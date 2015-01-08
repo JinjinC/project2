@@ -1,0 +1,215 @@
+
+.iconfont{font-family:"iconfont";
+font-size:40px;font-style:normal;}
+
+
+.headOne{
+  
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.headOneIcon{
+
+  display: inline-block;
+  margin: 40px auto;
+}
+
+.login{
+  display: inline-block;
+  padding-left: 90%; 
+}
+
+.login-logo{
+  line-height: 108px;
+}
+
+.headOneIconImg{
+  
+  width: 142px;
+  height: 142px;
+  border-radius: 35px;
+  background-color: white;
+  -webkit-box-shadow:0 0 50px grey;
+
+  @media(max-width:768px){
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+
+.headOneIconText{
+  
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 15px;
+  font-weight: normal;
+  text-shadow: 0 0 20px grey;
+}
+
+.logo .icon{
+  font-size: 220px;
+  line-height: 100px;
+  padding: 10px 0;
+  color:#fff;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+  -webkit-text-stroke-width: 0.2px;
+
+}
+
+.headOneIconImg .icon{
+  font-size: 90px;
+  line-height: 138px;
+  padding: 80px 0px;
+  color:#aaa;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+  -webkit-text-stroke-width: 0.2px;
+  text-align: center;
+  position: relative;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));  
+
+  @media(max-width:768px){
+    font-size: 60px;
+    line-height: 100px;
+
+  }
+}
+
+.homePage{
+  margin-top: 5%;
+  top: 15%;
+}
+
+.login-icon{
+  font-size: 200px;
+}
+
+.login-header{
+  margin-bottom:0;
+  margin-top:-30px;
+  height: 200px;
+}
+
+.show-shadow{
+  z-index: 999;
+}
+
+.login-modal{
+  margin-top:15%;
+}
+
+.sign-modal{
+  margin-top: 10%;
+}
+
+.myModalHeader{
+  text-align: center;
+  line-height: 1;
+}
+
+.myModalBody{
+  padding-bottom:0;
+  max-height: 500px;
+}
+
+.myInputGroup{
+  width: 100%;
+}
+
+.myModalContent{
+  width: 64%;
+  margin: auto;
+}
+
+@media(max-width:1200px){
+
+  .headOneIcon{
+    margin: 20px auto;
+  }
+}
+
+@media(max-width:400px){
+  .myModalContent{
+    width: 90%;
+  }
+}
+
+.home-footer{
+  position:absolute;
+  bottom:1.5%;
+  text-align: center;
+  width: 100%;
+  span{
+    padding-left:15px;
+  }
+}
+
+.form-sign-in{
+  display: none;
+}
+
+.blur { 
+   /* FireFox, Chrome, Opera */
+   filter: url('url(blur.svg#blur);utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+       <filter id="blur">
+           <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+       </filter>
+    </svg>');
+
+  -webkit-filter: blur($blur-degree); /* Chrome, Opera */
+     -moz-filter: blur($blur-degree);
+      -ms-filter: blur($blur-degree); 
+       -o-filter: blur($blur-degree);   
+          filter: blur($blur-degree);
+
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=18, MakeShadow=false); /* IE6~IE9 */
+
+  opacity:0.9;
+}
+
+.animateBlur{
+  -webkit-animation: filter-animation 0.3s;
+}
+
+@-webkit-keyframes filter-animation{
+
+  0%{
+      -webkit-filter: blur(17px);
+  }
+
+  20%{
+       -webkit-filter: blur(15px);
+  }
+
+  40%{
+       -webkit-filter: blur(12px);
+  }
+
+  60%{
+       -webkit-filter: blur(9px);
+  }
+
+  80%{
+       -webkit-filter: blur(5px);
+  }
+
+  100%{
+       -webkit-filter: blur(0px);
+  }
+
+}
+
+#divtest{
+  border: solid 3px blue;
+  padding: 4px;
+  margin: 3px;
+  width: 50%;
+  height: 100px;
+}

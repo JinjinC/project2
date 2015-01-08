@@ -1,0 +1,462 @@
+{{#extend "layout"}}
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="ui_buttons"}}
+    {{/replace}}
+    {{#replace "app_content"}}
+        <h2 class="page-title">按钮 <small>按钮, 更多状态</small></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-star"></i>
+                            默认按钮
+                            <small>
+                                鼠标悬浮
+                            </small>
+                        </h4>
+                    </header>
+                    <div class="body text-align-center">
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-default"
+                                            data-placement="top" data-original-title="选我选我">
+                                        默认
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-primary"
+                                            data-placement="top" data-original-title="Hi 傻瓜">
+                                        首要
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-info"
+                                            data-placement="top" data-original-title="八嘎嘎">
+                                        信息
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-success"
+                                            data-placement="top" data-original-title=".btn .btn-success">
+                                        成功
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-warning"
+                                            data-placement="top" data-original-title=".btn .btn-warning">
+                                        警告
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-danger"
+                                            data-placement="top" data-original-title=".btn .btn-danger">
+                                        危险
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-offset-4">
+                                    <button type="button" class="btn btn-inverse"
+                                            data-placement="top" data-original-title=".btn .btn-inverse">
+                                        反选按钮
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-star"></i>
+                            小按钮
+                        </h4>
+                    </header>
+                    <div class="body text-align-center">
+                        <div class="well well-sm well-white">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-default btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-default .btn-sm">
+                                        默认
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-primary btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-primary .btn-sm">
+                                        首要
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-info btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-info .btn-sm">
+                                        信息
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm well-white">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-success btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-success .btn-sm">
+                                        成功
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-warning btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-warning .btn-sm">
+                                        警告
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-danger btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-danger .btn-sm">
+                                        危险
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm well-white">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-offset-4">
+                                    <button type="button" class="btn btn-inverse btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-inverse .btn-sm">
+                                        反选
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-star"></i>
+                            大按钮
+                        </h4>
+                    </header>
+                    <div class="body text-align-center">
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-default btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-default .btn-lg">
+                                        默认
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-primary btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-primary .btn-lg">
+                                        首要
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-info btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-info .btn-lg">
+                                        信息
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-success btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-success .btn-lg">
+                                        成功
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-warning btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-warning .btn-lg">
+                                        警告
+                                    </button>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="button" class="btn btn-danger btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-danger .btn-lg">
+                                        危险
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-offset-4">
+                                    <button type="button" class="btn btn-inverse btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-inverse .btn-lg">
+                                        反选
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-cogs"></i>
+                            选项
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">禁止 状态</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <button type="button"
+                                            class="btn btn-default"
+                                            disabled="disabled">
+                                        默认
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-primary"
+                                            disabled="disabled">
+                                        首要
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-info"
+                                            disabled="disabled">
+                                        信息
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-inverse"
+                                            disabled="disabled">
+                                        反选
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="row text-align-center">
+                                <div class="col-md-12">
+                                    <button type="button"
+                                            class="btn btn-success"
+                                            disabled="disabled">
+                                        成功
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-warning"
+                                            disabled="disabled">
+                                        警告
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-danger"
+                                            disabled="disabled">
+                                        危险
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">按钮 分组</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">
+                                            One
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+                                            Two
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-align-center">
+                                <div class="col-md-12">
+                                    <button type="button"
+                                            class="btn btn-success">
+                                        <i class="fa fa-align-left"></i>
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-warning">
+                                        <i class="fa fa-align-center"></i>
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-danger">
+                                        <i class="fa fa-align-right"></i>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">下拉菜单按钮</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <div class="btn-group">
+                                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                            &nbsp; One &nbsp;
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                            &nbsp; Two &nbsp;
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            &nbsp; Three &nbsp;
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">Segmented dropdowns</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <div class="btn-group">
+                                        <button class="btn btn-default btn-lg">灰</button>
+                                        <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-inverse">白</button>
+                                        <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-info btn-sm">蓝</button>
+                                        <button class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary btn-xs">青</button>
+                                        <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">响应 1</a></li>
+                                            <li><a href="#">响应 2</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">复选框</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> 左
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> 中
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> 右
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">单选框</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-12">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-success">
+                                            <input type="radio" name="options" id="option1"> 左
+                                        </label>
+                                        <label class="btn btn-success">
+                                            <input type="radio" name="options" id="option2"> 中
+                                        </label>
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option3"> 右
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="well well-sm">
+                            <blockquote class="blockquote-sm">块级按钮</blockquote>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <button class="btn btn-lg btn-warning btn-block">
+                                        块级
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row margin-bottom text-align-center">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <button class="btn btn-lg btn-danger btn-block">
+                                        块级
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+    {{/append}}
+{{/extend}}

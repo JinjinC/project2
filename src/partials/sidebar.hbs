@@ -1,0 +1,43 @@
+<nav id="sidebar" class="sidebar nav-collapse collapse">
+    <ul id="side-nav" class="side-nav">
+         <li class="panel {{conditionClass "active" active "indexD topologyD transactionD sql externalD jvms"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "indexD topologyD transactionD sql externalD jvms" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">监控</span></a>
+            <ul id="forms-collapse" class="panel-collapse collapse {{conditionClass "in" active "indexD topologyD transactionD sql externalD jvms"}}">
+                <li class="{{conditionClass "active" active "indexD"}}"><a href="indexD.html">总览</a></li>
+                <li class="{{conditionClass "active" active "topologyD"}}"><a href="topologyD.html">拓扑</a></li>
+                <li class="{{conditionClass "active" active "transactionD"}}"><a href="transactionD.html">事务</a></li>
+                <li class="{{conditionClass "active" active "sql"}}"><a href="sql.html">SQL</a></li>
+                <li class="{{conditionClass "active" active "externalD"}}"><a href="externalD.html">外部服务</a></li>
+                <li class="{{conditionClass "active" active "jvms"}}"><a href="jvms.html">JVMs</a></li>
+            </ul>
+        </li>
+
+        <li class="panel {{conditionClass "active" active "errorMessage profiler"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "errorMessage profiler" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">事件</span></a>
+            <ul id="stats-collapse" class="panel-collapse collapse {{conditionClass "in" active "errorMessage profiler"}}">
+                <li class="{{conditionClass "active" active "errorMessage"}}"><a href="errorMessage.html">错误信息</a></li>
+                <li class="{{conditionClass "active" active "profiler"}}"><a href="profiler.html">性能剖析</a></li>
+               
+            </ul>
+        </li>
+
+        
+        <li class="{{conditionClass "active" active "serverEn"}}">
+            <a href="reportD.html"> <i class="fa fa-home"></i> <span class="name">报表</span></a>
+        </li>
+        <li class="panel {{conditionClass "active" active "serverEn"}}">
+            <a class="accordion-toggle {{conditionClass "collapsed" active "serverEn" true}}" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">设置</span></a>
+            <ul id="ui-collapse" class="panel-collapse collapse {{conditionClass "in" active "serverEn"}}">
+                <li class="{{conditionClass "active" active "serverEn"}}"><a href="serverEn.html">服务器环境</a></li>
+               
+            </ul>
+        </li>
+        
+        
+    </ul>
+
+
+</nav>

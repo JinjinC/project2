@@ -1,0 +1,108 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="errorMessage"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     <h2 class="page-title">错误信息 <small>错误信息界面</small></h2>
+
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-12">
+						<section class="widget">
+                            <header>
+                                <h4>
+                                    错误率
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                                
+                            </div>
+						</section>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<section class="widget">
+							<header>
+                 
+                            </header>
+                            <div class="body">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="source-col-header">第一次出现时间</th>
+                                        <th>第一次出现时间</th>
+                                        <th>响应时间</th>
+                                        <th class="hidden-xs">请求地址</th>
+                                        <th>消息</th>
+                                        <th>出现次数</th>
+                                      
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        
+                                        
+                                    </tr>
+                                   
+                                   
+                                    </tbody>
+                                </table>
+                            </div>
+
+						</section>
+					</div>
+				</div>
+			</div>
+
+		</div>
+ {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+
+        <!-- page template -->
+        <script type="text/template" id="message-template">
+            <div class="sender pull-left">
+                <div class="icon">
+                    <img src="img/2.jpg" class="img-circle" alt="">
+                </div>
+                <div class="time">
+                    刚刚
+                </div>
+            </div>
+            <div class="chat-message-body">
+                <span class="arrow"></span>
+                <div class="sender"><a href="#">T 同学</a></div>
+                <div class="text">
+                    <%- text %>
+                </div>
+            </div>
+        </script>
+    {{/append}}
+
+{{/extend}}

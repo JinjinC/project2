@@ -1,0 +1,178 @@
+﻿{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="jvms"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     <h2 class="page-title">JVMs <small>Jvms 界面</small></h2>
+     <div class="row">
+        <div class="col-lg-12">
+                <section class="widget widget-tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#memory" data-toggle="tab">内存</a>
+                            </li>
+                            <li>
+                                <a href="#thread" data-toggle="tab">线程</a>
+                            </li>
+                            <li>
+                                <a href="#session" data-toggle="tab">会话</a>
+                            </li>
+                            
+                        </ul>
+                    </header>
+                    <div class="body tab-content" style="padding: 30px;">
+                        <div id="memory" class="tab-pane active clearfix">
+                        	<div class="row">
+                        		<div class="col-lg-12">
+                        			<div class="row">
+	                        			<div class="col-lg-6">
+	                            			<section class="widget">
+					                            <header>
+					                                <h4>
+					                                    Heap memory usage (MB)
+					                                    
+					                                </h4>
+					                                
+					                            </header>
+					                            <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+					                                <div id="visits-chart" class="chart visits-chart">
+					                                    <svg></svg>
+					                                </div>
+					                                
+					                            </div>
+	            							</section>
+			                            </div>
+			                            <div class="col-lg-6">
+	                            			<section class="widget">
+					                            <header>
+					                                <h4>
+					                                    Heap memory usage (MB)
+					                                    
+					                                </h4>
+					                                
+					                            </header>
+					                            <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+					                                <div id="visits-chart" class="chart visits-chart">
+					                                    <svg></svg>
+					                                </div>
+					                                
+					                            </div>
+	            							</section>
+			                            </div>
+	                        		</div>
+	                        		<div class="row">
+	                        			<div class="col-lg-6">
+		                                			<section class="widget">
+							                            <header>
+							                                <h4>
+							                                    Garbage collection (MB)
+							                                </h4>
+							                                
+							                            </header>
+							                            <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+							                                <div id="visits-chart" class="chart visits-chart">
+							                                    <svg></svg>
+							                                </div>
+							                                
+							                            </div>
+                        							</section>
+		                                		</div>
+		                                		<div class="col-lg-6">
+		                                			<section class="widget">
+							                            <header>
+							                                <h4>
+							                                   Class count (MB)
+							                                    
+							                                </h4>
+							                                
+							                            </header>
+							                            <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+							                                <div id="visits-chart" class="chart visits-chart">
+							                                    <svg></svg>
+							                                </div>
+							                                
+							                            </div>
+                        							</section>
+		                                		</div>
+
+	                        		</div>
+                        		</div>
+                        	</div>
+                           
+                        </div>
+                        <div class="tab-pane fade" id="thread">
+                            <div class="row">
+                        		<div class="col-lg-6">
+                        			<section class="widget">
+			                            <header>
+			                                <h4>
+			                                    Heap memory usage (MB)
+			                                    
+			                                </h4>
+			                               
+			                            </header>
+			                            <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+			                                <div id="visits-chart" class="chart visits-chart">
+			                                    <svg></svg>
+			                                </div>
+			                                
+			                            </div>
+        							</section>
+
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="tab-pane fade in active" id="session">
+                            
+                        </div>
+                       
+		                     
+                        
+                    </div>
+                </section>
+        </div>
+     </div>
+
+
+		
+ {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+
+        <!-- page template -->
+        <script type="text/template" id="message-template">
+            <div class="sender pull-left">
+                <div class="icon">
+                    <img src="img/2.jpg" class="img-circle" alt="">
+                </div>
+                <div class="time">
+                    ¸Õ¸Õ
+                </div>
+            </div>
+            <div class="chat-message-body">
+                <span class="arrow"></span>
+                <div class="sender"><a href="#">T Í¬Ñ§</a></div>
+                <div class="text">
+                    <%- text %>
+                </div>
+            </div>
+        </script>
+    {{/append}}
+
+{{/extend}}

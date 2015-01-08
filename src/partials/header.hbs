@@ -1,0 +1,175 @@
+<header class="page-header">
+    <div class="navbar">
+        <div class="nav navbar-nav pull-left">
+            <div id="Home-nav">
+                <button id="goHome" type="button" class="goHome">
+                  <span style="font-size: 15px;">订餐系统</span>
+                  <i id="icon11" class="glyphicon glyphicon-chevron-left" style="float: right;margin-top: 3px;"></i>
+                </button>
+                <div id="goHome-content" class="goHome-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe606;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>应用程序</span></div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe603;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>浏览器</span></div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe602;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>关键事务</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe604;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>移动应用</span></div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe605;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>系统设置</span></div>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a role="button" class="firNav">
+                                <div class="firNav_content">
+                                    <div class="firNav_icon">
+                                        <i class="icon iconfont">&#xe601;</i>
+                                    </div>
+                                    <div class="firNav_title"><span>个人中心</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+            
+            
+            <li class="divider"></li>
+            <li class="hidden-xs">
+                <a href="#" id="settings"
+                   title="Settings"
+                   data-toggle="popover1"
+                   data-placement="bottom">
+                    <i class="fa fa-cog" style="margin-top: 5px;"></i>
+                </a>
+            </li>
+            <li class="hidden-xs dropdown" style="width: 200px;">
+                <a href="#" title="Account" id="account"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown" style="width: 80%;">
+                    <i class="fa fa-user" style="float: left;margin-top: 8px;"> <span style="float: right; margin-top: 5px; margin-left: 9px;font-size: 13px;">674986033@qq.com</span></i>
+                </a>
+
+                <ul id="account-menu" class="dropdown-menu account" role="menu">
+                    <li role="presentation" class="account-picture">
+                        <img src="img/2.jpg" alt="">
+                        Philip Daineka
+                    </li>
+                    <li role="presentation">
+                        <a href="form_account.html" class="link">
+                            <i class="fa fa-user"></i>
+                            账户设置
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="fa fa-sign-out"></i>
+                            退出登录
+                        </a>
+                    </li>
+                </ul>
+            </li>
+          
+             <li class="visible-xs">
+                <a href="#"
+                   class="btn-navbar"
+                   data-toggle="collapse"
+                   data-target=".sidebar"
+                   title="">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+           <!--  <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li> -->
+        </ul>
+         
+    </div>
+</header>
+    <script>
+        $(function(){
+            $('#goHome').click(function(){
+                 
+                $('#goHome-content').toggle();
+                return false;
+            })
+            
+            $(document).click(function(){
+                $('#goHome-content').hide();
+            })
+
+            $('#goHome-content').click(function(){
+                $('#goHome-content').show();
+                return false;
+            })
+
+            $('#goHome').click(function(){
+                $('#icon11').animate({
+                    rotate:"+=90deg"  //为rotate属性赋值,注意：deg为角度单位
+                },'slow');
+
+               
+            })
+    })
+
+
+        //     $('#Home-nav').click(function(){
+        //         $('#goHome-content').show();
+        //         return false;
+        //     })
+            
+        //     $(document).click(function(){
+        //         $('#goHome-content').hide();
+        //     })
+ 
+        // })
+
+    </script>
+   

@@ -1,0 +1,238 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="form_validation"}}
+    {{/replace}}
+
+    {{#replace "content"}}
+    
+    {{#append "scripts"}}
+
+    <script src="lib/parsleyjs/dist/parsley.min.js"></script>
+
+    <!-- page application js -->
+    <script src="js/forms-validation.js"></script>
+    
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+      <script>
+            $(document).ready(
+            function (){
+
+                //登录框弹出,后面背景变模糊。
+                $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
+                $('.single-widget-container').addClass("blur");
+
+
+                //登录后(点击登录按钮)
+                $('#loginButton').click(
+                    function (){
+
+                        $('#myModal').removeClass("in").removeClass("show-shadow").hide();
+                        $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                    });
+
+
+                //注册和登录的切换
+                $('#sign-in').click(
+                    function (){
+                        event.preventDefault();
+                        var text = $('#sign-in').children().html();
+                        if (text=="尚未注册？") {
+                            $('.form-sign-in').show();
+                            $('.form-login').hide();
+                            $('#sign-in').children().html("已有账号？");
+                            $('.login-modal').removeClass("login-modal").addClass("sign-modal");
+                            $('.myModalHeader').css('line-height','0.4');
+                        }
+                        else if (text=="已有账号？"){
+                            $('.form-sign-in').hide();
+                            $('.form-login').show();
+                            $('#sign-in').children().html("尚未注册？");
+                            $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
+                            $('.myModalHeader').css('line-height','1');
+
+                        }
+                    });
+            }
+            );
+    </script> 
+
+    {{/append}}
+
+    <div class="login-logo">
+        <i class="iconfont login-icon">&#xe600;</i>
+    </div>
+
+
+    <div class="single-widget-container">
+        <div class="row headOne">
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe606;</i>
+                        </div>
+                        <div class="headOneIconText">应用程序</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe603;</i>
+                        </div>
+                        <div class="headOneIconText">浏览器</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe602;</i>
+                        </div>
+                        <div class="headOneIconText">关键事务</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe604;</i>
+                        </div>
+                        <div class="headOneIconText">移动应用</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe605;</i>
+                        </div>
+                        <div class="headOneIconText">系统设置</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe601;</i>
+                        </div>
+                        <div class="headOneIconText">个人中心</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelleby="myModallabel" aria-hidden="true">
+        <div class="modal-dialog login-modal" id="myModalDialog">
+            <div class="modal-content myModalContent">
+                <div class="modal-header myModalHeader">
+                    <i class="iconfont login-icon">&#xe600;</i>
+                </div>
+                <div class="modal-body myModalBody">
+
+                    <form class="no-margin form-login" action="home.html" method="get" id="validation-form" data-parsley-priority-enabled="false"
+                              novalidate="novalidate">
+                        <fieldset>
+                            <div class="form-group form-login">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="email" type="email" class="form-control input-lg input-transparent"
+                                           placeholder="账号" data-parsley-trigger="change" data-parsley-validation-threshold="1"
+                                               required="required">
+                                </div>
+                            </div>
+                            <div class="form-group form-login">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="password" type="password" class="form-control input-lg input-transparent"
+                                           placeholder="密码" required="required">
+                                </div>
+                            </div>
+                             <div class="form-group form-login">
+                                <div class="input-group input-group-lg myInputGroup" style="margin-left:30px">
+                                    <input id="loginButton" type="button" class="input-lg input-transparent"
+                                           value="登录">
+                                    <input id="remember" type="checkbox" class="input-transparent" value="1" name="remember">
+                                    <label>记住我</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <form class="no-margin form-sign-in" action="home.html" method="get" id="validation-form-sign" data-parsley-priority-enabled="true">
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="email-s" type="email" class="form-control input-lg input-transparent"
+                                           placeholder="邮箱"  data-parsley-trigger="change" data-parsley-validation-threshold="1"
+                                               required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="password-s" type="password" class="form-control input-lg input-transparent"
+                                           placeholder="密码" data-parsley-trigger="change" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="passwordRepeat" type="password" class="form-control input-lg input-transparent"
+                                           placeholder="确认密码" data-parsley-trigger="change"
+                                               data-parsley-equalto="#password-s"
+                                               required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="name" type="text" class="form-control input-lg input-transparent"
+                                           placeholder="姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="company" type="text" class="form-control input-lg input-transparent"
+                                           placeholder="企业名称">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="phone" type="text" class="form-control input-lg input-transparent"
+                                           placeholder="联系方式">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="qq" type="text" class="form-control input-lg input-transparent"
+                                           placeholder="QQ号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg myInputGroup">
+                                    <input id="signButton" type="button" class="form-control input-transparent"
+                                           value="注册">
+                                </div>
+                            </div>     
+                        </fieldset>
+                    </form>
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="home-footer">
+            <a href="#" id="forget-psw"><span>忘记密码？</span></a>
+            <a href="#" id="sign-in"><span>尚未注册？</span></a>
+        </div>
+    </div>
+
+    
+
+    {{/replace}}
+
+{{/extend}}

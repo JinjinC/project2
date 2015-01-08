@@ -1,0 +1,257 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="indexD"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     <h2 class="page-title">总览 <small>总览页面</small></h2>
+       
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    响应时间
+
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                                
+                            </div>
+                        </section>
+
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    事务
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                </div>
+                            </header>
+                            <div class="body">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                   
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="label label-info">StructsAction/orderread</span></td>
+                                        <td>28.13s</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-info">StructsAction/list</span></td>
+                                        <td>18ms</td>
+                                    </tr>  
+                                    <tr>
+                                        <td><span class="label label-info">StructsAction/restaurant</span></td>
+                                        <td>11ms</td>
+                                    </tr>                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        
+                        
+                    </div>
+                    <div class="col-lg-6">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    错误率
+                                   
+                                </h4>
+                                <div class="widget-controls">
+                                    
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    服务器
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                    
+                                </div>
+                            </header>
+                            <div class="body">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="source-col-header">服务器</th>
+                                        <th>Apedx</th>
+                                        <th>响应时间</th>
+                                        <th class="hidden-xs">吞吐量(cpm)</th>
+                                        <th>错误率</th>
+                                        <th>CPU</th>
+                                        <th>内容(MB)</th>                                     
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="label label-warning">java:E-Menu网上订餐系统:8080(fe80:0:0:0:5054:ff:fe5f:d63%2)</span></td>
+                                        <td>713</td>
+                                        <td><strong class="color-green">0.96</strong></td>
+                                        <td class="hidden-xs">16 ms</td>
+                                        <td>0.52</td>
+                                        <td>4.11%</td>
+                                        <td>0.05%</td>
+                                        <td>460.29</td>
+                                    </tr>                                   
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    
+                </div>
+                
+
+                
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    Apdex
+                                   
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                  
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>   
+                      
+                    </section>
+
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    吞吐量
+                                   
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    ALL
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                </div>
+                            </header>
+                            <div class="body">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="source-col-header"> 开始时间 : 12-24 10:39 - 截止时间 : 12-24 11:09</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>还没有事件</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+                
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+
+        <!-- page template -->
+        
+    {{/append}}
+
+{{/extend}}

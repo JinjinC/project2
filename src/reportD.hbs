@@ -1,0 +1,99 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="reportD"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     <h2 class="page-title">报表 <small>报表界面</small></h2>
+     <div class="row">
+        <div class="col-lg-12">
+                <section class="widget widget-tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#webTran" data-toggle="tab">Web 事务</a>
+                            </li>
+                            <li>
+                                <a href="#sql" data-toggle="tab">SQL</a>
+                            </li>
+                            
+                        </ul>
+                    </header>
+                    <div class="body tab-content">
+                        <div id="webTran" class="tab-pane active clearfix">
+                            <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 40%;">Web 事务</th>
+                                        <th>吞吐量</th>
+                                        <th>总执行时间</th>
+                                        <th>平均执行时间</th>
+                                        <th>Apdex</th>
+                                        <th> </th>
+                                       
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            
+                        </div>
+                        <div id="sql" class="tab-pane">
+                             <table class="table table-striped no-margin sources-table">
+                                <thead>
+                                <tr>
+                                    <th style="width: 40%;">SQL</th>
+                                    <th>吞吐量</th>
+                                    <th>总执行时间</th>
+                                    <th>平均执行时间</th>
+                                    <th>Apdex</th>
+                                    <th> </th>
+                                   
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                </section>
+        </div>
+     </div>
+
+    {{/replace}}
+
+{{/extend}}
