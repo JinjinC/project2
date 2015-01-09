@@ -22,8 +22,8 @@ $i: 1;
 /**********************************/
 
 
-.iconfont{font-family:"iconfont";
-font-size:16px;font-style:normal;}
+// .iconfont{font-family:"iconfont";
+// font-size:16px;font-style:normal;}
 
 .form-control.parsley-error{
   &, &:focus{
@@ -52,7 +52,7 @@ font-size:16px;font-style:normal;}
   }
   left: 1.6%;
   right: auto;
-  top: -60px;
+  top: -45px;
   width: 140px;
   height: 130px;
   float: left;
@@ -574,14 +574,25 @@ position: absolute;
     background-color: rgba(0, 0, 0, 0);
     border:0;
     text-align: left;
+
+    & > .go_button{
+      font-size: 15px;
+    }
+
+    & > .go_img{
+      float: right;
+      margin: 8px 0;
+      height: 8px;
+    }
   }
 
   .goHome-content {
     padding: 20px 30px;
     display: none;
     position: absolute;
-    left: 10px;
-    background-color: rgba(51, 51, 51, 0.85);
+    left: 0;
+    top: 53px;
+    background-color:rgba(51, 51, 51, 0.85);
     border-radius: 5px;
     z-index: 1;
   }

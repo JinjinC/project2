@@ -3,13 +3,14 @@
         <div class="nav navbar-nav pull-left">
             <div id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
-                  <span style="font-size: 15px;">订餐系统</span>
-                  <i id="icon11" class="glyphicon glyphicon-chevron-left" style="float: right;margin-top: 3px;"></i>
+                  <span class="go_button">应用程序</span>
+                  <img id="go_img" class="go_img" src="../img/back-01.png">
+                 {{!--  <i id="icon11" class="glyphicon glyphicon-chevron-left" style="float: right;margin-top: 3px;"></i> --}}
                 </button>
                 <div id="goHome-content" class="goHome-content">
                     <div class="row">
                         <div class="col-md-4">
-                            <a role="button" class="firNav">
+                            <a role="button" class="firNav" href="application_list.html" >
                                 <div class="firNav_content">
                                     <div class="firNav_icon">
                                         <i class="icon iconfont">&#xe606;</i>
@@ -151,8 +152,8 @@
             })
 
             $('#goHome').click(function(){
-                $('#icon11').animate({
-                    rotate:"+=90deg"  //为rotate属性赋值,注意：deg为角度单位
+                $('#go_img').animate({
+                    rotate:"90deg"  //为rotate属性赋值,注意：deg为角度单位
                 },'slow');
 
                

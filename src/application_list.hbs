@@ -1,0 +1,114 @@
+ 
+{{#extend "layout"}}
+
+
+    {{#replace "sidebar"}}
+    <div class="sidebar-hidden">
+        {{> sidebar this conditionClass=conditionClass active=""}}
+    </div>
+    
+        
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div style="margin-top: 20px; margin-left: -113px; margin-right: 80px">
+        <h2 class="page-title">应用程序 <small>应用程序列表</small></h2>
+       
+        <div class="row">
+            <div class="col-lg-8">
+                 <section class="widget">
+                    <header>
+                        <h4>
+                            应用程序
+                        </h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                            
+                        </div>
+                    </header>
+                    <div class="body">
+                        <table class="table table-striped no-margin sources-table">
+                            <thead>
+                            <tr>
+                                <th class="source-col-header">响应时间</th>
+                                <th>Apedx</th>
+                                {{!-- class="hidden-xs" --}}
+                                <th>吞吐量(cpm)</th>
+                                <th>错误率</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="indexD.html">订餐系统</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>                                   
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="iconfont">&#xe60d;</i>
+                            <i class="iconfont">&#xe607;</i>
+                            <i class="iconfont">&#xe60c;</i>
+                            <i class="iconfont">&#xe608;</i>
+                            <i class="iconfont">&#xe60a;</i>
+                            <i class="iconfont">&#xe60b;</i>
+                        </h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <table class="table table-striped no-margin sources-table">
+                            <thead>
+                            <tr>
+                                <th class="source-col-header"> 开始时间 : 12-24 10:39 - 截止时间 : 12-24 11:09</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>还没有事件</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </section>
+            </div>
+        </div>
+
+    </div>
+     
+    {{/replace}}
+    <script>
+      
+        $('body').addClass("sidebar-hidden");
+           
+    </script>
+    {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+
+        <!-- page template -->
+        
+    {{/append}}
+
+{{/extend}}
