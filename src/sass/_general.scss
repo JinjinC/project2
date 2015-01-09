@@ -6,7 +6,7 @@
   //it also has an option $experimental-support-for-svg which should generate correct svg for IE, but it works incorrect, so
   //fixing it
   //issue id - https://github.com/chriseppstein/compass/issues/1225
-  background-color: $color_1;
+  background-color: rgba(53, 115, 137, 0.89);
 //final w3c
   background-image: radial-gradient(
       $type $figure at $position_x $position_y,
@@ -47,9 +47,9 @@ body{
   );
   &.background-dark{
     @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
-      rgba(96, 167, 177, 0.9)   30%,
-      rgba(162, 190, 205, 0.89) 90%,
-      rgba(240, 217, 188, 1)
+      rgba(124, 108, 120, 0.8) 30%, 
+      rgba(103, 108, 131, 0.8) 76%, 
+      rgba(91, 107, 98, 0.8)
     );
   }
 
