@@ -25,6 +25,21 @@ font-size:40px;font-style:normal;}
   line-height: 108px;
 }
 
+.home-button{
+  text-align: center;
+  
+}
+
+#loginButton,
+#signButton {
+  height: 33px;
+  line-height: 3px; 
+}
+#remember{
+  margin-left: 8%;
+}
+
+
 .headOneIconImg{
   
   width: 142px;
@@ -204,6 +219,10 @@ font-size:40px;font-style:normal;}
        -webkit-filter: blur(0px);
   }
 
+}
+
+.none-opacity{
+  opacity: 0;
 }
 
 #divtest{

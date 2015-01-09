@@ -19,10 +19,9 @@
             $(document).ready(
             function (){
 
-                //登录框弹出,后面背景变模糊。
+                //登录框弹出,后面背景变模糊,icon才显现出。
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
-                $('.single-widget-container').addClass("blur");
-
+                $('.single-widget-container').addClass("blur").animate({opacity: "1"});
 
                 //登录后(点击登录按钮)
                 $('#loginButton').click(
@@ -65,7 +64,7 @@
     </div>
 
 
-    <div class="single-widget-container">
+    <div class="single-widget-container none-opacity">
         <div class="row headOne">
             <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                 <a href="#">
@@ -155,11 +154,11 @@
                                 </div>
                             </div>
                              <div class="form-group form-login">
-                                <div class="input-group input-group-lg myInputGroup" style="margin-left:30px">
+                                <div class="input-group input-group-lg myInputGroup home-button">
                                     <input id="loginButton" type="button" class="input-lg input-transparent"
                                            value="登录">
                                     <input id="remember" type="checkbox" class="input-transparent" value="1" name="remember">
-                                    <label>请一定要记住我</label>
+                                    <label> 记住我</label>
                                 </div>
                             </div>
                         </fieldset>
@@ -213,8 +212,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="signButton" type="button" class="form-control input-transparent"
+                                <div class="input-group input-group-lg myInputGroup home-button">
+                                    <input id="signButton" type="button" class="input-lg input-transparent login-button"
                                            value="注册">
                                 </div>
                             </div>     
