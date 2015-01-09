@@ -569,6 +569,7 @@ position: absolute;
     border: none;
   }
   .goHome{
+    padding-top: 18px;
     width: 150px;
     height: 38px;
     background-color: rgba(0, 0, 0, 0);
@@ -1158,8 +1159,9 @@ legend + .control-group {
   }
 
   .nav > li > a{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    padding: 3px 8px;
     color: $text-color;
   }
 
