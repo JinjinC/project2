@@ -4,7 +4,11 @@
             <div id="Home-nav" style="float:left">
                 <button id="goHome" type="button" class="goHome">
                   <span class="go_button">应用程序</span>
+<<<<<<< HEAD
+                  <i class="glyphicon glyphicon-chevron-up" id="go-home-icon"></i>
+=======
                   <img id="go_img" class="go_img" src="../img/back-01.png">
+>>>>>>> d97d86f83c6116cc04624e62585ece6ee8af6ee9
                 </button>
                 <div id="goHome-content" class="goHome-content">
                     <div class="row">
@@ -163,36 +167,28 @@
             $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
-                e.stopPropagation();
+                if ($('#go-home-icon').hasClass("glyphicon-chevron-up")){
+                   $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down"); 
+                }
+                else {
+                    $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                }
+                 e.stopPropagation();
             })
             
             $(document).click(function(){
                 $('#goHome-content').hide();
+                $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+
             })
 
             $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
+
+                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
                 e.stopPropagation();
             })
-
-            // $('#goHome').click(function(){
-            //     $('#go_img').animate({
-            //         rotate:"90deg"  //为rotate属性赋值,注意：deg为角度单位
-            //     },'slow');
-            // })
     })
-
-
-        //     $('#Home-nav').click(function(){
-        //         $('#goHome-content').show();
-        //         return false;
-        //     })
-            
-        //     $(document).click(function(){
-        //         $('#goHome-content').hide();
-        //     })
- 
-        // })
 
     </script>
    
