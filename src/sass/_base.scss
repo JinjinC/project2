@@ -569,15 +569,15 @@ position: absolute;
     border: none;
   }
   .goHome{
-    padding-top: 18px;
-    width: 150px;
-    height: 38px;
+    padding-top: 5px;
+    width: 121px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0);
     border:0;
     text-align: left;
 
     & > .go_button{
-      font-size: 15px;
+      font-size: 17px;
     }
 
     & > .go_img{
@@ -600,6 +600,20 @@ position: absolute;
   button#goHome:focus{
     outline: none;
   }
+  .appOption {
+    
+    float: left; 
+    color: #f8f8f8;
+    padding-top: 13px; 
+    padding-left: 30px;
+
+  }
+  .appOpt {
+
+      font-size: 13px;
+      font-family: "Open Sans", "Microsoft Yahei", sans-serif;
+      font-size: 15px;
+    }
  
 
   .navbar .nav li.dropdown.open > .dropdown-toggle,
