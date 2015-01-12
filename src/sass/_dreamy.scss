@@ -350,3 +350,11 @@ font-size:40px;font-style:normal;
     animation: myrotateBack 0.5s;
 
     }
+
+.icon-up{
+  transform: rotate(90deg);
+}
+
+.icon-down{
+  transform: rotate(-90deg);
+}

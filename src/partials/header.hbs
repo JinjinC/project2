@@ -4,9 +4,7 @@
             <div id="Home-nav" style="float:left">
                 <button id="goHome" type="button" class="goHome">
                   <span class="go_button">应用程序</span>
-
-                  <i class="glyphicon glyphicon-chevron-up" id="go-home-icon"></i>
-                  <img id="go_img" class="go_img" src="../img/back-01.png">
+                  <img id="go_img" class="go_img icon-up" src="../img/back-01.png">
                 </button>
                 <div id="goHome-content" class="goHome-content">
                     <div class="row">
@@ -165,26 +163,31 @@
             $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
-                if ($('#go-home-icon').hasClass("glyphicon-chevron-up")){
-                   $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down"); 
+                if ($('#go_img').hasClass("icon-up")){
+                   $('#go_img').removeClass("icon-up").addClass("icon-down"); 
                 }
                 else {
-                    $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                    $('#go_img').removeClass("icon-down").addClass("icon-up");
                 }
                  e.stopPropagation();
             })
             
             $(document).click(function(){
                 $('#goHome-content').hide();
-                $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                $('#go_img').removeClass("icon-down").addClass("icon-up");
 
             })
 
             $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
+<<<<<<< HEAD
+                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
+                return false;
+=======
 
                 $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
                 e.stopPropagation();
+>>>>>>> 156eb31e2dce4a635dc4a64806d68412f5696ea9
             })
     })
 
