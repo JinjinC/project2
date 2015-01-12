@@ -4,8 +4,7 @@
             <div id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
                   <span class="go_button">应用程序</span>
-                  <img id="go_img" class="go_img" src="../img/back-01.png">
-                 {{!--  <i id="icon11" class="glyphicon glyphicon-chevron-left" style="float: right;margin-top: 3px;"></i> --}}
+                  <i class="glyphicon glyphicon-chevron-up" id="go-home-icon"></i>
                 </button>
                 <div id="goHome-content" class="goHome-content">
                     <div class="row">
@@ -139,36 +138,27 @@
             $('#goHome').click(function(){
                  
                 $('#goHome-content').toggle();
+                if ($('#go-home-icon').hasClass("glyphicon-chevron-up")){
+                   $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down"); 
+                }
+                else {
+                    $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                }
                 return false;
             })
             
             $(document).click(function(){
                 $('#goHome-content').hide();
+                $('#go-home-icon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+
             })
 
             $('#goHome-content').click(function(){
                 $('#goHome-content').show();
+                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
                 return false;
             })
-
-            // $('#goHome').click(function(){
-            //     $('#go_img').animate({
-            //         rotate:"90deg"  //为rotate属性赋值,注意：deg为角度单位
-            //     },'slow');
-            // })
     })
-
-
-        //     $('#Home-nav').click(function(){
-        //         $('#goHome-content').show();
-        //         return false;
-        //     })
-            
-        //     $(document).click(function(){
-        //         $('#goHome-content').hide();
-        //     })
- 
-        // })
 
     </script>
    
