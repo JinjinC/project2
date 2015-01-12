@@ -160,19 +160,19 @@
 </header>
     <script>
         $(function(){
-            $('#goHome').click(function(){
+            $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
-                return false;
+                e.stopPropagation();
             })
             
             $(document).click(function(){
                 $('#goHome-content').hide();
             })
 
-            $('#goHome-content').click(function(){
+            $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
-                return false;
+                e.stopPropagation();
             })
 
             // $('#goHome').click(function(){
