@@ -160,7 +160,7 @@
 </header>
     <script>
         $(function(){
-            $('#goHome').click(function(){
+            $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
                 if ($('#go_img').hasClass("icon-up")){
@@ -169,7 +169,7 @@
                 else {
                     $('#go_img').removeClass("icon-down").addClass("icon-up");
                 }
-                return false;
+                 e.stopPropagation();
             })
             
             $(document).click(function(){
@@ -178,10 +178,16 @@
 
             })
 
-            $('#goHome-content').click(function(){
+            $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
+<<<<<<< HEAD
                 $('#go_img').removeClass("icon-up").addClass("icon-down"); 
                 return false;
+=======
+
+                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+                e.stopPropagation();
+>>>>>>> 156eb31e2dce4a635dc4a64806d68412f5696ea9
             })
     })
 
