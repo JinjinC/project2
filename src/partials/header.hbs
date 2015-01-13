@@ -3,13 +3,8 @@
         <ul class="nav navbar-nav pull-left">
             <li id="Home-nav" style="float:left">
                 <button id="goHome" type="button" class="goHome">
-<<<<<<< HEAD
                     <span class="go_button">应用程序</span>
                     <img id="go_img" class="go_img icon-up" src="../img/back-01.png">
-=======
-                  <span class="go_button">应用程序</span>
-                  <img id="go_img" class="go_img icon-down" src="../img/back-01.png">
->>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
                 </button>
                 <div id="goHome-content" class="dropdown-menu goHome-content">
                     <div class="row">
@@ -35,7 +30,7 @@
                                 
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                      <div class="col-md-4 col-sm-6">
                             <a role="button" class="firNav">
                                 <div class="firNav_content">
                                     <div class="firNav_icon">
@@ -89,6 +84,7 @@
                     <i class="iconfont icon2">&#xe60f; 
                         <span class="appOpt">订餐系统</span>
                     </i>
+                    <img id="go_app" class="go_img icon-down" src="../img/back-01.png" style="width: 8px">
                 </a>
 
                 <ul id="appOption_menu" class="dropdown-menu account" role="menu">
@@ -165,28 +161,19 @@
     </div>
 </header>
     <script>
-        $(function(){
-            $('#goHome').click(function(){
+       $(function(){
+            $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
-<<<<<<< HEAD
-                e.stopPropagation();
-                if ($('#go_img').hasClass("icon-up")){
-                   $('#go_img').removeClass("icon-up").addClass("icon-down"); 
-=======
                 if ($('#go_img').hasClass("icon-down")){
                    $('#go_img').removeClass("icon-down").addClass("icon-up"); 
->>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
                 }
                 else {
                     $('#go_img').removeClass("icon-up").addClass("icon-down"); 
 
                 }
-<<<<<<< HEAD
-                 
-=======
+                e.stopPropagation();
                 return false;
->>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
             })
             
             $(document).click(function(){
@@ -195,20 +182,34 @@
 
             })
 
-            $('#goHome-content').click(function(){
+            $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
-<<<<<<< HEAD
-                e.stopPropagation();
-
-                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
-                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
-                
-=======
                 $('#go_img').removeClass("icon-down").addClass("icon-up"); 
-                return false;
->>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
+                e.stopPropagation();
             })
+
+            $('#appOption').click(function(){
+
+                $('#app_menu').toggle();
+                if ($('#go_app').hasClass("icon-down")){
+                   $('#go_app').removeClass("icon-down").addClass("icon-up"); 
+                }
+                else {
+                    $('#go_app').removeClass("icon-up").addClass("icon-down"); 
+
+                }
+                return false;
+            })
+
+            $(document).click(function(){
+                $('#app_menu').hide();
+                $('#go_app').removeClass("icon-up").addClass("icon-down"); 
+
+            })
+
+
     })
+
 
     </script>
    
