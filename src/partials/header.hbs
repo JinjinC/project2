@@ -1,12 +1,12 @@
 <header class="page-header">
     <div class="navbar">
-        <div class="nav navbar-nav pull-left">
-            <div id="Home-nav" style="float:left">
+        <ul class="nav navbar-nav pull-left">
+            <li id="Home-nav" style="float:left">
                 <button id="goHome" type="button" class="goHome">
-                  <span class="go_button">应用程序</span>
-                  <img id="go_img" class="go_img icon-up" src="../img/back-01.png">
+                    <span class="go_button">应用程序</span>
+                    <img id="go_img" class="go_img icon-up" src="../img/back-01.png">
                 </button>
-                <div id="goHome-content" class="goHome-content">
+                <div id="goHome-content" class="dropdown-menu goHome-content">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <a role="button" class="firNav" href="application_list.html" >
@@ -77,34 +77,35 @@
                     </div>
                 </div>
 
-            </div>
-            <div id="appOption" class="appOption">
+            </li>
+            <li class="dropdown appOption" style="width:140px;">
+                <a href="#" title="appOption" id="appOption"
+                   class="dropdown-toggle" data-toggle="dropdown" style="color: #f8f8f8;">
+                    <i class="iconfont icon2">&#xe60f; 
+                        <span class="appOpt">订餐系统</span>
+                    </i>
+                </a>
 
-                <div class="dropdown" style="width:80px;">
-                    <a href="#" title="appOption" 
-                       class="dropdown-toggle" data-toggle="dropdown" style="color: #f8f8f8;">
-                        <i class="iconfont icon2">&#xe60f; <span class="appOpt">订餐系统</span></i>
-                    </a>
+                <ul id="appOption_menu" class="dropdown-menu account" role="menu">
+                    
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2">&#xe60f; </i>
+                            app1
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2">&#xe60f; </i>
+                            app2
+                        </a>
+                    </li>
+                </ul>
 
-                    <ul id="" class="dropdown-menu account" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="iconfont icon2">&#xe60f; </i>
-                                app1
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="iconfont icon2">&#xe60f; </i>
-                                app2
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            </li>
 
-            </div>
-            
-        </div>
+        </ul>
+           
         <ul class="nav navbar-nav navbar-right pull-right">
             
             
@@ -127,7 +128,7 @@
                 <ul id="account-menu" class="dropdown-menu account" role="menu">
                     <li role="presentation" class="account-picture">
                         <img src="img/2.jpg" alt="">
-                        Philip Daineka
+                        Philip
                     </li>
                     <li role="presentation">
                         <a href="form_account.html" class="link">
@@ -163,13 +164,14 @@
             $('#goHome').click(function(e){
                  
                 $('#goHome-content').toggle();
+                e.stopPropagation();
                 if ($('#go_img').hasClass("icon-up")){
                    $('#go_img').removeClass("icon-up").addClass("icon-down"); 
                 }
                 else {
                     $('#go_img').removeClass("icon-down").addClass("icon-up");
                 }
-                 e.stopPropagation();
+                 
             })
             
             $(document).click(function(){
@@ -180,14 +182,11 @@
 
             $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
-<<<<<<< HEAD
-                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
-                return false;
-=======
-
-                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
                 e.stopPropagation();
->>>>>>> 156eb31e2dce4a635dc4a64806d68412f5696ea9
+
+                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
+                $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+                
             })
     })
 
