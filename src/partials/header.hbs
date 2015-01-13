@@ -3,8 +3,13 @@
         <ul class="nav navbar-nav pull-left">
             <li id="Home-nav" style="float:left">
                 <button id="goHome" type="button" class="goHome">
+<<<<<<< HEAD
                     <span class="go_button">应用程序</span>
                     <img id="go_img" class="go_img icon-up" src="../img/back-01.png">
+=======
+                  <span class="go_button">应用程序</span>
+                  <img id="go_img" class="go_img icon-down" src="../img/back-01.png">
+>>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
                 </button>
                 <div id="goHome-content" class="dropdown-menu goHome-content">
                     <div class="row">
@@ -161,32 +166,47 @@
 </header>
     <script>
         $(function(){
-            $('#goHome').click(function(e){
+            $('#goHome').click(function(){
                  
                 $('#goHome-content').toggle();
+<<<<<<< HEAD
                 e.stopPropagation();
                 if ($('#go_img').hasClass("icon-up")){
                    $('#go_img').removeClass("icon-up").addClass("icon-down"); 
+=======
+                if ($('#go_img').hasClass("icon-down")){
+                   $('#go_img').removeClass("icon-down").addClass("icon-up"); 
+>>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
                 }
                 else {
-                    $('#go_img').removeClass("icon-down").addClass("icon-up");
+                    $('#go_img').removeClass("icon-up").addClass("icon-down"); 
+
                 }
+<<<<<<< HEAD
                  
+=======
+                return false;
+>>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
             })
             
             $(document).click(function(){
                 $('#goHome-content').hide();
-                $('#go_img').removeClass("icon-down").addClass("icon-up");
+                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
 
             })
 
-            $('#goHome-content').click(function(e){
+            $('#goHome-content').click(function(){
                 $('#goHome-content').show();
+<<<<<<< HEAD
                 e.stopPropagation();
 
                 $('#go_img').removeClass("icon-up").addClass("icon-down"); 
                 $('#go-home-icon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
                 
+=======
+                $('#go_img').removeClass("icon-down").addClass("icon-up"); 
+                return false;
+>>>>>>> a295c39235e6aed9d8d8af558883de287bdd683e
             })
     })
 
