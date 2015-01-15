@@ -3,16 +3,11 @@
         <ul class="nav navbar-nav pull-left">
             <li id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
-<<<<<<< HEAD
-                  <span class="go_button" style="font-weight: 600; color: rgba(51, 51, 51, 0.5); font-weight: bold;">应用程序</span>
-                  <img id="go_img" class="go_img icon-down" src="../img/back-01.png">
-=======
                     <i class="iconfont icon3">&#xe606;</i>
                     <span class="go_button">应用程序</span>
                     <i id="icon_down" class="iconfont icon2">&#xe610;</i>
                     <i id="icon_up" class="iconfont icon2 icon-direc">&#xe611;</i>
                     
->>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
                 </button>
 
                 <div id="goHome-content" class="dropdown-menu goHome-content">
@@ -86,33 +81,6 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
-            </div>
-            <div id="appOption" class="appOption" style="padding-top: 9px;">
-
-                <div class="dropdown" style="width:150px;">
-                    <a href="#" title="appOption" 
-                       class="dropdown-toggle" data-toggle="dropdown" style="color: #f8f8f8;">
-                        <i class="iconfont icon2">&#xe60f; <span class="appOpt" style="padding-right: 10px;color: rgba(51, 51, 51, 0.5);font-weight: bold;" >MyApplication</span></i>
-                        <img id="go_app" class="go_img icon-down" src="../img/back-01.png" style="width: 8px">
-                    </a>
-
-                    <ul id="app_menu" class="dropdown-menu account" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="iconfont icon2">&#xe60f; </i>
-                                app1
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="iconfont icon2">&#xe60f; </i>
-                                app2
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-=======
             </li>
             <li id="divider" class="divider"></li>
             <li class="dropdown goHome">
@@ -141,7 +109,6 @@
                 </ul>
 
             </li>
->>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
 
         </ul>
            
@@ -200,24 +167,6 @@
     </div>
 </header>
     <script>
-<<<<<<< HEAD
-        $(function(){
-            $('#goHome').click(function(e){
-                 
-                $('#goHome-content').toggle();
-                if ($('#go_img').hasClass("icon-down")){
-                   $('#go_img').removeClass("icon-down").addClass("icon-up"); 
-                }
-                else {
-                    $('#go_img').removeClass("icon-up").addClass("icon-down"); 
-
-                }
-                e.stopPropagation();
-                return false;
-            })
-            
-            $(document).click(function(){
-=======
        $(function(){
 
         $('#goHome').click(function(e){
@@ -230,7 +179,6 @@
                 $('#icon_down').hide(); 
                 
             }else{
->>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
                 $('#goHome-content').hide();
                 $('#icon_down').show(); 
                 $('#icon_up').hide();
@@ -256,33 +204,6 @@
             }
             e.stopPropagation();
 
-<<<<<<< HEAD
-            $('#goHome-content').click(function(e){
-                $('#goHome-content').show();
-                $('#go_img').removeClass("icon-down").addClass("icon-up"); 
-                e.stopPropagation();
-            })
-
-            $('#appOption').click(function(){
-
-                $('#app_menu').toggle();
-                if ($('#go_app').hasClass("icon-down")){
-                   $('#go_app').removeClass("icon-down").addClass("icon-up"); 
-                }
-                else {
-                    $('#go_app').removeClass("icon-up").addClass("icon-down"); 
-
-                }
-                return false;
-            })
-
-            $(document).click(function(){
-                $('#app_menu').hide();
-                $('#go_app').removeClass("icon-up").addClass("icon-down"); 
-
-            })
-
-=======
          })
          $(document).click(function(e){
                 $('#goHome-content').hide();
@@ -300,7 +221,6 @@
                 $('#icon_up').show();
                 e.stopPropagation();
          })
->>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
 
     })
 
