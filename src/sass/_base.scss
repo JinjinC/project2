@@ -567,7 +567,7 @@ position: absolute;
   }
   .goHome{
     padding-top: 5px;
-    width: 121px;
+    width: 100px;
     height: 40px;
     background-color: rgba(0, 0, 0, 0);
     border:0;
@@ -581,6 +581,10 @@ position: absolute;
       float: right;
       margin: 8px 0;
       height: 8px;
+      -webkit-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
+      -ms-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
+      -moz-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
+      -o-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
     }
   }
 

@@ -27,8 +27,27 @@
                 $('#loginButton').click(
                     function (){
 
-                        $('#myModal').removeClass("in").removeClass("show-shadow").hide();
-                        $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                        if (!$('#loginButton').hasClass("buttonDisabled")) {
+
+                            var email_type = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+                            //先判断是否是邮箱的格式，如果不是，相应提示信息显示。如果是判断用户名和密码是否正确：如果不正确，相应提示信息显现；如果正确，就进入。
+                            if (email_type.test($('#email').val()) == false){
+
+                                $('#email-tip').addClass("in");
+                            }
+                            else {
+
+                                if ($('#email').val()=='123@qq.com' && $('#password').val()=='123'){
+
+                                    $('#myModal').removeClass("in").removeClass("show-shadow").hide();
+                                    $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                                }
+                                else {
+                                    $('#password-tip').addClass("in");
+                                }
+                            }
+                        };
                     });
 
 
@@ -53,8 +72,57 @@
 
                         }
                     });
+                
+                //登录的交互，判空登录按钮的变化
+                $('#email').keydown(function(){
+
+                    if (($('#email').val()!="")&&($('#password').val()!="")){
+                        $('#loginButton').removeClass("buttonDisabled");
+                    }
+
+                    if (($('#email').val()=="")||($('#password').val()=="")){
+                        $('#loginButton').addClass("buttonDisabled");
+                    }
+
+                    $('#email-tip').removeClass("in");
+                    $('#password-tip').removeClass("in");
+
+                });
+
+                $('#password').keydown(function(){
+
+                    if (($('#email').val()!="")&&($('#password').val()!="")){
+                        $('#loginButton').removeClass("buttonDisabled");
+                    }
+
+                     if (($('#email').val()=="")||($('#password').val()=="")){
+                        $('#loginButton').addClass("buttonDisabled");
+                    }
+
+                    $('#email-tip').removeClass("in");
+                    $('#password-tip').removeClass("in");
+
+                });
+
+
+                //tooltip的定位！
+                $('.tooltip').each(function () {
+
+                    var tooltip_width = $(this).css("width");
+                    console.log(tooltip_width);
+                    subpos = tooltip_width.length-2;
+                    posleft = -tooltip_width.substr(0,subpos)/2+"px";
+                    console.log(subpos);
+                    console.log(posleft);
+                    $(this).css("margin-left",posleft);
+
+
+                })
+
             }
             );
+
+            
     </script> 
 
     {{/append}}
@@ -141,23 +209,29 @@
                         <fieldset>
                             <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup">
-                                    <input id="email" type="email" class="form-control input-lg input-transparent"
-                                           placeholder="账号" data-parsley-trigger="change" data-parsley-validation-threshold="1"
-                                               required="required">
+                                    <input id="email" type="email" class="form-control input-lg" placeholder="账号">
+                                    <div class="tooltip fade bottom tooltip_login" id="email-tip">
+                                        <div class="arrow_tooltip"></div>
+                                        <span class="tip-content"> 用户名不是邮箱的格式哟！</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup">
-                                    <input id="password" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="密码" required="required">
+                                    <input id="password" type="password" class="form-control input-lg" placeholder="密码">
+                                    <div class="tooltip fade bottom tooltip_login" id="password-tip">
+                                        <div class="arrow_tooltip"></div>
+                                        <span class="tip-conetent"> 用户名或密码不正确哟！请修改！</span>
+                                    </div>
                                 </div>
                             </div>
                              <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup home-button">
-                                    <input id="loginButton" type="button" class="input-lg input-transparent"
-                                           value="登录">
-                                    <input id="remember" type="checkbox" class="input-transparent" value="1" name="remember">
-                                    <label> 记住我</label>
+                                    <div class="remember checkbox">
+                                        <input id="remember-box" type="checkbox" value="1" name="remember">
+                                        <label for="remember-box"> 记住我</label>
+                                    </div>
+                                    <span class="loginButton buttonDisabled" id="loginButton">登录</span>
                                 </div>
                             </div>
                         </fieldset>
