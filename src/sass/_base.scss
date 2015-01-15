@@ -64,6 +64,12 @@ $i: 1;
   strong{
     color: $white;
   }
+
+  &:hover,
+  &:focus{
+    color: white;
+  }
+
 }
 .logodivider {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
@@ -561,21 +567,31 @@ position: absolute;
   @include border-radius($border-radius-base);
 
   .navbar{
-    padding-top: 6px;
+    height: 43px;
     min-height: 40px;
     border: none;
   }
   .goHome{
+<<<<<<< HEAD
     padding-top: 5px;
     width: 100px;
     height: 40px;
+=======
+    color: rgba(51, 51, 51, 0.5);
+    padding: 8px 0px;
+    width: 120px;
+    height: 38px;
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
     background-color: rgba(0, 0, 0, 0);
     border:0;
     text-align: left;
 
     & > .go_button{
+      font-weight: bold;
+      padding-right: 6px;
       font-size: 17px;
     }
+<<<<<<< HEAD
 
     & > .go_img{
       float: right;
@@ -585,18 +601,29 @@ position: absolute;
       -ms-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
       -moz-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
       -o-filter: grayscale(100%) brightness(38%) contrast(178%) opacity(95%);
+=======
+    &:hover,
+    &:focus{
+      color: white;
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
     }
+
   }
+  .go_img{
+      width: 8px;
+      margin-bottom: 3px;
+    }
 
   .goHome-content {
+    width: 390px;
     padding: 20px 30px;
     display: none;
     position: absolute;
-    left: 0;
-    top: 53px;
+    left: 0px;
+    top: 43px;
     background-color:rgba(51, 51, 51, 0.85);
-    border-radius: 5px;
-    z-index: 1;
+    border-radius: 3px !important;
+    z-index: 1; 
   }
   button#goHome:focus{
     outline: none;
@@ -605,15 +632,15 @@ position: absolute;
 
     float: left; 
     color: #f8f8f8;
-    padding-top: 13px; 
+    padding-top: 0px; 
     padding-left: 30px;
 
   }
   .appOpt {
-
-      font-size: 13px;
       font-family: "Open Sans", "Microsoft Yahei", sans-serif;
-      font-size: 15px;
+      font-size: 17px;
+      padding-right: 6px;
+      font-weight: bold;
     }
  
 
@@ -643,14 +670,15 @@ position: absolute;
 
     & > a{
       color: $text-transparent;
-      width: 100px;
+      width: 177px;
       padding: 0;
+      padding-top: 5px;
       font-size: $font-size-base * 1.5;
       outline: 0;
       background: none;
       text-align: center;
       vertical-align: middle;
-      line-height: 36px;
+      // line-height: 36px;
       text-shadow: none;
 
       &:hover{
@@ -675,7 +703,9 @@ position: absolute;
       display: block;
       height: 38px;
       width: 1px;
-      margin: 0 20px;
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
       $experimental-support-for-svg: true;
       @include background(linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0)));
       $experimental-support-for-svg: false;
@@ -716,16 +746,18 @@ position: absolute;
       border-right:  6px solid transparent;
       border-bottom: 6px solid $popover-bg;
       position: absolute;
+      border-radius: 0px;
       top: -6px;
-      left: 10px;
+      left: 6px;
     }
   }
 
   // Right aligned menus need alt position
   .navbar .pull-right > li > .dropdown-menu,
   .navbar .nav > li > .dropdown-menu.pull-right {
+    // margin-top: 6px;
     left: auto;
-    right: 0;
+    right: 0px;
     &:before {
       left: auto;
       right: 12px;
@@ -735,7 +767,8 @@ position: absolute;
       right: 13px;
     }
     .dropdown-menu {
-      left: auto;
+      margin-top: 6px;
+      left: 48px;
       right: 100%;
       margin-left: 0;
       margin-right: -1px;
@@ -890,8 +923,8 @@ position: absolute;
   font-size: $font-size-small;
 
   //override js-set variables
-  left: -76px !important;
-  top: 30px !important;
+  left: -90px !important;
+  top: 36px !important;
 
   &.bottom .arrow{
     border-bottom-color: transparent;
@@ -899,7 +932,7 @@ position: absolute;
     top: -13px;
     margin-left: 0;
     left: auto;
-    right: 4px;
+    right: -4px;
     &:after{
       border-bottom-color: $popover-bg;
       border-width: 6px;
@@ -929,12 +962,14 @@ position: absolute;
 
 
 .account{
-  width: 180px;
+  margin-top: 6px !important;
+  width: 150px;
   background: $popover-bg;
   @include box-shadow(none);
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-base !important;
   border: none;
   color: $white;
+  left: 17px;
 }
 .application{
   width: 180px;
@@ -946,6 +981,14 @@ position: absolute;
 }
 
 .navbar .nav > li > .account{
+  &:before{
+    border-bottom: none;
+  }
+  &:after{
+    border-bottom-color: $popover-bg;
+  }
+}
+.account{
   &:before{
     border-bottom: none;
   }

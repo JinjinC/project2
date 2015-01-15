@@ -1,12 +1,21 @@
 <header class="page-header">
     <div class="navbar">
-        <div class="nav navbar-nav pull-left">
-            <div id="Home-nav" style="float:left">
+        <ul class="nav navbar-nav pull-left">
+            <li id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
+<<<<<<< HEAD
                   <span class="go_button" style="font-weight: 600; color: rgba(51, 51, 51, 0.5); font-weight: bold;">应用程序</span>
                   <img id="go_img" class="go_img icon-down" src="../img/back-01.png">
+=======
+                    <i class="iconfont icon3">&#xe606;</i>
+                    <span class="go_button">应用程序</span>
+                    <i id="icon_down" class="iconfont icon2">&#xe610;</i>
+                    <i id="icon_up" class="iconfont icon2 icon-direc">&#xe611;</i>
+                    
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
                 </button>
-                <div id="goHome-content" class="goHome-content">
+
+                <div id="goHome-content" class="dropdown-menu goHome-content">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <a role="button" class="firNav" href="application_list.html" >
@@ -30,7 +39,7 @@
                                 
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                      <div class="col-md-4 col-sm-6">
                             <a role="button" class="firNav">
                                 <div class="firNav_content">
                                     <div class="firNav_icon">
@@ -77,6 +86,7 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
             </div>
             <div id="appOption" class="appOption" style="padding-top: 9px;">
 
@@ -102,33 +112,63 @@
                         </li>
                     </ul>
                 </div>
+=======
+            </li>
+            <li id="divider" class="divider"></li>
+            <li class="dropdown goHome">
+                <a href="#" title="appOption" id="appOption"
+                   class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="iconfont icon2">&#xe60f; </i>
+                    <span class="appOpt">My Application</span>
+                    <i id="icon_down1" class="iconfont icon2">&#xe610;</i>
+                    <i id="icon_up1" class="iconfont icon2 icon-direc">&#xe611;</i>
+                </a>
 
-            </div>
-            
-        </div>
+                <ul id="appOption_menu" class="dropdown-menu account" role="menu">
+                    
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2">&#xe60f; </i>
+                            app1
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2">&#xe60f; </i>
+                            app2
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
+
+        </ul>
+           
         <ul class="nav navbar-nav navbar-right pull-right">
             
             
-            <li class="divider"></li>
+            
             <li class="hidden-xs">
                 <a href="#" id="settings"
                    title="Settings"
                    data-toggle="popover1"
-                   data-placement="bottom">
-                    <i class="fa fa-cog" style="margin-top: 5px;"></i>
+                   data-placement="bottom" style="width: 31px;">
+                    <i class="fa fa-cog" style="margin-top: 9px;"></i>
                 </a>
             </li>
-            <li class="hidden-xs dropdown" style="width: 200px;">
+            <li class="divider"></li>
+            <li class="hidden-xs dropdown" style="margin-right:16px; margin-left:7px;">
                 <a href="#" title="Account" id="account"
                    class="dropdown-toggle"
-                   data-toggle="dropdown" style="width: 80%;">
-                    <i class="fa fa-user" style="float: left;margin-top: 8px;"> <span style="float: right; margin-top: 5px; margin-left: 9px;font-size: 13px;">674986033@qq.com</span></i>
+                   data-toggle="dropdown" style="width: 100%;">
+                    <i class="fa fa-user" style="float:right; margin-top:8px;"> <span style="float:right; margin-top:5px; margin-left:9px; font-size:13px;">674986033@qq.com</span></i>
                 </a>
 
                 <ul id="account-menu" class="dropdown-menu account" role="menu">
                     <li role="presentation" class="account-picture">
                         <img src="img/2.jpg" alt="">
-                        Philip Daineka
+                        Philip
                     </li>
                     <li role="presentation">
                         <a href="form_account.html" class="link">
@@ -160,6 +200,7 @@
     </div>
 </header>
     <script>
+<<<<<<< HEAD
         $(function(){
             $('#goHome').click(function(e){
                  
@@ -176,11 +217,46 @@
             })
             
             $(document).click(function(){
+=======
+       $(function(){
+
+        $('#goHome').click(function(e){
+            $('#appOption_menu').hide();
+            $('#icon_down1').show(); 
+            $('#icon_up1').hide();
+            if ($('#goHome-content').css('display') == 'none') {
+                $('#goHome-content').show();
+                $('#icon_up').show();
+                $('#icon_down').hide(); 
+                
+            }else{
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
                 $('#goHome-content').hide();
-                $('#go_img').removeClass("icon-up").addClass("icon-down"); 
+                $('#icon_down').show(); 
+                $('#icon_up').hide();
+            }
 
-            })
 
+            e.stopPropagation();
+        })
+
+         $('#appOption').click(function(e){
+            $('#goHome-content').hide();
+            $('#icon_down').show(); 
+            $('#icon_up').hide();
+            if ($('#appOption_menu').css('display') == 'none') {
+                $('#appOption_menu').show();
+                $('#icon_down1').hide(); 
+                $('#icon_up1').show();
+
+            }else{
+                $('#appOption_menu').hide();
+                $('#icon_down1').show(); 
+                $('#icon_up1').hide();
+            }
+            e.stopPropagation();
+
+<<<<<<< HEAD
             $('#goHome-content').click(function(e){
                 $('#goHome-content').show();
                 $('#go_img').removeClass("icon-down").addClass("icon-up"); 
@@ -206,8 +282,28 @@
 
             })
 
+=======
+         })
+         $(document).click(function(e){
+                $('#goHome-content').hide();
+                $('#icon_down').show(); 
+                $('#icon_up').hide();
+                $('#appOption_menu').hide();
+                $('#icon_down1').show(); 
+                $('#icon_up1').hide(); 
+                e.stopPropagation();
+         })
+         $('#goHome-content').click(function(e){
+                $('#goHome-content').show();
+                $('#appOption_menu').hide();
+                $('#icon_down').hide(); 
+                $('#icon_up').show();
+                e.stopPropagation();
+         })
+>>>>>>> a3723439dd44e07c2941d9ac3899e5268e374f23
 
     })
+
 
     </script>
    
