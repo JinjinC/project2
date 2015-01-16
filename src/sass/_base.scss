@@ -47,11 +47,12 @@ $i: 1;
   @media (min-height: 940px) {
     position: fixed;
   }
+  overflow: hidden;
   left: 1.6%;
   right: auto;
   top: -45px;
   width: 140px;
-  height: 130px;
+  height: 110px;
   float: left;
   z-index: 1;
   display: block;
@@ -536,11 +537,16 @@ position: absolute;
     & > .iconfont{
       font-size: 50px;
        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5))); 
+      &:hover,
+      &:focus{
+        color: #aaa;
+      }
     } 
   }
   .firNav_icon:hover,
   .firNav_icon:focus {
     background-color: rgba(255, 255, 255, 0.9);
+    color: #aaa;
   }
 
 
@@ -611,13 +617,12 @@ position: absolute;
     outline: none;
   }
   .appOption {
-
     float: left; 
     color: #f8f8f8;
     padding-top: 0px; 
     padding-left: 30px;
-
   }
+
   .appOpt {
       font-family: "Open Sans", "Microsoft Yahei", sans-serif;
       font-size: 17px;
@@ -953,14 +958,14 @@ position: absolute;
   color: $white;
   left: 17px;
 }
-.application{
-  width: 180px;
-  background: $popover-bg;
-  @include box-shadow(none);
-  border-radius: $border-radius-base;
-  border: none;
-  color: $white;
-}
+// .application{
+//   width: 180px;
+//   background: $popover-bg;
+//   @include box-shadow(none);
+//   border-radius: $border-radius-base;
+//   border: none;
+//   color: $white;
+// }
 
 .navbar .nav > li > .account{
   &:before{

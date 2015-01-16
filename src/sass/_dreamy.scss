@@ -1,7 +1,65 @@
 
-.iconfont{font-family:"iconfont";
-font-size:40px;font-style:normal;
+.iconfont{
+  font-family:"iconfont";
+  font-size:40px;font-style:normal;
 }
+.icon1{
+  font-size: 19px;
+}
+.icon2{
+  font-size: 12px;
+}
+.icon3{
+  font-size: 21px;
+}
+.iconplus{
+  display: none;
+  font-weight: bold;
+  color: rgb(60, 60, 60);
+  position: absolute;
+  left: 43px;
+  top: 31px;
+  font-size:34px;
+  &:hover,
+  &:focus{
+    color: #767676;
+    cursor: pointer;
+  }
+}
+.btn-hollow{
+
+  float:right;
+  background-color: transparent;
+  color: #56bc76;
+  &:hover,
+  &:focus{
+    background-color: #56bc76;
+    border-color: #56bc76;
+    color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+.btn-reply{
+
+  float:left;
+  background-color: transparent;
+  color: #fff;
+  border: solid 1px transparent;
+  padding: 0 6px;
+  margin-right: 13px;
+  transition: border-color 0.2s;
+
+  &:hover,
+  &:focus{
+    border: solid 1px #fff;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
 .iconlogo{
   font-size: 140px; 
   color:rgba(51, 51, 51, 0.5);
@@ -10,19 +68,14 @@ font-size:40px;font-style:normal;
     color: white;
   }
 }
-.icon1{
-    font-size: 19px;
-  }
-.icon2{
-  font-size: 12px;
-}
-.icon-direc{
-   display: none;
-}
-.icon3{
-  font-size: 21px;
-}
 
+.appItem {
+  color: #9bd0f6;
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+}
 
 
 .headOne{
@@ -404,7 +457,7 @@ a{
 }
 
 a :hover{
-  color: #E2E2E2;
+  color: white;
 }
 
 #email{

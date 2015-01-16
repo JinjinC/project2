@@ -1,0 +1,64 @@
+ 
+{{#extend "layout"}}
+
+
+    {{#replace "sidebar"}}
+    <div class="sidebar-hidden">
+        {{> sidebar this conditionClass=conditionClass active=""}}
+    </div>
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div style="margin-left: -185px;">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="page-title">
+                    <a href="application_list.html">
+                        <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top">
+                            <i class="iconfont icon3">&#xe612;</i>
+                        </button>
+                    </a>
+                    添加应用<small>新增应用</small>
+                </h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                 <section class="widget">
+                    <header>
+                       
+                    </header>
+                    <div class="body">
+                        
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="widget widget-tabs">
+                    <header>
+                        
+                    </header>
+                    <div class="body tab-content">
+                        
+                    </div>
+                        
+                </section>
+            </div>
+        </div>
+
+    </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+        <script>
+            $('#appOption').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+        </script>
+    {{/append}}
+
+{{/extend}}

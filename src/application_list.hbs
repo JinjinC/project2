@@ -10,8 +10,18 @@
 
     {{#replace "app_content"}}
     <div style="margin-left: -185px;">
-        <h2 class="page-title">应用程序<small>应用程序列表</small></h2>
-       
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="page-title">应用程序<small>应用程序列表</small>
+                    <a href="add_application.html">
+                        <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
+                            添加应用
+                        </button>
+                    </a>
+                </h2>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="col-lg-8">
                  <section class="widget">
@@ -27,7 +37,7 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="indexD.html">订餐系统</a></td>
+                                <td><a href="indexD.html" class="appItem">订餐系统</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
@@ -88,10 +98,11 @@
         <!-- page application js -->
         <script src="js/ui-buttons.js"></script>
         <script>
-       
+           
             $('#appOption').hide();
             $('#divider').hide();
-     
+            $('#settings').hide();
+            $('#divider1').hide();
         </script>
     {{/append}}
 
