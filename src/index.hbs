@@ -1,53 +1,96 @@
 {{#extend "layout"}}
 
     {{#replace "sidebar"}}
-        {{> sidebar this conditionClass=conditionClass active="form_validation"}}
+    <div class="sidebar-hidden">
+        {{> sidebar this conditionClass=conditionClass}}
+    </div>
     {{/replace}}
 
-    {{#replace "content"}}
+    {{#replace "app_content"}}
+
+
     
     {{#append "scripts"}}
 
-    <script src="lib/parsleyjs/dist/parsley.min.js"></script>
-
-    <!-- page application js -->
-    <script src="js/forms-validation.js"></script>
-    
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
       <script>
+
+            //隐藏sidebar中不需要的部分。
+            $('header').hide();
+
             $(document).ready(
 
                 //登录框弹出,后面背景变模糊,icon才显现出。
             function (){
+
+
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
                 $('.single-widget-container').addClass("blur").animate({opacity: "1"},500);
+
+                //tooltip的定位！
+                $('.tooltip').each(function () {
+
+                    var tooltip_width = $(this).css("width");
+                    console.log(tooltip_width);
+                    subpos = tooltip_width.length-2;
+                    posleft = -tooltip_width.substr(0,subpos)/2+"px";
+                    console.log(subpos);
+                    console.log(posleft);
+                    $(this).css("margin-left",posleft);
+
+
+                })
 
                 //登录后(点击登录按钮)
                 $('#loginButton').click(
                     function (){
 
-                        if (!$('#loginButton').hasClass("buttonDisabled")) {
+                        if (false){
 
-                            var email_type = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                            if (!$('#loginButton').hasClass("buttonDisabled")) {
 
-                            //先判断是否是邮箱的格式，如果不是，相应提示信息显示。如果是判断用户名和密码是否正确：如果不正确，相应提示信息显现；如果正确，就进入。
-                            if (email_type.test($('#email').val()) == false){
+                                var email_type = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
-                                $('#email-tip').addClass("in");
-                            }
-                            else {
+                                //先判断是否是邮箱的格式，如果不是，相应提示信息显示。如果是判断用户名和密码是否正确：如果不正确，相应提示信息显现；如果正确，就进入。
+                                if (email_type.test($('#email').val()) == false){
 
-                                if ($('#email').val()=='123@qq.com' && $('#password').val()=='123'){
-
-                                    $('#myModal').removeClass("in").removeClass("show-shadow").hide();
-                                    $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                                    $('#email-tip').addClass("in");
                                 }
                                 else {
-                                    $('#password-tip').addClass("in");
+
+                                    if ($('#email').val()=='1@qq.com' && $('#password').val()=='12'){
+
+                                        $('#myModal').removeClass("in").removeClass("show-shadow").hide();
+                                        $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                                        $('header').show();
+                                        $('.nav.pull-left').hide();
+                                        $('.nav.pull-right>li:eq(0)').hide();
+                                        $('.nav.pull-right>li:eq(1)').hide();
+                                        $('.in-footer').show();
+                                    }
+                                    else {
+                                        $('#password-tip').addClass("in");
+                                        $('.myModalContent').addClass("shake shake-constant shake-horizontal");
+                                         setTimeout(function (){
+                                            $('.myModalContent').removeClass("shake shake-constant shake-horizontal");
+                                         },500);
+                                    }
                                 }
-                            }
-                        };
+                            };
+
+
+                        }
+                        else{
+
+                            $('#myModal').removeClass("in").removeClass("show-shadow").hide();
+                            $('.single-widget-container').removeClass("blur").addClass("animateBlur");
+                            $('header').show();
+                            $('.nav.pull-left').hide();
+                            $('.nav.pull-right>li:eq(0)').hide();
+                            $('.nav.pull-right>li:eq(1)').hide();
+                            $('.in-footer').show();
+
+                        }
+
                     });
 
 
@@ -102,22 +145,13 @@
                     $('#email-tip').removeClass("in");
                     $('#password-tip').removeClass("in");
 
+
                 });
 
 
-                //tooltip的定位！
-                $('.tooltip').each(function () {
-
-                    var tooltip_width = $(this).css("width");
-                    console.log(tooltip_width);
-                    subpos = tooltip_width.length-2;
-                    posleft = -tooltip_width.substr(0,subpos)/2+"px";
-                    console.log(subpos);
-                    console.log(posleft);
-                    $(this).css("margin-left",posleft);
 
 
-                })
+
 
             }
             );
@@ -301,6 +335,22 @@
             <a href="#" id="forget-psw"><span>忘记密码？</span></a>
             <a href="#" id="sign-in"><span>尚未注册？</span></a>
         </div>
+    </div>
+
+    <div class="navbar in-footer">
+        <ul class="nav navbar-nav">
+            <li><a href="#"><span>官方网站</span></a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span>帮助中心</span></a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span>客户隐私政策</span></a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span>条款与条件</span></a></li>
+        </ul>
+    </div>
+
+    <div class="loader-wrap hiding hide">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
     </div>
 
     
