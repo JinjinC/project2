@@ -47,6 +47,11 @@ $i: 1;
   @media (min-height: 940px) {
     position: fixed;
   }
+  @media (max-width: 767px) {
+    position: relative;
+    width: 140px;
+    top: -60px;
+  }
   overflow: hidden;
   left: 1.6%;
   right: auto;

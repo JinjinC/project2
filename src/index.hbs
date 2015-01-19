@@ -44,7 +44,21 @@
                 $('#loginButton').click(
                     function (){
 
-                        if (false){
+                        //tooltip的定位！
+                        $('.tooltip').each(function () {
+
+                            var tooltip_width = $(this).css("width");
+                            console.log(tooltip_width);
+                            subpos = tooltip_width.length-2;
+                            posleft = -tooltip_width.substr(0,subpos)/2+"px";
+                            console.log(subpos);
+                            console.log(posleft);
+                            $(this).css("margin-left",posleft);
+
+
+                        })
+
+                        if (true){
 
                             if (!$('#loginButton').hasClass("buttonDisabled")) {
 
@@ -246,6 +260,7 @@
                                     <input id="email" type="email" class="form-control input-lg" placeholder="账号">
                                     <div class="tooltip fade bottom tooltip_login" id="email-tip">
                                         <div class="arrow_tooltip"></div>
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
                                         <span class="tip-content"> 用户名不是邮箱的格式哟！</span>
                                     </div>
                                 </div>
@@ -255,6 +270,7 @@
                                     <input id="password" type="password" class="form-control input-lg" placeholder="密码">
                                     <div class="tooltip fade bottom tooltip_login" id="password-tip">
                                         <div class="arrow_tooltip"></div>
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
                                         <span class="tip-conetent"> 用户名或密码不正确哟！请修改！</span>
                                     </div>
                                 </div>
