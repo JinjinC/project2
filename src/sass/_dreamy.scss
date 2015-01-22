@@ -228,6 +228,7 @@
   top: 50%;
   margin-left: -300px;
   margin-top: -230px;
+  width: 600px;
 }
 
 .sign-modal{
@@ -267,7 +268,6 @@
 
 @media(max-width:400px){
   .myModalContent{
-    width: 90%;
     margin: auto;
   }
 }
