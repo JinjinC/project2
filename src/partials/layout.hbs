@@ -54,6 +54,7 @@
 <script src="lib/underscore/underscore.js"></script>
 
 
+
 <!-- common application js -->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
@@ -61,7 +62,7 @@
 <!-- common templates -->
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
-        <div>Background</div>
+        <div>背景</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
             <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>" style="background-color:rgb(255, 233, 110); width:33%;">黄</button>
@@ -71,11 +72,11 @@
     </div>
     
     <div class="setting clearfix">
-        <div>Sidebar</div>
+        <div>侧边栏</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>" style="width: 50%;">Show</button>
-            <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>" style="width: 50%;">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>" style="width: 50%;">显示</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>" style="width: 50%;">隐藏</button>
         </div>
     </div>
     

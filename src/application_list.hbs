@@ -11,7 +11,7 @@
     {{#replace "app_content"}}
     <div style="margin-left: -185px;">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-12">
                 <h2 class="page-title">应用程序<small>应用程序列表</small>
                     <a href="add_application.html">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
@@ -23,7 +23,7 @@
         </div>
         
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-12">
                  <section class="widget">
                     <div class="body">
                         <table class="table table-striped no-margin sources-table">
@@ -37,11 +37,53 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="indexD.html" class="appItem">订餐系统</a></td>
+                                <td><a href="indexD.html" class="appItem">My Application</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
-                            </tr>                                   
+                            </tr> 
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app1</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>   
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app2</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>  
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app3</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr> 
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app4</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>   
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app4</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>    
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app5</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr> 
+                            <tr>
+                                <td><a href="indexD.html" class="appItem">app6</a></td>
+                                <td>0 ms</td>
+                                <td>0.0</td>
+                                <td>0.00%</td>
+                            </tr>                               
                             </tbody>
                         </table>
                     </div>
@@ -54,7 +96,7 @@
                             <li class="active">
                                 <a href="#All" data-toggle="tab"><i class="iconfont icon1">&#xe60d;</i></a>
                             </li>
-                            <li>
+                            <li data-toggle="tooltip" data-placement="top" title="宕机">
                                 <a href="#breaktime" data-toggle="tab"><i class="iconfont icon1">&#xe607;</i></a>
                             </li>
                             <li>
@@ -105,5 +147,7 @@
             $('#divider1').hide();
         </script>
     {{/append}}
+
+  
 
 {{/extend}}

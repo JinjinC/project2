@@ -46,13 +46,14 @@
   float:left;
   background-color: transparent;
   color: #fff;
-  border: solid 1px transparent;
+  border: solid 1px #fff;
   padding: 0 6px;
   margin-right: 13px;
   transition: border-color 0.2s;
 
   &:hover,
   &:focus{
+    opacity: 0.65;
     border: solid 1px #fff;
     background-color: transparent;
     box-shadow: none;

@@ -8,4 +8,4 @@ $(function(){
     pageLoad();
 
     PjaxApp.onPageLoad(pageLoad);
-});
+})
