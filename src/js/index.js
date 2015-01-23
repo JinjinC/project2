@@ -21,8 +21,14 @@ $(function(){
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
             var data = testData(['单独', '访问量'], 30);
             data[0].area = true;
-            d3.select('.visits-chart svg')
+            d3.select('#visits-chart svg')
                 .datum(data)
+                .transition().duration(500)
+                .call(chart);
+
+             d3.select('#sources-chart-line svg')
+                //.datum(sinAndCos())
+                .datum(testData)
                 .transition().duration(500)
                 .call(chart);
 

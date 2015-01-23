@@ -1223,7 +1223,11 @@ legend + .control-group {
         color: $text-color;
       }
     }
+    & > .tabItem{
+      background: rgba(51, 51, 51, 0.4) !important;
+    }
   }
+
 
   .nav > li:not(.active) > a{
     background: $bg-transparent;
