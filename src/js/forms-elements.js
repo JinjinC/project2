@@ -107,7 +107,7 @@ $(function(){
         $('#datetimepicker1').datetimepicker({
             pickTime: false
         });
-        $('#datetimepicker2').datetimepicker1({
+        $('#datetimepicker2').datetimepicker({
         });
 
         $('#colorpicker').colorpicker({color: '#999'});
