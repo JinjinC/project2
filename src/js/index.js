@@ -22,6 +22,7 @@ $(function(){
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
             var data = testData(['单独', '访问量','数据库'], 30);
             data[0].area = true;
+<<<<<<< HEAD
             d3.select('#visits-chart1 svg')
                 .datum(data)
                 .transition().duration(500)
@@ -38,7 +39,16 @@ $(function(){
                 .call(chart);
 
             d3.select('#visits-chart4 svg')
+=======
+            d3.select('#visits-chart svg')
+>>>>>>> 4557c3bc772d89eabac5a5c7de67a01fd56eece3
                 .datum(data)
+                .transition().duration(500)
+                .call(chart);
+
+             d3.select('#sources-chart-line svg')
+                //.datum(sinAndCos())
+                .datum(testData)
                 .transition().duration(500)
                 .call(chart);
 

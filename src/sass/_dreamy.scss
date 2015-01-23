@@ -1,3 +1,7 @@
+/***********************************/
+/**          ICON         **/
+/**********************************/
+
 
 .iconfont{
   font-family:"iconfont";
@@ -8,6 +12,11 @@
 }
 .icon2{
   font-size: 12px;
+}
+.icon2-dd{
+  font-size: 12px;
+  float: right; 
+  margin:2px 0 0 5px;
 }
 .icon3{
   font-size: 21px;
@@ -26,6 +35,40 @@
     cursor: pointer;
   }
 }
+
+.iconlogo{
+  font-size: 140px; 
+  color:rgba(51, 51, 51, 0.5);
+  &:hover,
+  &:focus{
+    color: white;
+  }
+}
+
+
+/***********************************/
+/**          TAB         **/
+/**********************************/
+li.dd-item:hover{
+
+  background-color: rgba(51, 51, 51, 0.1);
+}
+
+.tabItem{
+  color: white !important;
+  background-color: transparent !important;
+  &:hover{
+    background: rgba(0, 0, 0, 0.1) !important;   
+  }
+
+  // &:focus,
+  &:visited,
+  &:active,
+  .active{
+    background: rgba(51, 51, 51, 0.4) !important;
+  }
+}
+
 .btn-hollow{
 
   float:right;
@@ -61,14 +104,6 @@
   }
 }
 
-.iconlogo{
-  font-size: 140px; 
-  color:rgba(51, 51, 51, 0.5);
-  &:hover,
-  &:focus{
-    color: white;
-  }
-}
 
 .appItem {
   color: #9bd0f6;

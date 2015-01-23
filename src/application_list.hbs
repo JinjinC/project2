@@ -99,16 +99,16 @@
                             <li data-toggle="tooltip" data-placement="top" title="宕机">
                                 <a href="#breaktime" data-toggle="tab"><i class="iconfont icon1">&#xe607;</i></a>
                             </li>
-                            <li>
+                            <li data-toggle="tooltip" data-placement="top" title="通知">
                                 <a href="#notify" data-toggle="tab"><i class="iconfont icon1">&#xe60c;</i></a>
                             </li>
-                            <li>
+                            <li data-toggle="tooltip" data-placement="top" title="严重问题">
                                 <a href="#issue" data-toggle="tab"><i class="iconfont icon1">&#xe608;</i></a>
                             </li>
-                            <li>
+                            <li data-toggle="tooltip" data-placement="top" title="告警问题">
                                 <a href="#warn" data-toggle="tab"><i class="iconfont icon1">&#xe60a;</i></a>
                             </li>
-                            <li>
+                            <li data-toggle="tooltip" data-placement="top" title="注释">
                                 <a href="#notes" data-toggle="tab"><i class="iconfont icon1">&#xe60b;</i></a>
                             </li>
                             
@@ -145,9 +145,10 @@
             $('#divider').hide();
             $('#settings').hide();
             $('#divider1').hide();
+            $("li").tooltip();
         </script>
     {{/append}}
 
-  
+
 
 {{/extend}}

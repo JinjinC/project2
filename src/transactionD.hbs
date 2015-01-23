@@ -14,22 +14,84 @@
                         <header>
                             <ul class="nav nav-tabs">
                                 <li class="active">
-                                    <a href="#webTran" data-toggle="tab">Web 事务</a>
+                                    <a href="#webTran" data-toggle="tab" style="font-size:14px;">Web 事务</a>
                                 </li>
-                                <li>
-                                    <a href="#" data-toggle="tab">其他事务</a>
-                                </li>
+                               
                             </ul>
                         </header>
                         <div class="body tab-content">
-                            <div id="webTran" class="tab-pane active clearfix" style="font-size: 200px; text-align: center; color: #56bc76; height: 200px;">
-                                
-                                
-                            </div>
-                            <div id="OtherTran" class="tab-pane clearfix">
-                                <div style="font-size: 200px; text-align: center; color: #56bc76; height: 280px;">
-                                    
-                                </div>
+                            <div id="webTran" class="tab-pane active clearfix">
+
+                                    <div class="body" style="background-color:transparent; padding:0;">
+                                        <ul id="myTab" class="nav nav-tabs">
+                                            <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
+                                            <li><a href="#apdex" data-toggle="tab" class="tabItem">Apdex</a></li>
+                                            <li><a href="#throughput" data-toggle="tab" class="tabItem active">吞吐量</a></li>
+                                        </ul>
+                                        <div id="myTabContent" class="tab-content" >
+                                            <div class="tab-pane fade in active" id="responseTime">
+                                                <div class="dd" id="nestable1">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/test</span>
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;">5.35s</span>
+
+                                                            </div>
+                                                        </li>
+                                                        <li class="dd-item" data-id="2">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/split</span>
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;">1.00s</span>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="apdex">
+                                                <div class="dd" id="nestable2">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/test</span>
+                                                                <span style="float: right;">0.00</span>
+                                                            </div>                                                        
+                                                        </li>
+                                                        <li class="dd-item" data-id="2">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/split</span>
+                                                                <span style="float: right;">0.50</span>
+                                                            </div>                                                        
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="throughput">
+                                                <div class="dd" id="nestable3">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/test</span>
+                                                                <span style="float: right;">0.0002cpm</span>
+                                                            </div>                                                        
+                                                        </li>
+                                                        <li class="dd-item" data-id="2">
+                                                            <div class="dd-handle">
+                                                                <span>SpringController/TestController/split</span>
+                                                                <span style="float: right;">0.0001cpm</span>
+                                                            </div>                                                        
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                           
                             </div>
                             
                         </div>
@@ -134,20 +196,25 @@
 
     {{#append "scripts"}}
         <!-- page libs -->
-        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
-        <script src="lib/jquery.sparkline/index.js"></script>
+        // {{!-- <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        // <script src="lib/jquery.sparkline/index.js"></script>
 
-        <script src="lib/backbone/backbone.js"></script>
-        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+        // <script src="lib/backbone/backbone.js"></script>
+        // <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
 
-        <script src="lib/d3/d3.min.js"></script>
-        <script src="lib/nvd3/nv.d3.min.js"></script>
+        // <script src="lib/d3/d3.min.js"></script>
+        // <script src="lib/nvd3/nv.d3.min.js"></script> --}}
+
+       <!-- page specific libs -->
+        <script src="lib/jquery-ui/ui/core.js"></script>
+        <script src="lib/jquery-ui/ui/widget.js"></script>
+        <script src="lib/jquery-ui/ui/mouse.js"></script>
+        <script src="lib/jquery-ui/ui/sortable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
         <!-- page application js -->
-        <script src="js/index.js"></script>
-        <script src="js/chat.js"></script>
-
-        <!-- page template -->
+        <script src="js/component-list-groups.js"></script>
         
     {{/append}}
 

@@ -1,56 +1,32 @@
 {{#extend "layout"}}
 
     {{#replace "sidebar"}}
-        {{> sidebar this conditionClass=conditionClass active="sql"}}
+        {{> sidebar this conditionClass=conditionClass active="background_task"}}
     {{/replace}}
 
     {{#replace "app_content"}}
-     <h2 class="page-title">SQL <small>SQL页面</small></h2>
+     <h2 class="page-title">后台任务 <small>后台任务页面</small></h2>
         <div class="row">
             <div class="col-lg-4">
                 <div class="row">
                     <div class="col-md-12">
-                       <section class="widget widget-tabs">
-                        <header>
-                            <ul class="nav nav-tabs">
-                                <li class="active">
-                                    <a href="#webTran" data-toggle="tab" style="font-size:14px;">Database</a>
-                                </li>
-                               
-                            </ul>
-                        </header>
-                        <div class="body tab-content">
-                            <div id="webTran" class="tab-pane active clearfix">
-
-                                    <div class="body" style="background-color:transparent; padding:0;">
-                                        <ul id="myTab" class="nav nav-tabs">
-                                            <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
-                                            <li><a href="#throughput" data-toggle="tab" class="tabItem active">吞吐量</a></li>
-                                        </ul>
-                                        <div id="myTabContent" class="tab-content" >
-                                            <div class="tab-pane fade in active" id="responseTime">
-                                                <div class="dd" id="nestable1">
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="tab-pane fade" id="throughput">
-                                                <div class="dd" id="nestable3">
-                                                    
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                           
+                        <section class="widget widget-tabs">
+                            <header>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#stats" data-toggle="tab">后台任务</a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="body tab-content">
+                                <div id="stats" class="tab-pane active clearfix">
+                                    
+                                    
+                                </div>
                             </div>
-                            
-                        </div>
-                    </section>
+                        </section>
                     </div>
-
                 </div>
-
             </div>
 
             <div class="col-lg-8">
@@ -60,49 +36,6 @@
                             <header>
                                 <h4>
                                     响应时间
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                                
-                            </div>
-                        </section>
-
-                    </div> 
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                         <section class="widget">
-                            <header>
-                                <h4>
-                                    吞吐量 - 操作类型
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                               
-                            </div>
-                        </section>
-
-                    </div>
-                    <div class="col-md-6">
-                         <section class="widget">
-                            <header>
-                                <h4>
-                                    响应时间 - 操作类型
                                     
                                 </h4>
                                 <div class="widget-controls">
@@ -114,14 +47,52 @@
                                 <div id="visits-chart" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
-                               
                             </div>
                         </section>
-
-                    </div>
-
+                    </div> 
                 </div>
                 <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    CPU 使用率
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    内存使用情况
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                 <div class="row">
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
@@ -134,8 +105,8 @@
                                 <table class="table table-striped no-margin sources-table">
                                     <thead>
                                     <tr>
-                                        <th class="source-col-header">最慢 SQL</th>
-                                        <th>时间戳</th>
+                                        <th class="source-col-header">Traces</th>
+                                        <th>开始时间</th>
                                         <th>耗时</th>
                                     </tr>
                                     </thead>
@@ -150,14 +121,9 @@
                             </div>
                         </section>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-       
     {{/replace}}
 
      {{#append "scripts"}}
@@ -170,8 +136,6 @@
 
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
-        <!-- page template -->
-        
     {{/append}}
 
 {{/extend}}
