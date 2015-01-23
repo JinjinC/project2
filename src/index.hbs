@@ -58,7 +58,7 @@
 
                         })
 
-                        if (true){
+                        if (false){
 
                             if (!$('#loginButton').hasClass("buttonDisabled")) {
 
@@ -76,9 +76,9 @@
                                         $('#myModal').removeClass("in").removeClass("show-shadow").hide();
                                         $('.single-widget-container').removeClass("blur").addClass("animateBlur");
                                         $('header').show();
-                                        $('.nav.pull-left').hide();
-                                        $('.nav.pull-right>li:eq(0)').hide();
-                                        $('.nav.pull-right>li:eq(1)').hide();
+                                        $('#nav-left').hide();
+                                        $('#nav-right>li:eq(0)').hide();
+                                        $('#nav-right>li:eq(1)').hide();
                                         $('.in-footer').show();
                                     }
                                     else {
@@ -98,9 +98,9 @@
                             $('#myModal').removeClass("in").removeClass("show-shadow").hide();
                             $('.single-widget-container').removeClass("blur").addClass("animateBlur");
                             $('header').show();
-                            $('.nav.pull-left').hide();
-                            $('.nav.pull-right>li:eq(0)').hide();
-                            $('.nav.pull-right>li:eq(1)').hide();
+                            $('#nav-left').hide();
+                            $('#nav-right>li:eq(0)').hide();
+                            $('#nav-right>li:eq(1)').hide();
                             $('.in-footer').show();
 
                         }

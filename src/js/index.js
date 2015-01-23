@@ -1,12 +1,13 @@
 $(function(){
     function pageLoad(){
         nv.addGraph(function() {
+
             var chart = nv.models.lineChart()
                 .useInteractiveGuideline(true)
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    $orange, '#cf6d51'
+                    $blue, $green, $orange
                     //'#618fb0', '#61b082'
                 ]);
 
@@ -19,9 +20,24 @@ $(function(){
             chart.xAxis
                 .showMaxMin(false)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-            var data = testData(['单独', '访问量'], 30);
+            var data = testData(['单独', '访问量','数据库'], 30);
             data[0].area = true;
-            d3.select('.visits-chart svg')
+            d3.select('#visits-chart1 svg')
+                .datum(data)
+                .transition().duration(500)
+                .call(chart);
+
+            d3.select('#visits-chart2 svg')
+                .datum(data)
+                .transition().duration(500)
+                .call(chart);
+
+            d3.select('#visits-chart3 svg')
+                .datum(data)
+                .transition().duration(500)
+                .call(chart);
+
+            d3.select('#visits-chart4 svg')
                 .datum(data)
                 .transition().duration(500)
                 .call(chart);

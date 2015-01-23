@@ -5,7 +5,18 @@
     {{/replace}}
 
     {{#replace "app_content"}}
-     <h2 class="page-title">总览 <small>总览页面</small></h2>
+    <div class="row">
+
+        <div class="col-lg-5 col-md-5">
+            <h2 class="page-title">总览 <small>总览页面</small></h2>
+        </div>
+
+        <div class="col-lg-7 col-md-7">
+            {{#block "picker"}}
+                {{> picker }}
+            {{/block}}
+        </div>
+    </div>
        
         <div class="row">
             <div class="col-lg-8">
@@ -22,7 +33,7 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
+                                <div id="visits-chart1" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
                                 
@@ -81,7 +92,7 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
+                                <div id="visits-chart2" class="chart">
                                     <svg></svg>
                                 </div>
                                 
@@ -153,7 +164,7 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
+                                <div id="visits-chart3" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
                             </div>   
@@ -177,7 +188,7 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                                <div id="visits-chart" class="chart visits-chart">
+                                <div id="visits-chart4" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
                                 
@@ -242,6 +253,7 @@
         </div>
     {{/replace}}
 
+
     {{#append "scripts"}}
         <!-- page libs -->
         <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
@@ -256,6 +268,43 @@
         <!-- page application js -->
         <script src="js/index.js"></script>
         <!-- page template -->
+
+        <!-- daterange picker js -->
+         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+        <script src="lib/bootstrap-datepicker/bootstrap-datepicker.js"></script>                 <!-- Datepicker -->
+        <script src="lib/bootstrap-timepicker/bootstrap-timepicker.js"></script>                 <!-- Timepicker -->
+        <script src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <script>
+            $(document).ready(function() {
+                    // Date Range Picker init
+                    $('#daterangepicker').daterangepicker({
+                    timePicker: true, 
+                    timePickerIncrement: 30, 
+                    format: 'MM/DD/YYYY h:mm A',
+                    ranges: {
+                        '30 min': [moment().subtract('minute', 30), moment()],
+                        '60 min': [moment().subtract('hour', 1), moment()],
+                        '3 hour': [moment().subtract('hour', 3), moment()],
+                        '6 hour': [moment().subtract('hour', 6), moment()],
+                        '12 hour': [moment().subtract('hour',12), moment()],
+                        '1 day': [moment().subtract('days', 1), moment()],
+                        '3 day': [moment().subtract('days', 3), moment()],
+                        '7 day': [moment().subtract('days', 7), moment()],
+                        '15 day': [moment().subtract('days', 15), moment()]
+                    },
+                    opens: 'right',
+                    startDate: moment().subtract('days', 29),
+                    endDate: moment()
+                    },
+                    function(start, end) {
+                        $('#daterangepicker span').html(start.format('MM/DD/YYYY h:mm A') + ' - ' + end.format('MM/DD/YYYY h:mm A'));
+                    });
+                    
+                    $('#daterangepicker').css("")
+            });
+        </script>
         
     {{/append}}
 

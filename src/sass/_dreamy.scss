@@ -717,3 +717,19 @@
   94% { transform: translate(4px, 0px) rotate(0deg); }
   96% { transform: translate(2px, 0px) rotate(0deg); }
   98% { transform: translate(-2px, 0px) rotate(0deg); } }
+
+
+  /*all agents and daterange picker in the indexD nav*/
+  ////////////////////////
+  ////////////////////////
+
+  .picker {
+    background-color: rgba(51, 51, 51, 0.4);
+    margin-top: 5px;
+  }
+
+  .nav-picker {
+    margin-right: 14px;
+    margin-top: 10px;
+  }
+
