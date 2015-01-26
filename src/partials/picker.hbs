@@ -1,31 +1,33 @@
 <div class="navbar nav-picker">
    <ul class="nav navbar-nav navbar-right">
        <li class="dropdown agents">
-          <button class="btn btn-default dropdown-toggle picker" data-toggle="dropdown">
-              <a href="#"> All Agents </a>
-               <span class="caret"></span>
-          </button>
-           <ul class="dropdown-menu account">
-               <li>
-                   <a href="#">All Agents</a>
-               </li>
-               <li>
-                   <a href="#">Agents 1</a>
-               </li>
-               <li>
-                   <a href="#">Agents 2</a>
-               </li>
-               <li>
-                   <a href="#">Agents 3</a>
-               </li>
-           </ul>
+          <div>
+              <button class="btn btn-default dropdown-toggle picker" data-toggle="dropdown">
+                  <a href="#"> All Agents </a>
+                   <span class="caret"></span>
+              </button>
+               <ul class="dropdown-menu account">
+                   <li>
+                       <a href="#">All Agents</a>
+                   </li>
+                   <li>
+                       <a href="#">Agents 1</a>
+                   </li>
+                   <li>
+                       <a href="#">Agents 2</a>
+                   </li>
+                   <li>
+                       <a href="#">Agents 3</a>
+                   </li>
+               </ul>
+          </div>
        </li>
        <li id="divider" class="divider"></li>
        <li role="presentation" class="timepicker">
            <div class="form-group">
                <button class="btn btn-default picker" id="daterangepicker">
                    <i class="fa fa-clock-o"></i> 
-                   <span><?php echo date("F j, Y", strtotime('-30 day')); ?> - <?php echo date("F j, Y"); ?></span> <b class="caret"></b>
+                   <span></span> <b class="caret"></b>
                </button>
            </div>
        </li>

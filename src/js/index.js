@@ -1,5 +1,6 @@
 $(function(){
     function pageLoad(){
+        
         nv.addGraph(function() {
 
             var chart = nv.models.lineChart()
@@ -94,7 +95,7 @@ $(function(){
             options.fillColor = 'rgba(255, 255, 255, 0.1)';
             $('#internal-trend').sparkline(values[4], options );
         }
-
+ 
         drawSparkLines();
 
         PjaxApp.onResize(drawSparkLines);
