@@ -54,10 +54,26 @@
 		                                </div>
 		                            </div>
 		                        </section>
-		                         <section class="widget">
+		                        <section class="widget">
 		                            <header>
 		                                <h4>
 		                                    响应时间
+		                                </h4>
+		                                <div class="widget-controls">
+		                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+		                                </div>
+		                            </header>
+		                            <div class="body no-margin">
+		                                <div id="visits-chart" class="chart visits-chart">
+		                                    <svg></svg>
+		                                </div>
+		                            </div>
+		                        </section>
+		                        <section class="widget">
+		                            <header>
+		                                <h4>
+		                                    吞吐量
 		                                </h4>
 		                                <div class="widget-controls">
 		                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -92,6 +108,8 @@
 
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
+        <!-- page application js -->
+        <script src="js/index.js"></script>
         
     {{/append}}
 
