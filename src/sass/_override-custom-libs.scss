@@ -251,7 +251,7 @@ $slider-handle-size: 26px;
   vertical-align: middle;
   position: relative;
   &.slider-horizontal {
-    width: 210px;
+    width: 100%;
     height: $slider-line-height;
     .slider-track {
       height: $slider-line-height/2;
