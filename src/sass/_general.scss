@@ -47,7 +47,7 @@ body{
   );
   &.background-dark{
     @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
-      rgba(160, 152, 166, 0.8) 30%, 
+      rgba(153, 139, 165, 0.8) 30%, 
       rgba(134, 138, 158, 0.8) 76%, 
       rgba(135, 150, 148, 0.8)
     );

@@ -23,11 +23,26 @@ $(function () {
         },
         function(start, end) {
             $('#daterangepicker span').html(start.format('MM/DD/YYYY h:mm A') + ' - ' + end.format('MM/DD/YYYY h:mm A'));
-        });
+        }),
+        function() {
+
+        };
 
     }
 
     pageLoad();
 
     PjaxApp.onPageLoad(pageLoad);
+}); 
+
+$(document).ready(function  () {
+    $('#daterangepicker').click(function  () {
+        if ($('.daterangepicker').css('display') != "none") {
+              $.proxy(this.hide, this);
+            } 
+        else {
+              $.proxy(this.show, this);
+            }
+    });
 });
+

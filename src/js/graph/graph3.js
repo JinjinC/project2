@@ -8,7 +8,7 @@ $(function(){
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    $blue, $green, $orange
+                    $blue, $green, $white
                     //'#618fb0', '#61b082'
                 ]);
 
@@ -21,32 +21,11 @@ $(function(){
             chart.xAxis
                 .showMaxMin(false)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-            var data = testData(['单独 ', '访问量 ','数据库 '], 30);
+            var data = testData(['A ', 'B ','C '], 30);
             data[0].area = true;
-            d3.select('#visits-chart1 svg')
-                .datum(data)
-                .transition().duration(500)
-                .call(chart);
-
-            d3.select('#visits-chart2 svg')
-                .datum(data)
-                .transition().duration(500)
-                .call(chart);
 
             d3.select('#visits-chart3 svg')
                 .datum(data)
-                .transition().duration(500)
-                .call(chart);
-
-            d3.select('#visits-chart4 svg')
-            d3.select('#visits-chart svg')
-                .datum(data)
-                .transition().duration(500)
-                .call(chart);
-
-             d3.select('#sources-chart-line svg')
-                //.datum(sinAndCos())
-                .datum(testData)
                 .transition().duration(500)
                 .call(chart);
 

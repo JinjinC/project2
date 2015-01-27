@@ -48,133 +48,31 @@ $(function(){
         }
 
         nv.addGraph(function() {
-
-            /*
-             * we need to display total amount of visits for some period
-             * calculating it
-             * pie chart uses y-property by default, so setting sum there.
-             */
-            for (var i = 0; i < testData.length; i++){
-                testData[i].y = Math.floor(d3.sum(testData[i].values, function(d){
-                    return d.y;
-                }))
-            }
-
-            var chart = nv.models.pieChartTotal()
-                .x(function(d) {return d.key })
-                .margin({top: 0, right: 20, bottom: 20, left: 20})
-                .values(function(d) {return d })
-                .color(COLOR_VALUES)
-                .showLabels(false)
+            var chart = nv.models.lineChart()
+                .margin({top: 0, bottom: 25, left: 30, right: 0})
                 .showLegend(false)
-                .tooltipContent(function(key, y, e, graph) {
-                    return '<h4>' + key + '</h4>' +
-                        '<p>' +  y + '</p>'
-                })
-                .total(function(count){
-                    return "<div class='visits'>" + count + "<br/> visits </div>"
-                })
-                .donut(true);
-            chart.pie.margin({top: 10, bottom: -20});
-
-            var sum = d3.sum(testData, function(d){
-                return d.y;
-            });
-            pieFooter
-                .append("div")
-                .classed("controls", true)
-                .selectAll("div")
-                .data(testData)
-                .enter().append("div")
-                .classed("control", true)
-                .style("border-top", function(d, i){
-                    return "3px solid " + COLOR_VALUES[i];
-                })
-                .html(function(d) {
-                    return "<div class='key'>" + d.key + "</div>"
-                        + "<div class='value'>" + Math.floor(100 * d.y / sum) + "%</div>";
-                })
-                .on('click', function(d) {
-                    pieChartUpdate.apply(this, [d]);
-                    setTimeout(function() {
-                        stackedChart.update();
-                        lineChart.update();
-                        barChart.update();
-                    }, 100);
-                });
-
-            d3.select("#sources-chart-pie svg")
-                .datum([testData])
-                .transition(500).call(chart);
-            PjaxApp.onResize(chart.update);
-
-            pieChart = chart;
-
-            return chart;
-        });
-
-        nv.addGraph(function(){
-            var chart = nv.models.multiBarChart()
-                .margin({left: 30, bottom: 20, right: 0})
-                .color(keyColor)
-                .controlsColor([$white, $white, $white])
-                .showLegend(false);
+                .color(keyColor);
 
             chart.yAxis
                 .showMaxMin(false)
-                .ticks(0)
                 .tickFormat(d3.format(',.f'));
 
             chart.xAxis
                 .showMaxMin(false)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
-            d3.select('#sources-chart-bar svg')
+            //just to make it look different
+            testData[0].area = true;
+            testData[3].area = true;
+
+            d3.select('#sources-chart-line svg')
+                //.datum(sinAndCos())
                 .datum(testData)
-                .transition().duration(500).call(chart);
+                .transition().duration(500)
+                .call(chart);
 
             PjaxApp.onResize(chart.update);
-
-            barChart = chart;
-
-            return chart;
-        });
-
-        nv.addGraph(function() {
-            var chart = nv.models.stackedAreaChart()
-                .margin({left: 0})
-                .color(keyColor)
-                .showControls(false)
-                .showLegend(false)
-                .style("stream")
-                .controlsColor([$textColor, $textColor, $textColor]);
-
-            chart.yAxis
-                .showMaxMin(false)
-                .tickFormat(d3.format(',f'));
-
-            chart.xAxis
-                .showMaxMin(false)
-                .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-
-            d3.select("#sources-chart-stacked svg")
-                .datum(testData)
-                .transition().duration(500).call(chart);
-            PjaxApp.onResize(chart.update);
-
-            chart.stacked.dispatch.on('areaClick.updateExamples', function(e) {
-                setTimeout(function() {
-                    lineChart.update();
-                    pieChart.update();
-                    barChart.update();
-
-                    pieSelect.selectAll('.control').classed("disabled", function(d){
-                        return d.disabled;
-                    });
-                }, 100);
-            });
-
-            stackedChart = chart;
+            lineChart = chart;
 
             return chart;
         });
@@ -197,7 +95,37 @@ $(function(){
             testData[0].area = true;
             testData[3].area = true;
 
-            d3.select('#sources-chart-line svg')
+            d3.select('#sources-chart-line1 svg')
+                //.datum(sinAndCos())
+                .datum(testData)
+                .transition().duration(500)
+                .call(chart);
+
+            PjaxApp.onResize(chart.update);
+            lineChart = chart;
+
+            return chart;
+        });
+
+        nv.addGraph(function() {
+            var chart = nv.models.lineChart()
+                .margin({top: 0, bottom: 25, left: 30, right: 0})
+                .showLegend(false)
+                .color(keyColor);
+
+            chart.yAxis
+                .showMaxMin(false)
+                .tickFormat(d3.format(',.f'));
+
+            chart.xAxis
+                .showMaxMin(false)
+                .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+
+            //just to make it look different
+            testData[0].area = true;
+            testData[3].area = true;
+
+            d3.select('#sources-chart-line2 svg')
                 //.datum(sinAndCos())
                 .datum(testData)
                 .transition().duration(500)

@@ -5,7 +5,19 @@
     {{/replace}}
 
     {{#replace "app_content"}}
-     <h2 class="page-title">错误信息 <small>错误信息界面</small></h2>
+    
+     <div class="row">
+
+         <div class="col-lg-5 col-md-5">
+              <h2 class="page-title">错误信息 <small>错误信息界面</small></h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+             {{#block "picker"}}
+                 {{> picker }}
+             {{/block}}
+         </div>
+     </div>
 
 
 		<div class="row">
@@ -77,6 +89,13 @@
 
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <!-- page application js -->
+        <script src="js/daterangepicker.js"></script>
 
         
     {{/append}}
