@@ -840,6 +840,12 @@ li.dd-item:hover{
   .picker {
     background-color: rgba(51, 51, 51, 0.4);
     margin-top: 5px;
+    &:hover,
+    &:active,
+    &:focus,
+    &:open{
+      background-color: rgba(26, 26, 26, 0.4);
+    }
   }
 
   .nav-picker {
