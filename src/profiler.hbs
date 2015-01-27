@@ -7,92 +7,117 @@
     {{#replace "app_content"}}
      <h2 class="page-title">性能剖析 <small>性能剖析界面</small></h2>
      <div class="row">
-     	<div class="col-lg-5">
+     	<div class="col-lg-4">
      		<section class="widget">
      			<header>
                     <h4>
                         创建性能剖析
                     </h4>
                 </header>
-                <div class="body no-margin">
+                <div class="body">
+                    <section class="widget" style="margin-bottom:17px;">
+                        <header>
+                            <h5>采样周期</h45>
+                        </header>
+                        <div style="float:right">4 min</div>
+                        <div class="mb-sm">
+                                <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="2" data-slider-max="10" data-slider-step="1" data-slider-value="4" style="display:none"/>
+                        </div>
+                        <div>
+                            <span>2 min</span>
+                            <span style="float:right">10 min</span>
+                        </div>
+                    </section>
+                    <section class="widget" style="margin-bottom:17px;">
+                        <header>
+                            <h5>采样频率</h45>
+                        </header>
+                        <div style="float:right">200 ms</div>
+                        <div class="mb-sm">
+                            <input class="js-slider" id="slider-ex2" data-slider-id='ex1Slider' type="text" data-slider-min="100" data-slider-max="1500" data-slider-step="100" data-slider-value="200" style="display:none"/>
+                        </div>
+                        <div>
+                            <span>100 ms</span>
+                            <span style="float:right">1500 ms</span>
+                        </div>
+                    </section>
+
+                    <section class="widget" style="margin-bottom:17px;">
+                        <header>
+                            <h5>仅包含 HTTP 请求</h5>
+                        </header>
+                       <div class="radio radio1">
+                            <input type="radio" name="radio1" id="radio1" value="option1" checked>
+                            <label for="radio1">
+                                是
+                            </label>
+                        </div>
+                        <div class="radio radio1">
+                            <input type="radio" name="radio1" id="radio2" value="option2">
+                            <label for="radio2">
+                                否
+                            </label>
+                        </div>
+                    </section>
+                    
+                    
                     <div>
-                        <h5>采样周期</h45>
-                    </div>
-                    <div class="mb-sm">
-                            <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" style="display:none"/>
-                    </div>
-                    <div>
-                        <span>采样频率</span>
-                    </div>
-                    <div class="mb-sm">
-                            <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" style="display:none"/>
-                    </div>
-                    <div>
-                        <span>仅包含 HTTP 请求？</span>
-                    </div>
-                    <div class="radio radio-danger">
-                        <input type="radio" name="radio1" id="radio1" value="option1">
-                        <label for="radio1">
-                            是
-                        </label>
-                    </div>
-                    <div class="radio radio-danger">
-                        <input type="radio" name="radio1" id="radio2" value="option2" checked>
-                        <label for="radio2">
-                            否
-                        </label>
-                    </div>
-                    <div>
-                        <section class="widget">
+                        <section class="widget" style="margin-bottom:17px;">
                             <header>
                                 <h4>
                                     服务器名称                                    
                                 </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
-                                </div>
                             </header>
-                            <div class="body">
+                            <div class="body no-margin">
                                 <table class="table table-striped no-margin sources-table">
                                     <thead>
                                     <tr>
-                                        <th width="20%" style="text-align: left;"></th>
-                                        <th width="40%" style="text-align: left;">名称</th>
+                                        <th width="5%" style="text-align: left;"></th>
+                                        <th width="50%" style="text-align: left;">名称</th>
                                         <th width="20%" style="text-align: left;">CPU</th>
-                                        <th width="20%" style="text-align: left;">内存(MB)</th>
+                                        <th width="25%" style="text-align: left;">内存(MB)</th>
                                                                        
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <input type="radio" name="radio2" id="radio1" value="option1">
+                                            <input type="radio" name="radio2" id="radio1" value="option1" style="margin:10px 0 10px 0">
                                         </td>
-                                        <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090(fe80:0:0:0:20c:29ff:fede:6cdc%2)</td>
+                                        <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
                                         <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
                                         <td style="text-align: left;">0.00</td>
-                                       
-                                    </tr>                                   
+                                    </tr> 
+                                    <tr>
+                                        <td style="text-align: left;">
+                                            <input type="radio" name="radio2" id="radio1" value="option1" style="margin:10px 0 10px 0">
+                                        </td>
+                                        <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
+                                        <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
+                                        <td style="text-align: left;">0.00</td>
+                                    </tr>                                     
                                     </tbody>
                                 </table>
                             </div>
                         </section>
+                        <div class="row margin-bottom text-align-center">
+                            <div class="col-md-8 col-md-offset-2">
+                                <button class="btn btn-lg btn-primary btn-block">
+                                    Block level
+                                </button>
+                            </div>
+                        </div>
 
                     </div>    
                 </div>
      		</section>
      	</div>
-        <div class="col-lg-7">
+        <div class="col-lg-8">
             <section class="widget">
                     <header>
                         <h4>
                             历史记录
                         </h4>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                        </div>
                     </header>
                     <div class="body">
                         <table class="table table-striped no-margin sources-table">
@@ -109,7 +134,34 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>2014-12-23 10:28:17</td>
+                                <td>2014-12-24 10:28:17</td>
+                                <td>100</td>
+                                <td>2</td>
+                                <td>是</td>
+                                <td>fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                                <td>oneapm</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>2014-12-25 10:28:17</td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>是</td>
+                                <td>fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                                <td>oneapm</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>2014-12-26 10:28:17</td>
+                                <td>50</td>
+                                <td>2</td>
+                                <td>否</td>
+                                <td>fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                                <td>oneapm</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>2014-12-24 10:28:17</td>
                                 <td>100</td>
                                 <td>2</td>
                                 <td>是</td>
