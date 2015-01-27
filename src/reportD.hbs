@@ -22,33 +22,79 @@
                     </header>
                     <div class="body tab-content">
                         <div id="webTran" class="tab-pane active clearfix">
+                            <div>
+
+                                <div class="checkbox checkbox0">
+                                    <input id="checkbox0" type="checkbox" disabled checked>
+                                    <label for="checkbox0">
+                                        今天
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox0">
+                                    <input id="checkbox1" type="checkbox">
+                                    <label for="checkbox1">
+                                        昨天
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox1">
+                                    <input id="checkbox2" type="checkbox" checked>
+                                    <label for="checkbox2">
+                                        7 天前
+                                    </label>
+                                </div>
+                                <div class="checkbox checkbox1">
+                                    <input id="checkbox3" type="checkbox">
+                                    <label for="checkbox3">
+                                       7 天内
+                                    </label>
+                                </div>
+                                 <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                    <i class="glyphicon glyphicon-refresh"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-report" data-placement="top" >
+                                    重置
+                                </button>
+                            </div>
                             <table class="table table-striped no-margin sources-table">
                                     <thead>
                                     <tr>
                                         <th style="width: 40%;">Web 事务</th>
-                                        <th>吞吐量</th>
-                                        <th>总执行时间</th>
-                                        <th>平均执行时间</th>
-                                        <th>Apdex</th>
-                                        <th> </th>
+                                        <th style="width: 12%;">吞吐量</th>
+                                        <th style="width: 12%;">总执行时间</th>
+                                        <th style="width: 12%;">平均执行时间</th>
+                                        <th style="width: 12%;">Apdex</th>
+                                        <th style="width: 12%;"> 
+                                            <div class="btn-group btn-choose-group">
+                                                <button class="btn dropdown-toggle btn-choose" data-toggle="dropdown">
+                                                    吞吐量
+                                                    <i class="fa fa-caret-down" style="padding-left:10px"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">吞吐量</a></li>
+                                                    <li><a href="#">总执行时间</a></li>
+                                                    <li><a href="#">平均执行时间</a></li>
+                                                    <li><a href="#">Apdex</a></li>
+                                                </ul>
+                                            </div>
+                                        </th>
                                        
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th>SpringController/TestController/test</th>
+                                        <th>0.0005cpm</th>
+                                        <th>21.40s</th>
+                                        <th>19.00s</th>
+                                        <th>0.00</th>
                                         <th></th>
                                     </tr>
                                     <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th>SpringController/TestController/split</th>
+                                        <th>0.0004cp,</th>
+                                        <th>2.09s</th>
+                                        <th>1.02s</th>
+                                        <th>1.00</th>
                                         <th></th>
                                     </tr>
                                     </tbody>

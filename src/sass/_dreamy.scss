@@ -1,8 +1,78 @@
 /***********************************/
 /**          ICON         **/
 /**********************************/
+.radio1{
+  width: 48px;
+  display: inline-block;
+}
+.checkbox0{
+  width: 61px;
+  display: inline-block;
+}
+.checkbox1{
+  width: 71px;
+  display: inline-block;
+}
+.label1{
+  margin-right: 10px;
+}
+.label2{
+  margin-right: 10px;
+}
 
 
+.btn-choose-group{
+  position: absolute;
+  top: 78px;
+  right: 5%;
+}
+.btn-report{
+  color: #fff;
+  background-color: transparent;
+  padding: 3px 7px 1px 7px;
+  border-color: #aaa;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited{
+    opacity: 0.65;
+  }
+}
+
+.btn-refresh{
+  color: #56bc76;
+  background-color: transparent;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 3px 7px 1px 7px;
+  border-color: #56bc76;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited{
+    color: #56bc76;
+    opacity: 0.65;
+  }
+
+}
+
+.btn-choose{
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited{
+    box-shadow: none;
+    text-decoration: underline;
+  }
+}
+button.btn.dropdown-toggle.btn-choose{
+  box-shadow:none;
+  -webkit-box-shadow:none;
+}
 .iconfont{
   font-family:"iconfont";
   font-size:40px;font-style:normal;
@@ -12,6 +82,15 @@
 }
 .icon2{
   font-size: 12px;
+  &.success{
+    color: rgb(86, 188, 118);
+  }
+  &.outdate{
+    color: rgb(234, 200, 94);
+  }
+  &.danger{
+    color:#e5603b;
+  }
 }
 .icon2-dd{
   font-size: 12px;

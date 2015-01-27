@@ -1212,6 +1212,7 @@ legend + .control-group {
     // padding-bottom: 10px;
     padding: 3px 8px;
     color: $text-color;
+  
   }
 
   .nav > li.active{
@@ -1225,6 +1226,9 @@ legend + .control-group {
     }
     & > .tabItem{
       background: rgba(51, 51, 51, 0.4) !important;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
     }
   }
 

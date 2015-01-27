@@ -24,7 +24,9 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                               
+                               <div id="visits-chart1" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
                             </div>
 						</section>
 					</div>
@@ -32,10 +34,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<section class="widget">
-							<header>
-                 
-                            </header>
-                            <div class="body">
+                            <div class="body" style="margin-top:0;">
                                 <table class="table table-striped no-margin sources-table">
                                     <thead>
                                     <tr>
@@ -77,6 +76,8 @@
 
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="js/index.js"></script>
 
         
     {{/append}}

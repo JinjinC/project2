@@ -27,3 +27,15 @@
     color: $gray;
   }
 }
+
+.checkbox input[type="checkbox"]:disabled + label::before{
+  opacity: 0.65;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.checkbox input[type="checkbox"]:disabled + label::after{
+  color: #eee;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
