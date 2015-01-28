@@ -91,6 +91,9 @@ button.btn.dropdown-toggle.btn-choose{
   &.danger{
     color:#e5603b;
   }
+  &.wait{
+    color: rgb(74, 121, 147);
+  }
 }
 .icon2-dd{
   font-size: 12px;
@@ -146,6 +149,10 @@ li.dd-item:hover{
   .active{
     background: rgba(51, 51, 51, 0.4) !important;
   }
+}
+
+a.tabIcon{
+  padding: 3px 9px !important;
 }
 
 .btn-hollow{

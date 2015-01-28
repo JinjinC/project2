@@ -5,7 +5,42 @@
     {{/replace}}
 
     {{#replace "app_content"}}
-     <h2 class="page-title">性能剖析 <small>性能剖析界面</small></h2>
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+              <h2 class="page-title">性能剖析 <small>性能剖析界面</small></h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+             <div class="navbar nav-picker">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown agents">
+                       <div>
+                           <button class="btn btn-default dropdown-toggle picker" data-toggle="dropdown">
+                               <a href="#"> All Agents </a>
+                                <span class="caret"></span>
+                           </button>
+                            <ul class="dropdown-menu account">
+                                <li>
+                                    <a href="#">All Agents</a>
+                                </li>
+                                <li>
+                                    <a href="#">Agents 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Agents 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Agents 3</a>
+                                </li>
+                            </ul>
+                       </div>
+                    </li>
+                </ul>  
+             </div
+         </div>
+
+    </div>
+     
      <div class="row">
      	<div class="col-lg-4">
      		<section class="widget">
@@ -16,31 +51,35 @@
                 </header>
                 <div class="body">
                     <section class="widget" style="margin-bottom:17px;">
-                        <header>
-                            <h5 style="float:left">采样周期</h5>
-                            <h5 style="float:right">4 min</h5>
+                        <header style="margin-bottom:10px">
+                            <h5>
+                                <span>采样周期</span>
+                                <span style="float:right; font-size:14px;">4 min</span>
+                            </h5>
                         </header>
                         
                         <div class="mb-sm">
                                 <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="2" data-slider-max="10" data-slider-step="1" data-slider-value="4" style="display:none"/>
                         </div>
                         <div>
-                            <span>2 min</span>
-                            <span style="float:right">10 min</span>
+                            <span style="color:rgb(187, 187, 187)">2 min</span>
+                            <span style="float:right; color:rgb(187, 187, 187)">10 min</span>
                         </div>
                     </section>
                     <section class="widget" style="margin-bottom:17px;">
-                        <header>
-                            <h5 style="float:left">采样频率</h5>
-                            <h5 style="float:right">200 ms</h5>
+                        <header style="margin-bottom:10px">
+                            <h5>
+                                <span>采样频率</span>
+                                <span style="float:right; font-size:14px;">1000 ms</span>
+                            </h5>
                         </header>
                         
                         <div class="mb-sm">
-                            <input class="js-slider" id="slider-ex2" data-slider-id='ex1Slider' type="text" data-slider-min="100" data-slider-max="1500" data-slider-step="100" data-slider-value="200" style="display:none"/>
+                            <input class="js-slider" id="slider-ex2" data-slider-id='ex1Slider' type="text" data-slider-min="100" data-slider-max="1500" data-slider-step="100" data-slider-value="1000" style="display:none"/>
                         </div>
                         <div>
-                            <span>100 ms</span>
-                            <span style="float:right">1500 ms</span>
+                            <span style="color:rgb(187, 187, 187)">100 ms</span>
+                            <span style="float:right; color:rgb(187, 187, 187)">1500 ms</span>
                         </div>
                     </section>
 
@@ -84,7 +123,10 @@
                                     <tbody>
                                     <tr>
                                         <td style="text-align: left;">
-                                            <input type="radio" name="radio2" id="radio1" value="option1" style="margin:10px 0 10px 0">
+                                            <div class="radio" style="margin-top: -3px;">
+                                                <input type="radio" name="radio2" id="radio3" value="option1" checked>
+                                                <label for="radio3"></label>
+                                            </div>
                                         </td>
                                         <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
                                         <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
@@ -92,7 +134,10 @@
                                     </tr> 
                                     <tr>
                                         <td style="text-align: left;">
-                                            <input type="radio" name="radio2" id="radio1" value="option1" style="margin:10px 0 10px 0">
+                                            <div class="radio" style="margin-top: -3px;">
+                                                <input type="radio" name="radio2" id="radio4" value="option2">
+                                                <label for="radio4"></label>
+                                            </div>
                                         </td>
                                         <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
                                         <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
@@ -103,9 +148,9 @@
                             </div>
                         </section>
                         <div class="row margin-bottom text-align-center">
-                            <div class="col-md-8 col-md-offset-2">
-                                <button class="btn btn-lg btn-primary btn-block">
-                                    Block level
+                            <div class="col-md-12">
+                                <button class="btn btn-lg btn-success btn-block">
+                                    性能剖析
                                 </button>
                             </div>
                         </div>
