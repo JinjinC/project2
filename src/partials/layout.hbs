@@ -64,10 +64,10 @@
     <div class="setting clearfix">
         <div>背景</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
-            <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>" style="background-color:rgb(255, 233, 110); width:33%;">黄</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>" style="background-color:rgb(61, 171, 255); width:33%;">蓝</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>" style="background-color:rgb(255, 152, 68); width:33%;">橙</button>
+            <% dark = background == 'dark'; light = background == 'light'; dawn = background == 'dawn';%>
+            <button type="button" data-value="dark" class="btn btn-sm btn-default <%= dark? 'active' : '' %>">沙</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-default <%= light? 'active' : '' %>">湖</button>
+            <button type="button" data-value="dawn" class="btn btn-sm btn-default <%= dawn? 'active' : '' %>">梦</button>
         </div>
     </div>
     

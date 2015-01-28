@@ -389,7 +389,7 @@ li.dd-item:hover{
 
 .home-footer{
   position:absolute;
-  bottom:0.5%;
+  bottom:1.5%;
   text-align: center;
   width: 100%;
   color: white;
@@ -858,9 +858,30 @@ li.dd-item:hover{
   }
 
   .background2 {
-    background-color: rgba(244,0,244,0.89);
+    background-color: rgba(144,133,79,0.89);
   }
 
   .background3 {
-    background-color: rgba(0,244,244,0.89);
+    background-color: rgba(136,79,144,0.89);
   }
+
+@media (max-width:768px){
+  .logo, .sidebar-on-right .logo, .sidebar-hidden .logo{
+    display: block;
+    left: 0%;
+    top: 4px;
+    right: auto;
+    padding-right: 5px;
+    width: 140px;
+
+    &>h4>a{
+      line-height: 0.2;
+    }
+
+  }
+
+  .hidden-btn {
+    width: auto;
+  }
+  
+}

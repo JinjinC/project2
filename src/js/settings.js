@@ -41,10 +41,19 @@ $(function(){
         },
         backgroundStyle = function(style){
             if (style == "dark"){
-                $body.addClass("background-dark");
+                $body.addClass("background2");
             } else {
+                $body.removeClass("background2");
                 $body.removeClass("background-dark");
             }
+
+            if (style == "dawn"){
+                $body.addClass("background3");
+            } else{
+                $body.removeClass("background3");
+                $body.removeClass("background-dark");
+            }
+
         },
         sidebarState = function(state, triggerResize){
             var $template = $('#sidebar-settings-template');
@@ -271,4 +280,4 @@ window.LightBlue = {
     darken: function(color, ratio) {
         return this.changeColor(color, ratio, true);
     }
-};
+}; 

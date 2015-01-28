@@ -673,6 +673,10 @@ position: absolute;
       // line-height: 36px;
       text-shadow: none;
 
+      &.hidden-btn{
+        width: auto;
+      }
+
       &:hover{
         color: $white;
       }
