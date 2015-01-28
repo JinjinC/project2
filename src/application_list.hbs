@@ -29,61 +29,67 @@
                         <table class="table table-striped no-margin sources-table">
                             <thead>
                             <tr>
-                                <th width="50%">应用程序</th>
+                                <th width="6%">状态</th>
+                                <th style="text-align:left; width:15%">名称</th>
                                 <th>响应时间</th>
                                 <th>吞吐量(cpm)</th>
                                 <th>错误率</th>
+                                <th width="15%">趋势</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="indexD.html" class="appItem">My Application</a></td>
+                                <td><i class="iconfont icon2" >&#xe60f; </i></td>
+                                <td style="text-align:left"><a href="indexD.html" class="appItem">My Application</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
+                                <td class="chart-cell hidden-xs">
+                                    <div id="internal-trend"></div>
+                                </td>
                             </tr> 
                             <tr>
-                                <td><a href="indexD.html" class="appItem">app1</a></td>
+                                <td><i class="iconfont icon2 success">&#xe60f; </i></td>
+                                <td style="text-align:left"><a href="indexD.html" class="appItem">app1</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
+                                <td class="chart-cell hidden-xs">
+                                    <div id="direct-trend"></div>
+                                </td>
                             </tr>   
+                           
                             <tr>
-                                <td><a href="indexD.html" class="appItem">app2</a></td>
+                                <td><i class="iconfont icon2 outdate">&#xe60f; </i></td>
+                                <td style="text-align:left"><a href="indexD.html" class="appItem">app3</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
-                            </tr>  
-                            <tr>
-                                <td><a href="indexD.html" class="appItem">app3</a></td>
-                                <td>0 ms</td>
-                                <td>0.0</td>
-                                <td>0.00%</td>
+                                <td class="chart-cell hidden-xs">
+                                    <div id="refer-trend"></div>
+                                </td>
                             </tr> 
                             <tr>
-                                <td><a href="indexD.html" class="appItem">app4</a></td>
+                                <td><i class="iconfont icon2 danger">&#xe60f; </i></td>
+                                <td style="text-align:left"><a href="indexD.html" class="appItem">app4</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
-                            </tr>   
-                            <tr>
-                                <td><a href="indexD.html" class="appItem">app4</a></td>
-                                <td>0 ms</td>
-                                <td>0.0</td>
-                                <td>0.00%</td>
-                            </tr>    
-                            <tr>
-                                <td><a href="indexD.html" class="appItem">app5</a></td>
-                                <td>0 ms</td>
-                                <td>0.0</td>
-                                <td>0.00%</td>
+                                <td class="chart-cell hidden-xs">
+                                    <div id="search-trend"></div>
+                                </td>
                             </tr> 
-                            <tr>
-                                <td><a href="indexD.html" class="appItem">app6</a></td>
+                             <tr>
+                                <td><i class="iconfont icon2 wait">&#xe60f; </i></td>
+                                <td style="text-align:left"><a href="indexD.html" class="appItem">app5</a></td>
                                 <td>0 ms</td>
                                 <td>0.0</td>
                                 <td>0.00%</td>
-                            </tr>                               
+                                <td class="chart-cell hidden-xs">
+                                    <div id="social-trend"></div>
+                                </td>
+                            </tr>     
+                                          
                             </tbody>
                         </table>
                     </div>
@@ -94,22 +100,22 @@
                     <header>
                         <ul class="nav nav-tabs">
                             <li class="active">
-                                <a href="#All" data-toggle="tab"><i class="iconfont icon1">&#xe60d;</i></a>
+                                <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
                             </li>
                             <li data-toggle="tooltip" data-placement="top" title="宕机">
-                                <a href="#breaktime" data-toggle="tab"><i class="iconfont icon1">&#xe607;</i></a>
+                                <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
                             </li>
                             <li data-toggle="tooltip" data-placement="top" title="通知">
-                                <a href="#notify" data-toggle="tab"><i class="iconfont icon1">&#xe60c;</i></a>
+                                <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
                             </li>
                             <li data-toggle="tooltip" data-placement="top" title="严重问题">
-                                <a href="#issue" data-toggle="tab"><i class="iconfont icon1">&#xe608;</i></a>
+                                <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
                             </li>
                             <li data-toggle="tooltip" data-placement="top" title="告警问题">
-                                <a href="#warn" data-toggle="tab"><i class="iconfont icon1">&#xe60a;</i></a>
+                                <a href="#warn" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
                             </li>
                             <li data-toggle="tooltip" data-placement="top" title="注释">
-                                <a href="#notes" data-toggle="tab"><i class="iconfont icon1">&#xe60b;</i></a>
+                                <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
                             </li>
                             
                         </ul>
@@ -137,6 +143,18 @@
      
     {{/replace}}
     {{#append "scripts"}}
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
         <!-- page application js -->
         <script src="js/ui-buttons.js"></script>
         <script>
