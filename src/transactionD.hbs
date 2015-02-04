@@ -9,7 +9,7 @@
     <div class="row">
 
         <div class="col-lg-5 col-md-5">
-            <h2 class="page-title">事务 <small>事务页面</small></h2>
+            <h2 class="page-title"><span>事务 <small>事务页面</small></span></h2>
         </div>
 
         <div class="col-lg-7 col-md-7">
@@ -183,7 +183,7 @@
         </div>
 
         <div class="col-lg-8">
-            <div class="row">
+            <div class="row basic-card">
                 <div class="col-md-12">
                      <section class="widget">
                         <header>
@@ -207,7 +207,7 @@
                 </div> 
 
             </div>
-            <div class="row">
+            <div class="row basic-card">
                 <div class="col-md-12">
                      <section class="widget">
                         <header>
@@ -230,7 +230,7 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row basic-card">
                 <div class="col-md-12">
                     <section class="widget">
                         <header>
@@ -262,11 +262,23 @@
                 </div>
 
             </div>
+            <div class="row  float-card" style="transform: translateY(-667px);">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <span>Title</span>
+                            <span class="glyphicon glyphicon-remove pull-right"></span>
+                        </header>
+                        <div class="body" style="height:600px; ">
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
 
         </div>
 
     </div>
-
 
     
        
@@ -307,6 +319,33 @@
         <script src="js/daterangepicker.js"></script>
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph2.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-handle').click(function  () {
+
+                    $('.dd-handle').removeClass("active");
+
+                    $(this).addClass("active");
+
+                    $(this).find('button').addClass("active");
+
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
+
+
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInLeftBig");
+                                         },1000);
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+
+            });
+        </script>
         
     {{/append}}
 
