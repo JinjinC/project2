@@ -120,5 +120,11 @@ $(function(){
     pageLoad();
 
     PjaxApp.onPageLoad(pageLoad);
+
+    $('header>ul>li').click(function  () {
+        pageLoad();
+    });
+
+
 });
 

@@ -35,14 +35,4 @@ $(function () {
     PjaxApp.onPageLoad(pageLoad);
 }); 
 
-$(document).ready(function  () {
-    $('#daterangepicker').click(function  () {
-        if ($('.daterangepicker').css('display') != "none") {
-              $.proxy(this.hide, this);
-            } 
-        else {
-              $.proxy(this.show, this);
-            }
-    });
-});
 

@@ -840,6 +840,64 @@ a.tabIcon{
   98% { transform: translate(-2px, 0px) rotate(0deg); } }
 
 
+
+
+  ////////////////////////////////////////////////////
+  //////////              animate           /////////
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 100;
+}
+
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-200px,-667px);
+        transform: translate(-200px,-667px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-667px);
+        transform: translate(0,-667px);
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-200px,-667px);
+        -ms-transform: translate(-200px,-667px);
+        transform: translate(-200px,-667px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-667px);
+        -ms-transform: translate(0,-667px);
+        transform: translate(0,-667px);
+    }
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+
+
+
+
+
+
+
+  ///////////////////////////////////////////////////
+
+
   /*all agents and daterange picker in the indexD nav*/
   ////////////////////////
   ////////////////////////
@@ -858,19 +916,20 @@ a.tabIcon{
   .nav-picker {
     margin-right: 14px;
     margin-top: 13px;
+
+    &>.navbar-nav{
+      @media(max-width:992px){
+        float: left !important;
+        margin-left: 0;
+      }
+    }
+
+    &>ul>li{
+      display: inline-block;
+    }
   }
 
-  .background1 {
-    background-color: rgba(53, 115, 137, 0.89);
-  }
-
-  .background2 {
-    background-color: rgba(144,133,79,0.89);
-  }
-
-  .background3 {
-    background-color: rgba(136,79,144,0.89);
-  }
+  
 
 @media (max-width:768px){
   .logo, .sidebar-on-right .logo, .sidebar-hidden .logo{
@@ -891,4 +950,21 @@ a.tabIcon{
     width: auto;
   }
   
+}
+
+.basic-card {
+  z-index: 0;
+}
+
+.float-card {
+  display: none;
+  z-index: 2;
+  position: relative;
+  & .widget{
+    background-color: #fff;
+    color: rgba(51,51,51,0.6);
+  }
+  & span {
+    cursor: pointer;
+  }
 }

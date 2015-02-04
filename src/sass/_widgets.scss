@@ -1328,8 +1328,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   text-decoration: none;
   background: $bg-transparent;
   border-radius: $border-radius-base;
+  cursor: pointer;
 
   @include box-sizing(border-box);
+
+  &.active {
+    background: #fff;
+    color: #000;
+  }
 }
 
 .dd-item > button {

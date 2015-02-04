@@ -467,6 +467,7 @@ textarea,
   }
 }
 
+
 .nav > li > a{
   @include transition(background-color .2s);
   color: #fff;
@@ -487,9 +488,9 @@ textarea,
 
 
 .nav > li.divider {
-  display: block;
+  display: inline-block;
   height: 38px;
-  width: 1px;
+  width: 0px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 5px;

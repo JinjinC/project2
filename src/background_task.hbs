@@ -9,7 +9,7 @@
      <div class="row">
 
          <div class="col-lg-5 col-md-5">
-             <h2 class="page-title">后台任务 <small>后台任务页面</small></h2>
+             <h2 class="page-title"><span>后台任务 <small>后台任务页面</small></span></h2>
          </div>
 
          <div class="col-lg-7 col-md-7">
@@ -218,7 +218,7 @@
 
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 animation_box">
                          <section class="widget">
                             <header>
                                 <h4>
@@ -239,7 +239,7 @@
                     </div> 
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 animation_box">
                          <section class="widget">
                             <header>
                                 <h4>
@@ -259,7 +259,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 animation_box">
                          <section class="widget">
                             <header>
                                 <h4>
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                  <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 animation_box">
                         <section class="widget">
                             <header>
                                 <div class="widget-controls">
@@ -336,6 +336,27 @@
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph4.js"></script>
         <script src="js/bgcolor.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+
+                $('.dd-item').click(function  () {
+
+                    // console.log('item');
+
+                    // if ($('.animation_box').hasClass('animated fadeInLeftBig')) {
+                    //     $('.animation_box').removeClass('animated fadeInLeftBig');
+                    //     console.log('if');
+                    // }
+                    
+                    $('.animation_box').addClass('animated fadeInLeftBig');
+
+                    setTimeout(function (){
+                                            $('.animation_box').removeClass('animated fadeInLeftBig');
+                                         },1000);
+                });
+            });
+        </script>
 
     {{/append}}
 
