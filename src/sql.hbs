@@ -34,84 +34,63 @@
                         <div class="body tab-content">
                             <div id="webTran" class="tab-pane active clearfix">
 
-                                    <div class="body" style="background-color:transparent; padding:0;">
-                                        <ul id="myTab" class="nav nav-tabs">
-                                            <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
-                                            <li><a href="#throughput" data-toggle="tab" class="tabItem active">吞吐量</a></li>
-                                        </ul>
-                                        <div id="myTabContent" class="tab-content" >
-                                            <div class="tab-pane fade in active" id="responseTime">
-                                                <div class="dd" id="nestable1">
-                                                    <ol class="dd-list">
-                                                        <li class="dd-item dd-collapsed" data-id="1">
-
-                                                            <div class="dd-handle">
-                                                                <span>zhidao.baidu.com</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">3.11 s</span>
-                                                            </div>
-                                                            
-                                                        </li>
-                                                        <li class="dd-item dd-collapsed" data-id="2">
-                                                            <div class="dd-handle">
-                                                                <span>www.sina.com.cn</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">2.74 s</span>
-                                                            </div>
-                                                            
-                                                        </li>
-                                                        <li class="dd-item dd-collapsed" data-id="3">
-                                                            <div class="dd-handle">
-                                                                <span>www.baidu.com</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">1.46 s</span>
-                                                            </div>
-                                                          
-                                                    </ol>
-                                                </div>
+                                <div class="body" style="background-color:transparent; padding:0;">
+                                    <ul id="myTab" class="nav nav-tabs">
+                                        <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
+                                        <li><a href="#throughput" data-toggle="tab" class="tabItem active">吞吐量</a></li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content" >
+                                        <div class="tab-pane fade in active" id="responseTime">
+                                            <div class="dd" id="nestable1">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                       <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <span style="float: right;">5.43 ms</span>
+                                                            <div class="bar-graph" style="width:90%"></div>
+                                                            <div class="bar-text"><span>users-insert</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="dd-item dd-collapsed" data-id="2">
+                                                       <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <span style="float: right;">0.43 ms</span>
+                                                            <div class="bar-graph" style="width:10%"></div>
+                                                            <div class="bar-text"><span>users-update</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ol>
                                             </div>
-                                           
-                                            <div class="tab-pane fade" id="throughput">
-                                                <div class="dd" id="nestable2">
-                                                    <ol class="dd-list">
-                                                        <li class="dd-item dd-collapsed" data-id="1">
-
-                                                            <div class="dd-handle">
-                                                                <span>zhidao.baidu.com</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">0.0004 cpm</span>
-                                                            </div>
-                                                           
-                                                        </li>
-                                                        <li class="dd-item dd-collapsed" data-id="2">
-                                                            <div class="dd-handle">
-                                                                <span>www.sina.com.cn</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">0.0002 cpm</span>
-                                                            </div>
-                                                            
-                                                        </li>
-                                                        <li class="dd-item dd-collapsed" data-id="3">
-                                                            <div class="dd-handle">
-                                                                <span>www.baidu.com</span>
-                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                </i>
-                                                                <span style="float: right;">0.0002 cpm</span>
-                                                            </div>
-                                                            
-                                                        </li>
-                                                    </ol>
-                                                    
-                                                </div>
+                                        </div>
+                                       
+                                        <div class="tab-pane fade" id="throughput">
+                                            <div class="dd" id="nestable2">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <span style="float: right;" style="width:100%">196,333 cpm</span>
+                                                            <div class="bar-graph" style="width:95%"></div>
+                                                            <div class="bar-text"><span>users-insert</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <span style="float: right;" style="width:100%">333 cpm</span>
+                                                            <div class="bar-graph" style="width:5%"></div>
+                                                            <div class="bar-text"><span>users-update</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ol>
                                             </div>
-
                                         </div>
                                     </div>
+                                </div>
                            
                             </div>
                             

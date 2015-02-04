@@ -18,99 +18,117 @@
         </div>
     </div>
        
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-12">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    响应时间
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart1" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                响应时间
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
                             </div>
-                        </section>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart1" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>
+                    </section>
 
-                    </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    事务
-                                    
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                                </div>
-                            </header>
-                            <div class="body">
-                                <table class="table table-striped no-margin sources-table">
-                                    <thead>
-                                   
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><span class="label label-info">SpringController/TestController/test</span></td>
-                                        <td>28.13s</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="label label-info">SpringController/TestController/split</span></td>
-                                        <td>18ms</td>
-                                    </tr>                                       
-                                    </tbody>
-                                </table>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                事务                                    
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
                             </div>
-                        </section>
-                        
-                        
-                    </div>
-                    <div class="col-lg-6">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    错误率
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart2" class="chart">
-                                    <svg></svg>
-                                </div>
-                                
-                            </div>
-                        </section>
-                    </div>
+                        </header>
+                        <div class="body">
+                            <ol class="dd-list">
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">47.99 s</span>
+                                        <div class="bar-graph"></div>
+                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                    </div>
+                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                </li>
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">15.37 s</span>
+                                        <div class="bar-graph" style="width:50%"></div>
+                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
+                                        
+                                    </div>
+                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                </li>
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">14.77 s</span>
+                                        <div class="bar-graph" style="width:30%"></div>
+                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
+                                        
+                                    </div>
+                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    服务器                                    
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
-                                </div>
-                            </header>
-                            <div class="body">
-                                <table class="table table-striped no-margin sources-table">
-                                    <thead>
+                <div class="col-lg-6">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                错误率
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart2" class="chart">
+                                <svg></svg>
+                            </div>
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                服务器                                    
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
+                            </div>
+                        </header>
+                        <div class="body">
+                            <table class="table table-striped no-margin sources-table">
+                                <thead>
                                     <tr>
                                         <th width="30%">服务器</th>
                                         <th>Apedx</th>
@@ -120,8 +138,8 @@
                                         <th>CPU</th>
                                         <th>内容(MB)</th>                                     
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                </thead>
+                                <tbody>
                                     <tr>
                                         <td>java:a:8080(localhost)</span></td>
                                         <td>713</td>
@@ -132,118 +150,104 @@
                                         <td>0.05%</td>
                                         <td>460.29</td>
                                     </tr>                                   
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-                    </div>
-                    
-                </div>
-                
-
-                
-                
-            </div>
-            <div class="col-lg-4">
-                <div class="row">
-                    <div class="col-md-12">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    Apdex
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart3" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                            </div>   
-                      
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
-
-                    </div>
-                    
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <section class="widget">
-                            <header>
-                                <h4>
-                                    吞吐量
-                                   
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart4" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                         <section class="widget widget-tabs">
-                    <header>
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="top" title="宕机">
-                                <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="top" title="通知">
-                                <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="top" title="严重问题">
-                                <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="top" title="宕机">
-                                <a href="#warn" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="top" title="注释">
-                                <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
-                            </li>
-                            
-                        </ul>
-                    </header>
-                    <div class="body tab-content">
-                        <div id="All" class="tab-pane active clearfix">
-                            <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
-                            <ul>
-                                <li>还没有事件</li>
-                            </ul>
-                        </div>
-                        <div id="breaktime" class="tab-pane">
-                            <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
-                            <ul>
-                                <li>还没有事件</li>
-                            </ul>
-                        </div>
-                    </div>
-                        
-                </section>
-
-
-                    </div>
-
-                </div>
-
             </div>
         </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                Apdex
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart3" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>   
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                吞吐量
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart4" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget widget-tabs">
+                        <header>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="通知">
+                                    <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="严重问题">
+                                    <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#warn" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="注释">
+                                    <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
+                                </li>
+                                
+                            </ul>
+                        </header>
+                        <div class="body tab-content">
+                            <div id="All" class="tab-pane active clearfix">
+                                <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
+                                <ul>
+                                    <li>还没有事件</li>
+                                </ul>
+                            </div>
+                            <div id="breaktime" class="tab-pane">
+                                <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
+                                <ul>
+                                    <li>还没有事件</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
                 
-            </div>
-        </div>
+    
+
     {{/replace}}
 
 
@@ -275,7 +279,7 @@
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph4.js"></script>
-        <script src="js/daterangepicker.js"></script>
+            
 
         
     {{/append}}
