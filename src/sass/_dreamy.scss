@@ -890,6 +890,40 @@ a.tabIcon{
 }
 
 
+@-webkit-keyframes fadeInLeftBigEx {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-200px,-549px);
+        transform: translate(-200px,-549px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-549px);
+        transform: translate(0,-549px);
+    }
+}
+
+@keyframes fadeInLeftBigEx {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-200px,-549px);
+        -ms-transform: translate(-200px,-549px);
+        transform: translate(-200px,-549px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-549px);
+        -ms-transform: translate(0,-549px);
+        transform: translate(0,-549px);
+    }
+}
+
+.fadeInLeftBigEx {
+    -webkit-animation-name: fadeInLeftBigEx;
+    animation-name: fadeInLeftBigEx;
+}
 
 
 

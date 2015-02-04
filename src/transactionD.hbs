@@ -312,11 +312,13 @@
         <script>
             $(document).ready(function  () {
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
-                $('.dd-item').click(function  () {
+                $('.dd-handle').click(function  () {
 
                     $('.dd-handle').removeClass("active");
 
-                    $(this).find('.dd-handle').addClass("active");
+                    $(this).addClass("active");
+
+                    $(this).find('button').addClass("active");
 
                     $('.float-card').show().addClass("animated fadeInLeftBig");
 
