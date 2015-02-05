@@ -1058,9 +1058,44 @@ a.tabIcon{
     }
 }
 
-.fadeInLeftBigEx {
-    -webkit-animation-name: fadeInLeftBigEx;
-    animation-name: fadeInLeftBigEx;
+.fadeInLeftBigA {
+    -webkit-animation-name: fadeInLeftBigA;
+    animation-name: fadeInLeftBigA;
+}
+
+@-webkit-keyframes fadeInLeftBigA {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50px,-940px);
+        transform: translate(-50px,-940px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-940px);
+        transform: translate(0,-940px);
+    }
+}
+
+@keyframes fadeInLeftBigA {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50px,-940px);
+        -ms-transform: translate(-50px,-940px);
+        transform: translate(-50px,-940px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,-940px);
+        -ms-transform: translate(0,-940px);
+        transform: translate(0,-940px);
+    }
+}
+
+.fadeInLeftBigA {
+    -webkit-animation-name: fadeInLeftBigA;
+    animation-name: fadeInLeftBigA;
 }
 
 

@@ -251,6 +251,135 @@
                         </section>
                     </div>
                 </div>
+
+                <div class="row  float-card" style="transform: translateY(-940px);">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <span class="float-card-title">Title</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </header>
+                            <div class="body">
+
+                             <section class="widget">
+                                <header>
+                                    <h4>
+                                        执行时间
+                                        
+                                    </h4>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart2" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                    
+                                </div>
+                            </section>
+
+                             <section class="widget">
+                                <header>
+                                    <h4>
+                                        吞吐量
+                                    </h4>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart5" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                   
+                                </div>
+                            </section>
+
+                        <section class="widget">
+                            <header>
+                               
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                </div>
+                            </header>
+                            <div class="body body-for-table">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="source-col-header">Breakdown Table</th>
+                                        <th>类型</th>
+                                        <th>百分比</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>other</td>
+                                        <td>java</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>users-insert</td>
+                                        <td>database</td>
+                                        <td>30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>blabla</td>
+                                        <td>java</td>
+                                        <td>30%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="widget">
+                            <header>
+                               
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                </div>
+                            </header>
+                            <div class="body body-for-table">
+                                <table class="table table-striped no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="source-col-header">Traces</th>
+                                        <th>开始时间</th>
+                                        <th>耗时</th>
+                                        <th>Agent</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10ms</td>
+                                        <td>10ms</td>
+                                        <td>a</td>
+                                        <td>a</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10ms</td>
+                                        <td>10ms</td>
+                                        <td>b</td>
+                                        <td>a</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     {{/replace}}
@@ -277,6 +406,37 @@
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph4.js"></script>
+        <script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph5.js"></script>
+
+        <script >
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-handle').click(function  () {
+
+                    $('.dd-handle').removeClass("active");
+
+                    $(this).addClass("active");
+
+                    $(this).find('button').addClass("active");
+
+                    $('.float-card').show().addClass("animated fadeInLeftBigA");
+
+
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInLeftBigA");
+                                         },500);
+
+                    $('.float-card-title').text($(this).find('.bar-text').text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+
+            });
+        </script>
 
     {{/append}}
 
