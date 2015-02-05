@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-md-12">
                        <section class="widget widget-tabs">
-                        <header>
+                        <header class="card-header">
                             <ul class="nav nav-tabs">
                                 <li class="active">
                                     <a href="#webTran" data-toggle="tab" style="font-size:14px; font-weight: 500">外部服务
@@ -56,7 +56,7 @@
                                                                 <div class="bar-text"><span>zhidao.baidu.com</span></div>
                                                             </div>
                                                             <ol class="dd-list">
-                                                                <li class="dd-item" data-id="1">
+                                                                <li class="dd-item" data-id="11">
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
@@ -65,7 +65,7 @@
                                                                         <div class="bar-text"><span>splits.do (GET)</span></div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="dd-item" data-id="2">
+                                                                <li class="dd-item" data-id="12">
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
@@ -269,11 +269,50 @@
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
-                                <span>Title</span>
+                                <span class="float-card-title">Title</span>
                                 <span class="glyphicon glyphicon-remove pull-right"></span>
                             </header>
-                            <div class="body" style="height:600px; ">
+                            <div class="body" style="min-height: 600px;">
                                 
+                                <section class="widget">
+                                    <header>
+                                       
+                                        <div class="widget-controls">
+                                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                        </div>
+                                    </header>
+                                    <div class="body body-for-table">
+                                        <table class="table table-striped no-margin sources-table">
+                                            <thead>
+                                            <tr>
+                                                <th class="source-col-header">事务</th>
+                                                <th>执行时间占比</th>
+                                                <th>响应时间</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td>50.05%</td>
+                                                <td>123.38ms</td>
+                                            </tr>
+                                            <tr>
+                                                <td>WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td>50.05%</td>
+                                                <td>123.38ms</td>
+                                            </tr>
+                                            <tr>
+                                                <td>WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td>50.05%</td>
+                                                <td>123.38ms</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+
+
                             </div>
                         </section>
                     </div>
@@ -329,6 +368,8 @@
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
                 $('.dd-handle').click(function  () {
 
+                    var handleParent = $('.dd-handle.active')
+
                     $('.dd-handle').removeClass("active");
                     $('.dd-item').find('button').removeClass("active");
 
@@ -336,12 +377,15 @@
 
                     $(this).parent().find('button').addClass("active");
 
+
                     $('.float-card').show().addClass("animated fadeInLeftBigEx");
 
 
                     setTimeout(function (){
                                              $('.float-card').removeClass("animated fadeInLeftBigEx");
                                          },1000);
+
+                    $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
                 $('.float-card .glyphicon-remove').click(function  () {
