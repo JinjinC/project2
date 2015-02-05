@@ -174,18 +174,27 @@
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                                </div>
+                               <h4>最慢 SQL</h4>
                             </header>
                             <div class="body">
                                 <table class="table table-striped no-margin sources-table">
                                     <thead>
                                     <tr>
-                                        <th class="source-col-header">最慢 SQL</th>
-                                        <th>时间戳</th>
-                                        <th>耗时</th>
+                                        <th width="34%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">名称</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">时间戳</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">耗时</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -210,71 +219,85 @@
                                 <span class="glyphicon glyphicon-remove pull-right"></span>
                             </header>
                             <div class="body">
-
-                                     <section class="widget">
-                                        <header>
-                                            <h4>
-                                                响应时间和吞吐量
-                                                
-                                            </h4>
-                                            <div class="widget-controls">
-                                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                            </div>
-                                        </header>
-                                        <div class="body no-margin">
-                                            <div id="visits-chart4" class="chart visits-chart">
-                                                <svg></svg>
-                                            </div>
-                                            
-                                        </div>
-                                    </section>
-
-                                     <section class="widget">
-                                        <header>
-                                            <h4>
-                                                调用者时间占比
-                                            </h4>
-                                            <div class="widget-controls">
-                                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                            </div>
-                                        </header>
-                                        <div class="body no-margin">
-                                            <div id="visits-chart5" class="chart visits-chart">
-                                                <svg></svg>
-                                            </div>
-                                           
-                                        </div>
-                                    </section>
-
-                                     <section class="widget">
+                                 <section class="widget">
                                     <header>
-                                       
+                                        <h4>
+                                            响应时间和吞吐量
+                                        </h4>
                                         <div class="widget-controls">
-                                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
                                         </div>
                                     </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart4" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </section>
+
+                                <section class="widget">
+                                    <header>
+                                        <h4>
+                                            调用者时间占比
+                                        </h4>
+                                        <div class="widget-controls">
+                                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                        </div>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart5" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                       
+                                    </div>
+                                </section>
+
+                                <section class="widget">
+                                    <header>
+                                       <h4>事务</h4>
+                                    </header>
                                     <div class="body body-for-table">
-                                        <table class="table table-striped no-margin sources-table">
+                                        <table class="table table-striped table-hover no-margin sources-table">
                                             <thead>
                                             <tr>
-                                                <th class="source-col-header">事务</th>
-                                                <th>访问次数</th>
-                                                <th>响应时间</th>
+                                                <th width="50%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">名称</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="16%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">访问次数</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="16%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">响应时间</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="18%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">吞吐量 </span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>transaction a</td>
-                                                <td>12</td>
-                                                <td>20ms</td>
+                                                <td style="text-align: left;">SpringController/insert.do (GET)</td>
+                                                <td style="text-align: left;">6700000</td>
+                                                <td style="text-align: left;">5.76 ms</td>
+                                                <td style="text-align: left;">223,333.33cpm</td>
                                             </tr>
                                             <tr>
-                                                <td>transaction b</td>
-                                                <td>12</td>
-                                                <td>20ms</td>
+                                                <td style="text-align: left;">SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">33000</td>
+                                                <td style="text-align: left;">6.33 ms</td>
+                                                <td style="text-align: left;">1,100.00cpm</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -348,6 +371,25 @@
                 });
 
             });
+
+             $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
         </script>
         
     {{/append}}
