@@ -48,7 +48,7 @@
                     <section class="widget">
                         <header>
                             <h4>
-                                事务                                    
+                                <a href="transactionD.html">事务</a>                                    
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
@@ -66,7 +66,7 @@
                                         <div class="bar-graph"></div>
                                         <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
                                     </div>
-                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">n\a</a></div>
                                 </li>
                                 <li class="trace-item">
                                     <div class="traceList">
@@ -78,7 +78,7 @@
                                         <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
                                         
                                     </div>
-                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">109,568 ms</a><a href="transactionD.html">   109,396 ms</a><a href="transactionD.html">   108,970 ms</a><a href="transactionD.html">   108,558 ms</a><a href="transactionD.html">   107,513 ms</a></div>
                                 </li>
                                 <li class="trace-item">
                                     <div class="traceList">
@@ -90,7 +90,7 @@
                                         <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
                                         
                                     </div>
-                                    <div class="trace_value">traces: <a href="">n\a</a></div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">112,242 ms</a><a href="transactionD.html">   111,167 ms</a><a href="transactionD.html">   107,892 ms</a><a href="transactionD.html">   106,685 ms</a><a href="transactionD.html">   105,872 ms</a></div>
                                 </li>
                             </ol>
                         </div>
@@ -100,7 +100,7 @@
                     <section class="widget">
                         <header>
                             <h4>
-                                错误率
+                                <a href="errorMessage.html">错误率</a>
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -132,33 +132,114 @@
                             <table class="table table-striped table-hover sources-table no-margin">
                                 <thead>
                                     <tr>
-                                        <th width="30%" class="sortedth">名称</th>
-                                        <th class="sortedth">Apedx</th>
-                                        <th class="sortedth">响应时间</th>
-                                        <th class="sortedth">吞吐量(cpm)</th> {{!-- class="hidden-xs"隐藏 --}}
-                                        <th class="sortedth">错误率</th>
-                                        <th class="sortedth">CPU</th>
-                                        <th class="sortedth">内容(MB)</th>                                     
+                                        <th width="28%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">名称</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="12%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">Apedx</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="12%" style="text-align: left;" class="sortedth" id="sort2">
+                                            <span class="sortedtext">响应时间</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+
+                                        </th>
+                                        <th width="12%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">吞吐量(cpm)</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th> 
+                                        <th width="12%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">错误率</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="12%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">CPU</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="12%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">内容(MB)</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                                                           
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>java:a:8080(localhost)</span></td>
-                                        <td>713</td>
-                                        <td>0.96</td>
-                                        <td>16 ms</td>
-                                        <td>0.52</td>
-                                        <td>4.11%</td>
-                                        <td>0.05%</td>
-                                        <td>460.29</td>
-                                    </tr>                                   
+                                        <td style="text-align: left;"><a href="">java:a:8080(localhost)</a></td>
+                                        <td style="text-align: left;">0.71</td>
+                                        <td style="text-align: left;">50.53 s</td>
+                                        <td style="text-align: left;">107.87</td>
+                                        <td style="text-align: left;">0.68%</td>
+                                        <td style="text-align: left;" id="cpuchart"><a href="">38.92%</a></td>
+                                        <td style="text-align: left;" id="contentchart"><a href="">1,115.08</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;"><a href="">(VM_203_101_centos)</a></td>
+                                        <td style="text-align: left;">0.00</td>
+                                        <td style="text-align: left;">0.00 ms</td>
+                                        <td style="text-align: left;">0.00</td>
+                                        <td style="text-align: left;">0.00%</td>
+                                        <td style="text-align: left;"><a href="">0.00%</a></td>
+                                        <td style="text-align: left;"><a href="">0.00</a></td>
+                                    </tr>  
+                                    <tr>
+                                        <td style="text-align: left;"><a href="">java:e-menu(10-10-39-113)</a></td>
+                                        <td style="text-align: left;">1.00</td>
+                                        <td style="text-align: left;">29.79 ms</td>
+                                        <td style="text-align: left;">0.60</td>
+                                        <td style="text-align: left;">0.00%</td>
+                                        <td style="text-align: left;"><a href="">0.05%</a></td>
+                                        <td style="text-align: left;"><a href="">165.46</a></td>
+                                    </tr>                                      
                                 </tbody>
                             </table>
-
-
-
                         </div>
                     </section>
+                    <div class="cputrend">
+                        <div class="modal" id="cputrend" style="position:relative; display:none;">
+                            <div class="modal-dialog" style="width: auto; padding: 0;">
+                                <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                    <header>
+                                        <h5>CPU</h5>
+                                    </header>
+                                    <div class="body">
+                                        <div id="single-chart1" class="chart single-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div>
+                    </div>
+                    <div class="contenttrend">
+                        <div class="modal" id="contenttrend" style="position:relative; display:none;">
+                            <div class="modal-dialog" style="width: auto; padding: 0;">
+                                <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                    <header>
+                                        <h5>内容(MB)</h5>
+                                    </header>
+                                    <div class="body">
+                                        <div id="single-chart2" class="chart single-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -221,7 +302,7 @@
                                     <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="top" title="宕机">
-                                    <a href="#warn" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                                    <a href="#warm" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="top" title="注释">
                                     <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
@@ -231,16 +312,114 @@
                         </header>
                         <div class="body tab-content">
                             <div id="All" class="tab-pane active clearfix">
-                                <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
-                                <ul>
-                                    <li>还没有事件</li>
-                                </ul>
+                                <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:28</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                          
+                                    </tbody>
+                                </table>
+
                             </div>
                             <div id="breaktime" class="tab-pane">
-                                <span><h5>开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</h5></span>
-                                <ul>
-                                    <li>还没有事件</li>
-                                </ul>
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                                <h5><strong>还没有事件</strong></h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="notify" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                                <h5><strong>还没有事件</strong></h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="issue" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                                <h5><strong>今天</strong></h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="warm" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                                <h5><strong>还没有事件</strong></h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="notes" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                                <h5><strong>还没有事件</strong></h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </section>
@@ -271,8 +450,6 @@
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
 
-
-        <script src="js/tables-dynamic.js"></script>
         <!-- daterange picker js -->
         <script src="lib/form-daterangepicker/daterangepicker.js"></script>               
         <!-- DateTime Picker -->
@@ -283,9 +460,47 @@
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph4.js"></script>
-        
 
+         <!-- page libs -->
+  
+        <script src="js/graph/singlechart1.js"></script>
+        <script src="js/graph/singlechart2.js"></script>
 
+        <script>
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('#cpuchart').mouseover(function(){
+                $('#cputrend').show();
+            })
+            $('#cpuchart').mouseout(function(){
+                $('#cputrend').hide();
+            })
+            $('#contentchart').mouseover(function(){
+                $('#contenttrend').show();
+            })
+            $('#contentchart').mouseout(function(){
+                $('#contenttrend').hide();
+            })
+
+           
+        </script>
         
     {{/append}}
 

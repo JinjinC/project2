@@ -15,6 +15,13 @@ svg text {
   font-family: inherit;
 }
 
+.single-chart{
+  svg text {
+  fill: black;
+  font-family: inherit;
+  }
+} 
+
 .nvd3 .nv-axis path.domain{
   display: none;
 }
