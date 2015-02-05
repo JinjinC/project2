@@ -234,26 +234,46 @@
                 <div class="col-md-12">
                     <section class="widget">
                         <header>
-                           
-                            <div class="widget-controls">
-                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                            </div>
+                            <h4>Traces</h4>
                         </header>
                         <div class="body">
-                            <table class="table table-striped no-margin sources-table">
+                            <table class="table table-striped table-hover no-margin sources-table">
                                 <thead>
                                 <tr>
-                                    <th class="source-col-header">Traces</th>
-                                    <th>开始时间</th>
-                                    <th>耗时</th>
+                                    <th width="34%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">开始时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">耗时</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Agent</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td style="text-align: left;">SpringController/splits.do (GET)</td>
+                                    <td style="text-align: left;">2015-02-05 16:00:44</td>
+                                    <td style="text-align: left;">99,428ms</td>
+                                    <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">SpringController/abc.do (GET)</td>
+                                    <td style="text-align: left;">2015-02-05 16:00:40</td>
+                                    <td style="text-align: left;">97,030ms</td>
+                                    <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -310,36 +330,44 @@
 
                     <section class="widget">
                         <header>
-                           
-                            <div class="widget-controls">
-                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                            </div>
+                            <h4>Breakdown Table</h4>
                         </header>
                         <div class="body body-for-table">
-                            <table class="table table-striped no-margin sources-table">
+                            <table class="table table-striped table-hover no-margin sources-table">
                                 <thead>
                                 <tr>
-                                    <th class="source-col-header">Breakdown Table</th>
-                                    <th>类型</th>
-                                    <th>百分比</th>
+                                    <th width="34%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="33%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">类型</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="33%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">百分比</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>other</td>
-                                    <td>java</td>
-                                    <td>20%</td>
+                                    <td style="text-align: left;">other</td>
+                                    <td style="text-align: left;">java</td>
+                                    <td style="text-align: left;">20%</td>
                                 </tr>
                                 <tr>
-                                    <td>users-insert</td>
-                                    <td>database</td>
-                                    <td>30%</td>
+                                    <td style="text-align: left;">users-insert</td>
+                                    <td style="text-align: left;">database</td>
+                                    <td style="text-align: left;">30%</td>
                                 </tr>
                                 <tr>
-                                    <td>blabla</td>
-                                    <td>java</td>
-                                    <td>30%</td>
+                                    <td style="text-align: left;">blabla</td>
+                                    <td style="text-align: left;">java</td>
+                                    <td style="text-align: left;">30%</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -348,34 +376,40 @@
 
                     <section class="widget">
                         <header>
-                           
-                            <div class="widget-controls">
-                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                            </div>
+                            <h4>Traces</h4>
                         </header>
                         <div class="body body-for-table">
-                            <table class="table table-striped no-margin sources-table">
+                            <table class="table table-striped table-hover no-margin sources-table">
                                 <thead>
                                 <tr>
-                                    <th class="source-col-header">Traces</th>
-                                    <th>开始时间</th>
-                                    <th>耗时</th>
-                                    <th>Agent</th>
+                                    <th width="34%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">开始时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">耗时</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Agent</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>10ms</td>
-                                    <td>10ms</td>
-                                    <td>a</td>
-                                    <td>a</td>
-                                </tr>
-                                <tr>
-                                    <td>10ms</td>
-                                    <td>10ms</td>
-                                    <td>b</td>
-                                    <td>a</td>
+                                 <tr>
+                                    <td style="text-align: left;">SpringController/splits.do (GET)</td>
+                                    <td style="text-align: left;">2015-02-05 16:00:44</td>
+                                    <td style="text-align: left;">99,428ms</td>
+                                    <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -462,6 +496,26 @@
                 });
 
             });
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
         </script>
         
     {{/append}}
