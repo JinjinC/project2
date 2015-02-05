@@ -121,8 +121,18 @@ $(function(){
     PjaxApp.onPageLoad(pageLoad);
 
 
-    $('header>ul>li').click(function  () {
-        pageLoad();
+    $('.card-header>ul>li').click(function  () {
+
+        setTimeout(function  () {
+                    pageLoad();
+                },500);
+    });
+
+    $('.dd-handle').click(function () {
+        
+        setTimeout(function  () {
+                    pageLoad();
+                },100);
     });
 
  

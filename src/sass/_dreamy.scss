@@ -917,8 +917,8 @@ a.tabIcon{
   //////////              animate           /////////
 
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     z-index: 100;
@@ -928,8 +928,8 @@ a.tabIcon{
 @-webkit-keyframes fadeInLeftBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-100px,-667px);
-        transform: translate(-100px,-667px);
+        -webkit-transform: translate(-50px,-667px);
+        transform: translate(-50px,-667px);
     }
 
     100% {
@@ -942,9 +942,9 @@ a.tabIcon{
 @keyframes fadeInLeftBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-100px,-667px);
-        -ms-transform: translate(-100px,-667px);
-        transform: translate(-100px,-667px);
+        -webkit-transform: translate(-50px,-667px);
+        -ms-transform: translate(-50px,-667px);
+        transform: translate(-50px,-667px);
     }
 
     100% {
@@ -964,8 +964,8 @@ a.tabIcon{
 @-webkit-keyframes fadeInLeftBigEx {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-100px,-549px);
-        transform: translate(-100px,-549px);
+        -webkit-transform: translate(-50px,-549px);
+        transform: translate(-50px,-549px);
     }
 
     100% {
@@ -978,9 +978,9 @@ a.tabIcon{
 @keyframes fadeInLeftBigEx {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-100px,-549px);
-        -ms-transform: translate(-100px,-549px);
-        transform: translate(-100px,-549px);
+        -webkit-transform: translate(-50px,-549px);
+        -ms-transform: translate(-50px,-549px);
+        transform: translate(-50px,-549px);
     }
 
     100% {
@@ -1066,10 +1066,52 @@ a.tabIcon{
   z-index: 2;
   position: relative;
   & .widget{
-    background-color: #fff;
+    background-color: #f5f5f5;
     color: rgba(51,51,51,0.6);
   }
   & span {
     cursor: pointer;
   }
+
+  & section .widget {
+  background-color: #fff;
+  }
+
+  & h1,h2,h3,h4,h5,div,th,td {
+    color: rgba(51,51,51,0.6);
+  }
+
+  & .float-card-title {
+    font-weight: bold;
+  }
+
+  .table-striped > tbody > tr:nth-child(odd) > td {
+    background-color: #f5f5f5;
+  }
+
+  .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
+    border-top: #ddd solid 1px;
+    color: rgba(104,104,104,1);
+    font-weight: 400;
+  }
+
+  .table>thead>tr>th{
+    border-bottom: #ddd solid 2px;
+  }
+
+  .body {
+    height: auto;
+    
+  }
+
+  .body-for-table {
+    // padding-bottom: 10px;
+  }
+
+  .source-col-header {
+    font-size: 14px;
+  }
 }
+
+
+

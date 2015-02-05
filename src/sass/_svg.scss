@@ -15,6 +15,10 @@ svg text {
   font-family: inherit;
 }
 
+.float-card  svg text {
+  fill: #666;
+}
+
 .nvd3 .nv-axis path.domain{
   display: none;
 }
