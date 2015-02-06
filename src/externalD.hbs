@@ -259,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="row  float-card" style="transform: translateY(-549px);">
+                <div class="row  float-card">
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
@@ -382,11 +382,11 @@
                     $(this).parent().find('button').addClass("active");
 
 
-                    $('.float-card').show().addClass("animated fadeInLeftBigEx");
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
 
 
                     setTimeout(function (){
-                                             $('.float-card').removeClass("animated fadeInLeftBigEx");
+                                             $('.float-card').removeClass("animated fadeInLeftBig");
                                          },1000);
 
                     $('.float-card-title').text($(this).find('.bar-text').text());

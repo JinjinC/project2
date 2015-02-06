@@ -1006,30 +1006,30 @@ a.tabIcon{
 @-webkit-keyframes fadeInLeftBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-50px,-684px);
-        transform: translate(-50px,-684px);
+        -webkit-transform: translate(-50px,0px);
+        transform: translate(-50px,0px);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translate(0,-684px);
-        transform: translate(0,-684px);
+        -webkit-transform: translate(0,0px);
+        transform: translate(0,0px);
     }
 }
 
 @keyframes fadeInLeftBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-50px,-684px);
-        -ms-transform: translate(-50px,-684px);
-        transform: translate(-50px,-684px);
+        -webkit-transform: translate(-50px,0px);
+        -ms-transform: translate(-50px,0px);
+        transform: translate(-50px,0px);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translate(0,-684px);
-        -ms-transform: translate(0,-684px);
-        transform: translate(0,-684px);
+        -webkit-transform: translate(0,0px);
+        -ms-transform: translate(0,0px);
+        transform: translate(0,0px);
     }
 }
 
@@ -1039,113 +1039,6 @@ a.tabIcon{
 }
 
 
-@-webkit-keyframes fadeInLeftBigEx {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-549px);
-        transform: translate(-50px,-549px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-549px);
-        transform: translate(0,-549px);
-    }
-}
-
-@keyframes fadeInLeftBigEx {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-549px);
-        -ms-transform: translate(-50px,-549px);
-        transform: translate(-50px,-549px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-549px);
-        -ms-transform: translate(0,-549px);
-        transform: translate(0,-549px);
-    }
-}
-
-.fadeInLeftBigEx {
-    -webkit-animation-name: fadeInLeftBigEx;
-    animation-name: fadeInLeftBigEX;
-}
-
-
-
-@-webkit-keyframes fadeInLeftBigA {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-940px);
-        transform: translate(-50px,-940px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-940px);
-        transform: translate(0,-940px);
-    }
-}
-
-@keyframes fadeInLeftBigA {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-940px);
-        -ms-transform: translate(-50px,-940px);
-        transform: translate(-50px,-940px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-940px);
-        -ms-transform: translate(0,-940px);
-        transform: translate(0,-940px);
-    }
-}
-
-.fadeInLeftBigA {
-    -webkit-animation-name: fadeInLeftBigA;
-    animation-name: fadeInLeftBigA;
-}
-
-
-@-webkit-keyframes fadeInLeftBigB {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-740px);
-        transform: translate(-50px,-740px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-740px);
-        transform: translate(0,-740px);
-    }
-}
-
-@keyframes fadeInLeftBigB {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50px,-740px);
-        -ms-transform: translate(-50px,-740px);
-        transform: translate(-50px,-740px);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translate(0,-740px);
-        -ms-transform: translate(0,-740px);
-        transform: translate(0,-740px);
-    }
-}
-
-.fadeInLeftBigB {
-    -webkit-animation-name: fadeInLeftBigB;
-    animation-name: fadeInLeftBigB;
-}
 
 
 
@@ -1217,7 +1110,9 @@ a.tabIcon{
 .float-card {
   display: none;
   z-index: 2;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
   & .widget{
     background-color: #f5f5f5;
     color: rgba(51,51,51,0.6);
