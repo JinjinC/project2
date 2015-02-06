@@ -1,4 +1,6 @@
-
+td{
+  vertical-align: middle !important;
+}
 .cputrend{
   width: 300px;
   position: absolute;
@@ -161,7 +163,7 @@
 
 .btn-choose-group{
   position: absolute;
-  top: 78px;
+  top: 87px;
   right: 5%;
 }
 .btn-report{
