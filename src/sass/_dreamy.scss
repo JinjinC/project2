@@ -258,11 +258,13 @@ button.btn.dropdown-toggle.btn-choose{
 }
 
 .iconlogo{
-  font-size: 85px; 
-  line-height: 1.7;
+  font-size: 70px; 
+  line-height: 2.1;
+  margin-left: 20px;
 
   @media(max-width: 768px) {
-    line-height: 0.6;
+    line-height: 0.4;
+    margin-left: 5px;
   }
   color:rgba(51, 51, 51, 0.5);
 
