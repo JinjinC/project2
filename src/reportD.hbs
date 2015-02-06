@@ -94,12 +94,37 @@
                         <table class="table table-striped table-hover no-margin sources-table">
                                 <thead>
                                 <tr>
-                                    <th style="width: 40%; text-align: left;">Web 事务</th>
-                                    <th style="width: 12%; text-align: left;">吞吐量</th>
-                                    <th style="width: 12%; text-align: left;">总执行时间</th>
-                                    <th style="width: 12%; text-align: left;">平均执行时间</th>
-                                    <th style="width: 12%; text-align: left;">Apdex</th>
-                                    <th style="width: 12%; text-align: left;"> 
+                                    <th width="40%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Web 事务</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext"></span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">吞吐量</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">总执行时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">平均执行时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th> 
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Apdex</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>     
+                                    <th style="width: 10%;"> 
                                         <div class="btn-group btn-choose-group">
                                             <button class="btn dropdown-toggle btn-choose" data-toggle="dropdown">
                                                 吞吐量
@@ -118,20 +143,172 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th style="text-align: left;">SpringController/TestController/test</th>
-                                    <th style="text-align: left;">0.0005cpm</th>
-                                    <th style="text-align: left;">21.40s</th>
-                                    <th style="text-align: left;">19.00s</th>
-                                    <th style="text-align: left;">0.00</th>
-                                    <th style="text-align: left;"></th>
+                                    <th style="text-align: left; vertical-align:middle;">SpringController/TestController/test</th>
+                                    <th colspan="6">
+                                        <table  class="table table-hover no-margin sources-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th width="16%">今天</th>
+                                                    <th width="17%" style="text-align: left;">2.05 cpm</th>
+                                                    <th width="17%" style="text-align: left;">0.00 s</th>
+                                                    <th width="17%" style="text-align: left;">0.00 ms</th>
+                                                    <th width="17%" style="text-align: left;">0.00</th>
+                                                    <th width="16%" style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <th style="text-align: left;">SpringController/TestController/split</th>
-                                    <th style="text-align: left;">0.0004cp,</th>
-                                    <th style="text-align: left;">2.09s</th>
-                                    <th style="text-align: left;">1.02s</th>
-                                    <th style="text-align: left;">1.00</th>
-                                    <th style="text-align: left;"></th>
+                                    <th style="text-align: left;vertical-align:middle;">SpringController/TestController/split</th>
+                                    <th colspan="6">
+                                        <table  class="table table-hover no-margin sources-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th width="16%">今天</th>
+                                                    <th width="17%" style="text-align: left;">2.05 cpm</th>
+                                                    <th width="17%" style="text-align: left;">0.00 s</th>
+                                                    <th width="17%" style="text-align: left;">0.00 ms</th>
+                                                    <th width="17%" style="text-align: left;">0.00</th>
+                                                    <th width="16%" style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: left; vertical-align:middle;">SpringController/TestController/test</th>
+                                    <th colspan="6">
+                                        <table  class="table table-hover no-margin sources-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th width="16%">今天</th>
+                                                    <th width="17%" style="text-align: left;">2.05 cpm</th>
+                                                    <th width="17%" style="text-align: left;">0.00 s</th>
+                                                    <th width="17%" style="text-align: left;">0.00 ms</th>
+                                                    <th width="17%" style="text-align: left;">0.00</th>
+                                                    <th width="16%" style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: left; vertical-align:middle;">SpringController/TestController/test</th>
+                                    <th colspan="6">
+                                        <table  class="table table-hover no-margin sources-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th width="16%">今天</th>
+                                                    <th width="17%" style="text-align: left;">2.05 cpm</th>
+                                                    <th width="17%" style="text-align: left;">0.00 s</th>
+                                                    <th width="17%" style="text-align: left;">0.00 ms</th>
+                                                    <th width="17%" style="text-align: left;">0.00</th>
+                                                    <th width="16%" style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="text-align: left;">今天</th>
+                                                    <th style="text-align: left;">2.05 cpm</th>
+                                                    <th style="text-align: left;">0.00 s</th>
+                                                    <th style="text-align: left;">0.00 ms</th>
+                                                    <th style="text-align: left;">0.00</th>
+                                                    <th style="text-align: left;"></th>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </th>
                                 </tr>
                                 </tbody>
                             </table>
@@ -180,6 +357,27 @@
     {{#append "scripts"}}
         <!-- page application js -->
         <script src="js/ui-buttons.js"></script>
+        <script>
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+        </script>
     {{/append}}
 
 {{/extend}}
