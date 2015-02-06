@@ -213,7 +213,8 @@ button.btn.dropdown-toggle.btn-choose{
 }
 .iconfont{
   font-family:"iconfont";
-  font-size:40px;font-style:normal;
+  font-size:40px;
+  font-style:normal;
 }
 .icon1{
   font-size: 19px;
@@ -257,8 +258,16 @@ button.btn.dropdown-toggle.btn-choose{
 }
 
 .iconlogo{
-  font-size: 140px; 
+  font-size: 70px; 
+  line-height: 2.1;
+  margin-left: 20px;
+
+  @media(max-width: 768px) {
+    line-height: 0.4;
+    margin-left: 5px;
+  }
   color:rgba(51, 51, 51, 0.5);
+
   &:hover,
   &:focus{
     color: white;
@@ -469,7 +478,8 @@ a.tabIcon{
 }
 
 .login-icon{
-  font-size: 200px;
+  font-size: 140px;
+  color: #006ec3;
 }
 
 .login-header{
@@ -497,8 +507,9 @@ a.tabIcon{
 
 .myModalHeader{
   text-align: center;
-  line-height: 0.7;
-  border-bottom: 0px;
+  line-height: 1.1;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .myModalBody{
@@ -1104,30 +1115,30 @@ a.tabIcon{
 @-webkit-keyframes fadeInLeftBigB {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-50px,-780px);
-        transform: translate(-50px,-780px);
+        -webkit-transform: translate(-50px,-740px);
+        transform: translate(-50px,-740px);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translate(0,-780px);
-        transform: translate(0,-780px);
+        -webkit-transform: translate(0,-740px);
+        transform: translate(0,-740px);
     }
 }
 
 @keyframes fadeInLeftBigB {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-50px,-780px);
-        -ms-transform: translate(-50px,-780px);
-        transform: translate(-50px,-780px);
+        -webkit-transform: translate(-50px,-740px);
+        -ms-transform: translate(-50px,-740px);
+        transform: translate(-50px,-740px);
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translate(0,-780px);
-        -ms-transform: translate(0,-780px);
-        transform: translate(0,-780px);
+        -webkit-transform: translate(0,-740px);
+        -ms-transform: translate(0,-740px);
+        transform: translate(0,-740px);
     }
 }
 
