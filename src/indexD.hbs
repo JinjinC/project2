@@ -149,7 +149,7 @@
 
                                         </th>
                                         <th width="12%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">吞吐量(cpm)</span>
+                                            <span class="sortedtext">吞吐量</span>
                                             <i class="sortedup" style="display:none"></i>
                                             <i class="sorteddown" style="display:none"></i>
                                         </th> 
@@ -164,7 +164,7 @@
                                             <i class="sorteddown" style="display:none"></i>
                                         </th>
                                         <th width="12%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">内容(MB)</span>
+                                            <span class="sortedtext">内容</span>
                                             <i class="sortedup" style="display:none"></i>
                                             <i class="sorteddown" style="display:none"></i>
                                         </th>
@@ -347,36 +347,26 @@
                             <div id="breaktime" class="tab-pane">
                                 <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                     <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
-                                                <h5><strong>还没有事件</strong></h5>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
                                 </table>
                             </div>
                             <div id="notify" class="tab-pane">
                                 <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                     <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
-                                                <h5><strong>还没有事件</strong></h5>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
                                 </table>
                             </div>
                             <div id="issue" class="tab-pane">
                                 <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                     <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
                                     <tbody>
-                                        <tr>
-                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
-                                                <h5><strong>今天</strong></h5>
-                                            </td>
-                                        </tr>
                                         <tr>
                                             <td class="warmtime" width="10%">15:58</td>
                                             <td width="10%" class="warmicon">
@@ -400,25 +390,17 @@
                             <div id="warm" class="tab-pane">
                                 <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                     <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
-                                                <h5><strong>还没有事件</strong></h5>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
                                 </table>
                             </div>
                             <div id="notes" class="tab-pane">
                                 <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                     <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3" style="padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
-                                                <h5><strong>还没有事件</strong></h5>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
                                 </table>
                             </div>
                         </div>
@@ -500,6 +482,9 @@
                 $('#contenttrend').hide();
             })
 
+            $('.trace-item').click(function(){
+            location.href="transactionD.html";
+         })
            
         </script>
         

@@ -28,7 +28,6 @@
                             <header>
                                 <h4>
                                     错误率
-                                    
                                 </h4>
                                 <div class="widget-controls">
                                     <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -47,24 +46,67 @@
 					<div class="col-lg-12">
 						<section class="widget">
                             <div class="body" style="margin-top:0;">
-                                <table class="table table-striped no-margin sources-table">
+                                <table class="table table-striped table-hover no-margin sources-table">
                                     <thead>
                                     <tr>
-                                        <th class="source-col-header">第一次出现时间</th>
-                                        <th>第一次出现时间</th>
-                                        <th>请求地址</th>
-                                        <th>消息</th>
-                                        <th>出现次数</th>
+                                        <th width="15%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">第一次出现时间</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="15%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">最后一次出现时间</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="25%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">请求地址</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
+                                        <th width="35%" style="text-align: left;">消息</th>
+                                        <th width="10%" style="text-align: left;" class="sortedth">
+                                            <span class="sortedtext">出现次数</span>
+                                            <i class="sortedup" style="display:none"></i>
+                                            <i class="sorteddown" style="display:none"></i>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>2015-01-15 10:41:04</td>
-                                        <td>2015-01-15 10:41:18</td>
-                                        <td><span class="label label-info">SpringController/TestController/split</span></td>
-                                        <td>Request processing failed; nested exception is java.lang.NullPointerException</td>
-                                        <td>9</td>
-                                        
+                                        <td style="text-align: left;">2015-02-06 10:40:29</td>
+                                        <td style="text-align: left;">2015-02-06 10:40:29</td>
+                                        <td style="text-align: left;">http-bio-8090-exec-158</td>
+                                        <td style="text-align: left;">Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                        <td style="text-align: left;">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">2015-02-06 10:23:17</td>
+                                        <td style="text-align: left;">2015-02-06 10:50:14</td>
+                                        <td style="text-align: left;">SpringController/getlist.do (GET)</td>
+                                        <td style="text-align: left;">Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                        <td style="text-align: left;">69</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">2015-01-15 10:41:04</td>
+                                        <td style="text-align: left;">2015-01-15 10:41:18</td>
+                                        <td style="text-align: left;">http-bio-8090-exec-22</td>
+                                        <td style="text-align: left;">Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                        <td style="text-align: left;">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">2015-01-15 10:41:04</td>
+                                        <td style="text-align: left;">2015-01-15 10:41:18</td>
+                                        <td style="text-align: left;">http-bio-8090-exec-146</td>
+                                        <td style="text-align: left;">Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                        <td style="text-align: left;">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;">2015-01-15 10:41:04</td>
+                                        <td style="text-align: left;">2015-01-15 10:41:18</td>
+                                        <td style="text-align: left;">http-bio-8090-exec-87</td>
+                                        <td style="text-align: left;">Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                        <td style="text-align: left;">12</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -97,11 +139,26 @@
         <!-- page application js -->
         <script src="js/daterangepicker.js"></script>
         <script src="js/graph/graph2.js"></script>
+        <script>
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
 
-
-
-
-        
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>        
     {{/append}}
 
 {{/extend}}
