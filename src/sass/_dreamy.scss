@@ -1,6 +1,42 @@
+
+.settingBox{
+  width: 310px;
+  position: absolute;
+  right:18px;
+  top: 57px;
+  z-index: 1;
+}
+
+
+.linkk{
+  color: white;
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+.modal-trash{
+  width: 400px;
+
+}
+
 td{
   vertical-align: middle !important;
+  text-align: left !important;
 }
+.radioSer label::before{
+  margin-top: 10px;
+}
+.radioSer label::after{
+  margin-top: 10px;
+}
+
 .cputrend{
   width: 300px;
   position: absolute;
@@ -209,6 +245,12 @@ td{
     text-decoration: underline;
   }
 }
+
+.btn-trash{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
 button.btn.dropdown-toggle.btn-choose{
   box-shadow:none;
   -webkit-box-shadow:none;
@@ -234,6 +276,26 @@ button.btn.dropdown-toggle.btn-choose{
   }
   &.wait{
     color: rgb(74, 121, 147);
+  }
+  &.trash{
+    font-size: 19px;
+    color: #9F9F9F;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited{
+      color: white;
+    }
+  }
+  &.setting{
+    font-size: 14px;
+    color: #9F9F9F;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited{
+      color: white;
+    }
   }
 }
 .icon2-dd{

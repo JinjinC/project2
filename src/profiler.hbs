@@ -10,7 +10,7 @@
 
               <h2 class="page-title"><span>性能剖析 <small>性能剖析界面</small></span></h2>
          </div>
-        <div class="col-lg-7 col-md-7">
+        <div class="col-lg-7">
             <div class="navbar nav-picker">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown agents">
@@ -42,7 +42,7 @@
     </div>
      
     <div class="row">
-     	<div class="col-lg-4">
+     	<div class="col-lg-3">
      		<section class="widget">
      			<header>
                     <h4>
@@ -100,65 +100,58 @@
                             </label>
                         </div>
                     </section>
-                    
-                    
-                    <div>
-                        <section class="widget" style="margin-bottom:17px;">
-                            <header>
-                                <h4>
-                                    服务器名称                                    
-                                </h4>
-                            </header>
-                            <div class="body no-margin">
-                                <table class="table table-striped no-margin sources-table">
-                                    <thead>
-                                    <tr>
-                                        <th width="5%" style="text-align: left;"></th>
-                                        <th width="50%" style="text-align: left;">名称</th>
-                                        <th width="20%" style="text-align: left;">CPU</th>
-                                        <th width="25%" style="text-align: left;">内存(MB)</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td style="text-align: left;">
-                                            <div class="radio" style="margin-top: -3px;">
-                                                <input type="radio" name="radio2" id="radio3" value="option1" checked>
-                                                <label for="radio3"></label>
-                                            </div>
-                                        </td>
-                                        <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
-                                        <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
-                                        <td style="text-align: left;">0.00</td>
-                                    </tr> 
-                                    <tr>
-                                        <td style="text-align: left;">
-                                            <div class="radio" style="margin-top: -3px;">
-                                                <input type="radio" name="radio2" id="radio4" value="option2">
-                                                <label for="radio4"></label>
-                                            </div>
-                                        </td>
-                                        <td style="text-align: left;">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</td>
-                                        <td style="text-align: left;"><strong class="color-green">0.00%</strong></td>
-                                        <td style="text-align: left;">0.00</td>
-                                    </tr>                                     
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-                        <div class="row margin-bottom text-align-center">
-                            <div class="col-md-12">
-                                <button class="btn btn-lg btn-success btn-block">
-                                    性能剖析
-                                </button>
-                            </div>
+                    <section class="widget" style="margin-bottom:17px;">
+                        <header>
+                            <h4>
+                                服务器名称                                    
+                            </h4>
+                        </header>
+                        <div class="body no-margin">
+                            <table class="table table-striped no-margin sources-table">
+                                <thead>
+                                <tr>
+                                    <th width="50%" style="text-align: left;">名称</th>
+                                    <th width="20%" style="text-align: left;">CPU</th>
+                                    <th width="25%" style="text-align: left;">内存(MB)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="radio radioSer">
+                                            <input type="radio" name="radio2" id="radio3" value="option1" checked>
+                                            <label for="radio3">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</label>
+                                        </div>
+                                    </td>
+                                    <td>0.00%</td>
+                                    <td>0.00</td>
+                                </tr> 
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <div class="radio">
+                                            <input type="radio" name="radio2" id="radio4" value="option2">
+                                            <label for="radio4">fe80:0:0:0:20c:29ff:fede:6cdc%2 java:b1:8090</label>
+                                        </div>
+                                    </td>
+                                    <td>0.00%</td>
+                                    <td>0.00</td>
+                                </tr>                                     
+                                </tbody>
+                            </table>
                         </div>
+                    </section>
 
-                    </div>    
+                    <div class="row margin-bottom text-align-center">
+                        <div class="col-md-12">
+                            <button class="btn btn-lg btn-success btn-block">
+                                性能剖析
+                            </button>
+                        </div>
+                    </div>   
                 </div>
      		</section>
      	</div>
-        <div class="col-lg-8">
+        <div class="col-lg-9 col-md-9">
             <section class="widget">
                 <header>
                     <h4>
@@ -169,61 +162,103 @@
                     <table class="table table-striped table-hover no-margin sources-table">
                         <thead>
                         <tr>
-                            <th style="text-align: left;">开始时间</th>
-                            <th style="text-align: left;">采样频率(ms)</th>
-                            <th style="text-align: left;">采样周期(分钟)</th>
-                            <th style="text-align: left;">仅包含 HTTP 请求</th>
-                            <th style="text-align: left;">服务器</th>
-                            <th style="text-align: left;">收集人</th>
-                            <th style="text-align: left;">操作</th>
+                            <th style="text-align:left;">开始时间</th>
+                            <th style="text-align:left;">采样频率(ms)</th>
+                            <th style="text-align:left;">采样周期(分钟)</th>
+                            <th style="text-align:left;">仅包含 HTTP 请求</th>
+                            <th style="text-align:left;">服务器</th>
+                            <th style="text-align:left;">收集人</th>
+                            <th width="5%" style="text-align:left;"></th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td style="text-align: left;">2014-12-24 10:28:17</td>
-                            <td style="text-align: left;">100</td>
-                            <td style="text-align: left;">2</td>
-                            <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
-                            <td style="text-align: left;">oneapm</td>
-                            <td style="text-align: left;"></td>
+                        <tr style="padding: 0 8px;">
+                            <td><a href="">2014-12-24 10:28:17</a></td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>是</td>
+                            <td><a href="">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
+                            <td>oneapm</td>
+                            <td style="padding: 0 8px;">
+                                <div class="body no-margin">
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                        <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
+                                    </button>
+                                </div>                               
+                            </td>
                         </tr>
                          <tr>
-                            <td style="text-align: left;">2014-12-25 10:28:17</td>
-                            <td style="text-align: left;">200</td>
-                            <td style="text-align: left;">3</td>
-                            <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
-                            <td style="text-align: left;">oneapm</td>
-                            <td style="text-align: left;"></td>
+                            <td><a href="">2014-12-25 10:28:17</a></td>
+                            <td>200</td>
+                            <td>3</td>
+                            <td>是</td>
+                            <td><a href="">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
+                            <td>oneapm</td>
+                            <td style="padding: 0 8px;">
+                                <div class="body no-margin">
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                        <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
+                                    </button>
+                                </div>                               
+                            </td>
                         </tr>
                          <tr>
-                            <td style="text-align: left;">2014-12-26 10:28:17</td>
-                            <td style="text-align: left;">50</td>
-                            <td style="text-align: left;">2</td>
-                            <td style="text-align: left;">否</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
-                            <td style="text-align: left;">oneapm</td>
-                            <td ></td>
+                            <td><a href="">2014-12-26 10:28:17</a></td>
+                            <td>50</td>
+                            <td>2</td>
+                            <td>否</td>
+                            <td><a href="">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
+                            <td>oneapm</td>
+                            <td style="padding: 0 8px;">
+                                <div class="body no-margin">
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                        <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
+                                    </button>
+                                </div>                               
+                            </td>
                         </tr>
-                         <tr>
-                            <td style="text-align: left;">2014-12-24 10:28:17</td>
-                            <td style="text-align: left;">100</td>
-                            <td style="text-align: left;">2</td>
-                            <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
-                            <td style="text-align: left;">oneapm</td>
-                            <td style="text-align: left;"></td>
-                        </tr>
+                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-trash">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">提示</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>确定删除吗？</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger">确定</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         </tbody>
                     </table>
                 </div>
             </section>
         </div>
     </div>
+       
+    </div>
 
     {{/replace}}
      {{#append "scripts"}}
+        <script>
+            $('tr').mouseover(function(){
+                $(this).find('.trash').show();
+            })
+
+            $('tr').mouseout(function(){
+               $(this).find('.trash').hide();
+            })
+
+
+        </script>
+
         <!-- page libs -->
         <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
         <script src="lib/jquery.sparkline/index.js"></script>

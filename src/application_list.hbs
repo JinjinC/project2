@@ -27,68 +27,168 @@
             <div class="col-lg-8 col-md-12">
                  <section class="widget">
                     <div class="body">
-                        <table class="table table-striped table-hover no-margin sources-table">
+                        <table class="table table-hover no-margin sources-table">
                             <thead>
-                            <tr>
-                                <th width="6%">状态</th>
-                                <th width="20%" style="text-align: left;" class="sortedth">
-                                    <span class="sortedtext">名称</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                                <th class="sortedth" width="20%" style="text-align: left;">
-                                    <span class="sortedtext">响应时间</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                                <th class="sortedth" width="20%" style="text-align: left;">
-                                    <span class="sortedtext">吞吐量(cpm)</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                                <th class="sortedth" width="20%" style="text-align: left;">
-                                    <span class="sortedtext">错误率</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                                <th width="14%" style="text-align: left;">趋势</th>
-                            </tr>
+                                <tr>
+                                    <th width="5%"></th>
+                                    <th width="6%">状态</th>
+                                    <th width="20%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="15%" style="text-align: left;">
+                                        <span class="sortedtext">响应时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="15%" style="text-align: left;">
+                                        <span class="sortedtext">吞吐量(cpm)</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="15%" style="text-align: left;">
+                                        <span class="sortedtext">错误率</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="20%" style="text-align: left;">趋势</th>
+                                    <th width="4%"></th>
+
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td style="padding-left: 14px;"><i class="iconfont icon2 success" >&#xe60f; </i></td>
-                                <td style="text-align:left"><a href="indexD.html" class="appItem">My Application</a></td>
-                                <td style="text-align: left;">0 ms</td>
-                                <td style="text-align: left;">0.0</td>
-                                <td style="text-align: left;">0.00%</td>
-                                <td class="chart-cell" style="text-align: left;">
-                                    <div id="direct-trend"></div>
-                                </td>
-                            </tr> 
+                                <tr>
+                                    <td> 
+                                        <i class="glyphicon glyphicon-plus-sign icon2 expand" id="plusOracle"></i>
+                                        <i class="glyphicon glyphicon-minus-sign icon2 expand" id="minusOracle" style="display:none"></i>
+                                    </td>                                
+                                    <td style="padding-left: 14px;">
+                                        <i class="iconfont icon2 success" >&#xe60f; </i>
+                                    </td>
+                                    <td ><a href="indexD.html" class="appItem">My Application</a></td>
+                                    <td >0 ms</td>
+                                    <td >0.0</td>
+                                    <td >0.00%</td>
+                                    <td class="chart-cell">
+                                        <div id="direct-trend"></div>
+                                    </td>
+                                    <td>
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                        </i>
+                                    </td>
+                                </tr> 
                             
+                                <tr>
+                                    <td colspan="8" style="padding:0; border:0">
+                                        <table class="table no-margin sources-table" id="tableOracle" style="display:none;">
+                                        <tbody>
+                                            <tr>
+                                                <td width="7%"></td>
+                                               
+                                                <td width="24.3%"><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
+                                                <td width="15%">0 ms</td>
+                                                <td width="15%">0.0</td>
+                                                <td width="15%">0.00%</td>
+                                                <td width="20%" class="chart-cell">
+                                                   
+                                                </td>
+                                                <td>
+                                                    <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td width="7%"></td>
+                                               
+                                                <td width="24.3%"><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
+                                                <td width="15%">0 ms</td>
+                                                <td width="15%">0.0</td>
+                                                <td width="15%">0.00%</td>
+                                                <td width="20%" class="chart-cell">
+                                                    
+                                                </td>
+                                                <td>
+                                                    <i class="glyphicon glyphicon-cog icon2 setting2" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </td>
+                                            </tr> 
+                                             <tr>
+                                                <td width="7%"></td>
+                                               
+                                                <td width="24.3%"><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
+                                                <td width="15%">0 ms</td>
+                                                <td width="15%">0.0</td>
+                                                <td width="15%">0.00%</td>
+                                                <td width="20%" class="chart-cell">
+                                                    <!-- <div id="refer-trend"></div> -->
+                                                </td>
+                                                <td>
+                                                    <i class="glyphicon glyphicon-cog icon2 setting3" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </td>
+                                            </tr>  
+                                            
+                                        </tbody>
+                                    </table>  
+
+                                    </td>
+                                                          
+                                </tr>
                            
-                            <tr>
-                                <td style="padding-left: 14px;"><i class="iconfont icon2 outdate">&#xe60f; </i></td>
-                                <td style="text-align:left"><a href="indexD.html" class="appItem">app3</a></td>
-                                <td style="text-align: left;">0 ms</td>
-                                <td style="text-align: left;">0.0</td>
-                                <td style="text-align: left;">0.00%</td>
-                                <td class="chart-cell">
-                                    <div id="refer-trend"></div>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td style="padding-left: 14px;"><i class="iconfont icon2 danger">&#xe60f; </i></td>
-                                <td style="text-align:left"><a href="indexD.html" class="appItem">app4</a></td>
-                                <td style="text-align: left;">0 ms</td>
-                                <td style="text-align: left;">0.0</td>
-                                <td style="text-align: left;">0.00%</td>
-                                <td class="chart-cell ">
-                                    <div id="search-trend"></div>
-                                </td>
-                            </tr> 
+                                <tr>
+                                    <td></td>
+                                    <td style="padding-left: 14px;"><i class="iconfont icon2 outdate">&#xe60f; </i></td>
+                                    <td ><a href="indexD.html" class="appItem">app3</a></td>
+                                    <td >0 ms</td>
+                                    <td >0.0</td>
+                                    <td >0.00%</td>
+                                    <td class="chart-cell">
+                                        <div id="refer-trend"></div>
+                                    </td>
+                                    <td></td>
+                                </tr> 
+                                <tr>
+                                    <td></td>
+                                    <td style="padding-left: 14px;"><i class="iconfont icon2 danger">&#xe60f; </i></td>
+                                    <td ><a href="indexD.html" class="appItem">app4</a></td>
+                                    <td >0 ms</td>
+                                    <td >0.0</td>
+                                    <td >0.00%</td>
+                                    <td class="chart-cell ">
+                                        <div id="search-trend"></div>
+                                    </td>
+                                    <td></td>
+                                </tr> 
                             </tbody>
                         </table>
+                        <div class="settingBox">
+                                <div class="modal" id="settingBox" style="position: relative; overflow: hidden; display:none;">
+                                    <div class="modal-dialog" style="width: auto; padding: 0;">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox">×</button>
+                                                <h4 class="modal-title">修改 APP 名称</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
+                                                        
+                                                            
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
+                                                            <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
                     </div>
                 </section>
             </div>
@@ -130,22 +230,22 @@
                                             <td width="10%" class="warmicon">
                                                 <i class="iconfont icon1">&#xe608;</i>
                                             </td>
-                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:56</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>  
                                         <tr>
                                             <td class="warmtime">15:54</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:28</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>                                          
                                     </tbody>
                                 </table>
@@ -179,17 +279,17 @@
                                             <td width="10%" class="warmicon">
                                                 <i class="iconfont icon1">&#xe608;</i>
                                             </td>
-                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:56</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>  
                                         <tr>
                                             <td class="warmtime">15:54</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>                                      
                                     </tbody>
                                 </table>
@@ -259,6 +359,53 @@
                 }
                 e.stopPropagation();
             })
+
+            $('tr').mouseover(function(){
+                $(this).find('.setting').show();
+            })
+
+            $('tr').mouseout(function(){
+               $(this).find('.setting').hide();
+            })
+
+            $('#icon-setting').click(function(){
+                $('#settingBox').show();
+            })
+             $('#closesettingBox').click(function(){
+                $('#settingBox').hide();
+            })
+            
+
+             $('#plusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }
+            })
+
+            $('#minusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') != 'none') {
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+            $('#oracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }else{
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+
         </script>
     {{/append}}
 

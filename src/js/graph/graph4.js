@@ -8,7 +8,7 @@ $(function(){
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    $blue, $red
+                    $blue, $red, $orange
                 ]);
 
             chart.legend.margin({top: 3});
@@ -20,7 +20,7 @@ $(function(){
             chart.xAxis
                 .showMaxMin(false)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-            var data = testData(['A ', 'B '], 30);
+            var data = testData(['A ', 'B ','C'], 30);
             data[0].area = true;
 
             d3.select('#visits-chart4 svg')
