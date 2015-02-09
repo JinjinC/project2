@@ -184,7 +184,7 @@
                             <td style="text-align: left;">100</td>
                             <td style="text-align: left;">2</td>
                             <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                            <td style="text-align: left;"><a class="server">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
                             <td style="text-align: left;">oneapm</td>
                             <td style="text-align: left;"></td>
                         </tr>
@@ -193,7 +193,7 @@
                             <td style="text-align: left;">200</td>
                             <td style="text-align: left;">3</td>
                             <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                            <td style="text-align: left;"><a class="server">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
                             <td style="text-align: left;">oneapm</td>
                             <td style="text-align: left;"></td>
                         </tr>
@@ -202,7 +202,7 @@
                             <td style="text-align: left;">50</td>
                             <td style="text-align: left;">2</td>
                             <td style="text-align: left;">否</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                            <td style="text-align: left;"><a class="server">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
                             <td style="text-align: left;">oneapm</td>
                             <td ></td>
                         </tr>
@@ -211,12 +211,113 @@
                             <td style="text-align: left;">100</td>
                             <td style="text-align: left;">2</td>
                             <td style="text-align: left;">是</td>
-                            <td style="text-align: left;">fe80:0:0:0:5054:ff:fe5f:d63%2</td>
+                            <td style="text-align: left;"><a class="server">fe80:0:0:0:5054:ff:fe5f:d63%2</a></td>
                             <td style="text-align: left;">oneapm</td>
                             <td style="text-align: left;"></td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row float-card float-all" style="min-height:800px;">
+        <div class="col-md-12 col-lg-12">
+            <section class="widget" style="min-height:800px;">
+                <header>
+                    <span class="float-card-title">Title</span>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>
+                </header>
+                <div class="body">
+                    
+                    <div class="visits-info well well-sm">
+                        <div class="row">
+                        <div class="col-sm-4  col-xs-6">
+                            <div class="key">服务器</div>
+                            <div id="serve-value" class="value">服务器名</div>
+                        </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key"> 开始时间</div>
+                                <div class="value">2015-02-07 04:42</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">采样周期</div>
+                                <div class="value">2分钟</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">采样次数</div>
+                                <div class="value">120</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">采集人</div>
+                                <div class="value">ONEAPM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="widget" style="margin-top: 17px;min-height: 740px;">
+                        <div>
+                            <span style="margin-right: 20px;font-size: 14px">显示设置</span>
+                            <div class="radio">
+                                 <input type="radio" name="radio3" id="radio5" value="option1" checked>
+                                 <label for="radio5">
+                                     web request
+                                 </label>
+                             </div>
+                             <div class="radio">
+                                 <input type="radio" name="radio3" id="radio6" value="option2">
+                                 <label for="radio6">
+                                     other
+                                 </label>
+                             </div>
+                             <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                <i class="glyphicon glyphicon-refresh"></i>
+                            </button>
+                        </div> 
+
+{{!--                         <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2>Default Tree</h2>
+                            </div>
+                            <div class="panel-body">
+                                <div id="tree-default">
+                                    <ul>
+                                        <li>
+                                             Root node 1
+                                            <ul>
+                                                <li data-jstree='{ "selected" : true }'>
+                                                    <a href="#">
+                                                    Initially selected </a>
+                                                </li>
+                                                <li data-jstree='{ "icon" : "fa fa-briefcase text-success " }'>
+                                                     custom icon URL
+                                                </li>
+                                                <li data-jstree='{ "opened" : true }'>
+                                                     initially open
+                                                    <ul>
+                                                        <li data-jstree='{ "disabled" : true }'>
+                                                             Disabled Node
+                                                        </li>
+                                                        <li data-jstree='{ "type" : "file" }'>
+                                                             Another node
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-jstree='{ "icon" : "fa fa-warning text-danger" }'>
+                                                     Custom icon class (bootstrap)
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-jstree='{ "type" : "file" }'>
+                                            <a href="http://www.jstree.com">
+                                            Clickanle link node </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>  --}}
+
+                    </section>
                 </div>
             </section>
         </div>
@@ -248,6 +349,25 @@
 
          <!-- page application js -->
         <script src="js/forms-elements.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+
+                $('.server').click(function  () {
+                    $('.float-card').show().addClass("animated fadeInRightBig");
+
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInRightBig");
+                                         },500);
+
+                    $('#serve-value').text($(this).text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                });
+            });
+        </script>
     {{/append}}
 
 {{/extend}}

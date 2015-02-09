@@ -1035,11 +1035,47 @@ a.tabIcon{
     }
 }
 
-.fadeInLeftBig {
-    -webkit-animation-name: fadeInLeftBig;
-    animation-name: fadeInLeftBig;
+
+
+.fadeInRightBig {
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
 }
 
+@-webkit-keyframes fadeInRightBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(50px,0px);
+        transform: translate(50px,0px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,0px);
+        transform: translate(0,0px);
+    }
+}
+
+@keyframes fadeInRightBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(50px,0px);
+        -ms-transform: translate(50px,0px);
+        transform: translate(50px,0px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0,0px);
+        -ms-transform: translate(0,0px);
+        transform: translate(0,0px);
+    }
+}
+
+.fadeInRightBig {
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
+}
 
 
 
@@ -1135,6 +1171,31 @@ a.tabIcon{
     font-weight: bold;
   }
 
+  & .well{
+    background-color: #fff;
+  }
+
+  & .radio{
+    display: inline-block;
+    margin-right: 15px;
+
+    & label::after{
+      background-color: rgba(51,51,51,0.6);
+    }
+
+  }
+
+  & .visits-info .key{
+    color: #999;
+    margin-top: 16px;
+  }
+
+  & .visits-info .value{
+    font-weight: 400;
+    margin-top: 8px;
+    color: #666;
+  }
+
   .table-striped > tbody > tr:nth-child(odd) > td {
     background-color: #f5f5f5;
   }
@@ -1166,5 +1227,10 @@ a.tabIcon{
   }
 }
 
+.float-all {
+  width: 85%;
+  top: 146px;
+  
+}
 
 

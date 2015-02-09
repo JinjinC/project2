@@ -16,6 +16,7 @@
 
             //隐藏sidebar中不需要的部分。
             $('header').hide();
+            $('.logo').hide();
 
             $(document).ready(
 
@@ -98,6 +99,7 @@
                             $('#myModal').removeClass("in").removeClass("show-shadow").hide();
                             $('.single-widget-container').removeClass("blur").addClass("animateBlur");
                             $('header').show();
+                            $('.logo').show();
                             $('#nav-left').hide();
                             $('#nav-right>li:eq(0)').hide();
                             $('#nav-right>li:eq(1)').hide();
