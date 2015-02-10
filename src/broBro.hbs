@@ -162,6 +162,95 @@
                         </section>
                     </div>
                 </div>
+                <div class="row  float-card">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <span class="float-card-title">Title</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </header>
+                            <div class="body">
+                                 <section class="widget">
+                                    <header>
+                                        <h4>
+                                            响应时间和吞吐量
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart4" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </section>
+
+                                <section class="widget">
+                                    <header>
+                                        <h4>
+                                            调用者时间占比
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart2" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                       
+                                    </div>
+                                </section>
+
+                               {{!--  <section class="widget">
+                                    <header>
+                                       <h4>事务</h4>
+                                    </header>
+                                    <div class="body body-for-table">
+                                        <table class="table table-striped table-hover no-margin sources-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">名称</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="16%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">访问次数</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="16%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">响应时间</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="18%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">吞吐量 </span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td style="text-align: left;">SpringController/insert.do (GET)</td>
+                                                <td style="text-align: left;">6700000</td>
+                                                <td style="text-align: left;">5.76 ms</td>
+                                                <td style="text-align: left;">223,333.33cpm</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">33000</td>
+                                                <td style="text-align: left;">6.33 ms</td>
+                                                <td style="text-align: left;">1,100.00cpm</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                                 --}}
+                            </div>
+                        </section>
+                    </div>
+                </div>
                 
             </div>
         </div>
@@ -188,7 +277,55 @@
         <script src="js/daterangepicker.js"></script>
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph1.js"></script>
+        <script src="js/graph/graph4.js"></script>
+        <script src="js/graph/graph2.js"></script>
         <script src="js/bgcolor.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-item').click(function  () {
+
+                    $('.dd-handle').removeClass("active");
+
+                    $(this).find('.dd-handle').addClass("active");
+
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
+
+
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInLeftBig");
+                                         },1000);
+
+                    $('.float-card-title').text($(this).find('.bar-text').text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+
+            });
+
+             $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>
 
     {{/append}}
 

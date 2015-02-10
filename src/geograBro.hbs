@@ -546,6 +546,86 @@
                         </section>
                     </div>
                 </div>
+                <div class="row  float-card">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <span class="float-card-title">Title</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </header>
+                            <div class="body">
+
+                             <section class="widget">
+                                <header>
+                                    <h4>
+                                        页面加载时间
+                                    </h4>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart5" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>                                   
+                                </div>
+                            </section>
+
+                            <section class="widget">
+                                <header>
+                                    <h4>Traces</h4>
+                                </header>
+                                <div class="body body-for-table">
+                                    <table class="table table-striped table-hover no-margin sources-table">
+                                        <thead>
+                                        <tr>
+                                            <th width="34%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">名称</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">开始时间</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">耗时</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">Agent</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                         <tr>
+                                            <td style="text-align: left;">SpringController/splits.do (GET)</td>
+                                            <td style="text-align: left;">2015-02-05 16:00:44</td>
+                                            <td style="text-align: left;">99,428ms</td>
+                                            <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>  
+
+                             <section class="widget">
+                                <header>
+                                    <h4>
+                                        PV
+                                    </h4>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart6" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div> 
+                                </div>
+                            </section>                           
+                            </div>
+                        </section>
+                    </div>
+                </div>
                 
             </div>
         </div>
@@ -582,6 +662,8 @@
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph5.js"></script>
+        <script src="js/graph/graph6.js"></script>
 
 
         <script>
