@@ -1,0 +1,377 @@
+{{#extend "layoutKey"}}
+
+    {{#replace "sidebarKey"}}
+        {{> sidebarKey this conditionClass=conditionClass active="overviewKey"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div class="row">
+
+        <div class="col-lg-5 col-md-5">
+            <h2 class="page-title">
+                <span>总览 <small>总览页面</small></span>
+            </h2>
+        </div>
+
+        <div class="col-lg-7 col-md-7">
+           <div class="navbar nav-picker">
+               <ul class="nav navbar-nav navbar-right">
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="fa fa-clock-o"></i> 
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
+        </div>
+    </div>
+       
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                响应时间
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart1" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                <a href="transactionD.html" class="linkk">事务</a>                                    
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
+                            </div>
+                        </header>
+                        <div class="body">
+                            <ol class="dd-list">
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">47.99 s</span>
+                                        <div class="bar-graph"></div>
+                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                    </div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">n\a</a></div>
+                                </li>
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">15.37 s</span>
+                                        <div class="bar-graph" style="width:50%"></div>
+                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
+                                        
+                                    </div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">109,568 ms</a><a href="transactionD.html">   109,396 ms</a><a href="transactionD.html">   108,970 ms</a><a href="transactionD.html">   108,558 ms</a><a href="transactionD.html">   107,513 ms</a></div>
+                                </li>
+                                <li class="trace-item">
+                                    <div class="traceList">
+                                        <i class="iconfont icon2-dd" style="float: right;">
+                                            &#xe613;
+                                        </i>
+                                        <span style="float: right;">14.77 s</span>
+                                        <div class="bar-graph" style="width:30%"></div>
+                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
+                                        
+                                    </div>
+                                    <div class="trace_value">traces: <a href="transactionD.html">112,242 ms</a><a href="transactionD.html">   111,167 ms</a><a href="transactionD.html">   107,892 ms</a><a href="transactionD.html">   106,685 ms</a><a href="transactionD.html">   105,872 ms</a></div>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-6">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                <a href="errorMessage.html" class="linkk">错误率</a>
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart2" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+        
+        </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                Apdex
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart3" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>   
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                吞吐量
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            </div>
+                        </header>
+                        <div class="body no-margin">
+                            <div id="visits-chart4" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="widget widget-tabs">
+                        <header>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="通知">
+                                    <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="严重问题">
+                                    <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#warm" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="注释">
+                                    <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
+                                </li>
+                                
+                            </ul>
+                        </header>
+                        <div class="body tab-content">
+                            <div id="All" class="tab-pane active clearfix">
+                                <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:28</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                          
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="breaktime" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notify" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="issue" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="warm" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notes" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                
+    
+
+    {{/replace}}
+
+
+    {{#append "scripts"}}
+        <!-- page libs -->
+        <script>
+            $("li").tooltip();
+        </script>
+
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- daterange picker js -->
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>               
+        <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+        <script src="js/daterangepicker.js"></script>
+
+        <!-- page application js -->
+        <script src="js/graph/graph1.js"></script>
+        <script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph4.js"></script>
+
+         <!-- page libs -->
+  
+        <script src="js/graph/singlechart1.js"></script>
+        <script src="js/graph/singlechart2.js"></script>
+
+        <script>
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('#cpuchart').mouseover(function(){
+                $('#cputrend').show();
+            })
+            $('#cpuchart').mouseout(function(){
+                $('#cputrend').hide();
+            })
+            $('#contentchart').mouseover(function(){
+                $('#contenttrend').show();
+            })
+            $('#contentchart').mouseout(function(){
+                $('#contenttrend').hide();
+            })
+
+            $('.trace-item').click(function(){
+            location.href="transactionD.html";
+         })
+           
+        </script>
+        
+    {{/append}}
+
+{{/extend}}
