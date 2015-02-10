@@ -389,12 +389,12 @@
             $(document).ready(function  () {
 
                 $('.server').click(function  () {
-                    $('.float-card').show();
+                    $('.float-card').show().addClass("animated fadeInRightBig");
 
-                    // .addClass("animated fadeInRightBig")
-                    // setTimeout(function (){
-                    //                          $('.float-card').removeClass("animated fadeInRightBig");
-                    //                      },500);
+                    
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInRightBig");
+                                         },500);
 
                     $('#serve-value').text($(this).text());
                 });
