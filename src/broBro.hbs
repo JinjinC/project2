@@ -1,0 +1,195 @@
+{{#extend "layoutBro"}}
+
+    {{#replace "sidebarBro"}}
+        {{> sidebarBro this conditionClass=conditionClass active="broBro"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     
+     <div class="row">
+
+         <div class="col-lg-5 col-md-5">
+             <h2 class="page-title">浏览器 <small>浏览器信息</small></h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+             {{#block "picker"}}
+                 {{> picker }}
+             {{/block}}
+         </div>
+     </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <section class="widget widget-tabs">
+                         
+                            <div class="body tab-content">
+                                <div id="webTran" class="tab-pane active clearfix">
+
+                                    <div class="body" style="background-color:transparent; padding:0;">
+                                        <ul id="myTab" class="nav nav-tabs">
+                                            <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">平均时间</a></li>
+                                            <li><a href="#throughput" data-toggle="tab" class="tabItem active">时间百分比</a></li>
+                                            <li><a href="#throughput1" data-toggle="tab" class="tabItem active">吞吐量</a></li>
+                                        </ul>
+                                        <div id="myTabContent" class="tab-content" >
+                                            <div class="tab-pane fade in active" id="responseTime">
+                                                <div class="dd" id="nestable1">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                           <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;">5.43 ms</span>
+                                                                <div class="bar-graph" style="width:90%"></div>
+                                                                <div class="bar-text"><span>Robot/Spider</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dd-item dd-collapsed" data-id="2">
+                                                           <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;">0.43 ms</span>
+                                                                <div class="bar-graph" style="width:10%"></div>
+                                                                <div class="bar-text"><span>FireFox</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="tab-pane fade" id="throughput">
+                                                <div class="dd" id="nestable2">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;" style="width:100%">196,333 cpm</span>
+                                                                <div class="bar-graph" style="width:95%"></div>
+                                                                <div class="bar-text"><span>Robot/Spider</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;" style="width:100%">333 cpm</span>
+                                                                <div class="bar-graph" style="width:5%"></div>
+                                                                <div class="bar-text"><span>FireFox</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="throughput1">
+                                                <div class="dd" id="nestable2">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;" style="width:100%">196,333 cpm</span>
+                                                                <div class="bar-graph" style="width:95%"></div>
+                                                                <div class="bar-text"><span>Robot/Spider</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <span style="float: right;" style="width:100%">333 cpm</span>
+                                                                <div class="bar-graph" style="width:5%"></div>
+                                                                <div class="bar-text"><span>FireFox</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                </div>
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    吞吐量 - 浏览器类型
+                                    
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart1" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    页面加载 - 设备类型
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart3" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+
+        <!-- daterange picker js -->
+         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <!-- page application js -->
+        <script src="js/daterangepicker.js"></script>
+        <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph1.js"></script>
+        <script src="js/bgcolor.js"></script>
+
+    {{/append}}
+
+{{/extend}}
