@@ -1,10 +1,10 @@
-﻿ 
-{{#extend "layout"}}
+ 
+{{#extend "layoutKey"}}
 
 
-    {{#replace "sidebar"}}
+    {{#replace "sidebarKey"}}
     <div class="sidebar-hidden">
-        {{> sidebar this conditionClass=conditionClass active="application_list"}}
+        {{> sidebar this conditionClass=conditionClass active="keytransaction_list"}}
     </div>
     {{/replace}}
 
@@ -13,10 +13,10 @@
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 <h2 class="page-title">
-                <span>应用程序<small>应用程序列表</small></span>
-                    <a href="add_application.html">
+                <span>关键事务<small>关键事务列表</small></span>
+                    <a href="#">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
-                            添加应用
+                            添加关键事务
                         </button>
                     </a>
                 </h2>
@@ -30,137 +30,73 @@
                         <table class="table table-hover no-margin sources-table">
                             <thead>
                                 <tr>
-                                    <th width="2%"></th>
-                                    <th width="2%"></th>
-                                    <th width="50%" style="text-align: left;" class="sortedth">
-                                        <span class="sortedtext">名称</span>
+                                    <th width="30%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">事务名称</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
                                     <th class="sortedth" width="10%" style="text-align: left;">
-                                        <span class="sortedtext">响应时间</span>
+                                        <span class="sortedtext">应用程序</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="20%" style="text-align: left;">
+                                        <span class="sortedtext">URL</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
                                     <th class="sortedth" width="10%" style="text-align: left;">
-                                        <span class="sortedtext">吞吐量(cpm)</span>
+                                        <span class="sortedtext">吞吐量</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th class="sortedth" width="10%" style="text-align: left;">
-                                        <span class="sortedtext">错误率</span>
-                                        <i class="sortedup" style="display:none"></i>
-                                        <i class="sorteddown" style="display:none"></i>
-                                    </th>
-                                    <th width="13%" style="text-align: left;">趋势</th>
+                                    <th width="13%" style="text-align: left;">错误率</th>
                                     <th width="3%"></th>
 
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> 
-                                        <i class="iconfont icon2 expand" id="plusOracle">&#xe612;</i>
-                                        <i class="iconfont icon2 expand" id="minusOracle" style="display:none">&#xe610;</i>
-                                    </td>                                
-                                    <td>
-                                        <i class="iconfont icon2 success" >&#xe60f; </i>
-                                    </td>
-                                    <td ><a href="indexD.html" class="appItem">My Application</a></td>
+                                    <td ><a href="overviewKey.html" class="appItem">My Application</a></td>
                                     <td >0 ms</td>
-                                    <td >0.0</td>
+                                    <td >SpringController/getlist.do (GET)</td>
                                     <td >0.00%</td>
-                                    <td class="chart-cell">
-                                        <div id="direct-trend"></div>
-                                    </td>
+                                    <td>0.00%</td>
                                     <td style="text-align: center !important; padding: 8px 0">
                                         <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
                                         </i>
                                     </td>
                                 </tr> 
                             
-                                <tr>
-                                    <td colspan="8" style="padding:0; border:0">
-                                        <table class="table no-margin sources-table" id="tableOracle" style="display:none;">
-                                        <tbody>
-                                            <tr id="tr1">
-                                                <td width="8%"></td>
-                                               
-                                                <td width="46%"><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
-                                                <td width="10%">0 ms</td>
-                                                <td width="10%">0.0</td>
-                                                <td width="10%">0.00%</td>
-                                                <td width="13%" class="chart-cell">
-                                                   
-                                                </td>
-                                                <td width="3%" style="text-align: center !important; padding: 8px 0">
-                                                    <i class="glyphicon glyphicon-cog icon2 setting1" id="icon-setting1" style="display:none">
-                                                    </i>
-                                                </td>
-                                            </tr>
-                                             <tr id="tr2">
-                                                <td></td>
-                                               
-                                                <td><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
-                                                <td>0 ms</td>
-                                                <td>0.0</td>
-                                                <td>0.00%</td>
-                                                <td>
-                                                    
-                                                </td>
-                                                <td style="text-align: center !important; padding: 8px 0">
-                                                    <i class="glyphicon glyphicon-cog icon2 setting2" id="icon-setting2" style="display:none">
-                                                    </i>
-                                                </td>
-                                            </tr> 
-                                             <tr id="tr3">
-                                                <td></td>
-                                               
-                                                <td><a href="indexD.html" class="appItem">java:app187:80(10.133.197.33)</a></td>
-                                                <td>0 ms</td>
-                                                <td>0.0</td>
-                                                <td>0.00%</td>
-                                                <td>
-                                                    
-                                                </td>
-                                                <td style="text-align: center !important; padding: 8px 0">
-                                                    <i class="glyphicon glyphicon-cog icon2 setting3" id="icon-setting3" style="display:none">
-                                                    </i>
-                                                </td>
-                                            </tr>  
-                                            
-                                        </tbody>
-                                    </table>  
-
+                                 <tr>
+                                    <td ><a href="overviewKey.html" class="appItem"> app</a></td>
+                                    <td >0 ms</td>
+                                    <td >SpringController/getlist.do (GET)</td>
+                                    <td >0.00%</td>
+                                    <td>0.00%</td>
+                                    <td style="text-align: center !important; padding: 8px 0">
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting4" style="display:none">
+                                        </i>
                                     </td>
-                                                          
-                                </tr>
+                                </tr> 
                            
                                 <tr>
-                                    <td></td>
-                                    <td><i class="iconfont icon2 outdate">&#xe60f; </i></td>
-                                    <td ><a href="indexD.html" class="appItem">app3</a></td>
+                                    <td ><a href="overviewKey.html" class="appItem">app3</a></td>
                                     <td >0 ms</td>
-                                    <td >0.0</td>
+                                    <td >SpringController/getlist.do (GET)</td>
                                     <td >0.00%</td>
-                                    <td class="chart-cell">
-                                        <div id="refer-trend"></div>
-                                    </td>
+                                    <td>0.00%</td>
                                     <td style="text-align: center !important; padding: 8px 0">
                                         <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting4" style="display:none">
                                         </i>
                                     </td>
                                 </tr> 
                                 <tr>
-                                    <td></td>
-                                    <td><i class="iconfont icon2 danger">&#xe60f; </i></td>
-                                    <td ><a href="indexD.html" class="appItem">app4</a></td>
+                                    <td ><a href="overviewKey.html" class="appItem">app4</a></td>
                                     <td >0 ms</td>
-                                    <td >0.0</td>
+                                    <td >SpringController/getlist.do (GET)</td>
                                     <td >0.00%</td>
-                                    <td class="chart-cell ">
-                                        <div id="search-trend"></div>
-                                    </td>
+                                    <td>0.00%</td>
                                     <td style="text-align: center !important; padding: 8px 0">
                                         <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting5" style="display:none">
                                         </i>

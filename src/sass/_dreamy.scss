@@ -171,6 +171,10 @@ td{
   position: relative;
   z-index: 9;
 
+  & a{
+    cursor: pointer;
+  }
+
 }
 
 

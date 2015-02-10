@@ -1,7 +1,7 @@
 {{#extend "layoutBro"}}
 
     {{#replace "sidebarBro"}}
-        {{> sidebarBro this conditionClass=conditionClass active="indexD"}}
+        {{> sidebarBro this conditionClass=conditionClass active="broswer_overview"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -14,9 +14,18 @@
         </div>
 
         <div class="col-lg-7 col-md-7">
-            {{#block "picker"}}
-                {{> picker }}
-            {{/block}}
+            <div class="navbar nav-picker">
+               <ul class="nav navbar-nav navbar-right">
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="fa fa-clock-o"></i> 
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
         </div>
     </div>
        
@@ -63,9 +72,9 @@
                                         </i>
                                         <span style="float: right;">47.99 s</span>
                                         <div class="bar-graph"></div>
-                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                        <div class="bar-text"><span><a>SpringController/insert.do (GET)</a></span></div>
                                     </div>
-                                    <div class="trace_value">traces: n\a</div>
+                                    <div class="trace_value"><a>traces: n\a</a></div>
                                 </li>
                                 <li class="trace-item">
                                     <div class="traceList">
@@ -74,10 +83,10 @@
                                         </i>
                                         <span style="float: right;">15.37 s</span>
                                         <div class="bar-graph" style="width:50%"></div>
-                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
+                                        <div class="bar-text"><span><a>SpringController/abc.do (GET)</a></span></div>
                                         
                                     </div>
-                                    <div class="trace_value">traces: 109,568 ms  109,396 ms 108,970 ms 108,558 ms 107,513 ms</div>
+                                    <div class="trace_value"><a>traces: n\a</a></div>
                                 </li>
                                 <li class="trace-item">
                                     <div class="traceList">
@@ -86,10 +95,10 @@
                                         </i>
                                         <span style="float: right;">14.77 s</span>
                                         <div class="bar-graph" style="width:30%"></div>
-                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
+                                        <div class="bar-text"><span><a>SpringController/splits.do (GET)</a></span></div>
                                         
                                     </div>
-                                    <div class="trace_value">traces: 112,242 ms   111,167 ms  107,892 ms   106,685 ms   105,872 ms</div>
+                                    <div class="trace_value"><a>traces: n\a</a></div>
                                 </li>
                             </ol>
                         </div>
