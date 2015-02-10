@@ -1243,7 +1243,7 @@ legend + .control-group {
 
 
   .nav > li:not(.active) > a{
-    background: $bg-transparent;
+    // background: $bg-transparent;
     border-bottom: none;
     &:hover{
       background: rgba(darken($widget-bg, 10%), .4);

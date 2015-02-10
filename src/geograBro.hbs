@@ -25,24 +25,24 @@
                         <section class="widget widget-tabs">
 
                             <div class="body tab-content">
-                                <div id="averTime" class="tab-pane active clearfix">
+                                <div class="tab-pane active clearfix">
                                     <div class="body" style="background-color:transparent; padding:0;">
                                         <ul class="nav nav-tabs">
                                             <li class="active">
-                                                <a href="#averTime" data-toggle="tab" style="font-size:14px; font-weight: 500">平均时间</a>
+                                                <a href="#averTime" data-toggle="tab" class="tabItem">平均时间</a>
                                             </li>
                                             <li>
-                                                <a href="#percTime" data-toggle="tab" style="font-size:14px; font-weight: 500">时间百分比</a>
+                                                <a href="#percTime" data-toggle="tab" class="tabItem">时间百分比</a>
                                             </li>
                                             <li>
-                                                <a href="#throu" data-toggle="tab" style="font-size:14px; font-weight: 500">吞吐量</a>
+                                                <a href="#throu" data-toggle="tab" class="tabItem">吞吐量</a>
                                             </li>
                                         </ul>
                                         <div id="myTabContent" class="tab-content" >
-                                            <div class="tab-pane fade in active" id="responseTime">
+                                            <div class="tab-pane fade in active" id="averTime">
                                                 <div class="dd" id="nestable1">
                                                     <ol class="dd-list">
-                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                        <li class="dd-item" data-id="1">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -194,7 +194,7 @@
                                             <div id="percTime" class="tab-pane clearfix">
                                                 <div class="dd" id="nestable2">
                                                     <ol class="dd-list">
-                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                        <li class="dd-item" data-id="1">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -343,14 +343,14 @@
                                                     </ol>
                                                 </div>
                                             </div>
-                                            <div id="throu" class="tab-pane clearfix">
-                                                <div class="dd" id="nestable3">
+                                            <div class="tab-pane fade" id="throu">
+                                                <div class="dd" id="nestable1">
                                                     <ol class="dd-list">
                                                         <li class="dd-item dd-collapsed" data-id="1">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                <span style="float: right;">0.00 ppm</span>
+                                                                <span style="float: right;">0.00 ms</span>
                                                                 <div class="bar-graph" style="width:50%"></div>
                                                                 <div class="bar-text"><span>中国</span></div>
                                                             </div>
@@ -359,7 +359,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:30%"></div>
                                                                         <div class="bar-text"><span>辽宁</span></div>
                                                                     </div>
@@ -368,7 +368,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>湖北</span></div>
                                                                     </div>
@@ -377,7 +377,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>吉林</span></div>
                                                                     </div>
@@ -386,7 +386,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>天津</span></div>
                                                                     </div>
@@ -395,7 +395,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>山东</span></div>
                                                                     </div>
@@ -404,7 +404,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>福建</span></div>
                                                                     </div>
@@ -413,7 +413,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>广西</span></div>
                                                                     </div>
@@ -422,7 +422,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>广东</span></div>
                                                                     </div>
@@ -431,7 +431,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>江苏</span></div>
                                                                     </div>
@@ -440,7 +440,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>海南</span></div>
                                                                     </div>
@@ -449,7 +449,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>台湾</span></div>
                                                                     </div>
@@ -458,7 +458,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>山西</span></div>
                                                                     </div>
@@ -467,7 +467,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>青海</span></div>
                                                                     </div>
@@ -476,7 +476,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>西藏</span></div>
                                                                     </div>
@@ -485,7 +485,7 @@
                                                                     <div class="dd-handle">
                                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                         </i>
-                                                                        <span style="float: right;">0.00 ppm</span>
+                                                                        <span style="float: right;">0.00 ms</span>
                                                                         <div class="bar-graph" style="width:20%"></div>
                                                                         <div class="bar-text"><span>上海</span></div>
                                                                     </div>
@@ -494,8 +494,7 @@
                                                         </li>
                                                     </ol>
                                                 </div>
-                                            </div>                                
-                                        </div>
+                                            </div>
                                     </div>
                                 </div> 
                             </div>  
@@ -566,7 +565,7 @@
         <script src="lib/jquery-ui/ui/widget.js"></script>
         <script src="lib/jquery-ui/ui/mouse.js"></script>
         <script src="lib/jquery-ui/ui/sortable.js"></script>
-        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable1.js"></script>
         <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
         <!-- page application js -->
