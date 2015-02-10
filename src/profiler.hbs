@@ -349,13 +349,13 @@
     {{/replace}}
      {{#append "scripts"}}
         <script>
-            $('tr').mouseover(function(){
-                $(this).find('.trash').show();
-            })
+            // $('tr').mouseover(function(){
+            //     $(this).find('.trash').show();
+            // })
 
-            $('tr').mouseout(function(){
-               $(this).find('.trash').hide();
-            })
+            // $('tr').mouseout(function(){
+            //    $(this).find('.trash').hide();
+            // })
 
 
         </script>
@@ -389,11 +389,12 @@
             $(document).ready(function  () {
 
                 $('.server').click(function  () {
-                    $('.float-card').show().addClass("animated fadeInRightBig");
+                    $('.float-card').show();
 
-                    setTimeout(function (){
-                                             $('.float-card').removeClass("animated fadeInRightBig");
-                                         },500);
+                    // .addClass("animated fadeInRightBig")
+                    // setTimeout(function (){
+                    //                          $('.float-card').removeClass("animated fadeInRightBig");
+                    //                      },500);
 
                     $('#serve-value').text($(this).text());
                 });
