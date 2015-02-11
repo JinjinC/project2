@@ -31,7 +31,7 @@
                         <tr>
                             <td><a>10.20.234.123:8080 java-app</a></td>
                             <td>2.0</td>
-                            <td><a>Agent 配置</a></td>
+                            <td><a href="#" class="server">Agent 配置</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -100,8 +100,6 @@
                     </table>
                 </div>
             </section>
-         	
-
         </div>
          <div class="col-lg-3">
          	<section class="widget">
@@ -163,10 +161,61 @@
                     </table>
                 </div>
             </section>
-         	
-        	
-
         </div>
+    </div>
+    <div class="col-md-12 col-lg-12 float-card float-all">
+        <section class="widget" style="min-height:800px;">
+            <header>
+                <span class="float-card-title">Title</span>
+                <span class="glyphicon glyphicon-remove pull-right"></span>
+            </header>
+            <div class="body">                 
+                <div class="visits-info well well-sm">
+                    <div class="row">
+                    <div class="col-sm-4  col-xs-6">
+                        <div class="key">服务器</div>
+                        <div id="serve-value" class="value">服务器名</div>
+                    </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="key"> 开始时间</div>
+                            <div class="value">2015-02-07 04:42</div>
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="key">采样周期</div>
+                            <div class="value">2分钟</div>
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="key">采样次数</div>
+                            <div class="value">120</div>
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="key">采集人</div>
+                            <div class="value">ONEAPM</div>
+                        </div>
+                    </div>
+                </div>
+                <section class="widget" style="margin-top: 17px;min-height: 640px;">
+                    <div>
+                        <span style="margin-right: 20px;font-size: 14px">显示设置</span>
+                        <div class="radio">
+                             <input type="radio" name="radio3" id="radio5" value="option1" checked>
+                             <label for="radio5">
+                                 web request
+                             </label>
+                         </div>
+                         <div class="radio">
+                             <input type="radio" name="radio3" id="radio6" value="option2">
+                             <label for="radio6">
+                                 other
+                             </label>
+                         </div>
+                         <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
     </div>
 
 
@@ -183,6 +232,25 @@
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
         <script src="js/index.js"></script>
+        <script>
+            $(document).ready(function  () {
+
+                $('.server').click(function  () {
+                    $('.float-card').show().addClass("animated fadeInRightBig");
+
+                    
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInRightBig");
+                                         },500);
+
+                    $('#serve-value').text($(this).text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                });
+            });
+        </script>
     {{/append}}
 
 {{/extend}}
