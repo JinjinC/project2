@@ -4,11 +4,11 @@
     background: rgba(51, 51, 51, 0.25);
   }
 }
-
-.tr0{
+.tre1, .tre2, .tre3{
+  background: rgba(51, 51, 51, 0.25);
   &:hover,
   &:focus{
-    background: transparent;
+    background: rgba(51, 51, 51, 0.4);
   }
 }
 
@@ -167,7 +167,7 @@ td{
   z-index: 9;
 }
 .bar-text{
-  padding: 0 10px 0 0;
+  padding: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -316,36 +316,7 @@ button.btn.dropdown-toggle.btn-choose{
       color: white;
     }
   }
-  &.setting1{
-    font-size: 14px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
-  &.setting2{
-    font-size: 14px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
-  &.setting3{
-    font-size: 14px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
+  
   &.expand{
     cursor: pointer;
     font-size: 12px;
