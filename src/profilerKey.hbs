@@ -9,13 +9,102 @@
         <div class="col-lg-12">
             <h2 class="page-title">
             <span>性能剖析<small>性能剖析页面</small></span>
-                <a href="">
-                    <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
+                <a href="#">
+                    <button  class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
                         创建性能剖析
                     </button>
                 </a>
             </h2>
         </div>
+    </div>
+    {{!--创建性能剖析modal --}}
+    <div id="myModal" class="modal fade trans-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">创建性能剖析</h4>
+                </div>
+                <div class="modal-body">
+                   <div class="row">
+
+                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                           <form class="form-horizontal form-label-left">
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="app" class="control-label">agent</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <select required="required" class="select1 form-control form-input-white" name="app">
+                                                <option value="">app1</option>
+                                                <option value="">app2</option>
+                                                <option value="">app3</option>
+                                                <option value="">app4</option>
+                                            </select>
+                                        </div>                                           
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="profiler-name" class="control-label">名称</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <input id="profiler-name" class="form-control form-input-white" required="required" type="text" value="" name="trans-name" data-parsley-trigger="change">
+                                            <p class="validation-message" id="trans-error">该项不能为空</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="term" class="control-label">采样周期(ms)</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <input id="term" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                            <p class="validation-message" id="apdexT-error">该项不能为空</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="follow" class="control-label">最大跟踪数</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <input id="follow" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                            <p class="validation-message" id="follow-error">该项不能为空</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="apdex" class="control-label">持续时间(分钟)</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <input id="timesus" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                            <p class="validation-message" id="timesus-error">该项不能为空</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                           </form>
+                       </div>
+                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <p>什么是性能剖析？</p>
+                            <p> </p>
+                            <p>性能剖析能够为关键事务提供更多细节信息。启动性能剖析，TPM 就能够收集到你事务的100个事务足迹和一个线程监控。 通过仔细研究事务足迹和线程分析，我们可以更好地确定在关键性事务内部发生了什么。</p>
+                       </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                    <button type="button" class="btn btn-success" id="btn-trans">保存</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div>
      
     <div class="row">
@@ -47,7 +136,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -61,7 +150,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -75,7 +164,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -89,7 +178,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -103,7 +192,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -117,7 +206,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -131,7 +220,7 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
@@ -145,14 +234,14 @@
                             <td>结束</td>
                             <td style="padding: 0 8px;">
                                 <div class="body no-margin">
-                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModal"> 
+                                    <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
                                         <i class="fa fa-trash-o icon2 trash" style="display:none"></i>
                                     </button>
                                 </div>                               
                             </td>
                         </tr>
 
-                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                        <div id="myModalDel" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog modal-trash">
                                 <div class="modal-content">
 
@@ -236,6 +325,30 @@
                     $('.float-card').hide();
                 });
             });
+
+
+            //创建性能剖析验证
+
+            $('#btn-trans').click(function  () {
+                if ( $('.form-input-white').val()=="" ){
+                    $('.validation-message').show();
+                }
+            });
+
+            $('#btn-trans-close').click(function  () {
+                $('#trans-name').removeClass("from-error");
+                $('#trans-error').hide();
+                $('#apdexT').removeClass("from-error");
+                $('#apdexT-error').hide();
+                $('#trans-name').val("");
+                $('#apdexT').val("");
+            });
+
+            $('.form-input-white').focus(function  () {
+                $(this).next().removeClass("from-error");
+                $(this).next().hide();
+            });
+
         </script>
     {{/append}}
 

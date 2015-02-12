@@ -6,8 +6,11 @@
   -webkit-box-shadow:none;
   box-shadow:none;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e393de6c18be948db419030ac1f912a562f23f60
 
 .tre{
   &:hover,
@@ -22,7 +25,6 @@
     background: rgba(51, 51, 51, 0.4);
   }
 }
-
 
 .settingBox{
   width: 310px;
@@ -1342,6 +1344,26 @@ a.tabIcon{
 .trans-modal{
   top: 25%;
   & .modal-dialog{
+
+    width: 650px;
+    @media(max-width: 768px){
+      width: 91%;
+    }
+    @media(max-width: 640px){
+      width: 90%;
+    }
+    @media(max-width: 530px){
+      width: 89%;
+    }
+    @media(max-width: 480px){
+      width: 97.5%;
+    }
+  }
+}
+
+.account-modal{
+  top: 25%;
+  & .modal-dialog{
     @media(max-width: 768px){
       width: 91%;
     }
@@ -1371,6 +1393,8 @@ a.tabIcon{
   font-size: 12px;
   display: none;
 }
+
+
 
 
 

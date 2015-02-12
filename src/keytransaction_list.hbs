@@ -16,7 +16,7 @@
                 <span>关键事务<small>关键事务列表</small></span>
                     <a href="#">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
-                            添加到关键事务
+                            添加关键事务
                         </button>
                     </a>
                 </h2>
@@ -81,8 +81,8 @@
                                                 <label for="apdex" class="control-label">ApdexT</label>
                                             </div>
                                             <div class="col-sm-6 col-lg-6 col-md-6">
-                                                <input id="apdex" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
-                                                <p class="validation-message" id="apdex-error">该项不能为空</p>
+                                                <input id="apdexT" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                                <p class="validation-message" id="apdexT-error">该项不能为空</p>
                                             </div>                                         
                                        </div>
                                    </div>
@@ -96,8 +96,8 @@
                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">关闭</button>
-                        <button type="button" class="btn btn-primary" id="btn-trans">创建关键事务</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
                     </div>
 
                 </div><!-- /.modal-content -->
@@ -504,9 +504,9 @@
                     $('#trans-name').addClass("from-error");
                     $('#trans-error').show();
                 }
-                if ( $('#apdex').val()=="" ){
-                    $('#apdex').addClass("from-error");
-                    $('#apdex-error').show();
+                if ( $('#apdexT').val()=="" ){
+                    $('#apdexT').addClass("from-error");
+                    $('#apdexT-error').show();
                 }
             });
 
@@ -515,18 +515,18 @@
                 $('#trans-error').hide();
             });
 
-            $('#apdex').focus(function  () {
-                $('#apdex').removeClass("from-error");
-                $('#apdex-error').hide();
+            $('#apdexT').focus(function  () {
+                $('#apdexT').removeClass("from-error");
+                $('#apdexT-error').hide();
             });
 
             $('#btn-trans-close').click(function  () {
                 $('#trans-name').removeClass("from-error");
                 $('#trans-error').hide();
-                $('#apdex').removeClass("from-error");
-                $('#apdex-error').hide();
+                $('#apdexT').removeClass("from-error");
+                $('#apdexT-error').hide();
                 $('#trans-name').val("");
-                $('#apdex').val("");
+                $('#apdexT').val("");
             });
 
         </script>
