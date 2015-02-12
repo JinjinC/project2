@@ -1,0 +1,307 @@
+{{#extend "layoutMob"}}
+
+    {{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="versMob"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     
+     <div class="row">
+
+         <div class="col-lg-5 col-md-5">
+             <h2 class="page-title">
+             <span>应用版本 <small>版本信息</small></span>
+             </h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+            <div class="navbar nav-picker">
+               <ul class="nav navbar-nav navbar-right">
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="fa fa-clock-o"></i> 
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
+        </div>
+     </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-md-12">
+                       <section class="widget widget-tabs">
+                        <header class="card-header">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#reqMob" data-toggle="tab" style="font-size:14px; font-weight: 500">应用版本
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+                        <div class="body tab-content">
+                            <div id="reqMob" class="tab-pane active clearfix">
+
+                                <div class="body" style="background-color:transparent; padding:0;">
+                                    <ul id="myTab" class="nav nav-tabs">
+                                        <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">交互时间</a></li>
+                                        <li><a href="#excuTime" data-toggle="tab" class="tabItem">活跃会话数</a>
+                                        </li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content" >
+                                        <div class="tab-pane fade in active" id="responseTime">
+                                            <div class="dd" id="nestable1">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:100%"></div>
+                                                            <div class="bar-text"><span>1.1</span><span style="float: right;">2.02 s</span></div>
+                                                        </div>
+                                                        
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="tab-pane fade" id="excuTime">
+                                            <div class="dd" id="nestable2">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:100%"></div>
+                                                            <div class="bar-text"><span>1.1</span><span style="float: right;">1,829</span></div>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            
+                        </div>
+                    </section>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    执行时间
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart2" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                                
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    活跃会话数
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart3" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+                <div class="row  float-card">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <span class="float-card-title">Title</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </header>
+                            <div class="body" style="min-height: 600px;">
+                                <section class="widget">
+                                    <header>
+                                       <h4>事务</h4>
+                                    </header>
+                                    <div class="body body-for-table">
+                                        <table class="table table-striped table-hover no-margin sources-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">名称</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="13%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">执行时间占比</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="13%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">响应时间</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                                <th width="14%" style="text-align: left;" class="sortedth">
+                                                    <span class="sortedtext">访问次数</span>
+                                                    <i class="sortedup" style="display:none"></i>
+                                                    <i class="sorteddown" style="display:none"></i>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td style="text-align: left;">WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">50.05%</td>
+                                                <td style="text-align: left;">123.38ms</td>
+                                                <td style="text-align: left;">148</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">50.05%</td>
+                                                <td style="text-align: left;">123.38ms</td>
+                                                <td style="text-align: left;">116</td>
+                                            </tr>
+                                           
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    
+       
+       
+    {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="lib/jquery-ui/ui/core.js"></script>
+        <script src="lib/jquery-ui/ui/widget.js"></script>
+        <script src="lib/jquery-ui/ui/mouse.js"></script>
+        <script src="lib/jquery-ui/ui/sortable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/component-list-groups.js"></script>
+
+        <!-- daterange picker js -->
+         <script src="lib/form-daterangepicker/daterangepicker.js"></script>        
+         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <!-- page application js -->
+        <script src="js/daterangepicker.js"></script>
+        <script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph3.js"></script>
+
+
+        <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-handle').click(function  () {
+
+                    var handleParent = $('.dd-handle.active')
+
+                    $('.dd-handle').removeClass("active");
+                    $('.dd-item').find('button').removeClass("active");
+
+                    $(this).addClass("active");
+
+                    $(this).parent().find('button').addClass("active");
+
+
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
+
+
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInLeftBig");
+                                         },1000);
+
+                    $('.float-card-title').text($(this).find('.bar-text').text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                    $('.dd-item').find('button').removeClass("active");
+                });
+
+            });
+
+             $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>
+   
+    {{/append}}
+
+{{/extend}}

@@ -1,7 +1,7 @@
 {{#extend "layoutMob"}}
 
-    {{#replace "sidebarMov"}}
-        {{> sidebarMov this conditionClass=conditionClass active="OSMob"}}
+    {{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="opMob"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -10,15 +10,24 @@
 
          <div class="col-lg-5 col-md-5">
              <h2 class="page-title">
-                <span>OS <small>操作系统</small></span>
+             <span>运营商 <small>运营商信息</small></span>
              </h2>
          </div>
 
          <div class="col-lg-7 col-md-7">
-             {{#block "picker"}}
-                 {{> picker }}
-             {{/block}}
-         </div>
+            <div class="navbar nav-picker">
+               <ul class="nav navbar-nav navbar-right">
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="fa fa-clock-o"></i> 
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
+        </div>
      </div>
         <div class="row">
             <div class="col-lg-4">
@@ -28,139 +37,98 @@
                         <header class="card-header">
                             <ul class="nav nav-tabs">
                                 <li class="active">
-                                    <a href="#dev" data-toggle="tab" style="font-size:14px; font-weight: 500">操作系统版本
+                                    <a href="#reqMob" data-toggle="tab" style="font-size:14px; font-weight: 500">运营商
                                     </a>
                                 </li>
                             </ul>
                         </header>
                         <div class="body tab-content">
-                            <div id="dev" class="tab-pane active clearfix">
+                            <div id="reqMob" class="tab-pane active clearfix">
 
                                 <div class="body" style="background-color:transparent; padding:0;">
                                     <ul id="myTab" class="nav nav-tabs">
-                                        <li class="active"><a href="#interTime" data-toggle="tab" class="tabItem">交互时间</a></li>
-                                        <li><a href="#htReTime" data-toggle="tab" class="tabItem">HTTP 响应时间</a>
+                                        <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
+                                        <li><a href="#excuTime" data-toggle="tab" class="tabItem">活跃会话数</a>
                                         </li>
-                                        <li><a href="#htReqTime" data-toggle="tab" class="tabItem">HTTP 请求数</a>
-                                        </li>
-                                        <li><a href="#acSeTime" data-toggle="tab" class="tabItem">活跃会话数</a>
-                                        </li>
-                                        <li><a href="#NetEr" data-toggle="tab" class="tabItem">网络错误率</a>
+                                        <li><a href="#traffic" data-toggle="tab" class="tabItem">网络错误率</a>
                                         </li>
                                     </ul>
                                     <div id="myTabContent" class="tab-content" >
-                                        <div class="tab-pane fade in active" id="interTime">
+                                        <div class="tab-pane fade in active" id="responseTime">
                                             <div class="dd" id="nestable1">
                                                 <ol class="dd-list">
                                                     <li class="dd-item dd-collapsed" data-id="1">
                                                         <div class="dd-handle">
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
-                                                            <div class="bar-graph" style="width:100%"></div>
-                                                            <div class="bar-text"><span>Android</span><span style="float: right;">2.02 s</span></div>
+                                                            <div class="bar-graph" style="width:63%"></div>
+                                                            <div class="bar-text"><span>China Telecom</span><span style="float: right;">2.21 ms</span></div>
                                                         </div>
-                                                        <ol class="dd-list">
-                                                            <li class="dd-item dd-collapsed" data-id="2">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:30%"></div>
-                                                                    <div class="bar-text"><span>3.2.1</span><span style="float: right;">6.82 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                            <li class="dd-item dd-collapsed" data-id="3">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:23%"></div>
-                                                                    <div class="bar-text"><span>4.2.1</span><span style="float: right;">4.09 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                            <li class="dd-item" data-id="4">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:17%"></div>
-                                                                    <div class="bar-text"><span>4.2.2</span><span style="float: right;">3.41 s</span></div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="dd-item" data-id="5">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:5%"></div>
-                                                                    <div class="bar-text"><span>2.3.3</span><span style="float: right;">3.12 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                            <li class="dd-item" data-id="6">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:5%"></div>
-                                                                    <div class="bar-text"><span>2.2.1</span><span style="float: right;">2.42 s</span></div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="dd-item dd-collapsed" data-id="7">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:3%"></div>
-                                                                    <div class="bar-text"><span>4</span><span style="float: right;">2.37 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                            <li class="dd-item dd-collapsed" data-id="8">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:2%"></div>
-                                                                    <div class="bar-text"><span>2.2</span><span style="float: right;">2.10 s</span></div>
-                                                                </div>
-                                                               
-                                                            </li>
-                                                            <li class="dd-item dd-collapsed" data-id="9">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:2%"></div>
-                                                                    <div class="bar-text"><span>2.3</span><span style="float: right;">1.61 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                             <li class="dd-item dd-collapsed" data-id="10">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:2%"></div>
-                                                                    <div class="bar-text"><span>4.0.3</span><span style="float: right;">1.49 s</span></div>
-                                                                </div>
-                                                                
-                                                            </li>
-                                                        </ol>
+                                                        
                                                     </li>
-                                                    
+                                                    <li class="dd-item dd-collapsed" data-id="2">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:34%"></div>
+                                                            <div class="bar-text"><span>WiFi</span><span style="float: right;">1.26 s</span></div>
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li class="dd-item dd-collapsed" data-id="3">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:26%"></div>
+                                                            <div class="bar-text"><span>none</span> 
+                                                                <span style="float: right;">1.01 s</span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </li>
                                                 </ol>
                                             </div>
                                         </div>
                                        
-                                        <div class="tab-pane fade" id="htReTime">
+                                        <div class="tab-pane fade" id="excuTime">
+                                            <div class="dd" id="nestable2">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item dd-collapsed" data-id="1">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:93%"></div>
+                                                            <div class="bar-text"><span>WiFi</span><span style="float: right;">1,753</span></div>
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li class="dd-item dd-collapsed" data-id="2">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:5%"></div>
+                                                            <div class="bar-text"><span>Unknown</span><span style="float: right;">47</span></div>
+                                                        </div>
+                                                        
+                                                    </li>
+                                                    <li class="dd-item dd-collapsed" data-id="3">
+                                                        <div class="dd-handle">
+                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                            </i>
+                                                            <div class="bar-graph" style="width:3%"></div>
+                                                            <div class="bar-text"><span>none</span><span style="float: right;">26</span></div>
+                                                        </div>
+                                                       
+                                                    </li>
+                                                </ol>
+                                                
+                                            </div>
+                                        </div>
                                         
-                                        </div>
 
-                                        <div class="tab-pane fade" id="htReqTime">
-                                           
-                                        </div>
-                                        <div class="tab-pane fade" id="acSeTime">
-                                            
-                                        </div>
-                                        <div class="tab-pane fade" id="NetEr">
-                                            
-                                        </div>
                                     </div>
                                 </div>
+                           
                             </div>
                             
                         </div>
@@ -173,34 +141,12 @@
             </div>
 
             <div class="col-lg-8">
-                <div class="row basic-card">
+                <div class="row">
                     <div class="col-md-12">
                          <section class="widget">
                             <header>
                                 <h4>
-                                    执行时间
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart1" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div> 
-
-                </div>
-                <div class="row basic-card">
-                    <div class="col-md-12">
-                         <section class="widget">
-                            <header>
-                                <h4>
-                                    HTTP 响应时间 
+                                    HTTP 响应时间
                                 </h4>
                                 <div class="widget-controls">
                                     <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -211,16 +157,18 @@
                                 <div id="visits-chart2" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
+                                
                             </div>
                         </section>
+
                     </div>
                 </div>
-                <div class="row basic-card">
+                <div class="row">
                     <div class="col-md-12">
                          <section class="widget">
                             <header>
                                 <h4>
-                                    网络错误率
+                                    网络故障率
                                 </h4>
                                 <div class="widget-controls">
                                     <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -235,7 +183,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="row basic-card">
+                <div class="row">
                     <div class="col-md-12">
                          <section class="widget">
                             <header>
@@ -248,7 +196,7 @@
                                 </div>
                             </header>
                             <div class="body no-margin">
-                                <div id="visits-chart4" class="chart visits-chart">
+                                <div id="visits-chart1" class="chart visits-chart">
                                     <svg></svg>
                                 </div>
                             </div>
@@ -296,16 +244,16 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>WebTransaction/SpringController/splits.do (GET)</td>
-                                                <td>50.05%</td>
-                                                <td>123.38ms</td>
-                                                <td>148</td>
+                                                <td style="text-align: left;">WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">50.05%</td>
+                                                <td style="text-align: left;">123.38ms</td>
+                                                <td style="text-align: left;">148</td>
                                             </tr>
                                             <tr>
-                                                <td>WebTransaction/SpringController/splits.do (GET)</td>
-                                                <td>50.05%</td>
-                                                <td>123.38ms</td>
-                                                <td>116</td>
+                                                <td style="text-align: left;">WebTransaction/SpringController/splits.do (GET)</td>
+                                                <td style="text-align: left;">50.05%</td>
+                                                <td style="text-align: left;">123.38ms</td>
+                                                <td style="text-align: left;">116</td>
                                             </tr>
                                            
                                             </tbody>
@@ -363,7 +311,6 @@
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
-        <script src="js/graph/graph4.js"></script>
 
 
         <script>
