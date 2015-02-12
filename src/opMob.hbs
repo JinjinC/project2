@@ -15,19 +15,10 @@
          </div>
 
          <div class="col-lg-7 col-md-7">
-            <div class="navbar nav-picker">
-               <ul class="nav navbar-nav navbar-right">
-                   <li role="presentation" class="timepicker">
-                       <div class="form-group">
-                           <button class="btn picker" id="daterangepicker">
-                               <i class="fa fa-clock-o"></i> 
-                               <span></span> <b class="caret"></b>
-                           </button>
-                       </div>
-                   </li>
-               </ul>  
-            </div>
-        </div>
+             {{#block "picker"}}
+                 {{> picker }}
+             {{/block}}
+         </div>
      </div>
         <div class="row">
             <div class="col-lg-4">
