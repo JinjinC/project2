@@ -1,3 +1,5 @@
+
+
 .tre{
   &:hover,
   &:focus{
@@ -1327,5 +1329,41 @@ a.tabIcon{
   top: 146px;
   
 }
+
+.trans-modal{
+  top: 25%;
+  & .modal-dialog{
+    @media(max-width: 768px){
+      width: 91%;
+    }
+    @media(max-width: 640px){
+      width: 90%;
+    }
+    @media(max-width: 530px){
+      width: 89%;
+    }
+    @media(max-width: 480px){
+      width: 97.5%;
+    }
+  }
+}
+
+.form-input-white{
+  border: 1px solid #ccc;
+  
+}
+
+.from-error{
+  border: 1px solid #eac85e;
+}
+
+.validation-message {
+  color: #eac85e;
+  font-size: 12px;
+  display: none;
+}
+
+
+
 
 

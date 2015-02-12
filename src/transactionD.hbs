@@ -294,6 +294,9 @@
                         <header>
                             <span class="float-card-title">Title</span>
                             <span class="glyphicon glyphicon-remove pull-right"></span>
+                            <button type="button" class="btn btn-success btn-sm pull-right" data-placement="middle" data-toggle="modal" data-target="#myModal" style="margin-right:20px;line-height:1;">
+                                添加到关键事务
+                            </button>
                         </header>
                         <div class="body">
 
@@ -420,6 +423,88 @@
                 </div>
             </div>
 
+            <div id="myModal" class="modal fade trans-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">跟踪关键事务</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row">
+
+                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                   <form class="form-horizontal form-label-left">
+                                       <div class="form-group">
+                                           <div class="row">
+                                                <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                    <label for="app" class="control-label">选择一个应用</label>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                                    <select required="required" class="select1 form-control form-input-white" name="app">
+                                                        <option value="">app1</option>
+                                                        <option value="">app2</option>
+                                                        <option value="">app3</option>
+                                                        <option value="">app4</option>
+                                                    </select>
+                                                </div>                                           
+                                           </div>
+                                       </div>
+                                       <div class="form-group">
+                                           <div class="row">
+                                                <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                    <label for="trans" class="control-label">选择一个事务</label>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                                    <select required="required" class="select1 form-control form-input-white" name="trans">
+                                                        <option value="">transaction1</option>
+                                                        <option value="">transaction2</option>
+                                                        <option value="">transaction3</option>
+                                                        <option value="">transaction4</option>
+                                                    </select>
+                                                </div>                                           
+                                           </div>
+                                       </div>
+                                       <div class="form-group">
+                                           <div class="row">
+                                                <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                    <label for="trans-name" class="control-label">创建事务名称</label>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                                    <input id="trans-name" class="form-control form-input-white" required="required" type="text" value="" name="trans-name" data-parsley-trigger="change">
+                                                    <p class="validation-message" id="trans-error">该项不能为空</p>
+                                                </div>                                         
+                                           </div>
+                                       </div>
+                                       <div class="form-group">
+                                           <div class="row">
+                                                <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                    <label for="apdex" class="control-label">ApdexT</label>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                                    <input id="apdex" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                                    <p class="validation-message" id="apdex-error">该项不能为空</p>
+                                                </div>                                         
+                                           </div>
+                                       </div>
+                                   </form>
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <p>什么是关键事务？</p>
+                                    <p>在web应用中，从业务的角度来看，有些web事务比其它事务更重要，这些重要的事务需要精确监控。这些事务包括应用中的关键事件（如登录操作或确认购买操作）和/或从性能角度来看最重要的事务（如搜索或登录操作）。</p>
+                                    <p>关键事务能够允许用户密切监控关键性事务，并在运行异常时收到警告。</p>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">关闭</button>
+                            <button type="button" class="btn btn-primary" id="btn-trans">创建关键事务</button>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+
         </div>
 
     </div>
@@ -512,6 +597,39 @@
                 }
                 e.stopPropagation();
             })
+
+
+            //创建关键事务验证
+
+            $('#btn-trans').click(function  () {
+                if ( $('#trans-name').val()=="" ){
+                    $('#trans-name').addClass("from-error");
+                    $('#trans-error').show();
+                }
+                if ( $('#apdex').val()=="" ){
+                    $('#apdex').addClass("from-error");
+                    $('#apdex-error').show();
+                }
+            });
+
+            $('#trans-name').focus(function  () {
+                $('#trans-name').removeClass("from-error");
+                $('#trans-error').hide();
+            });
+
+            $('#apdex').focus(function  () {
+                $('#apdex').removeClass("from-error");
+                $('#apdex-error').hide();
+            });
+
+            $('#btn-trans-close').click(function  () {
+                $('#trans-name').removeClass("from-error");
+                $('#trans-error').hide();
+                $('#apdex').removeClass("from-error");
+                $('#apdex-error').hide();
+                $('#trans-name').val("");
+                $('#apdex').val("");
+            });
 
         </script>
         
