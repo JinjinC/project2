@@ -1,0 +1,418 @@
+ 
+{{#extend "layoutSys"}}
+    {{#replace "sidebarSys"}}
+        {{> sidebarSys this conditionClass=conditionClass active="account"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <h2 class="page-title">
+                <span>账号管理<small>报警通知用户列表</small></span>
+                    <a href="#">
+                        <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
+                            添加报警用户
+                        </button>
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">添加用户信息</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="account-name" class="control-label">用户名</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="accountemail" class="control-label">邮箱</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="accountemail" class="form-control form-input-white" required="required" type="text" value="" name="accountemail" data-parsley-trigger="change">
+                                                <p class="validation-message" id="accountemail-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="mobile" class="control-label">手机号</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="mobile" class="form-control form-input-white" required="required" type="text" value="" name="mobile" data-parsley-trigger="change">
+                                                <p class="validation-message" id="mobile-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <div id="myModalEdit" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">编辑用户信息</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="account-name" class="control-label">用户名</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="account-name" class="form-control form-input-white" required="required" type="text" value="user1" name="account-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="accountemail" class="control-label">邮箱</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="accountemail" class="form-control form-input-white" required="required" type="text" value="somebody@someemail.com" name="accountemail" data-parsley-trigger="change">
+                                                <p class="validation-message" id="accountemail-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="mobile" class="control-label">手机号</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="mobile" class="form-control form-input-white" required="required" type="text" value="13312341234" name="mobile" data-parsley-trigger="change">
+                                                <p class="validation-message" id="mobile-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger pull-left">删除</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">保存</button>                    
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                 <section class="widget">
+                    <div class="body no-margin">
+                        <table class="table table-hover table-stripped no-margin sources-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">用户名</span>
+                                    </th>
+                                    <th class="sortedth" width="25%" style="text-align: left;">
+                                        <span class="sortedtext">邮箱</span>
+                                    </th>
+                                    <th class="sortedth" width="25%" style="text-align: left;">
+                                        <span class="sortedtext">手机号</span>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td >user1</td>
+                                    <td >somebody@someemail.com</td>
+                                    <td >13312341234</td>
+                                    <td >
+                                        <a href="#" data-toggle="modal" data-target="#myModalEdit">
+                                            <i class="fa fa-cog icon2 setting" style="display:none"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                            
+                                 <tr>
+                                    <td >user2</td>
+                                    <td >somebody@someemail.com</td>
+                                    <td >13312341234</td>
+                                    <td >
+                                        <a href="#" data-toggle="modal" data-target="#myModalEdit">
+                                            <i class="fa fa-cog icon2 setting" style="display:none"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                           
+                                <tr>
+                                    <td >user3</td>
+                                    <td >somebody@someemail.com</td>
+                                    <td >13312341234</td>
+                                    <td >
+                                        <a href="#" data-toggle="modal" data-target="#myModalEdit">
+                                            <i class="fa fa-cog icon2 setting" style="display:none"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td >user4</td>
+                                    <td >somebody@someemail.com</td>
+                                    <td >13312341234</td>
+                                    <td >
+                                        <a href="#" data-toggle="modal" data-target="#myModalEdit">
+                                            <i class="fa fa-cog icon2 setting" style="display:none"></i>
+                                        </a>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+
+                        <div class="settingBox">
+                            <div class="modal" id="settingBox" style="position: relative; overflow: hidden; display:none;">
+                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox">×</button>
+                                            <h4 class="modal-title">修改关键事务名称</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
+                                                    
+                                                        
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
+                                                        <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       {{!--  <div class="settingBox">
+                            <div class="modal" id="settingBox1" style="position: relative; overflow: hidden; display:none;">
+                                <div class="modal-dialog" style="width: auto; padding: 0; top:37px;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox1">×</button>
+                                            <h4 class="modal-title">修改 APP 名称</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
+                                                    
+                                                        
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
+                                                        <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                       
+                        
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+        <script src="js/forms-account.js"></script>
+        <script src="js/forms-validation.js"></script>
+        <script>
+           
+            $('#appOption').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+            $("li").tooltip();
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('tr').mouseover(function(){
+                $(this).find('.setting').show();
+            })
+
+            $('tr').mouseout(function(){
+               $(this).find('.setting').hide();
+            })
+
+            $('#tr1').mouseover(function(){
+                $('#icon-setting1').show();
+            })
+            $('#tr1').mouseout(function(){
+                $('#icon-setting1').hide();
+            })
+            $('#tr2').mouseover(function(){
+                $('#icon-setting2').show();
+            })
+            $('#tr2').mouseout(function(){
+                $('#icon-setting2').hide();
+            })
+            $('#tr3').mouseover(function(){
+                $('#icon-setting3').show();
+            })
+            $('#tr3').mouseout(function(){
+                $('#icon-setting3').hide();
+            })
+
+
+
+        
+
+
+
+            $('#icon-setting').click(function(){
+                $('#settingBox').show();
+            })
+            $('#closesettingBox').click(function(){
+                $('#settingBox').hide();
+            })
+            // $('#icon-setting1').click(function(){
+            //     $('#settingBox1').show();
+            // })
+            // $('#closesettingBox1').click(function(){
+            //     $('#settingBox1').hide();
+            // })
+
+           
+
+             $('#plusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }
+            })
+
+            $('#minusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') != 'none') {
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+            $('#oracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }else{
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+
+            //创建用户
+
+            $('#btn-trans').click(function  () {
+                if ( $('.form-input-white').val()=="" ){
+                    $('.validation-message').show();
+                }
+            });
+
+            $('#btn-trans-close').click(function  () {
+                $('.form-input-white').next().removeClass("from-error");
+                $('.form-input-white').next().hide();
+                $('#myModal .form-input-white').val("");
+            });
+
+            $('.form-input-white').focus(function  () {
+                $(this).next().removeClass("from-error");
+                $(this).next().hide();
+            });
+
+            $('tr').mouseover(function(){
+                $(this).find('.trash').show();
+            })
+
+            $('tr').mouseout(function(){
+               $(this).find('.trash').hide();
+            })
+        </script>
+    {{/append}}
+
+
+{{/extend}}

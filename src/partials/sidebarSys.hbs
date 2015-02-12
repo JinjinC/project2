@@ -1,12 +1,8 @@
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav">
-         <li class="panel {{conditionClass "active" active "account"}}">
-            <a class="accordion-toggle {{conditionClass "" active "account" true}}" data-toggle="collapse"href="#forms-collapse"><i class="fa fa-pencil"></i> <span class="name">账号管理</span></a>
-            <ul id="forms-collapse" class="panel-collapse in collapse {{conditionClass "in" active "account"}}">
-                <li class="{{conditionClass "active" active "account"}}"><a href="account.html">账号管理</a></li>
-            </ul>
+         <li class="{{conditionClass "active" active "account"}}">
+            <a href="account.html"> <i class="fa fa-home"></i> <span class="name">账号管理</span></a>
         </li>
-
         <li class="panel {{conditionClass "active" active "appAlert transAlert"}}">
             <a class="accordion-toggle {{conditionClass "" active "appAlert transAlert" true}}" data-toggle="collapse" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name">报警策略</span></a>
             <ul id="stats-collapse" class="panel-collapse in collapse {{conditionClass "in" active "appAlert transAlert"}}">
