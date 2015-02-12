@@ -1,0 +1,184 @@
+{{#extend "layoutMob"}}
+
+    {{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="crashMob"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     
+     <div class="row">
+
+         <div class="col-lg-5 col-md-5">
+             <h2 class="page-title"><span>崩溃 <small>crash 界面</small></span></h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+             {{#block "picker"}}
+                 {{> picker }}
+             {{/block}}
+         </div>
+     </div>
+     <div class="row">
+     	<div class="col-lg-6">
+			<section class="widget">
+                <header>
+                    <h4>
+                        崩溃次数
+                    </h4>
+                </header>
+                <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+                    <div id="visits-chart1" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                    
+                </div>
+			</section>
+        </div>
+        <div class="col-lg-6">
+			<section class="widget">
+                <header>
+                    <h4>
+                        崩溃次数按版本
+                    </h4>
+                </header>
+                <div class="body no-margin" style="background: rgba(51, 51, 51, 0);">
+                    <div id="visits-chart2" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                    
+                </div>
+			</section>
+        </div>
+        
+     </div>
+     <div class="row">
+     	<div class="col-lg-12">
+     		<section class="widget">
+                <header>
+                   <h4>崩溃</h4>
+                </header>
+                <div class="body">
+                    <table class="table table-striped no-margin sources-table">
+                        <thead>
+                        <tr>
+                            <th width="50%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">名称</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            <th width="10%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">首次发生时间</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            <th width="10%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">最后发生时间</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            <th width="10%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">应用版本号</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            <th width="10%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">发生次数</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            <th width="10%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">影响用户数</span>
+                                <i class="sortedup" style="display:none"></i>
+                                <i class="sorteddown" style="display:none"></i>
+                            </th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="">java.lang.IllegalStateException</br> 
+                            	ListView.java line 1544 in android.widget.ListView.layoutChildren()</a></td>
+                            <td>2015-02-03 19:10 - </br>9天之前</td>
+                            <td>2015-02-06 14:35 - </br>
+                            	6天之前</td>
+                            <td>1.1</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">com.alibaba.fastjson.JSONException</br>
+								DefaultJSONParser.java line -1 in com.alibaba.fastjson.parser.DefaultJSONParser.parse()</a></td>
+                            <td>2015-02-08 16:19 - </br>4天之前</td>
+                            <td>2015-02-08 16:19 - </br>4天之前</td>
+                            <td>1.1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="">java.lang.IllegalStateException</br>
+								ListView.java line 1543 in android.widget.ListView.layoutChildren()</a></td>
+                            <td>2015-02-06 13:41 - </br>6天之前</td>
+                            <td>2015-02-06 13:41 - </br>6天之前</td>
+                            <td>1.1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+     	</div>
+     </div>
+
+
+		
+ {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="js/graph/graph1.js"></script>
+        <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph4.js"></script>
+   		<script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph5.js"></script>
+
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <!-- page application js -->
+        <script src="js/daterangepicker.js"></script>
+
+        <script>
+        	$('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>
+   
+    {{/append}}
+
+{{/extend}}

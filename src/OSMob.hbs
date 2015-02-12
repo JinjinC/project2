@@ -1,7 +1,7 @@
 {{#extend "layoutMob"}}
 
     {{#replace "sidebarMov"}}
-        {{> sidebarMov this conditionClass=conditionClass active="devMob"}}
+        {{> sidebarMov this conditionClass=conditionClass active="OSMob"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -10,7 +10,7 @@
 
          <div class="col-lg-5 col-md-5">
              <h2 class="page-title">
-                <span>设备 <small>设备信息</small></span>
+                <span>OS <small>操作系统</small></span>
              </h2>
          </div>
 
@@ -28,7 +28,7 @@
                         <header class="card-header">
                             <ul class="nav nav-tabs">
                                 <li class="active">
-                                    <a href="#dev" data-toggle="tab" style="font-size:14px; font-weight: 500">设备
+                                    <a href="#dev" data-toggle="tab" style="font-size:14px; font-weight: 500">操作系统版本
                                     </a>
                                 </li>
                             </ul>
@@ -56,8 +56,8 @@
                                                         <div class="dd-handle">
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
-                                                            <div class="bar-graph" style="width:60%"></div>
-                                                            <div class="bar-text"><span>large_pad</span><span style="float: right;">5.23 s</span></div>
+                                                            <div class="bar-graph" style="width:100%"></div>
+                                                            <div class="bar-text"><span>Android</span><span style="float: right;">2.02 s</span></div>
                                                         </div>
                                                         <ol class="dd-list">
                                                             <li class="dd-item dd-collapsed" data-id="2">
@@ -65,106 +65,43 @@
                                                                     <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                     </i>
                                                                     <div class="bar-graph" style="width:30%"></div>
-                                                                    <div class="bar-text"><span>intel</span><span style="float: right;">8.93 s</span></div>
+                                                                    <div class="bar-text"><span>3.2.1</span><span style="float: right;">6.82 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="201">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>intel Ramos i10pro</span><span style="float: right;">8.93 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
                                                             <li class="dd-item dd-collapsed" data-id="3">
                                                                 <div class="dd-handle">
                                                                     <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                     </i>
-                                                                    <div class="bar-graph" style="width:27%"></div>
-                                                                    <div class="bar-text"><span>samsung</span><span style="float: right;">8.09 s</span></div>
+                                                                    <div class="bar-graph" style="width:23%"></div>
+                                                                    <div class="bar-text"><span>4.2.1</span><span style="float: right;">4.09 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="301">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:57%"></div>
-                                                                            <div class="bar-text"><span>samsung GT-N8010</span><span style="float: right;">9.93 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="dd-item" data-id="302">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:43%"></div>
-                                                                            <div class="bar-text"><span>samsung GT-P5210</span><span style="float: right;">6.77 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
-                                                            <li class="dd-item dd-collapsed" data-id="4">
+                                                            <li class="dd-item" data-id="4">
                                                                 <div class="dd-handle">
                                                                     <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                     </i>
-                                                                    <div class="bar-graph" style="width:10%"></div>
-                                                                    <div class="bar-text"><span>asus</span><span style="float: right;">5.27 s</span></div>
+                                                                    <div class="bar-graph" style="width:17%"></div>
+                                                                    <div class="bar-text"><span>4.2.2</span><span style="float: right;">3.41 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="401">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:80%"></div>
-                                                                            <div class="bar-text"><span>asus Transformer TF101</span><span style="float: right;">7.74 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="dd-item" data-id="402">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:20%"></div>
-                                                                            <div class="bar-text"><span>asus ME302C</span><span style="float: right;">1.99 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
                                                             </li>
-                                                            <li class="dd-item dd-collapsed" data-id="5">
+                                                            <li class="dd-item" data-id="5">
                                                                 <div class="dd-handle">
                                                                     <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                     </i>
                                                                     <div class="bar-graph" style="width:5%"></div>
                                                                     <div class="bar-text"><span>unknown</span><span style="float: right;">3.12 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="501">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>unknown</span><span style="float: right;">3.12 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
-                                                            <li class="dd-item dd-collapsed" data-id="6">
+                                                            <li class="dd-item" data-id="6">
                                                                 <div class="dd-handle">
                                                                     <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                     </i>
                                                                     <div class="bar-graph" style="width:5%"></div>
                                                                     <div class="bar-text"><span>Teclast</span><span style="float: right;">2.42 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="601">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>Teclast P98HD(A2Q6)n</span><span style="float: right;">2.42 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
                                                             </li>
                                                             <li class="dd-item dd-collapsed" data-id="7">
                                                                 <div class="dd-handle">
@@ -173,16 +110,7 @@
                                                                     <div class="bar-graph" style="width:3%"></div>
                                                                     <div class="bar-text"><span>Ramos</span><span style="float: right;">2.37 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="701">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>Ramos W32</span><span style="float: right;">2.37 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
                                                             <li class="dd-item dd-collapsed" data-id="8">
                                                                 <div class="dd-handle">
@@ -191,16 +119,7 @@
                                                                     <div class="bar-graph" style="width:2%"></div>
                                                                     <div class="bar-text"><span>ONDA</span><span style="float: right;">2.10 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="801">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>ONDA V819i</span><span style="float: right;">2.10 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                               
                                                             </li>
                                                             <li class="dd-item dd-collapsed" data-id="9">
                                                                 <div class="dd-handle">
@@ -209,16 +128,7 @@
                                                                     <div class="bar-graph" style="width:2%"></div>
                                                                     <div class="bar-text"><span>ZTE</span><span style="float: right;">1.61 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="901">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>ZTE SmartTab10</span><span style="float: right;">1.61 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
                                                              <li class="dd-item dd-collapsed" data-id="10">
                                                                 <div class="dd-handle">
@@ -227,110 +137,18 @@
                                                                     <div class="bar-graph" style="width:2%"></div>
                                                                     <div class="bar-text"><span>LENOVO</span><span style="float: right;">1.49 s</span></div>
                                                                 </div>
-                                                                <ol class="dd-list">
-                                                                    <li class="dd-item" data-id="1001">
-                                                                        <div class="dd-handle">
-                                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                            </i>
-                                                                            <div class="bar-graph" style="width:100%"></div>
-                                                                            <div class="bar-text"><span>LENOVO</span><span style="float: right;">1.49 s</span></div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
+                                                                
                                                             </li>
                                                         </ol>
                                                     </li>
-                                                    <li class="dd-item dd-collapsed" data-id="11">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:30%"></div>
-                                                            <div class="bar-text"><span>small_phone</span><span style="float: right;">2.45 s</span></div>
-                                                        </div>
-                                                         <ol class="dd-list">
-                                                           
-                                                            <li class="dd-item" data-id="12">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:50%"></div>
-                                                                    <div class="bar-text"><span>samsung</span><span style="float: right;">3.64 s</span></div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="dd-item" data-id="13">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:30%"></div>
-                                                                    <div class="bar-text"><span>gionee</span><span style="float: right;">1.65 s</span></div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="dd-item" data-id="14">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <div class="bar-graph" style="width:20%"></div>
-                                                                    <div class="bar-text"><span>YuLong</span><span style="float: right;">1.39 s</span></div>
-                                                                </div>
-                                                            </li>
-                                                                                                                           
-                                                        </ol>
-                                                    </li>
-                                                    <li class="dd-item dd-collapsed" data-id="16">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>phone</span><span style="float: right;">2.11 ms</span></div>
-                                                        </div>
-                                                        <ol class="dd-list">
-                                                            <li class="dd-item" data-id="17">
-                                                                <div class="dd-handle">
-                                                                    <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                                    </i>
-                                                                    <span style="float: right;">12.46 ms</span>
-                                                                    <div class="bar-graph" style="width:20%"></div>
-                                                                    <div class="bar-text"><span>VLAND</span></div>
-                                                                </div>
-                                                            </li>
-                                                            
-                                                        </ol>
-                                                    </li>
+                                                    
                                                 </ol>
                                             </div>
                                         </div>
                                        
                                         <div class="tab-pane fade" id="htReTime">
                                             <div class="dd" id="nestable2">
-                                                <ol class="dd-list">
-                                                    <li class="dd-item dd-collapsed" data-id="18">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <span style="float: right;">2.38 cpm</span>
-                                                            <div class="bar-graph" style="width:50%"></div>
-                                                            <div class="bar-text"><span>small_phone</span></div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item dd-collapsed" data-id="19">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <span style="float: right;">2.12 cpm</span>
-                                                            <div class="bar-graph" style="width:30%"></div>
-                                                            <div class="bar-text"><span>large_pad</span></div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item dd-collapsed" data-id="20">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <span style="float: right;">1.33 cpm</span>
-                                                            <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>pad</span></div>
-                                                        </div>
-                                                    </li>
-                                                </ol>
+                                               
                                             </div>
                                         </div>
 
