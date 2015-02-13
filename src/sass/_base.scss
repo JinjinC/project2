@@ -49,7 +49,7 @@ $i: 1;
   }
   @media (max-width: 767px) {
     position: relative;
-    width: 140px;
+    width: auto;
     top: -60px;
   }
   overflow: hidden;
@@ -57,7 +57,7 @@ $i: 1;
   right: auto;
   top: -45px;
   width: 140px;
-  height: 110px;
+  // height: 110px;
   float: left;
   z-index: 1;
   display: block;
@@ -590,11 +590,17 @@ position: absolute;
     background-color: rgba(0, 0, 0, 0);
     border:0;
     text-align: left;
+    @media(max-width: 760px){
+        width: auto;
+    }
 
     & > .go_button{
       font-weight: bold;
       padding-right: 6px;
       font-size: 17px;
+      @media(max-width: 560px){
+        display: none;
+      }
     }
     &:hover,
     &:focus{
@@ -617,6 +623,9 @@ position: absolute;
     background-color:rgba(51, 51, 51, 0.85);
     border-radius: 3px !important;
     z-index: 99; 
+    @media(max-width: 768px) {
+      width: 270px;
+    }
   }
   button#goHome:focus{
     outline: none;
@@ -782,11 +791,11 @@ position: absolute;
   small{
     color: $text-muted;
   }
-  &>span {
-    @media(max-width: 768px){
-      margin-left: -125px;
-    }
-  }
+  // &>span {
+  //   @media(max-width: 768px){
+  //     margin-left: -125px;
+  //   }
+  // }
 }
 
 .notifications{
