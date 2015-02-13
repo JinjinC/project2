@@ -12,8 +12,6 @@
              <span>应用信息 <small>app 信息</small></span>
              </h2>
          </div>
-
-         
      </div>
 
     <div class="row">
@@ -25,7 +23,6 @@
                         <table class="table no-margin sources-table">
                             <thead>
                                 <tr>
-                                    
                                     <th width="48%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">名称</span>
                                         <i class="sortedup" style="display:none"></i>
@@ -55,47 +52,17 @@
                                     <td >for android</td>
                                     <td >0 ms</td>
                                     <td >0.0</td>
-                                    <td >0.00%</td>
-                                    
+                                    <td >0.00%</td>                                  
                                     <td style="text-align: center !important; padding: 8px 0">
-                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
-                                        </i>
+                                        <a href="#" data-toggle="modal" data-target="#myModal">
+                                            <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                            </i>
+                                        </a>
                                     </td>
                                 </tr> 
                                  
                             </tbody>
                         </table>
-
-                        <div class="settingBox">
-                            <div class="modal" id="settingBox" style="position: relative; overflow: hidden; display:none;">
-                                <div class="modal-dialog" style="width: auto; padding: 0;">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox">×</button>
-                                            <h4 class="modal-title">修改 APP 名称</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
-                                                    
-                                                        
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
-                                                        <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        
-
-
                     </div>
                 </section>
                      
@@ -103,6 +70,42 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">修改APP名称</h4>
+                </div>
+                <div class="modal-body">
+                   <div class="row">
+                       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                           <form class="form-horizontal form-label-left">
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                            <label for="account-name" class="control-label">输入app名称</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
+                                            <p class="validation-message" id="account-error">该项不能为空</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger pull-left">隐藏</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                    <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div>
 
 

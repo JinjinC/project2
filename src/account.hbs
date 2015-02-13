@@ -26,7 +26,6 @@
                     </div>
                     <div class="modal-body">
                        <div class="row">
-
                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
                                <form class="form-horizontal form-label-left">
                                    <div class="form-group">
@@ -124,14 +123,32 @@
                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger pull-left">删除</button>
+                        <button type="button" class="btn btn-danger pull-left"  data-toggle="modal" data-target="#myModalDel" id="btn-del">删除</button>
                         <button type="button" class="btn btn-success" id="btn-trans">保存</button>                    
                         <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
-                        
                     </div>
 
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
+        </div>
+
+        <div id="myModalDel" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;z-index: 1070;top:30%;">
+            <div class="modal-dialog modal-trash">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="del-x">×</button>
+                        <h4 class="modal-title" id="myModalLabel">提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>确定删除吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger">删除</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="del-cancel">取消</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row">
@@ -261,6 +278,8 @@
                 </section>
             </div>
         </div>
+
+        <div class="modal-backdrop fade in" id="shadow-del" style="z-index: 1060;display:none;"></div>
      
     {{/replace}}
     {{#append "scripts"}}
@@ -411,7 +430,22 @@
             $('tr').mouseout(function(){
                $(this).find('.trash').hide();
             })
+
+            //多的modal的黑色遮罩控制
+            $('#btn-del').click(function  () {
+                $('#shadow-del').show();
+            });
+
+            $('#del-cancel,#shadow-del,#del-x').click(function  () {
+                $('#shadow-del').hide();
+            });
+
+            
+
+
         </script>
+
+
     {{/append}}
 
 
