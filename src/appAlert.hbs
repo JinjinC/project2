@@ -1,0 +1,534 @@
+ 
+{{#extend "layoutSys"}}
+    {{#replace "sidebarSys"}}
+
+        {{> sidebarSys this conditionClass=conditionClass active="appAlert"}}
+
+    {{/replace}}
+
+    {{#replace "app_content"}}
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <h2 class="page-title">
+                <span>应用报警策略<small>报警列表</small></span>
+                    <a href="#">
+                        <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
+                            创建报警策略
+                        </button>
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade trans-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">跟踪关键事务</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="app" class="control-label">选择一个应用</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <select required="required" class="select1 form-control form-input-white" name="app">
+                                                    <option value="">app1</option>
+                                                    <option value="">app2</option>
+                                                    <option value="">app3</option>
+                                                    <option value="">app4</option>
+                                                </select>
+                                            </div>                                           
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="trans" class="control-label">选择一个事务</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <select required="required" class="select1 form-control form-input-white" name="trans">
+                                                    <option value="">transaction1</option>
+                                                    <option value="">transaction2</option>
+                                                    <option value="">transaction3</option>
+                                                    <option value="">transaction4</option>
+                                                </select>
+                                            </div>                                           
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="trans-name" class="control-label">创建事务名称</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="trans-name" class="form-control form-input-white" required="required" type="text" value="" name="trans-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="trans-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="apdex" class="control-label">ApdexT</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="apdexT" class="form-control form-input-white" required="required" type="text" value="" name="apdex" data-parsley-trigger="change">
+                                                <p class="validation-message" id="apdexT-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <p>什么是关键事务？</p>
+                                <p>在web应用中，从业务的角度来看，有些web事务比其它事务更重要，这些重要的事务需要精确监控。这些事务包括应用中的关键事件（如登录操作或确认购买操作）和/或从性能角度来看最重要的事务（如搜索或登录操作）。</p>
+                                <p>关键事务能够允许用户密切监控关键性事务，并在运行异常时收到警告。</p>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                 <section class="widget">
+                    <div class="body no-margin">
+                        <table class="table table-hover no-margin sources-table">
+                            <thead>
+                                <tr>
+                                    <th width="30%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">事务名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext">应用程序</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="20%" style="text-align: left;">
+                                        <span class="sortedtext">URL</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext">吞吐量</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="13%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">错误率</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="3%"></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td ><a href="overviewKey.html" class="appItem">insertDatabase</a></td>
+                                    <td >0 ms</td>
+                                    <td >SpringController/getlist.do (GET)</td>
+                                    <td >0.00%</td>
+                                    <td>0.00%</td>
+                                    <td style="text-align: center !important; padding: 8px 0">
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                        </i>
+                                    </td>
+                                </tr> 
+                            
+                                 <tr>
+                                    <td ><a href="overviewKey.html" class="appItem"> spider01</a></td>
+                                    <td >0 ms</td>
+                                    <td >SpringController/getlist.do (GET)</td>
+                                    <td >0.00%</td>
+                                    <td>0.00%</td>
+                                    <td style="text-align: center !important; padding: 8px 0">
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting4" style="display:none">
+                                        </i>
+                                    </td>
+                                </tr> 
+                           
+                                <tr>
+                                    <td ><a href="overviewKey.html" class="appItem">spider0101</a></td>
+                                    <td >0 ms</td>
+                                    <td >SpringController/getlist.do (GET)</td>
+                                    <td >0.00%</td>
+                                    <td>0.00%</td>
+                                    <td style="text-align: center !important; padding: 8px 0">
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting4" style="display:none">
+                                        </i>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td ><a href="overviewKey.html" class="appItem">selectDatabase</a></td>
+                                    <td >0 ms</td>
+                                    <td >SpringController/getlist.do (GET)</td>
+                                    <td >0.00%</td>
+                                    <td>0.00%</td>
+                                    <td style="text-align: center !important; padding: 8px 0">
+                                        <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting5" style="display:none">
+                                        </i>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+
+                        <div class="settingBox">
+                            <div class="modal" id="settingBox" style="position: relative; overflow: hidden; display:none;">
+                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox">×</button>
+                                            <h4 class="modal-title">修改关键事务名称</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
+                                                    
+                                                        
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
+                                                        <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       {{!--  <div class="settingBox">
+                            <div class="modal" id="settingBox1" style="position: relative; overflow: hidden; display:none;">
+                                <div class="modal-dialog" style="width: auto; padding: 0; top:37px;">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closesettingBox1">×</button>
+                                            <h4 class="modal-title">修改 APP 名称</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" role="form" id="article-form" method="post" novalidate="novalidate" data-parsley-priority-enabled="false" style="margin-left:15px; margin-right:15px">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <input type="text" id="prefix" name="prefix" class="form-control" style="background-color: #f5f5f5; display:inline-block; width:50%" value="Java-app-a">
+                                                    
+                                                        
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right">隐藏</button>
+                                                        <button type="button" class="btn btn-success" style="float:right;margin-right:10px">重命名</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                       
+                        
+
+
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <section class="widget widget-tabs">
+                        <header>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="通知">
+                                    <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="严重问题">
+                                    <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#warm" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="注释">
+                                    <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
+                                </li>
+                                
+                            </ul>
+                        </header>
+                        <div class="body tab-content">
+                            <div id="All" class="tab-pane active clearfix">
+                                <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:28</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                          
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="breaktime" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notify" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="issue" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="warm" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notes" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </div>
+
+    </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+        <script src="js/forms-account.js"></script>
+        <script src="js/forms-validation.js"></script>
+        <script>
+           
+            $('#appOption').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+            $("li").tooltip();
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('tr').mouseover(function(){
+                $(this).find('.setting').show();
+            })
+
+            $('tr').mouseout(function(){
+               $(this).find('.setting').hide();
+            })
+
+            $('#tr1').mouseover(function(){
+                $('#icon-setting1').show();
+            })
+            $('#tr1').mouseout(function(){
+                $('#icon-setting1').hide();
+            })
+            $('#tr2').mouseover(function(){
+                $('#icon-setting2').show();
+            })
+            $('#tr2').mouseout(function(){
+                $('#icon-setting2').hide();
+            })
+            $('#tr3').mouseover(function(){
+                $('#icon-setting3').show();
+            })
+            $('#tr3').mouseout(function(){
+                $('#icon-setting3').hide();
+            })
+
+
+
+        
+
+
+
+            $('#icon-setting').click(function(){
+                $('#settingBox').show();
+            })
+            $('#closesettingBox').click(function(){
+                $('#settingBox').hide();
+            })
+            // $('#icon-setting1').click(function(){
+            //     $('#settingBox1').show();
+            // })
+            // $('#closesettingBox1').click(function(){
+            //     $('#settingBox1').hide();
+            // })
+
+           
+
+             $('#plusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }
+            })
+
+            $('#minusOracle').click(function(){
+                
+                if ($('#tableOracle').css('display') != 'none') {
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+            $('#oracle').click(function(){
+                
+                if ($('#tableOracle').css('display') == 'none') {
+                    $('#tableOracle').show();
+                    $('#plusOracle').hide();
+                    $('#minusOracle').show();
+                }else{
+                    $('#tableOracle').hide();
+                    $('#minusOracle').hide();
+                    $('#plusOracle').show();
+                }
+            })
+
+            //创建关键事务验证
+
+            $('#btn-trans').click(function  () {
+                if ( $('#trans-name').val()=="" ){
+                    $('#trans-name').addClass("from-error");
+                    $('#trans-error').show();
+                }
+                if ( $('#apdexT').val()=="" ){
+                    $('#apdexT').addClass("from-error");
+                    $('#apdexT-error').show();
+                }
+            });
+
+            $('#trans-name').focus(function  () {
+                $('#trans-name').removeClass("from-error");
+                $('#trans-error').hide();
+            });
+
+            $('#apdexT').focus(function  () {
+                $('#apdexT').removeClass("from-error");
+                $('#apdexT-error').hide();
+            });
+
+            $('#btn-trans-close').click(function  () {
+                $('#trans-name').removeClass("from-error");
+                $('#trans-error').hide();
+                $('#apdexT').removeClass("from-error");
+                $('#apdexT-error').hide();
+                $('#trans-name').val("");
+                $('#apdexT').val("");
+            });
+
+        </script>
+    {{/append}}
+
+
+
+{{/extend}}

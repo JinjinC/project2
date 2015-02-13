@@ -1,0 +1,167 @@
+ 
+{{#extend "layoutSys"}}
+
+
+    {{#replace "sidebarSys"}}
+    
+        {{> sidebarSys this conditionClass=conditionClass active="alertLog"}}
+   
+    {{/replace}}
+
+    {{#replace "app_content"}}
+ 
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <h2 class="page-title">
+                    报警记录<small>报警列表</small>
+                </h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-lg-8">
+                <section class="widget widget-tabs">
+                        <header>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="通知">
+                                    <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="严重问题">
+                                    <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                    <a href="#warm" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="top" title="注释">
+                                    <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
+                                </li>
+                                
+                            </ul>
+                        </header>
+                        <div class="body tab-content">
+                            <div id="All" class="tab-pane active clearfix">
+                                <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:28</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                          
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="breaktime" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notify" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="issue" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>今天</strong></h5>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="warmtime" width="10%">15:58</td>
+                                            <td width="10%" class="warmicon">
+                                                <i class="iconfont icon1">&#xe608;</i>
+                                            </td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="warmtime">15:56</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                        </tr>  
+                                        <tr>
+                                            <td class="warmtime">15:54</td>
+                                            <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                            <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                        </tr>                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="warm" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                            <div id="notes" class="tab-pane">
+                                <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                    <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                    <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                        <h5><strong>还没有事件</strong></h5>
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </div>
+
+
+     
+    {{/replace}}
+    {{#append "scripts"}}
+   
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+        
+    {{/append}}
+
+
+
+{{/extend}}
