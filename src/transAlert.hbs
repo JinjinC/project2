@@ -2,7 +2,7 @@
 {{#extend "layoutSys"}}
     {{#replace "sidebarSys"}}
 
-        {{> sidebarSys this conditionClass=conditionClass active="appAlert"}}
+        {{> sidebarSys this conditionClass=conditionClass active="transAlert"}}
 
     {{/replace}}
 
@@ -10,10 +10,10 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <h2 class="page-title">
-                <span>应用报警策略<small>报警列表</small></span>
+                <span>关键事务报警策略<small>报警列表</small></span>
                     <a href="#">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
-                            创建报警策略
+                            创建关键事务报警策略
                         </button>
                     </a>
                 </h2>
@@ -26,7 +26,7 @@
                 <section class="widget">
                     <header>
                         <h5>
-                            Default application <strong>报警策略</strong>
+                            spider <strong>报警策略</strong>
                         </h5>
                         <div class="widget-controls">
                         	<div class="checkbox-inline checkbox-ios">
@@ -46,21 +46,15 @@
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            13 个应用
+                                            7 个关键事务
                                         </legend>
                                         <p style="color:#d2d2d2">
-                                            新应用默认加入报警列表
+                                            新关键事务默认加入报警列表
                                         </p>
                                         <div style="margin-top:15px">
                                         	<i class="fa fa-stop icon1 success"></i>
                                         	<i class="fa fa-stop icon1 success"></i>
                                         	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1"></i>
                                         	<i class="fa fa-stop icon1"></i>
                                         	<i class="fa fa-stop icon1"></i>
                                         	<i class="fa fa-stop icon1"></i>
@@ -81,11 +75,11 @@
 						                    <div class="row">
 						                        
 						                        <div class="col-sm-4  col-xs-6" style="padding-left: 6px;">
-						                            <div class="altValue"> < 0.8 </div>
+						                            <div class="altValue"> < 0.5 </div>
 						                            <div class="altName"> Apdex</div>
 						                        </div>
 						                        <div class="col-sm-4 col-xs-6">
-						                            <div class="altValue"> > 12.3%</div>
+						                            <div class="altValue"> > 53.7%</div>
 						                            <div class="altName">错误率</div>
 						                        </div>
 						                        
@@ -150,7 +144,7 @@
                 <section class="widget">
                     <header>
                         <h5>
-                            报警 for IOS 
+                            报警 for app
                         </h5>
                         <div class="widget-controls">
                         	<div class="checkbox-inline checkbox-ios">
@@ -170,20 +164,15 @@
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            8 个应用
+                                            2个应用
                                         </legend>
                                         <p style="color:#d2d2d2">
-                                            新应用默认加入报警列表
+                                            新关键事务默认加入报警列表
                                         </p>
                                         <div style="margin-top:15px">
                                         	<i class="fa fa-stop icon1 success"></i>
                                         	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
+                                        	
                                         </div>
                                     </fieldset>
                                 </div>
@@ -237,83 +226,7 @@
                 </section>
             </div>  
     	</div>
-    	<div class="row">
-            <div class="col-lg-12 col-md-12">
-                <section class="widget">
-                    <header>
-                        <h5>
-                            test 
-                        </h5>
-                        <div class="widget-controls">
-                        	<div class="checkbox-inline checkbox-ios">
-                                <label for="checkbox-ios4">
-                                    <input type="checkbox" id="checkbox-ios4">
-                                </label>
-                            </div>
-                            <a href="#" data-toggle="modal" data-target="#myModal" style="display: inline-block;">
-                                <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:block">
-                                </i>
-                            </a>
-                        </div>
-                    </header>
-                    <div class="widget-body" style="opacity: 0.65;cursor: not-allowed;">
-                        <form role="form">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <fieldset>
-                                        <legend class="section altSection">
-                                            0 个应用
-                                        </legend>
-                                        
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-4">
-                                    <fieldset>
-                                        <legend class="section altSection">
-                                            报警条件：
-                                        </legend>
-                                        <div class="visits-info well well-sm well-cos">
-						                    <div class="row">
-						                        
-						                        <div class="col-sm-4  col-xs-6" style="padding-left: 6px;">
-						                            <div class="altValue"> < 0.5 </div>
-						                            <div class="altName"> Apdex</div>
-						                        </div>
-						                        <div class="col-sm-4 col-xs-6">
-						                            <div class="altValue"> > 9.9%</div>
-						                            <div class="altName">错误率</div>
-						                        </div>
-						                        
-						                    </div>
-						                </div>
-                                       
-                                        
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-4">
-                                    <fieldset>
-                                        <legend class="section altSection">
-                                            用户
-                                        </legend>
-                                        <div class="altUser">
-                                            <span><i class="fa fa-user icon1"></span></i>
-                                        </div>
-                                        <p style="color:#d2d2d2">
-                                        	您的通知方式：
-                                        </p>
-                                        <p style="color:#d2d2d2">
-                                        	还没有选择通知方式
-                                        </p>
-                                       
-                                    </fieldset>
-                                </div>
-                            </div>
-                            
-                        </form>
-                    </div>
-                </section>
-            </div>  
-    	</div>
+    	
     	
      
     {{/replace}}

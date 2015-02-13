@@ -1,3 +1,30 @@
+
+.userlist{
+  padding-left:27px;
+  color:#555;
+  list-style:inherit;
+}
+.altSection{
+  color: white;
+}
+.altValue{
+  width: 80px;
+  text-align:left;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+.altName{
+  text-align: left;
+  margin-bottom: 5px;
+}
+.altUser{
+  padding-top: 7px;
+  padding-bottom: 9px;
+}
+
+
 .inner-widget{
   margin-bottom: 20px;
 }
@@ -296,6 +323,9 @@ button.btn.dropdown-toggle.btn-choose{
 }
 .icon1{
   font-size: 19px;
+  &.success{
+    color: rgb(86, 188, 118);
+  }
 }
 .icon2{
   font-size: 12px;
