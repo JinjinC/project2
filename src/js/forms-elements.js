@@ -103,6 +103,8 @@ $(function(){
 
         new Switchery(document.getElementById('checkbox-ios1'));
         new Switchery(document.getElementById('checkbox-ios2'),{color: $blue});
+        new Switchery(document.getElementById('checkbox-ios3'));
+        new Switchery(document.getElementById('checkbox-ios4'));
 
         $('#datetimepicker1').datetimepicker({
             pickTime: false
