@@ -44,7 +44,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                               
                                                                 <div class="bar-graph" style="width:67%"></div>
                                                                 <div class="bar-text"><span>ServletContextListener/org.springframe...</span> <span style="float: right;">17.43 s</span></div>
                                                             </div>
@@ -54,7 +53,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:20%"></div>
                                                                 <div class="bar-text"><span>org.springframework.web.servlet...</span><span style="float: right;">1.72 s</span></div>
                                                             </div>
@@ -80,7 +78,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:0%"></div>
                                                                 <div class="bar-text"><span>ServletContextListener/org</span><span style="float: right;">0.00</span></div>
                                                             </div>
@@ -90,7 +87,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:0%"></div>
                                                                 <div class="bar-text"><span>org.springframework</span><span style="float: right;">0.00</span></div>
                                                             </div>
@@ -99,7 +95,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:100%"></div>
                                                                 <div class="bar-text"><span>org.apache.jasper.servlet</span><span style="float: right;">1</span></div>
                                                             </div>
@@ -115,7 +110,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:33%"></div>
                                                                 <div class="bar-text"><span>org.apache.catalina.servlets/init</span><span style="float: right;">0.003 s</span></div>
                                                             </div>
@@ -125,18 +119,14 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:33%"></div>
                                                                 <div class="bar-text"><span>org.springframework.web.Dispatcher....</span><span style="float: right;">0.003 s</span></div>
-                                                            </div>
-
-                                                           
+                                                            </div>                                                           
                                                         </li>
                                                         <li class="dd-item" data-id="3">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                               
                                                                 <div class="bar-graph" style="width:33%"></div>
                                                                 <div class="bar-text"><span>org.apache.jasper.servlet/init</span> <span style="float: right;">0.003 ms</span></div>
                                                             </div>
@@ -221,31 +211,52 @@
                  <div class="row">
                     <div class="col-md-12 animation_box">
                         <section class="widget">
-                            <header>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                                </div>
-                            </header>
-                            <div class="body">
-                                <table class="table table-striped no-margin sources-table">
-                                    <thead>
-                                    <tr>
-                                        <th class="source-col-header">Traces</th>
-                                        <th>开始时间</th>
-                                        <th>耗时</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
+                        <header>
+                            <h4>Traces</h4>
+                        </header>
+                        <div class="body">
+                            <table class="table table-striped table-hover no-margin sources-table">
+                                <thead>
+                                <tr>
+                                    <th width="34%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">开始时间</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">耗时</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Agent</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>2015-02-05 16:00:44</td>
+                                    <td>99,428ms</td>
+                                    <td>java:app188:8090(10.133.197.33)</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/abc.do (GET)</td>
+                                    <td>2015-02-05 16:00:40</td>
+                                    <td>97,030ms</td>
+                                    <td>java:app188:8090(10.133.197.33)</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
                     </div>
                 </div>
 
@@ -390,7 +401,7 @@
 
 
         <!-- daterange picker js -->
-         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+         <script src="lib/form-daterangepicker/daterangepicker.js"></script>             
          <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
 

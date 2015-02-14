@@ -40,7 +40,7 @@
                             <div class="body" style="background-color:transparent; padding:0;">
                                 <ul id="myTab" class="nav nav-tabs">
                                     <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">错误名称</a></li>
-                                    <li><a href="#throughput" data-toggle="tab" class="tabItem active">事务名称</a></li>
+                                    <li><a href="#throughput" data-toggle="tab" class="tabItem">事务名称</a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content" >
                                     <div class="tab-pane fade in active" id="responseTime">
@@ -50,7 +50,6 @@
                                                    <div class="dd-handle">
                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                         </i>
-                                                        
                                                         <div class="bar-graph" style="width:90%"></div>
                                                         <div class="bar-text"><span>users-insert</span><span style="float: right;">5.43 ms</span></div>
                                                     </div>
@@ -59,7 +58,6 @@
                                                    <div class="dd-handle">
                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                         </i>
-                                                        
                                                         <div class="bar-graph" style="width:10%"></div>
                                                         <div class="bar-text"><span>users-update</span><span style="float: right;">0.43 ms</span></div>
                                                     </div>
@@ -71,20 +69,18 @@
                                     <div class="tab-pane fade" id="throughput">
                                         <div class="dd" id="nestable2">
                                             <ol class="dd-list">
-                                                <li class="dd-item dd-collapsed" data-id="1">
+                                                <li class="dd-item dd-collapsed" data-id="3">
                                                     <div class="dd-handle">
                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                         </i>
-                                                       
                                                         <div class="bar-graph" style="width:95%"></div>
                                                         <div class="bar-text"><span>users-insert</span> <span style="float: right;">196,333 cpm</span></div>
                                                     </div>
                                                 </li>
-                                                <li class="dd-item dd-collapsed" data-id="1">
+                                                <li class="dd-item dd-collapsed" data-id="4">
                                                     <div class="dd-handle">
                                                         <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                         </i>
-                                                       
                                                         <div class="bar-graph" style="width:5%"></div>
                                                         <div class="bar-text"><span>users-update</span> <span style="float: right;">333 cpm</span></div>
                                                     </div>
@@ -215,16 +211,16 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td style="text-align: left;">SpringController/insert.do (GET)</td>
-                                            <td style="text-align: left;">6700000</td>
-                                            <td style="text-align: left;">5.76 ms</td>
-                                            <td style="text-align: left;">223,333.33cpm</td>
+                                            <td>SpringController/insert.do (GET)</td>
+                                            <td>6700000</td>
+                                            <td>5.76 ms</td>
+                                            <td>223,333.33cpm</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: left;">SpringController/splits.do (GET)</td>
-                                            <td style="text-align: left;">33000</td>
-                                            <td style="text-align: left;">6.33 ms</td>
-                                            <td style="text-align: left;">1,100.00cpm</td>
+                                            <td>SpringController/splits.do (GET)</td>
+                                            <td>33000</td>
+                                            <td>6.33 ms</td>
+                                            <td>1,100.00cpm</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -254,8 +250,8 @@
 
 
         <!-- daterange picker js -->
-         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
-         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>               
+        <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
 
         <!-- page application js -->
