@@ -12,7 +12,7 @@
                 <h2 class="page-title">
                 <span>应用报警策略<small>报警列表</small></span>
                     <a href="#">
-                        <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
+                        <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModalCreate">
                             创建报警策略
                         </button>
                     </a>
@@ -87,12 +87,9 @@
 						                        <div class="col-sm-4 col-xs-6">
 						                            <div class="altValue"> > 12.3%</div>
 						                            <div class="altName">错误率</div>
-						                        </div>
-						                        
+						                        </div>						                        
 						                    </div>
-						                </div>
-                                       
-                                        
+						                </div>                                        
                                     </fieldset>
                                 </div>
                                 <div class="col-md-4">
@@ -314,6 +311,76 @@
                 </section>
             </div>  
     	</div>
+
+        <div id="myModal" class="modal fade alert-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">修改报警策略</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                               <
+                                           </div>
+                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                               
+                                           </div>
+                                       </div>
+                                       <span class="slider-warning">
+                                           <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
+                                                  type="text" data-slider-min="0" data-slider-max="2000"
+                                                  data-slider-step="1" data-slider-value="[200,1547]"/>
+                                       </span>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <div id="myModalCreate" class="modal fade trans-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">创建报警策略</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                           <label for="trans-name" class="control-label">报警策略名称</label>
+                                       </div>
+                                       <div class="col-sm-6 col-lg-6 col-md-6">
+                                           <input id="trans-name" class="form-control form-input-white" required="required" type="text" value="" name="trans-name" data-parsley-trigger="change">
+                                           <p class="validation-message" id="trans-error">该项不能为空</p>
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
     	
      
     {{/replace}}
