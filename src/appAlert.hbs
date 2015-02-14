@@ -99,30 +99,9 @@
                                         </legend>
                                         <div class="altUser">
                                         	<span style="margin-right:20px;"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
-                                            <span><i class="fa fa-user icon1" id="user1"></span></i>
-                                            <div id="altUser1">
-									    		<div class="modal" id="cputrend" style="position:relative; display:none; width: 190px;">
-									                <div class="modal-dialog" style="width: auto; padding: 0;">
-									                    <div class="widget modal-content" style="background:white; padding-right:24px;">
-									                        <header>
-									                            <h5>用户列表</h5>
-									                        </header>
-									                        <div class="body">
-									                            <ul class="userlist">
-													    			<li>zhaohaijun</li>
-													    			<li>hexiaoyang</li>
-													    			<li>peiliping</li>
-													    			<li>hebingqing</li>
-													    			<li>alan</li>
-													    		</ul>
-									                        </div>
-									                    </div>
-									                </div>
-									            </div>
-									    		
-									    	</div>
-
+                                            <span id="user1"><i class="fa fa-user icon1"></span></i>
                                         </div>
+                                        
                                         <p style="color:#d2d2d2">
                                         	您的通知方式：
                                         </p>
@@ -130,7 +109,26 @@
                                         	通过
                                         	<span><i class="glyphicon glyphicon-envelope icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
                                         </p>
-                                       
+                                       	<div style="position: absolute;top: -114px;">
+                                            <div class="modal" id="altUser1" style="position:relative; width: 190px;display:none;">
+                                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                    <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                        <header>
+                                                            <h5>用户列表</h5>
+                                                        </header>
+                                                        <div class="body">
+                                                            <ul class="userlist">
+                                                                <li>zhaohaijun</li>
+                                                                <li>hexiaoyang</li>
+                                                                <li>peiliping</li>
+                                                                <li>hebingqing</li>
+                                                                <li>alan</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </fieldset>
                                 </div>
                             </div>
@@ -214,7 +212,7 @@
                                         </legend>
                                         <div class="altUser">
                                         	<span style="margin-right:20px;"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
-                                            <span><i class="fa fa-user icon1"></span></i>
+                                            <span id="user2"><i class="fa fa-user icon1"></span></i>
 
                                         </div>
                                         <p style="color:#d2d2d2">
@@ -224,6 +222,26 @@
                                         	通过
                                         	<span><i class="glyphicon glyphicon-envelope icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
                                         </p>
+                                        <div style="position: absolute;top: -114px;">
+                                            <div class="modal" id="altUser2" style="position:relative; width: 190px;display:none;">
+                                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                    <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                        <header>
+                                                            <h5>用户列表</h5>
+                                                        </header>
+                                                        <div class="body">
+                                                            <ul class="userlist">
+                                                                <li>zhaohaijun</li>
+                                                                <li>hexiaoyang</li>
+                                                                <li>peiliping</li>
+                                                                <li>hebingqing</li>
+                                                                <li>alan</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                        
                                     </fieldset>
                                 </div>
@@ -398,6 +416,24 @@
 
         <!-- page application js -->
         <script src="js/forms-elements.js"></script>
+        <script>
+            $('#user1').mouseover(function(){
+                $('#altUser1').show();
+            })
+
+            $('#user1').mouseout(function(){
+               $('#altUser1').hide();
+            })
+        </script>
+        <script>
+            $('#user2').mouseover(function(){
+                $('#altUser2').show();
+            })
+
+            $('#user1').mouseout(function(){
+               $('#altUser2').hide();
+            })
+        </script>
         
     {{/append}}
 
