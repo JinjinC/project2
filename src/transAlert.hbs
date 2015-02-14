@@ -13,7 +13,7 @@
                 <span>关键事务报警策略<small>报警列表</small></span>
                     <a href="#">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="middle" data-toggle="modal" data-target="#myModal">
-                            创建关键事务报警策略
+                            创建报警策略
                         </button>
                     </a>
                 </h2>
@@ -48,28 +48,24 @@
                                         <legend class="section altSection">
                                             7 个关键事务
                                         </legend>
+                                        <div style="margin-top:7px;margin-bottom:17px">
+                                        	<i class="fa fa-stop icon1 success"></i>
+                                        	<i class="fa fa-stop icon1 success"></i>
+                                        	<i class="fa fa-stop icon1 success"></i>
+                                        	<i class="fa fa-stop icon1"></i>
+                                        	<i class="fa fa-stop icon1"></i>
+                                        	<i class="fa fa-stop icon1"></i>
+                                        	<i class="fa fa-stop icon1"></i>
+                                        </div>
                                         <p style="color:#d2d2d2">
                                             新关键事务默认加入报警列表
                                         </p>
-                                        <div style="margin-top:15px">
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1 success"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-                                        	<i class="fa fa-stop icon1"></i>
-
-
-                                        </div>
-                                        
-                                        
                                     </fieldset>
                                 </div>
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            报警条件：
+                                            报警条件
                                         </legend>
                                         <div class="visits-info well well-sm well-cos">
 						                    <div class="row">
@@ -92,20 +88,16 @@
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            用户
+                                            通知用户
                                         </legend>
                                         <div class="altUser">
-                                        	<span style="margin-right:20px;"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
+                                        	<span style="margin-right:20px;" id="userE1"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
                                             <span id="user1"><i class="fa fa-user icon1"></span></i>
-                                            
-
                                         </div>
                                         <p style="color:#d2d2d2">
-                                        	您的通知方式：
-                                        </p>
-                                        <p style="color:#d2d2d2">
-                                        	通过
+                                        	通知方式：
                                         	<span><i class="glyphicon glyphicon-envelope icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
+                                            <span><i class="glyphicon glyphicon-phone icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
                                         </p>
 
                                         <div style="position: absolute;top: -114px;">
@@ -128,7 +120,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
+                                        <div style="position: absolute;top: -42px;">
+                                            <div class="modal" id="altUserE1" style="position:relative; width: 226px;display:none;">
+                                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                    <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                        <header>
+                                                            <h5>联系方式</h5>
+                                                        </header>
+                                                        <div class="body">
+                                                            <ul class="userlist">
+                                                                <li>zhaohaijun@oneapm.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </fieldset>
                                 </div>
                             </div>
@@ -170,7 +177,7 @@
                                         <p style="color:#d2d2d2">
                                             新关键事务默认加入报警列表
                                         </p>
-                                        <div style="margin-top:15px">
+                                        <div style="style=margin-top:7px;margin-bottom:17px;">
                                         	<i class="fa fa-stop icon1 success"></i>
                                         	<i class="fa fa-stop icon1 success"></i>
                                         	
@@ -180,7 +187,7 @@
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            报警条件：
+                                            报警条件
                                         </legend>
                                         <div class="visits-info well well-sm well-cos">
 						                    <div class="row">
@@ -203,19 +210,18 @@
                                 <div class="col-md-4">
                                     <fieldset>
                                         <legend class="section altSection">
-                                            用户
+                                            通知用户
                                         </legend>
                                         <div class="altUser">
-                                        	<span style="margin-right:20px;"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
+                                        	<span style="margin-right:20px;" id="userE2"><i class="glyphicon glyphicon-envelope icon1" style="font-size: 16px;"></i></span>
                                             <span id="user2"><i class="fa fa-user icon1"></span></i>
 
                                         </div>
+                                        
                                         <p style="color:#d2d2d2">
-                                        	您的通知方式：
-                                        </p>
-                                        <p style="color:#d2d2d2">
-                                        	通过
+                                        	通知方式：
                                         	<span><i class="glyphicon glyphicon-envelope icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
+                                            <span><i class="glyphicon glyphicon-phone icon1" style="font-size: 14px;margin-left: 10px; color:white;"></i></span>
                                         </p>
                                         <div style="position: absolute;top: -114px;">
                                             <div class="modal" id="altUser2" style="position:relative; width: 190px;display:none;">
@@ -237,7 +243,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
+                                        <div style="position: absolute;top: -42px;">
+                                            <div class="modal" id="altUserE2" style="position:relative; width: 226px;display:none;">
+                                                <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                    <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                        <header>
+                                                            <h5>联系方式</h5>
+                                                        </header>
+                                                        <div class="body">
+                                                            <ul class="userlist">
+                                                                <li>zhaohaijun@oneapm.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </fieldset>
                                 </div>
                             </div>
@@ -247,6 +268,154 @@
                 </section>
             </div>  
     	</div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            test 
+                        </h5>
+                        <div class="widget-controls">
+                            <div class="checkbox-inline checkbox-ios">
+                                <label for="checkbox-ios4">
+                                    <input type="checkbox" id="checkbox-ios4">
+                                </label>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModalAlert" style="display: inline-block;">
+                                <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:block">
+                                </i>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="widget-body" style="opacity: 0.3;cursor: not-allowed;">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            0 个应用
+                                        </legend>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            报警条件
+                                        </legend>
+                                        <div class="visits-info well well-sm well-cos">
+                                            <div class="row">
+                                                
+                                                <div class="col-sm-4  col-xs-6" style="padding-left: 6px;">
+                                                    <div class="altValue"> < 0.5 </div>
+                                                    <div class="altName"> Apdex</div>
+                                                </div>
+                                                <div class="col-sm-4 col-xs-6">
+                                                    <div class="altValue"> > 9.9%</div>
+                                                    <div class="altName">错误率</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                       
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            通知用户
+                                        </legend>
+                                        <div class="altUser">
+                                            <span><i class="fa fa-user icon1"></span></i>
+                                        </div>
+                                        <p style="color:#d2d2d2">
+                                            通知方式：无
+                                        </p>
+                                       
+                                    </fieldset>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </section>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            test 1
+                        </h5>
+                        <div class="widget-controls">
+                            <div class="checkbox-inline checkbox-ios">
+                                <label for="checkbox-ios4">
+                                    <input type="checkbox" id="checkbox-ios4">
+                                </label>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModalAlert" style="display: inline-block;">
+                                <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:block">
+                                </i>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="widget-body" style="opacity: 0.3;cursor: not-allowed;">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            0 个应用
+                                        </legend>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            报警条件
+                                        </legend>
+                                        <div class="visits-info well well-sm well-cos">
+                                            <div class="row">
+                                                
+                                                <div class="col-sm-4  col-xs-6" style="padding-left: 6px;">
+                                                    <div class="altValue"> < 0.5 </div>
+                                                    <div class="altName"> Apdex</div>
+                                                </div>
+                                                <div class="col-sm-4 col-xs-6">
+                                                    <div class="altValue"> > 9.9%</div>
+                                                    <div class="altName">错误率</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                       
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <legend class="section altSection">
+                                            通知用户
+                                        </legend>
+                                        <div class="altUser">
+                                            <span><i class="fa fa-user icon1"></span></i>
+                                        </div>
+                                        <p style="color:#d2d2d2">
+                                            通知方式：无
+                                        </p>
+                                       
+                                    </fieldset>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </section>
+            </div>  
+        </div>
     	
     	
      
@@ -273,6 +442,13 @@
             $('#user1').mouseout(function(){
                $('#altUser1').hide();
             })
+            $('#userE1').mouseover(function(){
+                $('#altUserE1').show();
+            })
+
+            $('#userE1').mouseout(function(){
+               $('#altUserE1').hide();
+            })
         </script>
         <script>
             $('#user2').mouseover(function(){
@@ -281,6 +457,13 @@
 
             $('#user2').mouseout(function(){
                $('#altUser2').hide();
+            })
+            $('#userE2').mouseover(function(){
+                $('#altUserE2').show();
+            })
+
+            $('#userE2').mouseout(function(){
+               $('#altUserE2').hide();
             })
         </script>
         
