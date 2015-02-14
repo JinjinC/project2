@@ -71,9 +71,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">47.99 s</span>
                                         <div class="bar-graph"></div>
-                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span><span style="float: right;">47.99 s</span></div>
                                     </div>
                                    
                                 </li>
@@ -82,10 +81,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">15.37 s</span>
                                         <div class="bar-graph" style="width:50%"></div>
-                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
-                                        
+                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span><span style="float: right;">15.37 s</span></div>
                                     </div>
                                     
                                 </li>
@@ -94,9 +91,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">14.77 s</span>
                                         <div class="bar-graph" style="width:30%"></div>
-                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
+                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span><span style="float: right;">14.77 s</span></div>
                                         
                                     </div>
                                    
@@ -207,22 +203,22 @@
                                             <td width="10%" class="warmicon">
                                                 <i class="iconfont icon1">&#xe608;</i>
                                             </td>
-                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:56</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td>应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>  
                                         <tr>
                                             <td class="warmtime">15:54</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td>应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:28</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td>应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>                                          
                                     </tbody>
                                 </table>
@@ -256,17 +252,17 @@
                                             <td width="10%" class="warmicon">
                                                 <i class="iconfont icon1">&#xe608;</i>
                                             </td>
-                                            <td width="80%" style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>
                                         <tr>
                                             <td class="warmtime">15:56</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                            <td>应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
                                         </tr>  
                                         <tr>
                                             <td class="warmtime">15:54</td>
                                             <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
-                                            <td style="text-align: left;">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                            <td>应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
                                         </tr>                                      
                                     </tbody>
                                 </table>
@@ -331,38 +327,7 @@
         <script src="js/graph/singlechart2.js"></script>
 
         <script>
-            $('th').click(function(e){
-                var a = $(this).find('.sortedup');
-                var b = $(this).find('.sorteddown');
-
-                if (a.css('display') == 'none' && b.css('display') == 'none') {
-                    a.show();
-                }else{
-                    if (a.css('display') != 'none') {
-                        a.hide();
-                        b.show();
-                    }else{
-                        if (a.css('display') == 'none') {
-                            b.hide();
-                        }
-                    }
-                }
-                e.stopPropagation();
-            })
-
-            $('#cpuchart').mouseover(function(){
-                $('#cputrend').show();
-            })
-            $('#cpuchart').mouseout(function(){
-                $('#cputrend').hide();
-            })
-            $('#contentchart').mouseover(function(){
-                $('#contenttrend').show();
-            })
-            $('#contentchart').mouseout(function(){
-                $('#contenttrend').hide();
-            })
-
+           
             $('.trace-item').click(function(){
             location.href="transactionD.html";
          })

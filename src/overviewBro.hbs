@@ -1,7 +1,7 @@
 {{#extend "layoutBro"}}
 
     {{#replace "sidebarBro"}}
-        {{> sidebarBro this conditionClass=conditionClass active="broswer_overview"}}
+        {{> sidebarBro this conditionClass=conditionClass active="overviewBro"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -206,37 +206,6 @@
         <script src="js/graph/singlechart2.js"></script>
 
         <script>
-            $('th').click(function(e){
-                var a = $(this).find('.sortedup');
-                var b = $(this).find('.sorteddown');
-
-                if (a.css('display') == 'none' && b.css('display') == 'none') {
-                    a.show();
-                }else{
-                    if (a.css('display') != 'none') {
-                        a.hide();
-                        b.show();
-                    }else{
-                        if (a.css('display') == 'none') {
-                            b.hide();
-                        }
-                    }
-                }
-                e.stopPropagation();
-            })
-
-            $('#cpuchart').mouseover(function(){
-                $('#cputrend').show();
-            })
-            $('#cpuchart').mouseout(function(){
-                $('#cputrend').hide();
-            })
-            $('#contentchart').mouseover(function(){
-                $('#contenttrend').show();
-            })
-            $('#contentchart').mouseout(function(){
-                $('#contenttrend').hide();
-            })
 
             $('.trace-item').click(function(){
             location.href="pageBro.html";

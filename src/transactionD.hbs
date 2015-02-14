@@ -28,7 +28,6 @@
                                 <li class="active">
                                     <a href="#webTran" data-toggle="tab" style="font-size:14px; font-weight: 500">Web 事务</a>
                                 </li>
-                               
                             </ul>
                         </header>
                         <div class="body tab-content">
@@ -38,7 +37,7 @@
                                         <ul id="myTab" class="nav nav-tabs">
                                             <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">响应时间</a></li>
                                             <li><a href="#apdex" data-toggle="tab" class="tabItem">Apdex</a></li>
-                                            <li><a href="#throughput" data-toggle="tab" class="tabItem active">吞吐量</a></li>
+                                            <li><a href="#throughput" data-toggle="tab" class="tabItem">吞吐量</a></li>
                                         </ul>
                                         <div id="myTabContent" class="tab-content" >
                                             <div class="tab-pane fade in active" id="responseTime">
@@ -48,7 +47,6 @@
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                               
                                                                 <div class="bar-graph"></div>
                                                                 <div class="bar-text">
                                                                     <span>SpringController/insert.do (GET)</span> 
@@ -91,38 +89,34 @@
                                             <div class="tab-pane fade" id="apdex">
                                                 <div class="dd" id="nestable2">
                                                     <ol class="dd-list">
-                                                        <li class="dd-item" data-id="1">
+                                                        <li class="dd-item" data-id="11">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:0%"></div>
                                                                 <div class="bar-text"><span>SpringController/abc.do (GET)</span><span style="float: right;">0.00</span></div>
                                                             </div>                                                   
                                                         </li>
-                                                        <li class="dd-item" data-id="2">
+                                                        <li class="dd-item" data-id="12">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:0%"></div>
                                                                 <div class="bar-text"><span>SpringController/splits.do (GET)</span><span style="float: right;">0.00</span></div>
                                                             </div>                                                    
                                                         </li>
-                                                        <li class="dd-item" data-id="3">
+                                                        <li class="dd-item" data-id="13">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:0%"></div>
                                                                 <div class="bar-text"><span>SpringController/insert.do (GET)</span><span style="float: right;">0.00</span></div>
                                                             </div>
                                                         </li>
-                                                        <li class="dd-item" data-id="4">
+                                                        <li class="dd-item" data-id="14">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
-                                                                
                                                                 <div class="bar-graph" style="width:100%"></div>
                                                                 <div class="bar-text"><span>SpringController/testRedis.do (GET)</span><span style="float: right;">1</span></div>
                                                             </div>
@@ -133,7 +127,7 @@
                                             <div class="tab-pane fade" id="throughput">
                                                 <div class="dd" id="nestable3">
                                                     <ol class="dd-list">
-                                                        <li class="dd-item" data-id="1">
+                                                        <li class="dd-item" data-id="21">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -142,7 +136,7 @@
                                                                 <div class="bar-text"><span>SpringController/splits.do (GET)</span> <span style="float: right;">6.77 cpm</span></div>
                                                             </div>
                                                         </li>
-                                                        <li class="dd-item" data-id="2">
+                                                        <li class="dd-item" data-id="22">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -151,7 +145,7 @@
                                                                 <div class="bar-text"><span>SpringController/abc.do (GET)</span><span style="float: right;">4.03 cpm</span></div>
                                                             </div>
                                                         </li>
-                                                        <li class="dd-item" data-id="3">
+                                                        <li class="dd-item" data-id="23">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -160,7 +154,7 @@
                                                                 <div class="bar-text"><span>SpringController/insert.do (GET)</span><span style="float: right;">2.35 cpm</span></div>
                                                             </div>
                                                         </li>
-                                                        <li class="dd-item" data-id="4">
+                                                        <li class="dd-item" data-id="24">
                                                             <div class="dd-handle">
                                                                 <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                                 </i>
@@ -269,16 +263,16 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td style="text-align: left;">SpringController/splits.do (GET)</td>
-                                    <td style="text-align: left;">2015-02-05 16:00:44</td>
-                                    <td style="text-align: left;">99,428ms</td>
-                                    <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>2015-02-05 16:00:44</td>
+                                    <td>99,428ms</td>
+                                    <td>java:app188:8090(10.133.197.33)</td>
                                 </tr>
                                 <tr>
-                                    <td style="text-align: left;">SpringController/abc.do (GET)</td>
-                                    <td style="text-align: left;">2015-02-05 16:00:40</td>
-                                    <td style="text-align: left;">97,030ms</td>
-                                    <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
+                                    <td>SpringController/abc.do (GET)</td>
+                                    <td>2015-02-05 16:00:40</td>
+                                    <td>97,030ms</td>
+                                    <td>java:app188:8090(10.133.197.33)</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -355,19 +349,19 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td style="text-align: left;">other</td>
-                                        <td style="text-align: left;">java</td>
-                                        <td style="text-align: left;">20%</td>
+                                        <td>other</td>
+                                        <td>java</td>
+                                        <td>20%</td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: left;">users-insert</td>
-                                        <td style="text-align: left;">database</td>
-                                        <td style="text-align: left;">30%</td>
+                                        <td>users-insert</td>
+                                        <td>database</td>
+                                        <td>30%</td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: left;">blabla</td>
-                                        <td style="text-align: left;">java</td>
-                                        <td style="text-align: left;">30%</td>
+                                        <td>blabla</td>
+                                        <td>java</td>
+                                        <td>30%</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -406,10 +400,10 @@
                                     </thead>
                                     <tbody>
                                      <tr>
-                                        <td style="text-align: left;">SpringController/splits.do (GET)</td>
-                                        <td style="text-align: left;">2015-02-05 16:00:44</td>
-                                        <td style="text-align: left;">99,428ms</td>
-                                        <td style="text-align: left;">java:app188:8090(10.133.197.33)</td>
+                                        <td>SpringController/splits.do (GET)</td>
+                                        <td>2015-02-05 16:00:44</td>
+                                        <td>99,428ms</td>
+                                        <td>java:app188:8090(10.133.197.33)</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -537,7 +531,7 @@
         <script src="js/component-list-groups.js"></script>
         
         <!-- daterange picker js -->
-         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>    
          <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
 

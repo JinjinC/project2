@@ -62,9 +62,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">47.99 s</span>
                                         <div class="bar-graph"></div>
-                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span> <span style="float: right;">47.99 s</span></div>
                                     </div>
                                 </li>
                                 <li class="trace-item">
@@ -72,9 +71,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">15.37 s</span>
                                         <div class="bar-graph" style="width:50%"></div>
-                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
+                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span> <span style="float: right;">15.37 s</span></div>
                                         
                                     </div>
                                 </li>
@@ -83,9 +81,8 @@
                                         <i class="iconfont icon2-dd" style="float: right;">
                                             &#xe613;
                                         </i>
-                                        <span style="float: right;">14.77 s</span>
                                         <div class="bar-graph" style="width:30%"></div>
-                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span></div>
+                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span> <span style="float: right;">14.77 s</span></div>
                                     </div>
                                 </li>
                             </ol>
@@ -188,9 +185,6 @@
 
     {{#append "scripts"}}
         <!-- page libs -->
-        <script>
-            $("li").tooltip();
-        </script>
 
         <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
         <script src="lib/jquery.sparkline/index.js"></script>
@@ -220,40 +214,9 @@
         <script src="js/graph/singlechart2.js"></script>
 
         <script>
-            $('th').click(function(e){
-                var a = $(this).find('.sortedup');
-                var b = $(this).find('.sorteddown');
-
-                if (a.css('display') == 'none' && b.css('display') == 'none') {
-                    a.show();
-                }else{
-                    if (a.css('display') != 'none') {
-                        a.hide();
-                        b.show();
-                    }else{
-                        if (a.css('display') == 'none') {
-                            b.hide();
-                        }
-                    }
-                }
-                e.stopPropagation();
-            })
-
-            $('#cpuchart').mouseover(function(){
-                $('#cputrend').show();
-            })
-            $('#cpuchart').mouseout(function(){
-                $('#cputrend').hide();
-            })
-            $('#contentchart').mouseover(function(){
-                $('#contenttrend').show();
-            })
-            $('#contentchart').mouseout(function(){
-                $('#contenttrend').hide();
-            })
 
             $('.trace-item').click(function(){
-            location.href="transactionD.html";
+            location.href="interMob.html";
          })
            
         </script>
