@@ -326,6 +326,12 @@ button.btn.dropdown-toggle.btn-choose{
   &.success{
     color: rgb(86, 188, 118);
   }
+  &.danger{
+    color:#e5603b;
+  }
+  &.warning{
+    color:#eac85e;
+  }
 }
 .icon2{
   font-size: 12px;
@@ -1418,7 +1424,7 @@ a.tabIcon{
 .alert-modal{
   top: 25%;
   & .modal-dialog{
-    width: 800px;
+    width: 1000px;
     @media(max-width: 768px){
       width: 91%;
     }
@@ -1457,6 +1463,26 @@ a.tabIcon{
 
 }
 
+#myModalAlert {
+  & .form-control{
+    display: inline-block;
+    width: 20%;
+    // height: 25px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  & .form-row {
+    margin-bottom: 18px;
+  }
+  // & input{
+    
+  // }
+
+  // & select{
+  //   padding-right: 0;
+  //   padding-left: 0;
+  // }
+}
 
 
 
