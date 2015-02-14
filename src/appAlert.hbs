@@ -338,15 +338,15 @@
                                <form class="form-horizontal form-label-left">
                                    <div class="form-group">
                                        <div class="row">
-                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                                                <div class="row form-row">
                                                    <div class="col-sm-3 col-lg-3 col-md-3">
                                                        <label for="trans-name" class="control-label">报警条件设置</label>
                                                    </div>
-                                                   <div class="col-sm-9 col-lg-9 col-md-9">
+                                                   <div class="col-sm-9 col-lg-9 col-md-9" style="magin-top: 3px;">
                                                        <span>警示值</span>
                                                        <i class="fa fa-stop icon1 warning"></i>
-                                                       <span>发送警报</span>
+                                                       <span>&nbsp;&nbsp;&nbsp;&nbsp;发送警报</span>
                                                        <i class="fa fa-stop icon1 danger"></i>
                                                    </div>
                                                </div>
@@ -380,7 +380,7 @@
                                                     </div>
                                                </div>
                                                <div class="row">
-                                                    <div class="col-sm-3 col-lg-3 col-md-3 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                    <div class="col-sm-3 col-lg-3 col-md-3">
                                                         <label for="trans-name" class="control-label">性能指数</label>
                                                     </div>
                                                     <div class="col-sm-7 col-lg-7 col-md-7">
@@ -392,8 +392,69 @@
                                                     </div>
                                                </div>
                                            </div>
-                                           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                               
+                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <section class="widget widget-tabs">
+                                                            <header>
+                                                                <ul class="nav nav-tabs">
+                                                                    <li class="active">
+                                                                        <a href="#app" data-toggle="tab" style="font-size:14px;">应用程序</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#user" data-toggle="tab" style="font-size:14px;">用户</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </header>
+                                                            <div class="body tab-content">
+                                                                <div id="app" class="tab-pane active clearfix">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th width="30%">名称</th>
+                                                                                <th width="30%">应用</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>some-app-123456</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>some-app-123456</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>some-app-123456</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div id="user" class="tab-pane clearfix">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th width="30%">用户名</th>
+                                                                                <th width="30%">邮箱</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>name@company.com</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>name@company.com</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>name</td>
+                                                                                <td>name@company.com</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
                                            </div>
                                        </div>
                                    </div>
@@ -424,7 +485,7 @@
                                        <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
                                            <label for="trans-name" class="control-label">报警策略名称</label>
                                        </div>
-                                       <div class="col-sm-6 col-lg-6 col-md-6">
+                                       <div class="col-sm-7 col-lg-7 col-md-7">
                                            <input id="trans-name" class="form-control form-input-white" required="required" type="text" value="" name="trans-name" data-parsley-trigger="change">
                                            <p class="validation-message" id="trans-error">该项不能为空</p>
                                        </div>

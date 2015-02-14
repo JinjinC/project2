@@ -76,6 +76,33 @@
   }
 }
 
+.modal{
+  & .nav-tabs>li>a{
+    border: 1px solid transparent;
+    background-color: #fff;
+  }
+
+  & .widget-tabs .nav > li:not(.active) > a{
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    font-weight: 400;
+  }
+
+  & .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    font-weight: 400;
+  }
+
+  & .tab-content{
+    color: #666;
+    background-color: #fff;
+  }
+}
 
 .modal-trash{
   width: 400px;
@@ -1386,8 +1413,7 @@ a.tabIcon{
 .trans-modal{
   top: 25%;
   & .modal-dialog{
-
-    width: 650px;
+    width: 750px;
     @media(max-width: 768px){
       width: 91%;
     }
