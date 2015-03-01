@@ -76,6 +76,14 @@
 }
 
 .modal{
+
+  & .widget-tabs .nav-tabs {
+    border-bottom: 1px solid #ddd;
+    & li{
+      margin-bottom: -1px;
+    }
+  }
+
   & .nav-tabs>li>a{
     border: 1px solid transparent;
     background-color: #fff;
@@ -1486,6 +1494,9 @@ a.tabIcon{
   padding-top: 35px;
   & .control-label {
     float: right;
+    @media(max-width: 768px){
+      float: left;
+    }
   }
 
 }
@@ -1498,6 +1509,11 @@ a.tabIcon{
     padding-right: 0;
     padding-left: 0;
   }
+
+  & .select{
+    width: 32%;
+  }
+
   & .form-row {
     margin-bottom: 18px;
   }
@@ -1511,6 +1527,39 @@ a.tabIcon{
   // }
 }
 
+.app_status{
+  width: 100%;
+  height: 38px;
+  position: fixed;
+  z-index: 1050;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.4);
+  text-align: center;
+  
+}
+
+.app_status-info{
+  width: 70%;
+  line-height: 38px;
+  height: 38px;
+  margin: 0 auto;
+  & div {
+    display: inline-block;
+    width: 15%;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  & .unit {
+    color: #d2d2d2;
+    font-size: 13px;
+  }
+  & .app_name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
 
 
 

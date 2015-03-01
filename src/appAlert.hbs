@@ -357,134 +357,153 @@
                         <h4 class="modal-title" id="myModalLabel">修改报警策略</h4>
                     </div>
                     <div class="modal-body">
-                       <div class="row">
-                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                               <form class="form-horizontal form-label-left">
-                                   <div class="form-group">
-                                       <div class="row">
-                                           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                                               <div class="row form-row">
-                                                   <div class="col-sm-3 col-lg-3 col-md-3">
-                                                       <label for="trans-name" class="control-label">报警条件设置</label>
-                                                   </div>
-                                                   <div class="col-sm-9 col-lg-9 col-md-9" style="magin-top: 3px;">
-                                                       <span>警示值</span>
-                                                       <i class="fa fa-stop icon1 warning"></i>
-                                                       <span>&nbsp;&nbsp;&nbsp;&nbsp;发送警报</span>
-                                                       <i class="fa fa-stop icon1 danger"></i>
-                                                   </div>
+                       <form class="form-horizontal form-label-left">
+                           <div class="form-group">
+                               <div>
+                                   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                       <section class="">
+                                           <div class="row form-row">
+                                               <div class="col-sm-3 col-lg-3 col-md-3">
+                                                   <label for="trans-name" class="control-label">报警条件设置</label>
                                                </div>
-                                               <div class="row form-row">
-                                                    <div class="col-sm-3 col-lg-3 col-md-3">
-                                                        <label for="trans-name" class="control-label">性能指数</label>
-                                                    </div>
-                                                    <div class="col-sm-4 col-lg-4 col-md-4">
-                                                        <input id="trans-name" class="form-control form-input-white" type="text" value="" name="trans-name" >
-                                                        <span>分钟内为</span>
-                                                        <select required="required" class="select1 form-control form-input-white" name="app">
-                                                            <option value="">0.94</option>
-                                                            <option value="">0.9</option>
-                                                            <option value="">0.85</option>
-                                                            <option value="">0.8</option>
-                                                            <option value="">0.7</option>
-                                                            <option value="">0.5</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-4 col-lg-4 col-md-4">
-                                                        <input id="trans-name" class="form-control form-input-white" type="text" value="" name="trans-name" >
-                                                        <span>分钟内为</span>
-                                                        <select required="required" class="select1 form-control form-input-white" name="app">
-                                                            <option value="">0.94</option>
-                                                            <option value="">0.9</option>
-                                                            <option value="">0.85</option>
-                                                            <option value="">0.8</option>
-                                                            <option value="">0.7</option>
-                                                            <option value="">0.5</option>
-                                                        </select>
-                                                    </div>
-                                               </div>
-                                               <div class="row">
-                                                    <div class="col-sm-3 col-lg-3 col-md-3">
-                                                        <label for="trans-name" class="control-label">性能指数</label>
-                                                    </div>
-                                                    <div class="col-sm-7 col-lg-7 col-md-7">
-                                                        <span class="slider-warning">
-                                                            <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
-                                                                   type="text" data-slider-min="0" data-slider-max="2000"
-                                                                   data-slider-step="1" data-slider-value="[200,1547]"/>
-                                                        </span>
-                                                    </div>
+                                               <div class="col-sm-9 col-lg-9 col-md-9" style="magin-top: 3px;">
+                                                   <span>警示值</span>
+                                                   <i class="fa fa-stop icon1 warning"></i>
+                                                   <span>&nbsp;&nbsp;&nbsp;&nbsp;发送警报</span>
+                                                   <i class="fa fa-stop icon1 danger"></i>
                                                </div>
                                            </div>
-                                           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <section class="widget widget-tabs">
-                                                            <header>
-                                                                <ul class="nav nav-tabs">
-                                                                    <li class="active">
-                                                                        <a href="#app" data-toggle="tab" style="font-size:14px;">应用程序</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#user" data-toggle="tab" style="font-size:14px;">用户</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </header>
-                                                            <div class="body tab-content">
-                                                                <div id="app" class="tab-pane active clearfix">
-                                                                    <table>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <th width="30%">名称</th>
-                                                                                <th width="30%">应用</th>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>some-app-123456</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>some-app-123456</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>some-app-123456</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div id="user" class="tab-pane clearfix">
-                                                                    <table>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <th width="30%">用户名</th>
-                                                                                <th width="30%">邮箱</th>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>name@company.com</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>name@company.com</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>name</td>
-                                                                                <td>name@company.com</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
+                                           <div class="row form-row">
+                                                <div class="col-sm-3 col-lg-3 col-md-3">
+                                                    <label for="trans-name" class="control-label">性能指数</label>
+                                                </div>
+                                                <div class="col-sm-4 col-lg-4 col-md-4">
+                                                    <input id="trans-name" class="form-control form-input-white" type="text" value="" name="trans-name" >
+                                                    <span>分钟内为</span>
+                                                    <select required="required" class="select1 form-control form-input-white select" name="app">
+                                                        <option value="">0.94</option>
+                                                        <option value="">0.9</option>
+                                                        <option value="">0.85</option>
+                                                        <option value="">0.8</option>
+                                                        <option value="">0.7</option>
+                                                        <option value="">0.5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4 col-lg-4 col-md-4">
+                                                    <input id="trans-name" class="form-control form-input-white" type="text" value="" name="trans-name" >
+                                                    <span>分钟内为</span>
+                                                    <select required="required" class="select1 form-control form-input-white select" name="app">
+                                                        <option value="">0.94</option>
+                                                        <option value="">0.9</option>
+                                                        <option value="">0.85</option>
+                                                        <option value="">0.8</option>
+                                                        <option value="">0.7</option>
+                                                        <option value="">0.5</option>
+                                                    </select>
                                                 </div>
                                            </div>
-                                       </div>
+                                           <div class="row">
+                                                <div class="col-sm-3 col-lg-3 col-md-3">
+                                                    <label for="trans-name" class="control-label">性能指数</label>
+                                                </div>
+                                                <div class="col-sm-7 col-lg-7 col-md-7">
+                                                    <span class="slider-warning">
+                                                        <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
+                                                               type="text" data-slider-min="0" data-slider-max="2000"
+                                                               data-slider-step="1" data-slider-value="[200,1547]"/>
+                                                    </span>
+                                                </div>
+                                           </div>
+                                       </section>
                                    </div>
-                               </form>
+                                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <section class="widget widget-tabs">
+                                                    <header>
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="active">
+                                                                <a href="#app" data-toggle="tab" style="font-size:14px;">应用程序</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#user" data-toggle="tab" style="font-size:14px;">用户</a>
+                                                            </li>
+                                                        </ul>
+                                                    </header>
+                                                    <div class="body tab-content">
+                                                        <div id="app" class="tab-pane active clearfix">
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th width="30%">名称</th>
+                                                                        <th width="30%">应用</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>some-app-123456</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>some-app-123456</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>some-app-123456</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div id="user" class="tab-pane clearfix">
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th width="30%">用户名</th>
+                                                                        <th width="30%">邮箱</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>name@company.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>name@company.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>name</td>
+                                                                        <td>name@company.com</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <section>
+                                                    <header>
+                                                        
+                                                    </header>
+                                                    <div class="widget-body">
+                                                        <div class="col-sm-3 col-lg-3 col-md-3">
+                                                            <label for="trans-name" class="control-label">通知方式</label>
+                                                        </div>
+                                                        <div class="col-sm-9 col-lg-9 col-md-9">
+                                                            <select required="required" class="select1 form-control form-input-white select" name="app">
+                                                                <option value="">无</option>
+                                                                <option value="">邮件</option>
+                                                                <option value="">短信</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                   </div>
+                               </div>
                            </div>
-                       </div>
+                       </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
