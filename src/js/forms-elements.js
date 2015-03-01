@@ -105,6 +105,7 @@ $(function(){
         new Switchery(document.getElementById('checkbox-ios2'),{color: $blue});
         new Switchery(document.getElementById('checkbox-ios3'));
         new Switchery(document.getElementById('checkbox-ios4'));
+        new Switchery(document.getElementById('checkbox-ios5'));
 
         $('#datetimepicker1').datetimepicker({
             pickTime: false
