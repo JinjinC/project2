@@ -7,16 +7,59 @@
     {{#replace "app_content"}}
     <div class="row">
 
-        <div class="col-lg-5 col-md-5">
+        <div class="col-lg-4 col-md-4">
             <h2 class="page-title">
                 <span>总览 <small>总览页面</small></span>
             </h2>
         </div>
 
-        <div class="col-lg-7 col-md-7">
-            {{#block "picker"}}
-                {{> picker }}
-            {{/block}}
+        <div class="col-lg-8 col-md-8">
+            
+            <div class="navbar nav-picker">
+                 
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                    <div class="checkbox checkbox2 checkboxOver" style="min-height:24px;">
+                       <input id="checkbox1" type="checkbox">
+                       <label for="checkbox1" style="vertical-align:middle; font-weight:bold;">
+                           数据对比（今天、昨天、上周）
+                       </label>
+                    </div>
+
+                   </li>
+                   <li class="dropdown agents">
+                      <div>
+                          <button class="btn dropdown-toggle picker" data-toggle="dropdown">
+                              <a href="#" style="padding: 2px 13px 3px 0;"> All Agents </a>
+                               <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu account">
+                               <li>
+                                   <a href="#">All Agents</a>
+                               </li>
+                               <li>
+                                   <a href="#">Agents 1</a>
+                               </li>
+                               <li>
+                                   <a href="#">Agents 2</a>
+                               </li>
+                               <li>
+                                   <a href="#">Agents 3</a>
+                               </li>
+                           </ul>
+                      </div>
+                   </li>
+                   <li id="divider" class="divider"></li>
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="fa fa-clock-o"></i> 
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
         </div>
     </div>
        
