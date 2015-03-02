@@ -1541,30 +1541,34 @@ a.tabIcon{
   left: 0;
   background-color: rgba(51, 51, 51, 0.4);
   text-align: center;
+
+  .app_status-info{
+  margin: 0 auto;
+  width: 535px;
+  line-height: 38px;
+  height: 38px;
+  border-right: 1px solid #222;
+  
+    & div {
+      display: inline-block;
+      width: 15%;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & .unit {
+      color: #d2d2d2;
+      font-size: 13px;
+    }
+    & .app_name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
   
 }
 
-.app_status-info{
-  width: 70%;
-  line-height: 38px;
-  height: 38px;
-  margin: 0 auto;
-  & div {
-    display: inline-block;
-    width: 15%;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  & .unit {
-    color: #d2d2d2;
-    font-size: 13px;
-  }
-  & .app_name {
-    font-size: 15px;
-    font-weight: 600;
-  }
-}
 
 
 
