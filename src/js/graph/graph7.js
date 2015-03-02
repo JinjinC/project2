@@ -127,7 +127,7 @@ $(function(){
                        },500);
     });
 
-    $('.dd-handle').click(function () {
+    $('.dd-handle,.trans-name').click(function () {
         
         setTimeout(function  () {
                     pageLoad();
