@@ -1554,10 +1554,10 @@ a.tabIcon{
 #myModalAlert {
   & .form-control{
     display: inline-block;
-    width: 20%;
+    width: 25%;
     // height: 25px;
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 
   & .select{
