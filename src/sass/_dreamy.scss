@@ -1474,7 +1474,13 @@ a.tabIcon{
   .nav-tabs > li > a {
     border-bottom: 1px solid #ddd;
   }
+  
 }
+
+ #inner-tab-body {
+  padding: 0;
+  padding-top: 10px;
+ }
 
 .trans-modal{
   top: 25%;
