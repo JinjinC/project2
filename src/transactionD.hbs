@@ -24,7 +24,7 @@
                 <div class="col-md-12">
                     <section class="widget" style="min-height:800px;">
                         <header>
-                            <span class="float-card-title" style="margin-left: 15px;">web 事务(All Transaction)</span>
+                            <span class="float-card-title" style="margin-left: 4px;">web 事务(All Transaction)</span>
                             <span class="glyphicon glyphicon-remove pull-right"></span>
                         </header>
                         <div class="body body-for-table single-table">
@@ -433,13 +433,13 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>SpringController/splits.do (GET)</td>
+                                    <td><a href="#" class="trace-name">SpringController/splits.do (GET)</a></td>
                                     <td>2015-02-05 16:00:44</td>
                                     <td>99,428ms</td>
                                     <td>java:app188:8090(10.133.197.33)</td>
                                 </tr>
                                 <tr>
-                                    <td>SpringController/abc.do (GET)</td>
+                                    <td><a href="#" class="trace-name">SpringController/abc.do (GET)</a></td>
                                     <td>2015-02-05 16:00:40</td>
                                     <td>97,030ms</td>
                                     <td>java:app188:8090(10.133.197.33)</td>
@@ -585,6 +585,248 @@
                 </div>
             </div>
 
+            <div class="row float-card float-trace" style="width:auto">
+                <div class="col-md-12">
+                    <section class="widget" style="min-height:800px;">
+                        <header>
+                            <span class="float-card-title">Title</span>
+                            <span class="glyphicon glyphicon-remove pull-right"></span>
+                        </header>
+                        <div class="float-body">
+                                <header>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#general" data-toggle="tab" style="font-size:14px; font-weight: 500">概要</a>
+                                        </li>
+                                        <li>
+                                            <a href="#detail" data-toggle="tab" style="font-size:14px; font-weight: 500">详情</a>
+                                        </li>
+                                        <li>
+                                            <a href="#params" data-toggle="tab" style="font-size:14px; font-weight: 500">参数</a>
+                                        </li>
+                                        <li>
+                                            <a href="#sql" data-toggle="tab" style="font-size:14px; font-weight: 500">sql</a>
+                                        </li>
+                                    </ul>
+                                </header>
+                                <div class="body tab-content">
+                                    <div id="general" class="tab-pane active clearfix">
+                                        <section class="widget inner-widget">
+                                            <header><h4>开始时间-消耗总时间</h4></header>
+                                            <div class="no-margin">
+                                                <div id="visits-chart5" class="chart visits-chart">
+                                                    <svg></svg>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>最慢组件</h4>
+                                            </header>
+                                            <div class="body-for-table">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="60%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">名称</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="13%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">调用次数</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="13%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">执行时间(ms)</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="13%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">时间百分比</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td>1</td>
+                                                        <td>10ms</td>
+                                                        <td>25%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td>1</td>
+                                                        <td>10ms</td>
+                                                        <td>50%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td>1</td>
+                                                        <td>10ms</td>
+                                                        <td>25%</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div id="detail" class="tab-pane clearfix">
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>事务详情</h4>
+                                            </header>
+                                            <div class="body-for-table">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="15%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">时间戳(ms)</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="10%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">耗时(ms)</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="15%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">时间百分比(ms)</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="50%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">详情</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="10%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">附加信息</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>25%</td>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td><span class="glyphicon glyphicon-file"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>50%</td>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td><span class="glyphicon glyphicon-file"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>25%</td>
+                                                        <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                        <td><span class="glyphicon glyphicon-file"></span></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div id="params" class="tab-pane clearfix">
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>请求参数</h4>
+                                            </header>
+                                            <div class="body-for-table">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">httpResponseCode</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">jvm.thread_name</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">request.headers.referer</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>200</td>
+                                                        <td>http-nio-80-exec-13652</td>
+                                                        <td>http://182.254.159.46/emenu/userlogin/login.jsp</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div id="sql" class="tab-pane clearfix">
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>事务详情</h4>
+                                            </header>
+                                            <div class="body-for-table">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">调用时间(ms)</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">调用次数</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                        <th width="33%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">sql</span>
+                                                            <i class="sortedup" style="display:none"></i>
+                                                            <i class="sorteddown" style="display:none"></i>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1ms</td>
+                                                        <td>10ms</td>
+                                                        <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
             <div id="myModal" class="modal fade trans-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -699,6 +941,7 @@
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph4.js"></script>
+        <script src="js/graph/graph5.js"></script>
 
         <script>
             $(document).ready(function  () {
@@ -803,6 +1046,15 @@
                                      },500);
 
             });
+
+            //trace详细页面float-card
+            $('.trace-name').click(function  () {
+                $('.float-trace').show().addClass("animated fadeInLeftBig");
+            });
+
+            setTimeout(function (){
+                                     $('.float-trace').removeClass("animated fadeInLeftBig");
+                                 },500);
 
         </script>
         
