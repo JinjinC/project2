@@ -76,35 +76,35 @@
                                     <tr>
                                         <td>2015-02-06 10:40:29</td>
                                         <td>2015-02-06 10:40:29</td>
-                                        <td>http-bio-8090-exec-158</td>
+                                        <td><a href="#" class="request">http-bio-8090-exec-158</a></td>
                                         <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
                                         <td>6</td>
                                     </tr>
                                     <tr>
                                         <td>2015-02-06 10:23:17</td>
                                         <td>2015-02-06 10:50:14</td>
-                                        <td>SpringController/getlist.do (GET)</td>
+                                        <td><a href="#" class="request">SpringController/getlist.do (GET)</a></td>
                                         <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
                                         <td>69</td>
                                     </tr>
                                     <tr>
                                         <td>2015-01-15 10:41:04</td>
                                         <td>2015-01-15 10:41:18</td>
-                                        <td>http-bio-8090-exec-22</td>
+                                        <td><a href="#" class="request">http-bio-8090-exec-22</a></td>
                                         <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
                                         <td>13</td>
                                     </tr>
                                     <tr>
                                         <td>2015-01-15 10:41:04</td>
                                         <td>2015-01-15 10:41:18</td>
-                                        <td>http-bio-8090-exec-146</td>
+                                        <td><a href="#" class="request">http-bio-8090-exec-146</a></td>
                                         <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
                                         <td>13</td>
                                     </tr>
                                     <tr>
                                         <td>2015-01-15 10:41:04</td>
                                         <td>2015-01-15 10:41:18</td>
-                                        <td>http-bio-8090-exec-87</td>
+                                        <td><a href="#" class="request">http-bio-8090-exec-87</a></td>
                                         <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
                                         <td>12</td>
                                     </tr>
@@ -115,6 +115,63 @@
 						</section>
 					</div>
 				</div>
+                <div class="row  float-card">
+                    <div class="col-md-12">
+                    <section class="widget" style="min-height:800px;">
+                        <header>
+                            <span class="float-card-title">Title</span>
+                            <span class="glyphicon glyphicon-remove pull-right"></span>
+                        </header>
+                        <div class="body">                 
+                            <div class="visits-info well well-sm">
+                                <div class="row">
+                                <div class="col-sm-4  col-xs-6">
+                                    <div class="key">服务器</div>
+                                    <div id="serve-value" class="value">服务器名</div>
+                                </div>
+                                    <div class="col-sm-2 col-xs-6">
+                                        <div class="key"> 开始时间</div>
+                                        <div class="value">2015-02-07 04:42</div>
+                                    </div>
+                                    <div class="col-sm-2 col-xs-6">
+                                        <div class="key">采样周期</div>
+                                        <div class="value">2分钟</div>
+                                    </div>
+                                    <div class="col-sm-2 col-xs-6">
+                                        <div class="key">采样次数</div>
+                                        <div class="value">120</div>
+                                    </div>
+                                    <div class="col-sm-2 col-xs-6">
+                                        <div class="key">采集人</div>
+                                        <div class="value">ONEAPM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="widget" style="margin-top: 20px;min-height: 640px;">
+                                <div>
+                                    <span style="margin-right: 20px;font-size: 14px">显示设置</span>
+                                    <div class="radio">
+                                         <input type="radio" name="radio3" id="radio5" value="option1" checked>
+                                         <label for="radio5">
+                                             web request
+                                         </label>
+                                     </div>
+                                     <div class="radio">
+                                         <input type="radio" name="radio3" id="radio6" value="option2">
+                                         <label for="radio6">
+                                             other
+                                         </label>
+                                     </div>
+                                     <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                        <i class="glyphicon glyphicon-refresh"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                        
+                    </div>
+                </div>
 			</div>
 
 		</div>
@@ -157,7 +214,25 @@
                     }
                 }
                 e.stopPropagation();
-            })
+            });
+
+            $(document).ready(function  () {
+
+                $('.request').click(function  () {
+                    $('.float-card').show().addClass("animated fadeInRightBig");
+
+                    
+                    setTimeout(function (){
+                                             $('.float-card').removeClass("animated fadeInRightBig");
+                                         },500);
+
+                    $('#serve-value').text($(this).text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function  () {
+                    $('.float-card').hide();
+                });
+            });
         </script>        
     {{/append}}
 

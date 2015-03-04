@@ -166,6 +166,13 @@ td{
 .sortedtext{
   text-decoration: underline;
   text-align: left;
+  color: #fff;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-align: left;
+    color: #fff;
+  }
 }
 
 .sortedup{
@@ -1442,6 +1449,7 @@ a.tabIcon{
     color: #666;
     border-bottom-color: #f5f5f5;
     background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
   }
 
   .widget:not(.widget-tabs) .tab-content {
@@ -1657,6 +1665,14 @@ a.tabIcon{
       color: #2877b0;
     }
   }
+}
+
+table .progress {
+  margin-left: 8px;
+}
+
+.apdex-td {
+  padding-left: 13px !important;
 }
 
 

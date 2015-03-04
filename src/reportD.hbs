@@ -18,7 +18,7 @@
                     <li class="dropdown agents">
                         <div>
                             <button class="btn btn-default dropdown-toggle picker" data-toggle="dropdown">
-                               <a href="#"> All Agents </a>
+                                <a href="#"> All Agents </a>
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu account">
@@ -101,34 +101,34 @@
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;">
+                                    <th width="13%" style="text-align: left;">
                                         <span></span>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">吞吐量</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">总执行时间</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">平均执行时间</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th> 
-                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">Apdex</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>     
-                                    <th style="width: 10%; text-align: left;"> 
-                                        <div class="btn-group btn-choose-group">
-                                            <button class="btn dropdown-toggle btn-choose" data-toggle="dropdown">
+                                    <th width="15%" style="text-align: left;"> 
+                                        <div class="btn-group">
+                                            <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
                                                 吞吐量
-                                                {{!-- <i class="fa fa-caret-down" style="padding-left:10px"></i> --}}
+                                                <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#">吞吐量</a></li>
@@ -138,7 +138,6 @@
                                             </ul>
                                         </div>
                                     </th>
-                                   
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -148,36 +147,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td ></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -190,36 +205,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%" >2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -232,36 +263,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td></td>
+                                                    <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -274,36 +321,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%" >0.00</td>
-                                                    <td></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -356,34 +419,34 @@
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;">
+                                    <th width="13%" style="text-align: left;">
                                         <span></span>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">吞吐量</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">总执行时间</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>
-                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">平均执行时间</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th> 
-                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                    <th width="13%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">Apdex</span>
                                         <i class="sortedup" style="display:none"></i>
                                         <i class="sorteddown" style="display:none"></i>
                                     </th>     
-                                    <th style="width: 10%; text-align: left;"> 
-                                        <div class="btn-group btn-choose-group">
-                                            <button class="btn btn-choose dropdown-toggle" data-toggle="dropdown">
+                                    <th  width="15%" style="text-align: left;">
+                                        <div class="btn-group">
+                                            <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
                                                 吞吐量
-                                               {{!--  <i class="fa fa-caret-down" style="padding-left:10px"></i> --}}
+                                                <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#">吞吐量</a></li>
@@ -392,8 +455,7 @@
                                                 <li><a href="#">Apdex</a></li>
                                             </ul>
                                         </div>
-                                    </th>
-                                   
+                                    </th>        
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -403,36 +465,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td ></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:3%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:8%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:8%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -445,36 +523,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%" >2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:8%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:18%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:18%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:18%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -487,36 +581,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%">0.00</td>
-                                                    <td></td>
+                                                    <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:31%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:31%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:25%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:25%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -529,36 +639,52 @@
                                         <table  class="table table-hover no-margin sources-table">
                                             <tbody>
                                                 <tr>
-                                                    <td width="18%">今天</td>
-                                                    <td width="20%">2.05 cpm</td>
-                                                    <td width="19%">0.00 s</td>
-                                                    <td width="19%">0.00 ms</td>
-                                                    <td width="19%" >0.00</td>
-                                                    <td></td>
+                                                   <td width="16.25%">今天</td>
+                                                    <td width="16.25%" >2.05 cpm</td>
+                                                    <td width="16.25%">0.00 s</td>
+                                                    <td width="16.25%">0.00 ms</td>
+                                                    <td width="16.25%" class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:25%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>昨天</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天前</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>7天内</td>
                                                     <td>2.05 cpm</td>
                                                     <td>0.00 s</td>
                                                     <td>0.00 ms</td>
-                                                    <td>0.00</td>
-                                                    <td></td>
+                                                    <td class="apdex-td">0.00</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
                                                 </tr>
 
                                             </tbody>
@@ -580,7 +706,7 @@
         <!-- page application js -->
         
         <script>
-            $('th').click(function(e){
+            $('.sortedth').click(function(e){
                 var a = $(this).find('.sortedup');
                 var b = $(this).find('.sorteddown');
 

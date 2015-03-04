@@ -596,16 +596,16 @@
                                 <header>
                                     <ul class="nav nav-tabs">
                                         <li class="active">
-                                            <a href="#general" data-toggle="tab" style="font-size:14px; font-weight: 500">概要</a>
+                                            <a href="#general" data-toggle="tab" style="font-size:14px;" class="tab_link">概要</a>
                                         </li>
                                         <li>
-                                            <a href="#detail" data-toggle="tab" style="font-size:14px; font-weight: 500">详情</a>
+                                            <a href="#detail" data-toggle="tab" style="font-size:14px;" class="tab_link">详情</a>
                                         </li>
                                         <li>
-                                            <a href="#params" data-toggle="tab" style="font-size:14px; font-weight: 500">参数</a>
+                                            <a href="#params" data-toggle="tab" style="font-size:14px;" class="tab_link">参数</a>
                                         </li>
                                         <li>
-                                            <a href="#sql" data-toggle="tab" style="font-size:14px; font-weight: 500">sql</a>
+                                            <a href="#sql" data-toggle="tab" style="font-size:14px;" class="tab_link">sql</a>
                                         </li>
                                     </ul>
                                 </header>
@@ -837,7 +837,7 @@
                         <div class="modal-body">
                            <div class="row">
 
-                               <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                    <form class="form-horizontal form-label-left">
                                        <div class="form-group">
                                             <div class="col-sm-4 col-lg-4 col-md-4">
@@ -885,7 +885,7 @@
                                        </div>
                                    </form>
                                </div>
-                               <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right: 30px">
                                     <p>什么是关键事务？</p>
                                     <p>在web应用中，从业务的角度来看，有些web事务比其它事务更重要，这些重要的事务需要精确监控。这些事务包括应用中的关键事件（如登录操作或确认购买操作）和/或从性能角度来看最重要的事务（如搜索或登录操作）。</p>
                                     <p>关键事务能够允许用户密切监控关键性事务，并在运行异常时收到警告。</p>
@@ -949,6 +949,8 @@
                 $('.dd-handle').click(function  () {
 
                     $('.dd-handle').removeClass("active");
+
+                    $('.float-card').hide();
 
                     $(this).addClass("active");
 
