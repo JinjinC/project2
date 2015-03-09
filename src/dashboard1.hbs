@@ -1,3 +1,4 @@
+
 {{#extend "layoutMob"}}
 
     {{#replace "sidebarMob"}}
@@ -9,7 +10,7 @@
 
         <div class="col-lg-5 col-md-5">
             <h2 class="page-title">
-                <span>总览 <small>总览页面</small></span>
+                <span>仪表盘 <small>demo1</small></span>
             </h2>
         </div>
 
@@ -27,11 +28,11 @@
                     <section class="widget">
                         <header>
                             <h4>
-                                执行时间
+                                执行次数
                             </h4>
                             <div class="widget-controls">
-                               
-                                <i class="glyphicon glyphicon-plus-sign iconplus1"></i>
+                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -44,52 +45,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <section class="widget">
-                        <header>
-                            <h4>
-                                最慢 Interactions                                    
-                            </h4>
-                            <div class="widget-controls">
-                                <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                                <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>                                   
-                            </div>
-                        </header>
-                        <div class="body">
-                            <ol class="dd-list">
-                                <li class="trace-item">
-                                    <div class="traceList">
-                                        <i class="iconfont icon2-dd" style="float: right;">
-                                            &#xe613;
-                                        </i>
-                                        <div class="bar-graph"></div>
-                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span> <span style="float: right;">47.99 s</span></div>
-                                    </div>
-                                </li>
-                                <li class="trace-item">
-                                    <div class="traceList">
-                                        <i class="iconfont icon2-dd" style="float: right;">
-                                            &#xe613;
-                                        </i>
-                                        <div class="bar-graph" style="width:50%"></div>
-                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span> <span style="float: right;">15.37 s</span></div>
-                                        
-                                    </div>
-                                </li>
-                                <li class="trace-item">
-                                    <div class="traceList">
-                                        <i class="iconfont icon2-dd" style="float: right;">
-                                            &#xe613;
-                                        </i>
-                                        <div class="bar-graph" style="width:30%"></div>
-                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span> <span style="float: right;">14.77 s</span></div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <section class="widget">
                         <header>
                             <h4>
