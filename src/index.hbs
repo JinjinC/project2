@@ -12,6 +12,8 @@
     
     {{#append "scripts"}}
 
+    <script type="text/javascript" src="js/blur.dev.js"></script>
+
       <script>
 
             //隐藏sidebar中不需要的部分。
@@ -24,10 +26,15 @@
                 //登录框弹出,后面背景变模糊,icon才显现出。
             function (){
 
+                // stackBlurCanvasRGBA('canvas',100,100,400,400,10);
 
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
                 $('.single-widget-container').addClass("blur").animate({opacity: "1"},500);
 
+                $('.single-widget-container').blurjs({
+                    source: 'body',
+                    radius: 10
+                })
                 //tooltip的定位！
                 $('.tooltip').each(function () {
 
@@ -172,7 +179,7 @@
 
     {{/append}}
 
-    <div class="single-widget-container none-opacity">
+    <div class="single-widget-container none-opacity" id="srcimg">
         <div class="row headOne">
             <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                 <a href="application_list.html">

@@ -30,8 +30,9 @@
                                 执行时间
                             </h4>
                             <div class="widget-controls">
-                               
-                                <i class="glyphicon glyphicon-plus-sign iconplus1"></i>
+                               <a href="#" data-toggle="modal" data-target="#myModal">
+                                    <i class="glyphicon glyphicon-plus-sign iconplus1"></i>
+                                </a>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -175,6 +176,46 @@
             </div>
         </div>
     </div>
+
+    <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">添加到仪表盘</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-3 col-lg-3 col-md-3 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="dashboard-name" class="control-label">仪表盘名称</label>
+                                            </div>
+                                            <div class="col-sm-8 col-lg-8 col-md-8">
+                                                <select required="required" class="select1 form-control form-input-white" name="app">
+                                                    <option value="">仪表盘1</option>
+                                                    <option value="">仪表盘2</option>
+                                                    <option value="">仪表盘3</option>
+                                                    <option value="" style="color: #56bc76;">新的仪表盘</option>
+                                                </select>
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
 
 
                 
