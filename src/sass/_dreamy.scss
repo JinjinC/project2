@@ -1,4 +1,18 @@
 
+.widget-mob:hover .mob_dashboard{
+  display: inline-block;
+}
+
+
+.mob_dashboard{
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+  float: right;
+  display: none;
+}
+.mob_dashboard:hover{
+  color: rgba(255, 255, 255, 0.6);
+}
 .userlist{
   padding-left:27px;
   color:#555;

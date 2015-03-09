@@ -2,7 +2,7 @@
 {{#extend "layoutMob"}}
 
     {{#replace "sidebarMob"}}
-        {{> sidebarMob this conditionClass=conditionClass active="dashboard1"}}
+        {{> sidebarMob this conditionClass=conditionClass active="dashboard2"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -10,13 +10,7 @@
 
         <div class="col-lg-5 col-md-5">
             <h2 class="page-title">
-                <span>仪表盘 
-                    <small>
-                        <a href="#" data-toggle="modal" data-target="#dashboard-rename">
-                            <i class="setting icon2 fa fa-edit" id="dashboard-edit" style="display:none"></i>
-                        </a>
-                    </small>
-                </span>
+                <span>仪表盘 <small>demo2</small></span>
             </h2>
         </div>
 
@@ -101,40 +95,7 @@
             </div>
         </div>
     </div>
-    <div id="dashboard-rename" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="dashboard-renameLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel">修改仪表盘名称</h4>
-                </div>
-                <div class="modal-body">
-                   <div class="row">
-                       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
-                           <form class="form-horizontal form-label-left">
-                               <div class="form-group">
-                                   <div class="row">
-                                        <div class="col-sm-3 col-lg-3 col-md-3 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
-                                            <label for="account-name" class="control-label">仪表盘名称</label>
-                                        </div>
-                                        <div class="col-sm-8 col-lg-8 col-md-8">
-                                            <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
-                                            <p class="validation-message" id="account-error">该项不能为空</p>
-                                        </div>                                         
-                                   </div>
-                               </div>
-                           </form>
-                       </div>
-                   </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
-                    <button type="button" class="btn btn-success" id="btn-trans">确定</button>
-                </div>
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div>
+                
     {{/replace}}
 
 
@@ -173,14 +134,6 @@
             $('.trace-item').click(function(){
             location.href="interMob.html";
          })
-
-            $('.page-title').mouseover(function  () {
-                $('#dashboard-edit').show();
-            });
-
-            // $('.page-title').mouseout(function  () {
-            //     $('#dashboard-edit').hide();
-            // });
            
         </script>
         
