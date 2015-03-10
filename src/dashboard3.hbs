@@ -10,7 +10,10 @@
 
         <div class="col-lg-5 col-md-5">
             <h2 class="page-title">
-                <span>仪表盘 <small>demo3</small></span>
+               仪表盘 <small>demo3</small>
+                <a href="#" data-toggle="modal" data-target="#dashboard-rename">
+                    <i class="fa fa-edit dash-edit"></i>
+                </a>
             </h2>
         </div>
 
@@ -30,6 +33,9 @@
                             <h4>
                                 执行次数
                             </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart1" class="chart visits-chart">
@@ -46,6 +52,9 @@
                             <h4>
                                 会话数 - 应用版本
                             </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart2" class="chart visits-chart">
@@ -65,7 +74,9 @@
                             <h4>
                                 HTTP 响应时间
                             </h4>
-                           
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart4" class="chart visits-chart">
@@ -82,7 +93,9 @@
                             <h4>
                                 HTTP 错误率 & 网络故障率
                             </h4>
-                           
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart5" class="chart visits-chart">
@@ -90,7 +103,6 @@
                             </div>
                         </div>
                     </section>
-                    
                 </div>
             </div>
         </div>
@@ -129,13 +141,6 @@
         <script src="js/graph/singlechart1.js"></script>
         <script src="js/graph/singlechart2.js"></script>
 
-        <script>
-
-            $('.trace-item').click(function(){
-            location.href="interMob.html";
-         })
-           
-        </script>
         
     {{/append}}
 
