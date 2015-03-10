@@ -10,13 +10,10 @@
 
         <div class="col-lg-5 col-md-5">
             <h2 class="page-title">
-                <span>仪表盘 
-                    <small>
-                        <a href="#" data-toggle="modal" data-target="#dashboard-rename">
-                            <i class="setting icon2 fa fa-edit" id="dashboard-edit" style="display:none"></i>
-                        </a>
-                    </small>
-                </span>
+               仪表盘 <small>demo1</small>
+                <a href="#" data-toggle="modal" data-target="#dashboard-rename">
+                    <i class="fa fa-edit dash-edit"></i>
+                </a>
             </h2>
         </div>
 
@@ -36,6 +33,9 @@
                             <h4>
                                 执行次数
                             </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart1" class="chart visits-chart">
@@ -52,6 +52,9 @@
                             <h4>
                                 会话数 - 应用版本
                             </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart2" class="chart visits-chart">
@@ -63,7 +66,6 @@
             </div>  
         </div>
         <div class="col-lg-4">
-
             <div class="row">
                 <div class="col-md-12">
                     <section class="widget">
@@ -71,7 +73,9 @@
                             <h4>
                                 HTTP 响应时间
                             </h4>
-                           
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart4" class="chart visits-chart">
@@ -88,7 +92,9 @@
                             <h4>
                                 HTTP 错误率 & 网络故障率
                             </h4>
-                           
+                            <div class="widget-controls">
+                                <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
                         </header>
                         <div class="body no-margin">
                             <div id="visits-chart5" class="chart visits-chart">
@@ -131,7 +137,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
                     <button type="button" class="btn btn-success" id="btn-trans">确定</button>
                 </div>
-
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div>
@@ -168,21 +173,7 @@
         <script src="js/graph/singlechart1.js"></script>
         <script src="js/graph/singlechart2.js"></script>
 
-        <script>
 
-            $('.trace-item').click(function(){
-            location.href="interMob.html";
-         })
-
-            $('.page-title').mouseover(function  () {
-                $('#dashboard-edit').show();
-            });
-
-            // $('.page-title').mouseout(function  () {
-            //     $('#dashboard-edit').hide();
-            // });
-           
-        </script>
         
     {{/append}}
 

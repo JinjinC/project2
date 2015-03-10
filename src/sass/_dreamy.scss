@@ -1,3 +1,20 @@
+.cpuchart:hover .cputrend, .cpuchart:hover .contenttrend, .cpuchart:hover .trend1{
+  display: block;
+}
+
+.trend1{
+  position: relative;
+}
+
+.page-title:hover .dash-edit{
+  display: inline-block;
+}
+
+.dash-edit{
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.5);
+  display: none;
+}
 
 .widget-mob:hover .mob_dashboard{
   display: inline-block;
@@ -149,14 +166,16 @@ td{
   top: -170px;
   right: 5%;
   overflow:hidden;
+  display: none;
 }
+
 .contenttrend{
   width: 300px;
   position: absolute;
   top: -170px;
   right: -5%;
   overflow:hidden;
-
+  display: none;
 }
 
 

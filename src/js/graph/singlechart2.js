@@ -84,7 +84,7 @@ $(function(){
 
     PjaxApp.onPageLoad(pageLoad);
 
-    $('#contentchart').mouseenter(function(){
+    $('.cpuchart').hover(function(){
         pageLoad();
     })
 });

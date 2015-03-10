@@ -221,8 +221,44 @@
                                         <td>50.53 s</td>
                                         <td>107.87</td>
                                         <td>0.68%</td>
-                                        <td id="cpuchart"><a href="">38.92%</a></td>
-                                        <td id="contentchart"><a href="">1,115.08</a></td>
+                                        <td class="cpuchart">
+                                            <a href="">38.92%</a>
+                                            <div class="cputrend">
+                                                <div class="modal trend1">
+                                                    <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                        <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                            <header>
+                                                                <h5>CPU</h5>
+                                                            </header>
+                                                            <div class="body">
+                                                                <div id="single-chart1" class="chart single-chart">
+                                                                    <svg></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="cpuchart">
+                                            <a href="">1,115.08</a>
+                                            <div class="contenttrend">
+                                                <div class="modal trend1">
+                                                    <div class="modal-dialog" style="width: auto; padding: 0;">
+                                                        <div class="widget modal-content" style="background:white; padding-right:24px;">
+                                                            <header>
+                                                                <h5>内容(MB)</h5>
+                                                            </header>
+                                                            <div class="body">
+                                                                <div id="single-chart2" class="chart single-chart">
+                                                                    <svg></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>(VM_203_101_centos)</td>
@@ -246,38 +282,8 @@
                             </table>
                         </div>
                     </section>
-                    <div class="cputrend">
-                        <div class="modal" id="cputrend" style="position:relative; display:none;">
-                            <div class="modal-dialog" style="width: auto; padding: 0;">
-                                <div class="widget modal-content" style="background:white; padding-right:24px;">
-                                    <header>
-                                        <h5>CPU</h5>
-                                    </header>
-                                    <div class="body">
-                                        <div id="single-chart1" class="chart single-chart">
-                                            <svg></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contenttrend">
-                        <div class="modal" id="contenttrend" style="position:relative; display:none;">
-                            <div class="modal-dialog" style="width: auto; padding: 0;">
-                                <div class="widget modal-content" style="background:white; padding-right:24px;">
-                                    <header>
-                                        <h5>内容(MB)</h5>
-                                    </header>
-                                    <div class="body">
-                                        <div id="single-chart2" class="chart single-chart">
-                                            <svg></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
 
                 </div>
             </div>
@@ -508,22 +514,9 @@
                 e.stopPropagation();
             })
 
-            $('#cpuchart').mouseover(function(){
-                $('#cputrend').show();
-            })
-            $('#cpuchart').mouseout(function(){
-                $('#cputrend').hide();
-            })
-            $('#contentchart').mouseover(function(){
-                $('#contenttrend').show();
-            })
-            $('#contentchart').mouseout(function(){
-                $('#contenttrend').hide();
-            })
-
             $('.trace-item').click(function(){
-            location.href="transactionD.html";
-         })
+                location.href="transactionD.html";
+             })
            
         </script>
         
