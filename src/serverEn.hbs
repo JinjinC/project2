@@ -5,70 +5,69 @@
     {{/replace}}
 
     {{#replace "app_content"}}
-     <h2 class="page-title"><span>服务器环境 <small>服务器环境界面</small></span></h2>
-     <div class="row">
+    <h2 class="page-title"><span>服务器环境 <small>服务器环境界面</small></span></h2>
+    <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="row  float-card float-show-all">
                 <div class="col-md-12">
-                <section class="widget" style="min-height:800px;">
-                    <header>
-                        <span class="float-card-title">servers</span>
-                        <span class="glyphicon glyphicon-remove pull-right"></span>
-                    </header>
-                    <div class="body body-for-table single-table">
-                        <table class="table table-striped table-hover no-margin sources-table">
-                            <thead>
-                            <tr>
-                                <th width="34%" style="text-align: left;" class="sortedth">
-                                    <span class="sortedtext">名称</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                                <th width="22%" style="text-align: left;" class="sortedth">
-                                    <span class="sortedtext">值</span>
-                                    <i class="sortedup" style="display:none"></i>
-                                    <i class="sorteddown" style="display:none"></i>
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                             <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            <tr>
-                                <td>SpringController/splits.do (GET)</td>
-                                <td>dfefd2345242</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>           
-                </section>
-                    
+                    <section class="widget" style="min-height:800px;">
+                        <header>
+                            <span class="float-card-title">servers</span>
+                            <span class="glyphicon glyphicon-remove pull-right"></span>
+                        </header>
+                        <div class="body body-for-table single-table">
+                            <table class="table table-striped table-hover no-margin sources-table">
+                                <thead>
+                                <tr>
+                                    <th width="34%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">名称</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                    <th width="22%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">值</span>
+                                        <i class="sortedup" style="display:none"></i>
+                                        <i class="sorteddown" style="display:none"></i>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                 <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                <tr>
+                                    <td>SpringController/splits.do (GET)</td>
+                                    <td>dfefd2345242</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>           
+                    </section>
                 </div>
             </div>
         </div>
@@ -276,23 +275,37 @@
         <script src="lib/nvd3/nv.d3.min.js"></script>
         <script src="js/index.js"></script>
         <script>
-            $(document).ready(function  () {
+            $(document).ready(function(){
 
-                $('.server').click(function  () {
+                $('.server').click(function(){
                     $('.float-card').show().addClass("animated fadeInRightBig");
-
-                    
-                    setTimeout(function (){
-                                             $('.float-card').removeClass("animated fadeInRightBig");
-                                         },500);
-
+                        setTimeout(function(){
+                            $('.float-card').removeClass("animated fadeInRightBig");
+                        },500);
                     $('#serve-value').text($(this).text());
                 });
-
-                $('.float-card .glyphicon-remove').click(function  () {
+                $('.float-card .glyphicon-remove').click(function(){
                     $('.float-card').hide();
                 });
             });
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+                if (a.css('display') == 'none' && b.css('display') == 'none'){
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none'){
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none'){
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
         </script>
     {{/append}}
 
