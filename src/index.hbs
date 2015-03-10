@@ -127,16 +127,17 @@
                             $('.form-sign-in').show();
                             $('.form-login').hide();
                             $('#sign-in').children().html("已有账号？");
+                            $('#forget-psw').hide();
                             $('.login-modal').removeClass("login-modal").addClass("sign-modal");
-                            $('.myModalHeader').css('line-height','0.4');
+                            $('#modal-title').text("注册");
                         }
                         else if (text=="已有账号？"){
                             $('.form-sign-in').hide();
                             $('.form-login').show();
                             $('#sign-in').children().html("尚未注册？");
+                            $('#forget-psw').show();
                             $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
-                            $('.myModalHeader').css('line-height','1');
-
+                            $('#modal-title').text("登录");
                         }
                     });
                 
@@ -222,22 +223,22 @@
                 </a>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="#">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe617;</i>
+                        </div>
+                        <div class="headOneIconText">服务器</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                 <a href="account.html">
                     <div class="headOneIcon">
                         <div class="headOneIconImg">
                             <i class="icon iconfont">&#xe605;</i>
                         </div>
                         <div class="headOneIconText">系统设置</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                <a href="#">
-                    <div class="headOneIcon">
-                        <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe601;</i>
-                        </div>
-                        <div class="headOneIconText">个人中心</div>
                     </div>
                 </a>
             </div>
@@ -249,7 +250,7 @@
             <div class="modal-content myModalContent">
                 <div class="modal-header myModalHeader">
                     <i class="iconfont login-icon">&#xe616;</i>
-                    <p>登录&nbsp;OneAPM</p>
+                    <p><span id="modal-title">登录</span>&nbsp;OneAPM</p>
                 </div>
                 <div class="modal-body myModalBody">
                     <form class="no-margin form-login" action="index.html" method="get" id="validation-form" data-parsley-priority-enabled="false"
@@ -257,7 +258,7 @@
                         <fieldset>
                             <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup">
-                                    <input id="email" type="email" class="form-control input-lg" placeholder="账号">
+                                    <input id="email" type="email" class="form-control input-lg input-transparent" placeholder="账号">
                                     <div class="tooltip fade bottom tooltip_login" id="email-tip">
                                         <div class="arrow_tooltip"></div>
                                         <span class="glyphicon glyphicon-exclamation-sign"></span>
@@ -267,11 +268,11 @@
                             </div>
                             <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup">
-                                    <input id="password" type="password" class="form-control input-lg" placeholder="密码">
+                                    <input id="password" type="password" class="form-control input-lg input-transparent" placeholder="密码">
                                     <i class="fa fa-sign-in loginButton buttonDisabled" id="loginButton"></i>
                                     <div class="tooltip fade bottom tooltip_login" id="password-tip">
                                         <div class="arrow_tooltip"></div>
-                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        <span class="glyphicon glyphicon-exclamation-sign "></span>
                                         <span class="tip-conetent"> 用户名或密码不正确哟！请修改！</span>
                                     </div>
                                 </div>
