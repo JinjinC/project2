@@ -268,6 +268,7 @@
                             <div class="form-group form-login">
                                 <div class="input-group input-group-lg myInputGroup">
                                     <input id="password" type="password" class="form-control input-lg" placeholder="密码">
+                                    <i class="fa fa-sign-in loginButton buttonDisabled" id="loginButton"></i>
                                     <div class="tooltip fade bottom tooltip_login" id="password-tip">
                                         <div class="arrow_tooltip"></div>
                                         <span class="glyphicon glyphicon-exclamation-sign"></span>
@@ -279,9 +280,9 @@
                                 <div class="input-group input-group-lg myInputGroup home-button">
                                     <div class="remember checkbox">
                                         <input id="remember-box" type="checkbox" value="1" name="remember">
-                                        <label for="remember-box"> 记住我</label>
+                                        <label for="remember-box"> 保持我的登录状态</label>
                                     </div>
-                                    <span class="loginButton buttonDisabled" id="loginButton">登录</span>
+                                    {{!-- <span class="loginButton buttonDisabled" id="loginButton">登录</span> --}}
                                 </div>
                             </div>
                         </fieldset>
