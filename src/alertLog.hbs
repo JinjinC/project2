@@ -147,8 +147,11 @@
      
     {{/replace}}
     {{#append "scripts"}}
-   
-    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script>
+            $("li").tooltip();
+        </script>
+       
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
         <script src="lib/jquery.sparkline/index.js"></script>
 
         <script src="lib/backbone/backbone.js"></script>

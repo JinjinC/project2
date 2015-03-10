@@ -6,26 +6,21 @@
 
     {{#replace "app_content"}}
     <div class="row">
-
         <div class="col-lg-4 col-md-4">
             <h2 class="page-title">
                 <span>总览 <small>总览页面</small></span>
             </h2>
         </div>
-
         <div class="col-lg-8 col-md-8">
-            
             <div class="navbar nav-picker">
-                 
                 <ul class="nav navbar-nav navbar-right">
                    <li>
-                    <div class="checkbox checkbox2 checkboxOver" style="min-height:24px;">
-                       <input id="checkbox1" type="checkbox">
-                       <label for="checkbox1" style="vertical-align:middle; font-weight:bold;">
-                           数据对比（今天、昨天、上周）
-                       </label>
-                    </div>
-
+                      <div class="checkbox checkbox2 checkboxOver" style="min-height:24px;">
+                         <input id="checkbox1" type="checkbox">
+                         <label for="checkbox1" style="vertical-align:middle; font-weight:bold;">
+                             数据对比（今天、昨天、上周）
+                         </label>
+                      </div>
                    </li>
                    <li class="dropdown agents">
                       <div>
@@ -454,13 +449,7 @@
             </div>
         </div>
     </div>
-
-
-                
-    
-
     {{/replace}}
-
 
     {{#append "scripts"}}
         <!-- page libs -->
@@ -516,7 +505,7 @@
 
             $('.trace-item').click(function(){
                 location.href="transactionD.html";
-             })
+            })
            
         </script>
         

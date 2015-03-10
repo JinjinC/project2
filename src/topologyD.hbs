@@ -6,112 +6,102 @@
 
     {{#replace "app_content"}}
     
-     <div class="row">
-
-         <div class="col-lg-5 col-md-5">
-             <h2 class="page-title"><span>拓扑 <small>拓扑图</small></span></h2>
-         </div>
-
-         <div class="col-lg-7 col-md-7">
-             {{#block "picker"}}
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+            <h2 class="page-title"><span>拓扑<small>拓扑图</small></span></h2>
+        </div>
+        <div class="col-lg-7 col-md-7">
+            {{#block "picker"}}
                  {{> picker }}
-             {{/block}}
-         </div>
-     </div>
+            {{/block}}
+        </div>
+    </div>
 
-	    <div class="row">
-	    	<div class="col-lg-8">
-	    		<div class="row">
-	    			<div class="col-md-12">
-	    				<section class="widget">
-		    				<header class="header1">
-			                    <h4 style="font-size:15px;">
-			                        拓扑	                       
-			                    </h4>
-			               
-			                </header>
-			                <div class="body" style="height: 500px">
-			                	<section class="widget" style="height: 470px">
+    <div class="row">
+    	<div class="col-lg-8">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<section class="widget">
+	    				<header class="header1">
+		                    <h4 style="font-size:15px;">
+		                        拓扑	                       
+		                    </h4>
+		                </header>
+		                <div class="body" style="height: 500px">
+		                	<section class="widget" style="height: 470px">
 
-			                	</section>
-			                	
-			                </div>   
-	    				</section>
-	    			</div>  			
-	    		</div>
-	    	</div>
-	    	<div class="col-lg-4">
-	    		<div class="row">
-	    			<div class="col-md-12">
-						<section class="widget">
-		    				<header>
-			                    <h4>
-			                        WebTransaction                      
-			                    </h4>
-			                    <div class="widget-controls">
-			                        
-			                    </div>
-			                </header>
-			                <div class="body">
-			                    <section class="widget inner-widget">
-		                            <header>
-		                                <h4>
-		                                    Apdex
-		                                </h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-		                                </div>
-		                            </header>
-		                            <div class="body no-margin">
-		                                <div id="visits-chart2" class="chart visits-chart">
-		                                    <svg></svg>
-		                                </div>
-		                            </div>
-		                        </section>
-		                        <section class="widget inner-widget">
-		                            <header>
-		                                <h4>
-		                                    响应时间
-		                                </h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-		                                </div>
-		                            </header>
-		                            <div class="body no-margin">
-		                                <div id="visits-chart3" class="chart visits-chart">
-		                                    <svg></svg>
-		                                </div>
-		                            </div>
-		                        </section>
-		                        <section class="widget inner-widget">
-		                            <header>
-		                                <h4>
-		                                    吞吐量
-		                                </h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-		                                </div>
-		                            </header>
-		                            <div class="body no-margin">
-		                                <div id="visits-chart4" class="chart visits-chart">
-		                                    <svg></svg>
-		                                </div>
-		                            </div>
-		                        </section>
-		                        
-			                </div>   
-						</section>
-	    			</div> 
-	    		</div>
-	    		
-	    	</div>
+		                	</section>
+		                </div>   
+    				</section>
+    			</div>  			
+    		</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<div class="row">
+    			<div class="col-md-12">
+					<section class="widget">
+	    				<header>
+		                    <h4>
+		                        WebTransaction                      
+		                    </h4>
+		                </header>
+		                <div class="body">
+		                    <section class="widget inner-widget">
+	                            <header>
+	                                <h4>
+	                                    Apdex
+	                                </h4>
+	                                <div class="widget-controls">
+	                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+	                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+	                                </div>
+	                            </header>
+	                            <div class="body no-margin">
+	                                <div id="visits-chart2" class="chart visits-chart">
+	                                    <svg></svg>
+	                                </div>
+	                            </div>
+	                        </section>
+	                        <section class="widget inner-widget">
+	                            <header>
+	                                <h4>
+	                                    响应时间
+	                                </h4>
+	                                <div class="widget-controls">
+	                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+	                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+	                                </div>
+	                            </header>
+	                            <div class="body no-margin">
+	                                <div id="visits-chart3" class="chart visits-chart">
+	                                    <svg></svg>
+	                                </div>
+	                            </div>
+	                        </section>
+	                        <section class="widget inner-widget">
+	                            <header>
+	                                <h4>
+	                                    吞吐量
+	                                </h4>
+	                                <div class="widget-controls">
+	                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+	                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+	                                </div>
+	                            </header>
+	                            <div class="body no-margin">
+	                                <div id="visits-chart4" class="chart visits-chart">
+	                                    <svg></svg>
+	                                </div>
+	                            </div>
+	                        </section>
+		                </div>   
+					</section>
+    			</div> 
+    		</div>
+    	</div>
+    </div>
 
-	    </div>
-
-	 {{/replace}}
+	{{/replace}}
 
     {{#append "scripts"}}
         <!-- page libs -->
@@ -122,20 +112,16 @@
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
 
-        
         <!-- daterange picker js -->
         <script src="lib/form-daterangepicker/daterangepicker.js"></script>              
-         <!-- DateTime Picker -->
+        <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
-
         <!-- page application js -->
         <script src="js/daterangepicker.js"></script>
 
         <!-- page application js -->
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
-        <script src="js/graph/graph4.js"></script>
-
     {{/append}}
 
 {{/extend}}

@@ -18,12 +18,10 @@
         </div>
     </div>
 
-     
     <div class="row">
         <div class="col-lg-12">
             <section class="widget">
                 <div class="body no-margin">
-
                     <div class="visits-info well well-sm well-cos">
                         <div class="row">
                             <div class="col-sm-1 hidden-xs">
@@ -533,7 +531,6 @@
                                 </div>
                             </div>
 
-                            
                             <div class="row">
                                 <div class="col-lg-12">
                                      <section class="widget widget-tabs">
@@ -599,18 +596,7 @@
 
 
     {{/replace}}
-     {{#append "scripts"}}
-        <script>
-            $('tr').mouseover(function(){
-                $(this).find('.trash').show();
-            })
-
-            $('tr').mouseout(function(){
-               $(this).find('.trash').hide();
-            })
-
-
-        </script>
+    {{#append "scripts"}}
 
         <!-- page libs -->
         <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
@@ -637,8 +623,8 @@
         <script src="js/component-list-groups.js"></script>
         
         <!-- daterange picker js -->
-         <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
-         <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>              
+        <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
 
         <!-- page application js -->
@@ -653,29 +639,22 @@
             $(document).ready(function  () {
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
                 $('.dd-item').click(function  () {
-
                     $('.dd-handle').removeClass("active");
-
                     $(this).find('.dd-handle').addClass("active");
-
                     $('.float-card').show().addClass("animated fadeInLeftBig");
-
-
                     setTimeout(function (){
-                                             $('.float-card').removeClass("animated fadeInLeftBig");
-                                         },1000);
-
+                        $('.float-card').removeClass("animated fadeInLeftBig");
+                    },1000);
                     $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
-                $('.float-card .glyphicon-remove').click(function  () {
+                $('.float-card .glyphicon-remove').click(function() {
                     $('.float-card').hide();
                     $('.dd-handle').removeClass("active");
                 });
-
             });
 
-             $('th').click(function(e){
+            $('th').click(function(e){
                 var a = $(this).find('.sortedup');
                 var b = $(this).find('.sorteddown');
 
