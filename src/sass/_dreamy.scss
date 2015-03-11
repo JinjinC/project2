@@ -1,4 +1,6 @@
-
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle{
+  background: rgba(26, 26, 26, 0.4);
+}
 
 .icon-alert{
   font-size: 19px;
