@@ -394,6 +394,10 @@
             $('#settings').hide();
             $('#divider1').hide();
             $("li").tooltip();
+            $('.visible-xs').removeClass('visible-xs').hide();
+            //账户设置在此页不隐藏，sidebar按钮不需要显示。
+            $('#account').parent().removeClass('hidden-xs');
+            $('#account span').removeClass('hidden-xs')
 
             $('th').click(function(e){
                 var a = $(this).find('.sortedup');

@@ -290,60 +290,177 @@
                     </form>
 
                     <form class="no-margin form-sign-in" action="index.html" method="get" id="validation-form-sign" data-parsley-priority-enabled="true">
-                        <fieldset>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="email-s" type="email" class="form-control input-lg input-transparent"
-                                           placeholder="邮箱">
+                        <section class="widget">
+                            <header>
+                                <h4>
+                                    <i class="fa fa-windows"></i>
+                                    向导 
+                                    <small>可调工具 </small>
+                                </h4>
+                                <p class="text-muted">完整例子：</p>
+                                <div class="widget-controls">
+                                    <a title="Options" href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                                    <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="password-s" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="密码" >
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="passwordRepeat" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="确认密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="name" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="姓名">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="company" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="企业名称">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="phone" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="联系方式">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="qq" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="QQ号">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup home-button">
-                                    <input id="signButton" type="button" class="input-lg input-transparent login-button"
-                                           value="注册">
-                                </div>
-                            </div>     
-                        </fieldset>
-                    </form>
+                            </header>
+                            <div class="body">
+                                <div id="wizard" class="form-wizard">
+                                    <ul class="wizard-navigation nav-justified">
+                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong>详情信息</strong></a></li>
+                                        <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>运输</strong></a></li>
+                                        <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>付款</strong></a></li>
+                                        <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>感谢</strong></a></li>
+                                    </ul>
+                                    <div id="bar" class="progress progress-small">
+                                        <div class="progress-bar progress-bar-inverse"></div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="tab1">
+                                            <form class="form-horizontal mt-sm" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <!-- Username -->
+                                                        <label class="control-label col-md-3"  for="username">用户名</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10">
+                                                                <input type="text" id="username" name="username" placeholder="" class="form-control">
+                                                                <span class="help-block">用户名可包含任意字符和数字，不可包含有空格。</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- Email -->
+                                                        <label class="control-label col-md-3"  for="email">邮箱</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10">
+                                                                <input type="text" id="email" name="email"
+                                                                       placeholder="" class="form-control">
+                                                                <span class="help-block">请提供邮箱</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- Password -->
+                                                        <label class="control-label col-md-3"  for="address">地址</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10">
+                                                                <input type="text" id="address" name="address" placeholder="" class="form-control">
+                                                                <span class="help-block">请提供地址</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <form class="form-horizontal mt-sm" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label for="country-select" class="control-label col-md-3">目标国家</label>
 
-                </div>
-                
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><select id="country-select" data-placeholder="选择一个国家..." class="select-block-level chzn-select">
+                                                                <option value=""></option>
+                                                                <option value="United States">美国</option>
+                                                                <option value="United Kingdom">United Kingdom</option>
+                                                                <option value="Afghanistan">Afghanistan</option>
+                                                                <option value="Albania">Albania</option>
+                                                                <option value="Algeria">Algeria</option>
+                                                                <option value="American Samoa">American Samoa</option>
+                                                                <option value="Andorra">Andorra</option>
+                                                            </select>
+                                                                <span class="help-block pull-left">请选择您的目标国家</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="courier" class="control-label col-md-3">选择运输方式</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><select id="courier" data-placeholder="Choose an option.." class="select-block-level chzn-select">
+                                                                <option value=""></option>
+                                                                <option value="Australia Post">Australia Post</option>
+                                                                <option value="DHL US">DHL US</option>
+                                                                <option value="Other">Other</option>
+                                                            </select>
+                                                                <span class="help-block pull-left">请选择运输方式</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3" for="destination">目的地邮编</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><input type="text" id="destination" name="destination" placeholder="" class="form-control">
+                                                                <span class="help-block">请提供您的目的地邮编</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3" for="dest-address">目的地地址</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><input type="text" id="dest-address" name="address" placeholder="" class="form-control">
+                                                                <span class="help-block">请提供目的地地址/span></div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab3">
+                                            <form class="form-horizontal mt-sm" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3"  for="name">持卡人姓名</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><input type="text" id="name" name="name" placeholder="" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="credit-card-type" class="control-label col-md-3">信用卡类型</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><select id="credit-card-type" data-placeholder="Please select.." class="chzn-select select-block-level">
+                                                                <option value=""></option>
+                                                                <option value="Visa">Visa</option>
+                                                                <option value="Mastercard">Mastercard</option>
+                                                                <option value="Other">Other</option>
+                                                            </select></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <label class="control-label col-md-3" for="credit">信用卡卡号 </label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><input id="credit" type="text" tabindex="3" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="expiration-date" class="control-label col-md-3">有效期</label>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-10"><input type="text" id="expiration-date"  class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab4">
+                                            <h2>谢谢！</h2>
+                                            <p class="mb-lg">已收到您的申请</p>
+                                        </div>
+                                        <div class="description ml mr mt-n-md">
+                                            <ul class="pager wizard">
+                                                <li class="previous">
+                                                    <button class="btn btn-primary pull-left"><i class="fa fa-caret-left"></i> 上一步</button>
+                                                </li>
+                                                <li class="next">
+                                                    <button class="btn btn-primary pull-right" >下一步 <i class="fa fa-caret-right"></i></button>
+                                                </li>
+                                                <li class="finish" style="display: none">
+                                                    <button class="btn btn-success pull-right" >完成 <i class="fa fa-check"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+               </div>               
             </div>
         </div>
         <div class="home-footer">
