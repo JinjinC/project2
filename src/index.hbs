@@ -29,7 +29,7 @@
                 // stackBlurCanvasRGBA('canvas',100,100,400,400,10);
 
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
-                $('.single-widget-container').addClass("blur").animate({opacity: "1"},500);
+                $('.single-widget-container').addClass("blur").animate({opacity: "1"},800);
 
                 $('.single-widget-container').blurjs({
                     source: 'body',
@@ -294,22 +294,19 @@
                             <div class="form-group">
                                 <div class="input-group input-group-lg myInputGroup">
                                     <input id="email-s" type="email" class="form-control input-lg input-transparent"
-                                           placeholder="邮箱"  data-parsley-trigger="change" data-parsley-validation-threshold="1"
-                                               required="required">
+                                           placeholder="邮箱">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-lg myInputGroup">
                                     <input id="password-s" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="密码" data-parsley-trigger="change" required="required">
+                                           placeholder="密码" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-lg myInputGroup">
                                     <input id="passwordRepeat" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="确认密码" data-parsley-trigger="change"
-                                               data-parsley-equalto="#password-s"
-                                               required="required">
+                                           placeholder="确认密码">
                                 </div>
                             </div>
                             <div class="form-group">
