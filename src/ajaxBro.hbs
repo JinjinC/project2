@@ -33,160 +33,154 @@
                     <section class="widget widget-tabs">
                         <div class="body tab-content">
                             <div id="webTran" class="tab-pane active clearfix">
-                                    <ul id="myTab" class="nav nav-tabs">
-                                        <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">平均时间</a></li>
-                                        <li><a href="#apdex" data-toggle="tab" class="tabItem">时间百分比</a></li>
-                                        <li><a href="#throughput" data-toggle="tab" class="tabItem">吞吐量</a></li>
-                                    </ul>
-                                    <div id="myTabContent" class="tab-content" >
-                                        <div class="tab-pane fade in active" id="responseTime">
-                                            <div class="dd" id="nestable1">
-                                                <ol class="dd-list">
-                                                    <li class="dd-item" data-id="1">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span>
-                                                            <span style="float: right;">47.99 s</span>
-                                                            </div>
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active"><a href="#responseTime" data-toggle="tab" class="tabItem">平均时间</a></li>
+                                    <li><a href="#apdex" data-toggle="tab" class="tabItem">时间百分比</a></li>
+                                    <li><a href="#throughput" data-toggle="tab" class="tabItem">吞吐量</a></li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content" >
+                                    <div class="tab-pane fade in active" id="responseTime">
+                                        <div class="dd" id="nestable1">
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="1">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph"></div>
+                                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span>
+                                                        <span style="float: right;">47.99 s</span>
                                                         </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="2">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:30%"></div>
-                                                            <div class="bar-text"><span>SpringController/splits.do (GET)</span>
-                                                            <span style="float: right;">15.37 s</span>
-                                                            </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="2">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:30%"></div>
+                                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span>
+                                                        <span style="float: right;">15.37 s</span>
                                                         </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="3">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:15%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span>
-                                                            <span style="float: right;">3.35 s</span>
-                                                            </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="3">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:15%"></div>
+                                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span>
+                                                        <span style="float: right;">3.35 s</span>
                                                         </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="4">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:5%"></div>
-                                                            <div class="bar-text"><span>SpringController/testException.do (GET)</span>
-                                                            <span style="float: right;">1.17 s</span>
-                                                            </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:5%"></div>
+                                                        <div class="bar-text"><span>SpringController/testException.do (GET)</span>
+                                                        <span style="float: right;">1.17 s</span>
                                                         </div>
-                                                    </li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="apdex">
-                                            <div class="dd" id="nestable2">
-                                                <ol class="dd-list">
-                                                    <li class="dd-item" data-id="1">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span>
-                                                            <span style="float: right;">26%</span>
-                                                            </div>
-                                                        </div>                                                   
-                                                    </li>
-                                                    <li class="dd-item" data-id="2">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/splits.do (GET)</span>
-                                                            <span style="float: right;">10%</span>
-                                                            </div>
-                                                        </div>                                                    
-                                                    </li>
-                                                    <li class="dd-item" data-id="3">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span>
-                                                            <span style="float: right;">7%</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="4">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:100%"></div>
-                                                            <div class="bar-text"><span>SpringController/testRedis.do (GET)</span><span style="float: right;">1%</span></div>
-                                                        </div>
-                                                    </li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="throughput">
-                                            <div class="dd" id="nestable3">
-                                                <ol class="dd-list">
-                                                    <li class="dd-item" data-id="1">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:50%"></div>
-                                                            <div class="bar-text"><span>SpringController/splits.do (GET)</span>
-                                                            <span style="float: right;">6.77 cpm</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="2">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span>
-                                                            <span style="float: right;">4.03 cpm</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="3">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span>
-                                                            <span style="float: right;">2.35 cpm</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item" data-id="4">
-                                                        <div class="dd-handle">
-                                                            <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                            </i>
-                                                            <div class="bar-graph" style="width:10%"></div>
-                                                            <div class="bar-text"><span>SpringController/testRedis.do (GET)</span>
-                                                            <span style="float: right;">2.40 cpm</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ol>
-                                            </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
                                         </div>
                                     </div>
-
-                           
-                            </div>
-                            
+                                    <div class="tab-pane fade" id="apdex">
+                                        <div class="dd" id="nestable2">
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="1">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:0%"></div>
+                                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span>
+                                                        <span style="float: right;">26%</span>
+                                                        </div>
+                                                    </div>                                                   
+                                                </li>
+                                                <li class="dd-item" data-id="2">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:0%"></div>
+                                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span>
+                                                        <span style="float: right;">10%</span>
+                                                        </div>
+                                                    </div>                                                    
+                                                </li>
+                                                <li class="dd-item" data-id="3">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:0%"></div>
+                                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span>
+                                                        <span style="float: right;">7%</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:100%"></div>
+                                                        <div class="bar-text"><span>SpringController/testRedis.do (GET)</span><span style="float: right;">1%</span></div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="throughput">
+                                        <div class="dd" id="nestable3">
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="1">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:50%"></div>
+                                                        <div class="bar-text"><span>SpringController/splits.do (GET)</span>
+                                                        <span style="float: right;">6.77 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="2">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:20%"></div>
+                                                        <div class="bar-text"><span>SpringController/abc.do (GET)</span>
+                                                        <span style="float: right;">4.03 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="3">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:20%"></div>
+                                                        <div class="bar-text"><span>SpringController/insert.do (GET)</span>
+                                                        <span style="float: right;">2.35 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item" data-id="4">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:10%"></div>
+                                                        <div class="bar-text"><span>SpringController/testRedis.do (GET)</span>
+                                                        <span style="float: right;">2.40 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>                          
+                            </div>                      
                         </div>
                     </section>
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="col-lg-8">
@@ -195,8 +189,7 @@
                      <section class="widget">
                         <header>
                             <h4>
-                                响应时间
-                                
+                                响应时间                               
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -271,7 +264,6 @@
                     </section>
                 </div>
             </div>
-
             <div class="row  float-card">
                 <div class="col-md-12">
                     <section class="widget ">
@@ -280,148 +272,142 @@
                             <span class="glyphicon glyphicon-remove pull-right"></span>
                         </header>
                         <div class="body">
-
-                         <section class="widget inner-widget">
-                            <header>
-                                <h4>
-                                    执行时间
-                                </h4>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart5" class="chart visits-chart">
-                                    <svg></svg>
+                            <section class="widget inner-widget">
+                                <header>
+                                    <h4>
+                                        执行时间
+                                    </h4>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart5" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-                        </section>
+                            </section>
 
-                         <section class="widget inner-widget">
-                            <header>
-                                <h4>
-                                    吞吐量
-                                </h4>
-                            </header>
-                            <div class="body no-margin">
-                                <div id="visits-chart6" class="chart visits-chart">
-                                    <svg></svg>
+                            <section class="widget inner-widget">
+                                <header>
+                                    <h4>
+                                        吞吐量
+                                    </h4>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart6" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>                               
                                 </div>
-                               
-                            </div>
-                        </section>
+                            </section>
+                            <section class="widget inner-widget">
+                                <header>
+                                    <h4>Breakdown Table</h4>
+                                </header>
+                                <div class="body body-for-table">
+                                    <table class="table table-striped table-hover no-margin sources-table">
+                                        <thead>
+                                        <tr>
+                                            <th width="34%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">名称</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">类型</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">百分比</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>other</td>
+                                            <td>java</td>
+                                            <td>20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>users-insert</td>
+                                            <td>database</td>
+                                            <td>30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>blabla</td>
+                                            <td>java</td>
+                                            <td>30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>users-insert</td>
+                                            <td>database</td>
+                                            <td>30%</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
 
-                        <section class="widget inner-widget">
-                            <header>
-                                <h4>Breakdown Table</h4>
-                            </header>
-                            <div class="body body-for-table">
-                                <table class="table table-striped table-hover no-margin sources-table">
-                                    <thead>
-                                    <tr>
-                                        <th width="34%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">名称</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="33%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">类型</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="33%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">百分比</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>other</td>
-                                        <td>java</td>
-                                        <td>20%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>users-insert</td>
-                                        <td>database</td>
-                                        <td>30%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>blabla</td>
-                                        <td>java</td>
-                                        <td>30%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>users-insert</td>
-                                        <td>database</td>
-                                        <td>30%</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-
-                        <section class="widget inner-widget">
-                            <header>
-                                <h4>Traces</h4>
-                            </header>
-                            <div class="body body-for-table">
-                                <table class="table table-striped table-hover no-margin sources-table">
-                                    <thead>
-                                    <tr>
-                                        <th width="34%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">名称</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">开始时间</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">耗时</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">Agent</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                     <tr>
-                                        <td>SpringController/splits.do (GET)</td>
-                                        <td>2015-02-05 16:00:44</td>
-                                        <td>99,428ms</td>
-                                        <td>java:app188:8090(10.133.197.33)</td>
-                                    </tr>
-                                     <tr>
-                                        <td>SpringController/splits.do (GET)</td>
-                                        <td>2015-02-05 16:00:44</td>
-                                        <td>99,428ms</td>
-                                        <td>java:app188:8090(10.133.197.33)</td>
-                                    </tr>
-                                     <tr>
-                                        <td>SpringController/splits.do (GET)</td>
-                                        <td>2015-02-05 16:00:44</td>
-                                        <td>99,428ms</td>
-                                        <td>java:app188:8090(10.133.197.33)</td>
-                                    </tr>
-                                     <tr>
-                                        <td>SpringController/splits.do (GET)</td>
-                                        <td>2015-02-05 16:00:44</td>
-                                        <td>99,428ms</td>
-                                        <td>java:app188:8090(10.133.197.33)</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-
-
-                            
+                            <section class="widget inner-widget">
+                                <header>
+                                    <h4>Traces</h4>
+                                </header>
+                                <div class="body body-for-table">
+                                    <table class="table table-striped table-hover no-margin sources-table">
+                                        <thead>
+                                        <tr>
+                                            <th width="34%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">名称</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">开始时间</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">耗时</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">Agent</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                         <tr>
+                                            <td>SpringController/splits.do (GET)</td>
+                                            <td>2015-02-05 16:00:44</td>
+                                            <td>99,428ms</td>
+                                            <td>java:app188:8090(10.133.197.33)</td>
+                                        </tr>
+                                         <tr>
+                                            <td>SpringController/splits.do (GET)</td>
+                                            <td>2015-02-05 16:00:44</td>
+                                            <td>99,428ms</td>
+                                            <td>java:app188:8090(10.133.197.33)</td>
+                                        </tr>
+                                         <tr>
+                                            <td>SpringController/splits.do (GET)</td>
+                                            <td>2015-02-05 16:00:44</td>
+                                            <td>99,428ms</td>
+                                            <td>java:app188:8090(10.133.197.33)</td>
+                                        </tr>
+                                         <tr>
+                                            <td>SpringController/splits.do (GET)</td>
+                                            <td>2015-02-05 16:00:44</td>
+                                            <td>99,428ms</td>
+                                            <td>java:app188:8090(10.133.197.33)</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>                     
                         </div>
                     </section>
                 </div>

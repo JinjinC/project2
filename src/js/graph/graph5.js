@@ -125,15 +125,14 @@ $(function(){
 
     $('.card-header>ul>li').click(function  () {
        setTimeout(function  () {
-                   pageLoad();
-               },500);
+           pageLoad();
+       },500);
     });
 
-    $('.dd-handle,.trans-name,.trace-name,tab_link').click(function () {
-        
+    $('.dd-handle,.trans-name,.trace-name,tab_link').click(function () {     
         setTimeout(function  () {
-                    pageLoad();
-                },100);
+            pageLoad();
+        },100);
     });
 
 
