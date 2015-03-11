@@ -1,3 +1,26 @@
+
+
+.icon-alert{
+  font-size: 19px;
+}
+.conMess{
+  position:absolute; 
+  top: -109px;
+  width: 226px;
+  height: 106px;
+  font-family: "Open Sans","Hiragino Sans GB","Microsoft Yahei", sans-serif;
+  font-size: 13px;
+  display:none;
+}
+.conList{
+  width: 190px;
+  height: 200px;
+  top: -92px;
+}
+.icon-alert:hover .conMess{
+  display: block;
+}
+
 .cpuchart:hover .cputrend, .cpuchart:hover .contenttrend, .cpuchart:hover .trend1{
   display: block;
 }
