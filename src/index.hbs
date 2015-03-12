@@ -11,8 +11,14 @@
 
     
     {{#append "scripts"}}
+    <script src="lib/select2/select2.min.js"></script>
+    <script src="lib/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 
-    <script type="text/javascript" src="js/blur.dev.js"></script>
+    <!-- page application js -->
+    <script src="js/forms-wizard.js"></script>
 
       <script>
 
@@ -31,10 +37,10 @@
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
                 $('.single-widget-container').addClass("blur").animate({opacity: "1"},800);
 
-                $('.single-widget-container').blurjs({
-                    source: 'body',
-                    radius: 10
-                })
+                // $('.single-widget-container').blurjs({
+                //     source: 'body',
+                //     radius: 10
+                // })
                 //tooltip的定位！
                 $('.tooltip').each(function () {
 
@@ -173,6 +179,11 @@
 
                 });
 
+                $('#repeat-btn').click(function(){
+                    $('.validating').hide();
+                    $('.validated').show();
+                });
+
             });
 
             
@@ -288,8 +299,7 @@
                             </div>
                         </fieldset>
                     </form>
-
-                    <form class="no-margin form-sign-in" action="index.html" method="get" id="validation-form-sign" data-parsley-priority-enabled="true">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-sign-in">
                         <section class="widget">
                             <header>
                                 <h4>
@@ -308,10 +318,10 @@
                             <div class="body">
                                 <div id="wizard" class="form-wizard">
                                     <ul class="wizard-navigation nav-justified">
-                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong>详情信息</strong></a></li>
-                                        <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>运输</strong></a></li>
-                                        <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>付款</strong></a></li>
-                                        <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>感谢</strong></a></li>
+                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong>输入用户名密码</strong></a></li>
+                                        <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>填写其他信息</strong></a></li>
+                                        <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>邀请其他用户</strong></a></li>
+                                        <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>验证邮箱</strong></a></li>
                                     </ul>
                                     <div id="bar" class="progress progress-small">
                                         <div class="progress-bar progress-bar-inverse"></div>
@@ -321,33 +331,21 @@
                                             <form class="form-horizontal mt-sm" action='' method="POST">
                                                 <fieldset>
                                                     <div class="form-group">
-                                                        <!-- Username -->
-                                                        <label class="control-label col-md-3"  for="username">用户名</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10">
-                                                                <input type="text" id="username" name="username" placeholder="" class="form-control">
-                                                                <span class="help-block">用户名可包含任意字符和数字，不可包含有空格。</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
                                                         <!-- Email -->
                                                         <label class="control-label col-md-3"  for="email">邮箱</label>
                                                         <div class="col-md-8">
                                                             <div class="col-md-10">
-                                                                <input type="text" id="email" name="email"
+                                                                <input type="text" id="email-sign" name="email-sign"
                                                                        placeholder="" class="form-control">
-                                                                <span class="help-block">请提供邮箱</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <!-- Password -->
-                                                        <label class="control-label col-md-3"  for="address">地址</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10">
-                                                                <input type="text" id="address" name="address" placeholder="" class="form-control">
-                                                                <span class="help-block">请提供地址</span>
+                                                        <!-- password -->
+                                                        <label class="control-label col-md-3 col-sm-3"  for="password">密码</label>
+                                                        <div class="col-md-8 col-sm-8">
+                                                            <div class="col-md-10 col-sm-10">
+                                                                <input type="password" id="password-sign" name="password-sign" placeholder="" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -358,46 +356,32 @@
                                             <form class="form-horizontal mt-sm" action='' method="POST">
                                                 <fieldset>
                                                     <div class="form-group">
-                                                        <label for="country-select" class="control-label col-md-3">目标国家</label>
-
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><select id="country-select" data-placeholder="选择一个国家..." class="select-block-level chzn-select">
-                                                                <option value=""></option>
-                                                                <option value="United States">美国</option>
-                                                                <option value="United Kingdom">United Kingdom</option>
-                                                                <option value="Afghanistan">Afghanistan</option>
-                                                                <option value="Albania">Albania</option>
-                                                                <option value="Algeria">Algeria</option>
-                                                                <option value="American Samoa">American Samoa</option>
-                                                                <option value="Andorra">Andorra</option>
-                                                            </select>
-                                                                <span class="help-block pull-left">请选择您的目标国家</span></div>
+                                                        <!-- Username -->
+                                                        <label class="control-label col-md-3 col-sm-3"  for="username-sign">用户名</label>
+                                                        <div class="col-md-8 col-sm-8">
+                                                            <div class="col-md-10 col-sm-10">
+                                                                <input type="text" id="username-sign" name="username-sign" placeholder="" class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="courier" class="control-label col-md-3">选择运输方式</label>
+                                                        <!-- company -->
+                                                        <label class="control-label col-md-3"  for="company">公司名称</label>
                                                         <div class="col-md-8">
-                                                            <div class="col-md-10"><select id="courier" data-placeholder="Choose an option.." class="select-block-level chzn-select">
-                                                                <option value=""></option>
-                                                                <option value="Australia Post">Australia Post</option>
-                                                                <option value="DHL US">DHL US</option>
-                                                                <option value="Other">Other</option>
-                                                            </select>
-                                                                <span class="help-block pull-left">请选择运输方式</span></div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" id="company" name="company"
+                                                                       placeholder="" class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3" for="destination">目的地邮编</label>
+                                                        <!-- phone -->
+                                                        <label class="control-label col-md-3"  for="phone">联系方式</label>
                                                         <div class="col-md-8">
-                                                            <div class="col-md-10"><input type="text" id="destination" name="destination" placeholder="" class="form-control">
-                                                                <span class="help-block">请提供您的目的地邮编</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-3" for="dest-address">目的地地址</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><input type="text" id="dest-address" name="address" placeholder="" class="form-control">
-                                                                <span class="help-block">请提供目的地地址/span></div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" id="phone" name="phone"
+                                                                       placeholder="" class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </fieldset>
@@ -405,42 +389,29 @@
                                         </div>
                                         <div class="tab-pane" id="tab3">
                                             <form class="form-horizontal mt-sm" action='' method="POST">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-3"  for="name">持卡人姓名</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><input type="text" id="name" name="name" placeholder="" class="form-control"></div>
+                                               <div class="form-group">
+                                                    <!-- emails of colleague -->
+                                                    <h4 class="control-label col-md-12 emails-co-text"  for="emails-co" style="margin-top: 0px;">同事邮箱</h4>
+                                                    <label class="control-label col-md-12 emails-co-text" for="emails-co">可同时邀请多名同事，邮箱间请用空格键区隔</label>
+                                                    <div class="col-md-8 col-md-offset-2">
+                                                        <div class="col-md-12">
+                                                            <textarea rows="4" class="form-control input-transparent" id="emails-co" name="emails-co"></textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="credit-card-type" class="control-label col-md-3">信用卡类型</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><select id="credit-card-type" data-placeholder="Please select.." class="chzn-select select-block-level">
-                                                                <option value=""></option>
-                                                                <option value="Visa">Visa</option>
-                                                                <option value="Mastercard">Mastercard</option>
-                                                                <option value="Other">Other</option>
-                                                            </select></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group ">
-                                                        <label class="control-label col-md-3" for="credit">信用卡卡号 </label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><input id="credit" type="text" tabindex="3" class="form-control"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="expiration-date" class="control-label col-md-3">有效期</label>
-                                                        <div class="col-md-8">
-                                                            <div class="col-md-10"><input type="text" id="expiration-date"  class="form-control"></div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
+                                                </div>
                                             </form>
                                         </div>
                                         <div class="tab-pane" id="tab4">
-                                            <h2>谢谢！</h2>
-                                            <p class="mb-lg">已收到您的申请</p>
+                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="text-align: center;">
+                                                <div class="validating">
+                                                    <p class="mb-lg" style="margin-top: 15px;">验证邮箱已发送至&nbsp;chengmo@oneapm.com</p>
+                                                    <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
+                                                    <button class="btn btn-info" id="repeat-btn">重新发送<i class="fa fa-repeat"></i></button>
+                                                </div>
+                                                <div class="validated">
+                                                    <h3 class="mb-lg" style="margin-top: 15px;">恭喜您，已完成账号验证</h3>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="description ml mr mt-n-md">
                                             <ul class="pager wizard">
@@ -459,7 +430,7 @@
                                 </div>
                             </div>
                         </section>
-                    </form>
+                    </div>
                </div>               
             </div>
         </div>

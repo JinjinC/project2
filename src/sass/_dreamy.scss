@@ -779,7 +779,18 @@ a.tabIcon{
     font-size: 100px;
   }
 
-  
+  & .myModalContent {
+    width: 120%;
+  }
+
+  & .modal-body .control-label {
+    float: left;
+    color: #f8f8f8;
+  }
+
+  & h1,& h2,& h3,& h4,& h5,& h6,& p{
+    color: #f8f8f8;
+  }
 }
 
 .myModalHeader{
@@ -813,6 +824,7 @@ a.tabIcon{
   background-color: transparent;
   border: none;
 }
+
 
 .form-login {
   margin-bottom: 0;
@@ -1056,6 +1068,13 @@ a.tabIcon{
   box-shadow: none;
   color: #fff;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#emails-co {
+  margin-top: 15px;
+}
+.emails-co-text {
+  text-align: center !important;
 }
 
 // #email:focus{
@@ -1759,6 +1778,15 @@ table .progress {
 
 .apdex-td {
   padding-left: 13px !important;
+}
+
+.validating {
+  text-align: center;
+}
+
+.validated {
+  text-align: center;
+  display: none;
 }
 
 
