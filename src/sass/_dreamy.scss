@@ -768,9 +768,9 @@ a.tabIcon{
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -300px;
+  margin-left: -360px;
   margin-top: -360px;
-  width: 600px;
+  width: 720px;
   & .form-group {
     margin-bottom: 12px;
   }
@@ -782,7 +782,7 @@ a.tabIcon{
   }
 
   & .myModalContent {
-    width: 120%;
+    width: 100%;
   }
 
   & .modal-body .control-label {
@@ -792,6 +792,26 @@ a.tabIcon{
 
   & h1,& h2,& h3,& h4,& h5,& h6,& p{
     color: #f8f8f8;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position:absolute;
+    left: 0;
+    top: 10%;
+    margin-left: 0;
+    margin-top: 0;
+
+    & .form-wizard form {
+      text-align: center;
+      & .control-label {
+        float: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) and (max-height: 780px) {
+    top: 0;
   }
 }
 
@@ -1438,6 +1458,13 @@ a.tabIcon{
   
 }
 
+.logo i {
+    @media (max-width:330px) {
+      font-size: 50px;
+    }  
+  }
+
+
 .basic-card {
   z-index: 0;
 }
@@ -1790,6 +1817,31 @@ table .progress {
   text-align: center;
   display: none;
 }
+
+.page-header {
+    & .navbar {
+
+      @media (max-width: 420px) {
+        margin-left: -30px;
+      }
+
+      @media (max-width: 390px) {
+        margin-left: -50px;
+      }
+       @media (max-width: 375px) {
+        margin-left: -70px;
+      }
+       @media (max-width: 350px) {
+        margin-left: -90px;
+      }
+      @media (max-width: 330px) {
+        margin-left: -110px;
+      }
+      @media (max-width: 310px) {
+        margin-left: -130px;
+      }
+    }
+  }
 
 
 
