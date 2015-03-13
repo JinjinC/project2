@@ -16,6 +16,7 @@
     <script src="lib/moment/moment.js"></script>
     <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <script src="lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
 
     <!-- page application js -->
     <script src="js/forms-wizard.js"></script>
@@ -184,10 +185,6 @@
 
                 });
 
-                $('#repeat-btn').click(function(){
-                    $('.validating').hide();
-                    $('.validated').show();
-                });
 
             });
 
@@ -325,14 +322,14 @@
                                                 <fieldset>
                                                     <div class="form-group">
                                                         <!-- Email -->
-                                                        <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                                             <input type="text" id="email-sign" name="email-sign"
                                                                    placeholder="邮箱" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <!-- password -->
-                                                        <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                                             <input type="password" id="password-sign" name="password-sign" placeholder="密码" class="form-control">
                                                         </div>
                                                     </div>
@@ -344,20 +341,20 @@
                                                 <fieldset>
                                                     <div class="form-group">
                                                         <!-- Username -->
-                                                        <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                                             <input type="text" id="username-sign" name="username-sign" placeholder="姓名" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <!-- company -->
-                                                        <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                                             <input type="text" id="company" name="company"
                                                                    placeholder="公司名称" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <!-- phone -->
-                                                        <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
                                                             <input type="text" id="phone" name="phone"
                                                                    placeholder="联系方式" class="form-control">
                                                         </div>
@@ -369,7 +366,7 @@
                                             <form class="form-horizontal mt-md" action='' method="POST">
                                                <div class="form-group">
                                                     <!-- emails of colleague -->
-                                                    <h4 class="control-label col-md-12 col-sm-12 emails-co-text"  for="emails-co" style="margin-top: 0px;">同事邮箱</h4>
+                                                    <h4 class="control-label col-md-12 col-sm-12 emails-co-text"  for="emails-co" style="margin-top: 0px;padding-top: 0px;">同事邮箱</h4>
                                                     <label class="control-label col-md-12 col-sm-12  emails-co-text" for="emails-co">可同时邀请多名同事，邮箱间请用空格键区隔</label>
                                                     <div class="col-md-10 col-md-offset-1 col-sm-10 col-xs-12 col-sm-offset-1">
                                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -382,13 +379,13 @@
                                         <div class="tab-pane" id="tab4">
                                             <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="text-align: center;">
                                                 <div class="validating">
-                                                    <h4 class="mb-lg" style="margin-top: 5px;">验证邮箱已发送至&nbsp;chengmo@oneapm.com</h4>
+                                                    <h4 class="mb-lg" style="margin-top: 5px;padding-top: 0px;">验证邮箱已发送至&nbsp;chengmo@oneapm.com</h4>
                                                     <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
                                                     <button class="btn btn-info" id="repeat-btn">重新发送<i class="fa fa-repeat"></i></button>
                                                 </div>
-                                                <div class="validated">
+                                                {{!-- <div class="validated">
                                                     <h3 class="mb-lg" style="margin-top: 15px;">恭喜您，已完成账号验证</h3>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                         <div class="description ml mr mt-n-md">
