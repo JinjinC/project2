@@ -27,6 +27,7 @@
             $('header').hide();
             $('.logo').hide();
             $('.app_status').hide();
+            $('.news').hide();
 
             $(document).ready(
 
@@ -57,8 +58,6 @@
                     console.log(subpos);
                     console.log(posleft);
                     $(this).css("margin-left",posleft);
-
-
                 })
 
                 //登录后(点击登录按钮)
@@ -101,6 +100,7 @@
                                         $('#nav-right>li:eq(0)').hide();
                                         $('#nav-right>li:eq(1)').hide();
                                         $('.in-footer').show();
+                                        $('.news').show();
                                     }
                                     else {
                                         $('#password-tip').addClass("in");
@@ -124,7 +124,7 @@
                             $('#nav-right>li:eq(0)').hide();
                             $('#nav-right>li:eq(1)').hide();
                             $('.in-footer').show();
-
+                            $('.news').show();
                         }
 
                     });
@@ -182,7 +182,19 @@
                     $('#email-tip').removeClass("in");
                     $('#password-tip').removeClass("in");
 
+                });
 
+                $('.form-wizard a').click(function (){
+                    var href = $(this).attr("href");
+                    if(href == "#tab3"){
+                        $('#ignore').show();
+                    }else{
+                        $('#ignore').hide();
+                    }
+                });
+
+                $('.news-light').click(function  () {
+                    $('.news').toggleClass("active");
                 });
 
 
@@ -257,7 +269,6 @@
             </div>
         </div>
     </div>
-
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelleby="myModallabel" aria-hidden="true">
         <div class="modal-dialog login-modal" id="myModalDialog">
             <div class="modal-content myModalContent">
@@ -308,7 +319,7 @@
                             <div class="body">
                                 <div id="wizard" class="form-wizard">
                                     <ul class="wizard-navigation nav-justified">
-                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong>基本</strong></a></li>
+                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small> <strong>基本</strong></a></li>
                                         <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>信息</strong></a></li>
                                         <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>邀请</strong></a></li>
                                         <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>验证</strong></a></li>
@@ -395,10 +406,8 @@
                                                 </li>
                                                 <li class="next">
                                                     <button class="btn btn-primary" >下一步 <i class="fa fa-caret-right"></i></button>
+                                                    <a id="ignore">跳过 <i class="fa fa-caret-right"></i></a>
                                                 </li>
-                                                {{!-- <li class="finish" style="display: none">
-                                                    <button class="btn btn-success" >完成 <i class="fa fa-check"></i></button>
-                                                </li> --}}
                                             </ul>
                                         </div>
                                     </div>
@@ -425,6 +434,20 @@
             <li class="divider"></li>
             <li><a href="#"><span>条款与条件</span></a></li>
         </ul>
+    </div>
+    <div class="news">
+        <div class="news-light">
+            <p><i class="iconfont icon1" style="margin-right: 5px;">&#xe60b;</i> 更新</p>
+        </div>
+        <div class="news-content">
+           <ul class="news-lists">
+                <li><span class="news-time">2015-04-23</span><a href="#">Java Agent 更新至 v3.1.1</a></li>
+                <li><span class="news-time">2015-03-13</span><a href="#">Node.js Agent 更新至 v3.1.0</a></li>
+                <li><span class="news-time">2015-01-23</span><a href="#">Python Agent 更新至 v2.1.1</a></li>
+                <li><span class="news-time">2015-01-23</span><a href="#">iOS Agent 更新至 v1.1.1</a></li>
+                <li><span class="news-time">2015-01-23</span><a href="#">Android Agent 更新至 v3.1.1</a></li>
+           </ul>
+        </div>
     </div>
 
     <div class="loader-wrap hiding hide">
