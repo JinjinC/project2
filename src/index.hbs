@@ -138,20 +138,71 @@
                         if (text=="尚未注册？") {
                             $('.form-sign-in').show();
                             $('.form-login').hide();
+                            $('.form-forget-psw').hide();
                             $('#sign-in').children().html("已有账号？");
                             $('#forget-psw').hide();
                             $('.login-modal').removeClass("login-modal").addClass("sign-modal");
-                            $('#modal-title').text("注册");
+                            $('#modal-title').text("注册  OneAPM");
                         }
                         else if (text=="已有账号？"){
                             $('.form-sign-in').hide();
                             $('.form-login').show();
+                            $('.form-forget-psw').hide();
                             $('#sign-in').children().html("尚未注册？");
                             $('#forget-psw').show();
                             $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
-                            $('#modal-title').text("登录");
+                            $('#modal-title').text("登录 OneAPM");
                         }
                     });
+
+                //忘记密码 和 登录的切换
+                $('#forget-psw').click(function  () {
+                    event.preventDefault();
+                    var text = $('#forget-psw').children().html();
+                    if (text == "忘记密码？") {
+
+                        $('#forget-psw').children().html("返回登录");
+                        $('.form-forget-psw').show();
+                        $('.form-login').hide();
+                        $('.form-sign-in').hide();
+                        $('.login-modal').removeClass("login-modal").addClass("sign-modal");
+                        $('#modal-title').text("找回密码");
+
+                    }else if(text=="返回登录"){
+                        $('#forget-psw').children().html("忘记密码？");
+                        $('.form-login').show();
+                        $('.form-forget-psw').hide();
+                        $('.form-sign-in').hide();
+                        $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
+                         $('#modal-title').text("登录 OneAPM");
+                    }
+                    
+                })
+                
+                //忘记密码提交邮箱
+                $('#mail-find-psw').click(function  () {
+                    var email_type = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                    var  input = $('#email-forget').val();
+                    if (email_type.test(input) == false){
+                        $('.validate-message').addClass("active");
+                    }else{
+                        $('#find-psw1').removeClass("active");
+                        $('#find-psw2').addClass("active");
+                        $('#find-psw .next').hide();             
+                    }
+                })
+
+                //输入框监听
+                $('#email-forget').focus(function  () {
+                    $('.validate-message').removeClass("active");
+                });
+
+                //重新发送
+                $('#repeat-send').click(function  () {
+                    $('#find-psw1').addClass("active");
+                    $('#find-psw2').removeClass("active");
+                    $('#find-psw .next').show();
+                })
                 
                 //登录的交互，判空登录按钮的变化
                 $('#email').keydown(function(){
@@ -211,9 +262,9 @@
                 <a href="application_list.html">
                     <div class="headOneIcon">
                         <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe606;</i>
+                            <i class="icon iconfont">&#xe63a;</i>
                         </div>
-                        <div class="headOneIconText">应用程序</div>
+                        <div class="headOneIconText">Application Insight</div>
                     </div>
                 </a>
             </div>
@@ -221,9 +272,19 @@
                 <a href="broswer_list.html">
                     <div class="headOneIcon">
                         <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe603;</i>
+                            <i class="icon iconfont">&#xe63b;</i>
                         </div>
-                        <div class="headOneIconText">浏览器</div>
+                        <div class="headOneIconText">Browser Insight</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="overviewMob.html">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe63c;</i>
+                        </div>
+                        <div class="headOneIconText">Mobile Insight</div>
                     </div>
                 </a>
             </div>
@@ -234,16 +295,6 @@
                             <i class="icon iconfont">&#xe602;</i>
                         </div>
                         <div class="headOneIconText">关键事务</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                <a href="overviewMob.html">
-                    <div class="headOneIcon">
-                        <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe604;</i>
-                        </div>
-                        <div class="headOneIconText">移动应用</div>
                     </div>
                 </a>
             </div>
@@ -274,7 +325,7 @@
             <div class="modal-content myModalContent">
                 <div class="modal-header myModalHeader">
                     <i class="iconfont login-icon">&#xe616;</i>
-                    <p><span id="modal-title">登录</span>&nbsp;OneAPM</p>
+                    <p><span id="modal-title">登录 OneAPM</span></p>
                 </div>
                 <div class="modal-body myModalBody">
                     <form class="no-margin form-login" action="index.html" method="get" id="validation-form" data-parsley-priority-enabled="false"
@@ -388,7 +439,7 @@
                                             </form>
                                         </div>
                                         <div class="tab-pane" id="tab4">
-                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="text-align: center;">
+                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
                                                 <div class="validating">
                                                     <h4 class="mb-lg" style="margin-top: 5px;padding-top: 0px;">验证邮箱已发送至&nbsp;chengmo@oneapm.com</h4>
                                                     <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
@@ -415,6 +466,46 @@
                             </div>
                         </section>
                     </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-forget-psw">
+                        <section class="widget">
+                            <div class="body">
+                                <div id="find-psw" class="form-wizard">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="find-psw1">
+                                            <form class="form-horizontal mt-md" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <!-- Email -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="email-forget" name="email-forget"
+                                                                   placeholder="输入注册邮箱" class="form-control">
+                                                            <p class="validate-message text-warning">账号输入有误或不存在</p>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane"  id="find-psw2">
+                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+                                                <div class="validating">
+                                                    <h4 class="mb-lg" style="margin-top: 5px;padding-top: 0px;">密码重置邮件已发送至&nbsp;chengmo@oneapm.com</h4>
+                                                    <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
+                                                    <button class="btn btn-info" id="repeat-send">重新发送<i class="fa fa-repeat"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description ml mr mt-n-md">
+                                            <ul class="pager wizard">
+                                                <li class="next">
+                                                    <button class="btn btn-primary" id="mail-find-psw">提交 <i class="fa fa-caret-right"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>    
+                    </div>
                </div>               
             </div>
         </div>
@@ -437,15 +528,15 @@
     </div>
     <div class="news">
         <div class="news-light">
-            <p><i class="iconfont icon1" style="margin-right: 5px;">&#xe60b;</i> 更新</p>
+            <p><i class="iconfont icon1" style="margin-right: 5px;">&#xe639;</i> 最近更新</p>
         </div>
         <div class="news-content">
            <ul class="news-lists">
-                <li><span class="news-time">2015-04-23</span><a href="#">Java Agent 更新至 v3.1.1</a></li>
-                <li><span class="news-time">2015-03-13</span><a href="#">Node.js Agent 更新至 v3.1.0</a></li>
-                <li><span class="news-time">2015-01-23</span><a href="#">Python Agent 更新至 v2.1.1</a></li>
-                <li><span class="news-time">2015-01-23</span><a href="#">iOS Agent 更新至 v1.1.1</a></li>
-                <li><span class="news-time">2015-01-23</span><a href="#">Android Agent 更新至 v3.1.1</a></li>
+                <li><span class="news-time">2015-04-23</span><a href="#" class="pull-right">Java Agent 更新至 v3.1.1</a></li>
+                <li><span class="news-time">2015-03-13</span><a href="#" class="pull-right">Node.js Agent 更新至 v3.1.0</a></li>
+                <li><span class="news-time">2015-01-23</span><span class="pull-right">Python Agent 更新至 v2.1.1</span></li>
+                <li><span class="news-time">2015-01-23</span><span class="pull-right">iOS Agent 更新至 v1.1.1</span></li>
+                <li><span class="news-time">2015-01-23</span><a href="#" class="pull-right">Android Agent 更新至 v3.1.1</a></li>
            </ul>
         </div>
     </div>

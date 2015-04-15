@@ -85,73 +85,9 @@
                     <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i>
                     
                 </button>
-
-                <div id="goHome-content" class="dropdown-menu goHome-content">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="application_list.html" >
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe606;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>应用程序</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="broswer_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe603;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>浏览器</span></div>
-                               </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="keytransaction_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe602;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>关键事务</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="mob_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i id="itemCon" class="icon iconfont">&#xe604;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>移动应用</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav">
-                                <div id="noItem" class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe617;</i>
-                                        <i id="iconplus" class="glyphicon glyphicon-plus-sign iconplus"></i>
-                                    </div>
-                                    <div class="firNav_title"><span>服务器</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="account.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe605;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>系统设置</span></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                {{#block "dashboardHeader"}}
+                    {{> dashboardHeader }}
+                {{/block}}
             </li>
             <li id="divider" class="divider"></li>
             <li class="dropdown goHome" id="appList">
