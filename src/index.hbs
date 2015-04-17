@@ -11,8 +11,15 @@
 
     
     {{#append "scripts"}}
+    <script src="lib/select2/select2.min.js"></script>
+    <script src="lib/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
 
-    <script type="text/javascript" src="js/blur.dev.js"></script>
+    <!-- page application js -->
+    <script src="js/forms-wizard.js"></script>
 
       <script>
 
@@ -20,6 +27,7 @@
             $('header').hide();
             $('.logo').hide();
             $('.app_status').hide();
+            $('.news').hide();
 
             $(document).ready(
 
@@ -31,10 +39,15 @@
                 $('#myModal').addClass("in").addClass("show-shadow").show();//可以定义为fadeIn(),show('sow')
                 $('.single-widget-container').addClass("blur").animate({opacity: "1"},800);
 
-                $('.single-widget-container').blurjs({
-                    source: 'body',
-                    radius: 10
-                })
+                //账户设置在此页不隐藏，sidebar按钮不需要显示。
+                $('.visible-xs').removeClass('visible-xs').hide();
+                $('#account').parent().removeClass('hidden-xs');
+                $('#account span').removeClass('hidden-xs');
+
+                // $('.single-widget-container').blurjs({
+                //     source: 'body',
+                //     radius: 10
+                // })
                 //tooltip的定位！
                 $('.tooltip').each(function () {
 
@@ -45,8 +58,6 @@
                     console.log(subpos);
                     console.log(posleft);
                     $(this).css("margin-left",posleft);
-
-
                 })
 
                 //登录后(点击登录按钮)
@@ -89,6 +100,7 @@
                                         $('#nav-right>li:eq(0)').hide();
                                         $('#nav-right>li:eq(1)').hide();
                                         $('.in-footer').show();
+                                        $('.news').show();
                                     }
                                     else {
                                         $('#password-tip').addClass("in");
@@ -112,7 +124,7 @@
                             $('#nav-right>li:eq(0)').hide();
                             $('#nav-right>li:eq(1)').hide();
                             $('.in-footer').show();
-
+                            $('.news').show();
                         }
 
                     });
@@ -126,20 +138,71 @@
                         if (text=="尚未注册？") {
                             $('.form-sign-in').show();
                             $('.form-login').hide();
+                            $('.form-forget-psw').hide();
                             $('#sign-in').children().html("已有账号？");
                             $('#forget-psw').hide();
                             $('.login-modal').removeClass("login-modal").addClass("sign-modal");
-                            $('#modal-title').text("注册");
+                            $('#modal-title').text("注册  OneAPM");
                         }
                         else if (text=="已有账号？"){
                             $('.form-sign-in').hide();
                             $('.form-login').show();
+                            $('.form-forget-psw').hide();
                             $('#sign-in').children().html("尚未注册？");
                             $('#forget-psw').show();
                             $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
-                            $('#modal-title').text("登录");
+                            $('#modal-title').text("登录 OneAPM");
                         }
                     });
+
+                //忘记密码 和 登录的切换
+                $('#forget-psw').click(function  () {
+                    event.preventDefault();
+                    var text = $('#forget-psw').children().html();
+                    if (text == "忘记密码？") {
+
+                        $('#forget-psw').children().html("返回登录");
+                        $('.form-forget-psw').show();
+                        $('.form-login').hide();
+                        $('.form-sign-in').hide();
+                        $('.login-modal').removeClass("login-modal").addClass("sign-modal");
+                        $('#modal-title').text("找回密码");
+
+                    }else if(text=="返回登录"){
+                        $('#forget-psw').children().html("忘记密码？");
+                        $('.form-login').show();
+                        $('.form-forget-psw').hide();
+                        $('.form-sign-in').hide();
+                        $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
+                         $('#modal-title').text("登录 OneAPM");
+                    }
+                    
+                })
+                
+                //忘记密码提交邮箱
+                $('#mail-find-psw').click(function  () {
+                    var email_type = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                    var  input = $('#email-forget').val();
+                    if (email_type.test(input) == false){
+                        $('.validate-message').addClass("active");
+                    }else{
+                        $('#find-psw1').removeClass("active");
+                        $('#find-psw2').addClass("active");
+                        $('#find-psw .next').hide();             
+                    }
+                })
+
+                //输入框监听
+                $('#email-forget').focus(function  () {
+                    $('.validate-message').removeClass("active");
+                });
+
+                //重新发送
+                $('#repeat-send').click(function  () {
+                    $('#find-psw1').addClass("active");
+                    $('#find-psw2').removeClass("active");
+                    $('#find-psw .next').show();
+                })
                 
                 //登录的交互，判空登录按钮的变化
                 $('#email').keydown(function(){
@@ -170,8 +233,21 @@
                     $('#email-tip').removeClass("in");
                     $('#password-tip').removeClass("in");
 
-
                 });
+
+                $('.form-wizard a').click(function (){
+                    var href = $(this).attr("href");
+                    if(href == "#tab3"){
+                        $('#ignore').show();
+                    }else{
+                        $('#ignore').hide();
+                    }
+                });
+
+                $('.news-light').click(function  () {
+                    $('.news').toggleClass("active");
+                });
+
 
             });
 
@@ -186,9 +262,9 @@
                 <a href="application_list.html">
                     <div class="headOneIcon">
                         <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe606;</i>
+                            <i class="icon iconfont">&#xe63a;</i>
                         </div>
-                        <div class="headOneIconText">应用程序</div>
+                        <div class="headOneIconText product-text ">Application Insight</div>
                     </div>
                 </a>
             </div>
@@ -196,9 +272,19 @@
                 <a href="broswer_list.html">
                     <div class="headOneIcon">
                         <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe603;</i>
+                            <i class="icon iconfont">&#xe63b;</i>
                         </div>
-                        <div class="headOneIconText">浏览器</div>
+                        <div class="headOneIconText product-text">Browser Insight</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                <a href="mob_list.html">
+                    <div class="headOneIcon">
+                        <div class="headOneIconImg">
+                            <i class="icon iconfont">&#xe63c;</i>
+                        </div>
+                        <div class="headOneIconText product-text">Mobile Insight</div>
                     </div>
                 </a>
             </div>
@@ -209,16 +295,6 @@
                             <i class="icon iconfont">&#xe602;</i>
                         </div>
                         <div class="headOneIconText">关键事务</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                <a href="overviewMob.html">
-                    <div class="headOneIcon">
-                        <div class="headOneIconImg">
-                            <i class="icon iconfont">&#xe604;</i>
-                        </div>
-                        <div class="headOneIconText">移动应用</div>
                     </div>
                 </a>
             </div>
@@ -244,13 +320,12 @@
             </div>
         </div>
     </div>
-
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelleby="myModallabel" aria-hidden="true">
         <div class="modal-dialog login-modal" id="myModalDialog">
             <div class="modal-content myModalContent">
                 <div class="modal-header myModalHeader">
                     <i class="iconfont login-icon">&#xe616;</i>
-                    <p><span id="modal-title">登录</span>&nbsp;OneAPM</p>
+                    <p><span id="modal-title">登录 OneAPM</span></p>
                 </div>
                 <div class="modal-body myModalBody">
                     <form class="no-margin form-login" action="index.html" method="get" id="validation-form" data-parsley-priority-enabled="false"
@@ -261,7 +336,7 @@
                                     <input id="email" type="email" class="form-control input-lg input-transparent" placeholder="账号">
                                     <div class="tooltip fade bottom tooltip_login" id="email-tip">
                                         <div class="arrow_tooltip"></div>
-                                        <i class="iconfont icon-exclamation-sign">&#xe635;</icon2>
+                                        <i class="iconfont icon-exclamation-sign">&#xe635;</i>
                                         <span class="tip-content"> 用户名不是邮箱的格式哟！</span>
                                     </div>
                                 </div>
@@ -272,7 +347,7 @@
                                     <i class="iconfont loginButton buttonDisabled" id="loginButton">&#xe621;</i>
                                     <div class="tooltip fade bottom tooltip_login" id="password-tip">
                                         <div class="arrow_tooltip"></div>
-                                        <i class="iconfont icon-exclamation-sign">&#xe635;</icon2>
+                                        <i class="iconfont icon-exclamation-sign">&#xe635;</i>
                                         <span class="tip-conetent"> 用户名或密码不正确哟！请修改！</span>
                                     </div>
                                 </div>
@@ -288,62 +363,150 @@
                             </div>
                         </fieldset>
                     </form>
-
-                    <form class="no-margin form-sign-in" action="index.html" method="get" id="validation-form-sign" data-parsley-priority-enabled="true">
-                        <fieldset>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="email-s" type="email" class="form-control input-lg input-transparent"
-                                           placeholder="邮箱">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-sign-in">
+                        <section class="widget">
+                            <header>
+                            </header>
+                            <div class="body">
+                                <div id="wizard" class="form-wizard">
+                                    <ul class="wizard-navigation nav-justified">
+                                        <li><a href="#tab1" data-toggle="tab"><small>1.</small> <strong>基本</strong></a></li>
+                                        <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>信息</strong></a></li>
+                                        <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>邀请</strong></a></li>
+                                        <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>验证</strong></a></li>
+                                    </ul>
+                                    <div id="bar" class="progress progress-small">
+                                        <div class="progress-bar progress-bar-inverse"></div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="tab1">
+                                            <form class="form-horizontal mt-md" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <!-- Email -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="email-sign" name="email-sign"
+                                                                   placeholder="邮箱" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- password -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="password" id="password-sign" name="password-sign" placeholder="密码" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <form class="form-horizontal mt-md" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <!-- Username -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="username-sign" name="username-sign" placeholder="姓名" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- company -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="company" name="company"
+                                                                   placeholder="公司名称" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- phone -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="phone" name="phone"
+                                                                   placeholder="联系方式" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab3">
+                                            <form class="form-horizontal mt-md" action='' method="POST">
+                                               <div class="form-group">
+                                                    <!-- emails of colleague -->
+                                                    <h4 class="control-label col-md-12 col-sm-12 emails-co-text"  for="emails-co" style="margin-top: 0px;padding-top: 0px;">同事邮箱</h4>
+                                                    <label class="control-label col-md-12 col-sm-12  emails-co-text" for="emails-co">可同时邀请多名同事，邮箱间请用空格键区隔</label>
+                                                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-xs-12 col-sm-offset-1">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea rows="4" class="form-control input-transparent" id="emails-co" name="emails-co"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="tab4">
+                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+                                                <div class="validating">
+                                                    <h4 class="mb-lg" style="margin-top: 5px;padding-top: 0px;">验证邮箱已发送至&nbsp;chengmo@oneapm.com</h4>
+                                                    <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
+                                                    <button class="btn btn-info" id="repeat-btn">重新发送<i class="fa fa-repeat"></i></button>
+                                                </div>
+                                                {{!-- <div class="validated">
+                                                    <h3 class="mb-lg" style="margin-top: 15px;">恭喜您，已完成账号验证</h3>
+                                                </div> --}}
+                                            </div>
+                                        </div>
+                                        <div class="description ml mr mt-n-md">
+                                            <ul class="pager wizard">
+                                                <li class="previous">
+                                                    <button class="btn btn-primary pull-left"><i class="fa fa-caret-left"></i> 上一步</button>
+                                                </li>
+                                                <li class="next">
+                                                    <button class="btn btn-primary" >下一步 <i class="fa fa-caret-right"></i></button>
+                                                    <a id="ignore">跳过 <i class="fa fa-caret-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="password-s" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="密码" >
+                        </section>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-forget-psw">
+                        <section class="widget">
+                            <div class="body">
+                                <div id="find-psw" class="form-wizard">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="find-psw1">
+                                            <form class="form-horizontal mt-md" action='' method="POST">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <!-- Email -->
+                                                        <div class="col-md-8 col-sm-8 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                                            <input type="text" id="email-forget" name="email-forget"
+                                                                   placeholder="输入注册邮箱" class="form-control">
+                                                            <p class="validate-message text-warning">账号输入有误或不存在</p>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane"  id="find-psw2">
+                                            <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
+                                                <div class="validating">
+                                                    <h4 class="mb-lg" style="margin-top: 5px;padding-top: 0px;">密码重置邮件已发送至&nbsp;chengmo@oneapm.com</h4>
+                                                    <p class="mb-lg">若未收到验证邮件，请检查您的垃圾邮箱或</p>
+                                                    <button class="btn btn-info" id="repeat-send">重新发送<i class="fa fa-repeat"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description ml mr mt-n-md">
+                                            <ul class="pager wizard">
+                                                <li class="next">
+                                                    <button class="btn btn-primary" id="mail-find-psw">提交 <i class="fa fa-caret-right"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="passwordRepeat" type="password" class="form-control input-lg input-transparent"
-                                           placeholder="确认密码">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="name" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="姓名">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="company" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="企业名称">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="phone" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="联系方式">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup">
-                                    <input id="qq" type="text" class="form-control input-lg input-transparent"
-                                           placeholder="QQ号">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group input-group-lg myInputGroup home-button">
-                                    <input id="signButton" type="button" class="input-lg input-transparent login-button"
-                                           value="注册">
-                                </div>
-                            </div>     
-                        </fieldset>
-                    </form>
-
-                </div>
-                
+                        </section>    
+                    </div>
+               </div>               
             </div>
         </div>
         <div class="home-footer">
@@ -362,6 +525,20 @@
             <li class="divider"></li>
             <li><a href="#"><span>条款与条件</span></a></li>
         </ul>
+    </div>
+    <div class="news">
+        <div class="news-light">
+            <p><i class="iconfont icon1" style="margin-right: 5px;">&#xe639;</i> 最近更新</p>
+        </div>
+        <div class="news-content">
+           <ul class="news-lists">
+                <li><span class="news-time">2015-04-23</span><a href="#" class="pull-right">Java Agent 更新至 v3.1.1</a></li>
+                <li><span class="news-time">2015-03-13</span><a href="#" class="pull-right">Node.js Agent 更新至 v3.1.0</a></li>
+                <li><span class="news-time">2015-01-23</span><span class="pull-right">Python Agent 更新至 v2.1.1</span></li>
+                <li><span class="news-time">2015-01-23</span><span class="pull-right">iOS Agent 更新至 v1.1.1</span></li>
+                <li><span class="news-time">2015-01-23</span><a href="#" class="pull-right">Android Agent 更新至 v3.1.1</a></li>
+           </ul>
+        </div>
     </div>
 
     <div class="loader-wrap hiding hide">

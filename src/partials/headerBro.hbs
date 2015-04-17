@@ -74,87 +74,17 @@
 
 <header class="page-header">
     <div class="navbar">
-           
-        
         <ul class="nav navbar-nav" style="float:left;" id="nav-left">
             <li id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
-                    <i class="iconfont icon3">&#xe603;</i>
-                    <span class="go_button">浏览器</span>
+                    <i class="iconfont icon3">&#xe63b;</i>
+                    <span class="go_button">Browser Insight</span>
                     <i id="icon_down" class="iconfont icon2">&#xe610;</i>
-                    <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i>
-                    
+                    <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i>  
                 </button>
-
-                <div id="goHome-content" class="dropdown-menu goHome-content">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="application_list.html" >
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe606;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>应用程序</span></div>
-                                </div>
-                                
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="broswer_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe603;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>浏览器</span></div>
-                               </div>
-                                
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="keytransaction_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe602;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>关键事务</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="mob_list.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i id="itemCon" class="icon iconfont">&#xe604;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>移动应用</span></div>
-                                </div>
-                                
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav">
-                                <div id="noItem" class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe617;</i>
-                                        <i id="iconplus" class="iconfont iconplus">&#xe634;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>服务器</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <a role="button" class="firNav" href="account.html">
-                                <div class="firNav_content">
-                                    <div class="firNav_icon">
-                                        <i class="icon iconfont">&#xe605;</i>
-                                    </div>
-                                    <div class="firNav_title"><span>系统设置</span></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                {{#block "dashboardHeader"}}
+                    {{> dashboardHeader }}
+                {{/block}}
             </li>
             <li id="divider" class="divider"></li>
             <li class="dropdown goHome" id="appList">
@@ -193,7 +123,7 @@
 
         </ul>
         <ul class="nav navbar-nav navbar-right pull-right" id="nav-right">
-            <li class="hidden-xs">                 
+            <li class="hidden-xs">             
                 <a href="#" id="settings" title="Settings" data-toggle="popover1" data-placement="bottom" 
                 style="width: 31px;">                     
                     <i class="iconfont icon-setting"> &#xe61e;</i>              
@@ -213,9 +143,10 @@
                 <ul id="account-menu" class="dropdown-menu account" role="menu">
                    
                     <li role="presentation">
-                        <a href="form_account.html" class="link">
+
+                        <a href="user.html" class="link">
                             <i class="iconfont icon2 icon-user"> &#xe623;</i>
-                            账户设置
+                            个人中心
                         </a>
                     </li>
                     <li role="presentation">

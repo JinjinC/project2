@@ -525,6 +525,7 @@ position: absolute;
         margin: 10px 5px;
         text-align: center;
         width: 80px;
+        min-height: 121px;
   }
   
 
@@ -539,13 +540,17 @@ position: absolute;
     margin-bottom: 5px;
    
 
-    & > .iconfont{
+    & .iconfont{
       font-size: 50px;
        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5))); 
       &:hover,
       &:focus{
         color: #aaa;
       }
+    }
+    & .product-icon{
+      font-size: 70px;
+      line-height: 1;
     } 
   }
   .firNav_icon:hover,
@@ -585,7 +590,8 @@ position: absolute;
   .goHome{
     color: rgba(51, 51, 51, 0.5);
     padding: 8px 0px;
-    width: 120px;
+    width: auto;
+    padding-right: 10px;
     height: 38px;
     background-color: rgba(0, 0, 0, 0);
     border:0;
@@ -596,8 +602,9 @@ position: absolute;
 
     & > .go_button{
       font-weight: bold;
-      padding-right: 6px;
+      padding: 0 6px;
       font-size: 17px;
+      vertical-align: text-bottom;
       @media(max-width: 560px){
         display: none;
       }
@@ -607,6 +614,9 @@ position: absolute;
       color: white;
     }
 
+  }
+  .header-icon{
+      font-size: 30px;
   }
   .go_img{
       width: 8px;
@@ -1160,6 +1170,13 @@ legend + .control-group {
 .form-wizard{
   .progress{
     margin-bottom: 10px;
+  }
+  & .tab-pane{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  & .previous{
+    display: none;
   }
 }
 

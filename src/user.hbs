@@ -1,0 +1,140 @@
+{{#extend "layoutUser"}}
+	{{#replace "sidebar"}}
+	    <div class="sidebar-hidden">
+	        {{> sidebar this conditionClass=conditionClass active="user"}}
+	    </div>
+	{{/replace}}
+
+    {{#replace "app_content"}}
+    	<div style="margin-left: -185px;">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+			        <h2 class="page-title"><span>个人中心 <small>查看或修改个人信息</small></span></h2>
+			    </div>
+			</div>
+    		<div class="row">
+    			<div class="col-lg-12 col-md-12 col-sm-12">
+    				<section class="widget user-info">
+    					<div class="row">
+    						<div class="col-lg-4 col-md-4 col-sm-4">
+		    					<div class="form-section">
+		    						<legend class="section">账户<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+		    						<div class="form-group">
+		    							<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="Jerry">
+		    						</div>
+		    						<div class="form-group">
+			    						<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="liuyuanli@oneapm.com">
+			    					</div>
+		    					</div>
+    							<div class="form-section">
+    								<legend class="section">密码<span class="edit-text pull-right psw-edit">修改</span><span class="save-text pull-right psw-save">保存</span></legend>
+    								<div class="before-edit">
+    									<div class="form-group">
+    										<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled"  value="11111">
+    									</div>
+    								</div>
+    								<div class="editing">
+	    								<div class="form-group">
+	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="输入原密码">
+	    								</div>
+	    								<div class="form-group">
+	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="输入新密码">
+	    								</div>
+	    								<div class="form-group">
+	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="重复密码">
+	    								</div>
+    								</div>
+    							</div>
+    							<div class="form-section">
+    								<legend class="section">企业信息<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+    								<div class="form-group">
+    									<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="OneAPM">
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-lg-4 col-md-4 col-sm-4">
+    							<div class="form-section">
+    								<legend class="section">账户类型</legend>
+    								<label class="text-success">免费用户</label>
+    							</div>
+    							<div class="form-section">
+    								<legend class="section">授权信息</legend>
+    								<label class="text-warning">5天后，OneAPM免费试用到期</label>
+    							</div>
+    						</div>
+    						<div class="col-lg-4 col-md-4 col-sm-4">
+    							<div class="form-section">
+    								<legend class="section">使用情况</legend>
+    								<div class="agent">
+    									<p class="agent-title">已使用产品</p>
+    									<ul>
+    										<li>java</li>
+    										<li>ruby</li>
+    										<li>python</li>
+    									</ul>
+    								</div>
+    								<div class="agent-num pull-right">
+    									<p class="num-title">有效agent数量</p>
+    									<ul>
+    										<li>1</li>
+    										<li>2</li>
+    										<li>0</li>
+    									</ul>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</section>
+    			</div>
+    		</div>
+    		<div class="navbar in-footer" style="display:block;">
+    		    <ul >
+    		        <li><a href="#"><span>官方网站</span></a></li>
+    		        <li class="divider"></li>
+    		        <li><a href="#"><span>帮助中心</span></a></li>
+    		        <li class="divider"></li>
+    		        <li><a href="#"><span>客户隐私政策</span></a></li>
+    		        <li class="divider"></li>
+    		        <li><a href="#"><span>条款与条件</span></a></li>
+    		    </ul>
+    		</div>
+    	</div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+    <script>
+    	$(document).ready(function  () {
+
+    		$('#nav-right>li:eq(0)').hide();
+            $('#nav-right>li:eq(1)').hide();
+    		//点击修改
+    		$('.edit-text').click(function  () {
+
+    			$(this).next().show();
+    			$(this).hide();
+    			var input = $(this).parentsUntil(".form-section").parent().find("input");
+    			input.removeAttr("disabled");
+    			input.first().focus();
+    		});
+    		//点击保存
+    		$('.save-text').click(function  () {
+    			$(this).prev().removeAttr("style");
+    			$(this).hide();
+    			var input = $(this).parentsUntil(".form-section").parent().find("input");
+    			input.attr("disabled","disabled");
+    		})
+
+    		//密码修改
+    		$('.psw-edit').click(function  () {
+    			$('.editing').show();
+    			$('.before-edit').hide();
+    		});
+
+    		$('.psw-save').click(function  () {
+    			$('.editing').hide();
+    			$('.before-edit').show();
+    		});
+    	});
+    </script>
+    {{/append}}
+{{/extend}}

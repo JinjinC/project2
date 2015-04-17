@@ -1,41 +1,53 @@
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav">
-         <li class="panel {{conditionClass "active" active "overviewMob interMob devMob OSMob crashMob"}}">
-            <a class="accordion-toggle {{conditionClass "" active "overviewMob interMob devMob OSMob crashMob" true}}" data-toggle="collapse"href="#forms-collapse"><i class="iconfont icon-side">&#xe627;</i> <span class="name">应用</span></a>
-            <ul id="forms-collapse" class="panel-collapse in collapse {{conditionClass "in" active "overviewMob interMob devMob OSMob crashMob"}}">
+
+         <li class="panel {{conditionClass "active" active "overviewMob interMob crashMob"}}">
+            <a class="accordion-toggle {{conditionClass "" active "overviewMob interMob crashMob" true}}" data-toggle="collapse"href="#forms-collapse"><i class="iconfont icon-side">&#xe627;</i> <span class="name">应用</span></a>
+            <ul id="forms-collapse" class="panel-collapse in collapse {{conditionClass "in" active "overviewMob interMob crashMob"}}">
                 <li class="{{conditionClass "active" active "overviewMob"}}"><a href="overviewMob.html">总览</a></li>
-                <li class="{{conditionClass "active" active "interMob"}}"><a href="interMob.html">Interactions</a></li>
-                <li class="{{conditionClass "active" active "devMob"}}"><a href="devMob.html">设备</a></li>
-                <li class="{{conditionClass "active" active "OSMob"}}"><a href="OSMob.html">OS</a></li>
-                <li class="{{conditionClass "active" active "crashMob"}}"><a href="crashMob.html">崩溃</a></li>
+                <li class="{{conditionClass "active" active "interMob"}}"><a href="interMob.html">交互</a></li>
+                <li class="{{conditionClass "active" active "crashMob"}}"><a href="crashMob.html">崩溃列表</a></li>
             </ul>
         </li>
 
-        <li class="panel {{conditionClass "active" active "topoMob reqMob errMob geoMob opMob"}}">
-            <a class="accordion-toggle {{conditionClass "" active "topoMob reqMob errMob geoMob opMob" true}}" data-toggle="collapse" href="#stats-collapse"><i class="iconfont icon-side">&#xe625;</i> <span class="name">网络</span></a>
-            <ul id="stats-collapse" class="panel-collapse in collapse {{conditionClass "in" active "topoMob reqMob errMob geoMob opMob"}}">
-                <li class="{{conditionClass "active" active "topoMob"}}"><a href="topoMob.html">拓扑</a></li>
+
+        <li class="panel {{conditionClass "active" active "topoMob reqMob errMob"}}">
+            <a class="accordion-toggle {{conditionClass "" active "topoMob reqMob errMob" true}}" data-toggle="collapse" href="#stats-collapse"><i class="iconfont icon-side">&#xe625;</i> <span class="name">网络</span></a>
+            <ul id="stats-collapse" class="panel-collapse in collapse {{conditionClass "in" active "topoMob reqMob errMob"}}">
+                <li class="{{conditionClass "active" active "topoMob"}}"><a href="topoMob.html">拓扑图</a></li>
                 <li class="{{conditionClass "active" active "reqMob"}}"><a href="reqMob.html">请求</a></li>
                 <li class="{{conditionClass "active" active "errMob"}}"><a href="errMob.html">错误</a></li>
-                <li class="{{conditionClass "active" active "geoMob"}}"><a href="geoMob.html">地理</a></li>
-                <li class="{{conditionClass "active" active "opMob"}}"><a href="opMob.html">运营商</a></li>
-               
             </ul>
         </li>
         
-        <li class="panel {{conditionClass "active" active "versMob"}}">
-            <a class="accordion-toggle {{conditionClass "" active "versMob" true}}" data-toggle="collapse"
-                href="#ui-collapse"><i class="iconfont icon-side">&#xe632;</i> <span class="name">运营</span></a>
-            <ul id="ui-collapse" class="panel-collapse in collapse {{conditionClass "in" active "versMob"}}">
+
+        <li class="panel {{conditionClass "active" active "geoMob opMob versMob OSMob devMob dayAct"}}">
+            <a class="accordion-toggle {{conditionClass "" active "geoMob opMob versMob OSMob devMob dayAct" true}}" data-toggle="collapse" href="#ui-collapse"><i class="iconfont icon-side">&#xe632;</i> <span class="name">运营</span></a>
+            <ul id="ui-collapse" class="panel-collapse in collapse {{conditionClass "in" active "geoMob opMob versMob OSMob devMob dayAct"}}">
+                <li class="{{conditionClass "active" active "geoMob"}}"><a href="geoMob.html">地域</a></li>
+                <li class="{{conditionClass "active" active "opMob"}}"><a href="opMob.html">运营商</a></li>
                 <li class="{{conditionClass "active" active "versMob"}}"><a href="versMob.html">应用版本</a></li>
+                <li class="{{conditionClass "active" active "OSMob"}}"><a href="OSMob.html">操作系统</a></li>
+                <li class="{{conditionClass "active" active "devMob"}}"><a href="devMob.html">设备</a></li>
+                <li class="{{conditionClass "active" active "dayAct"}}"><a href="dayAct.html">日活</a></li>
             </ul>
         </li>
 
-        <li class="panel {{conditionClass "active" active "infoMob"}}">
-            <a class="accordion-toggle {{conditionClass "" active "infoMob" true}}" data-toggle="collapse"
-                href="#info-collapse"><i class="iconfont icon-side">&#xe618;</i> <span class="name">设置</span></a>
-            <ul id="info-collapse" class="panel-collapse in collapse {{conditionClass "in" active "infoMob"}}">
+
+        <li class="panel {{conditionClass "active" active "conAnaly keyElem"}}">
+            <a class="accordion-toggle {{conditionClass "" active "conAnaly keyElem" true}}" data-toggle="collapse" href="#analyse"><i class="iconfont icon-side">&#xe618;</i> <span class="name">分析</span></a>
+            <ul id="analyse" class="panel-collapse in collapse {{conditionClass "in" active "conAnaly keyElem"}}">
+                <li class="{{conditionClass "active" active "conAnaly"}}"><a href="conAnaly.html">组合分析</a></li>
+                <li class="{{conditionClass "active" active "keyElem"}}"><a href="keyElem.html">关键元素</a></li>
+            </ul>
+        </li>
+
+        <li class="panel {{conditionClass "active" active "infoMob alarmMob"}}">
+            <a class="accordion-toggle {{conditionClass "" active "infoMob alarmMob" true}}" data-toggle="collapse"
+                href="#info-collapse"><i class="fa fa-cogs"></i> <span class="name">设置</span></a>
+            <ul id="info-collapse" class="panel-collapse in collapse {{conditionClass "in" active "infoMob alarmMob"}}">
                 <li class="{{conditionClass "active" active "infoMob"}}"><a href="infoMob.html">应用信息</a></li>
+                <li class="{{conditionClass "active" active "alarmMob"}}"><a href="alarmMob.html">报警设置</a></li>
             </ul>
         </li>
 
@@ -44,9 +56,9 @@
             <ul id="dashboard" class="panel-collapse in collapse {{conditionClass "in" active "dashboard1 dashboard2 dashboard3 dashboard4"}}">
                 <li class="{{conditionClass "active" active "dashboard1"}}"><a href="dashboard1.html">仪表盘1</a></li>
                 <li class="{{conditionClass "active" active "dashboard2"}}"><a href="dashboard2.html">仪表盘2</a></li>
-                <li class="{{conditionClass "active" active "dashboard3"}}"><a href="dashboard3.html">仪表盘3</a></li>
+               {{!--  <li class="{{conditionClass "active" active "dashboard3"}}"><a href="dashboard3.html">仪表盘3</a></li>
                 <li class="{{conditionClass "active" active "dashboard4"}}"><a href="dashboard4.html">未命名仪表盘</a></li>
-
+ --}}
             </ul>
         </li>
         

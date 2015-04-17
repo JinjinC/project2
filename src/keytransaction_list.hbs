@@ -376,6 +376,10 @@
             $('#divider1').hide();
             $("li").tooltip();
 
+            $('.visible-xs').removeClass('visible-xs').hide();
+            $('#account').parent().removeClass('hidden-xs');
+            $('#account span').removeClass('hidden-xs');
+
             $('th').click(function(e){
                 var a = $(this).find('.sortedup');
                 var b = $(this).find('.sorteddown');
