@@ -86,8 +86,8 @@
   font-weight: bold;
   color: rgb(60, 60, 60);
   position: absolute;
-  left: 40px;
-  top: 23px;
+  left: 21px;
+  top: 22px;
   font-size:37px !important;
   &:hover,
   &:focus{
@@ -192,7 +192,8 @@
 }
 .conMess{
   position:absolute; 
-  top: -109px;
+  top: -100px;
+  left: 0;
   width: 226px;
   height: 106px;
   font-family: "Open Sans","Hiragino Sans GB","Microsoft Yahei", sans-serif;
@@ -200,11 +201,11 @@
   display:none;
 }
 .conList{
-  width: 190px;
   height: 200px;
-  top: -92px;
+  top: -172px;
 }
-.icon-alert:hover .conMess{
+.icon-alert:hover .conMess,
+.icon-users:hover .conMess {
   display: block;
 }
 
@@ -259,6 +260,7 @@
   text-align: left;
 }
 .altUser{
+  position: relative;
   padding-top: 7px;
   padding-bottom: 15px;
 }
