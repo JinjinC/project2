@@ -9,7 +9,7 @@
     {{#replace "app_content"}}
     <div style="margin-left: -185px;">
          <div class="row">
-             <div class="col-lg-5 col-md-5">
+             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                  <h2 class="page-title">
                  <span>应用程序 <small>app 信息</small></span>
                  </h2>
@@ -17,78 +17,282 @@
          </div>
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <section class="widget">
-                        <div class="body no-margin">
-                            <table class="table no-margin sources-table">
-                                <thead>
-                                    <tr>
-                                        <th width="52%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">名称</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th class="sortedth" width="10%" style="text-align: left;">
-                                            <span class="sortedtext">应用包名</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th class="sortedth" width="10%" style="text-align: left;">
-                                            <span class="sortedtext">创建时间</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th class="sortedth" width="15%" style="text-align: left;">
-                                            <span class="sortedtext">活跃会话数-今天</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th class="sortedth" width="10%" style="text-align: left;">
-                                            <span class="sortedtext">昨天</span>
-                                            <i class="sortedup" style="display:none"></i>
-                                            <i class="sorteddown" style="display:none"></i>
-                                        </th>
-                                        <th width="3%"></th>
-                                    </tr>
-                                </thead>
+                            <div class="body no-margin">
+                                <table class="table no-margin sources-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="22%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">应用名称</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="10%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">活跃版本</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="10%" style="text-align: left;">
+                                                <span class="sortedtext">包名</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="10%" style="text-align: left;">
+                                                <span class="sortedtext">崩溃率</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="15%" style="text-align: left;">
+                                                <span class="sortedtext">HTTP 请求吞吐率</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="10%" style="text-align: left;">
+                                                <span class="sortedtext">HTTP 错误率</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="10%" style="text-align: left;">
+                                                <span class="sortedtext">网络错误率</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="10%" style="text-align: left;">
+                                                <span class="sortedtext">活跃设备数</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="3%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tre">
+                                            <td ><a href="overviewMob.html">for android</a></td>
+                                            <td >2</td>
+                                            <td >com.tom.by</td>
+                                            <td >4%</td>
+                                            <td >1.5rpm</td>
+                                            <td >0%</td>
+                                            <td >0%</td>
+                                            <td >20</td>                                  
+                                            <td style="text-align: center !important; padding: 8px 0">
+                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                    <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </a>
+                                            </td>
+                                        </tr> 
+                                        <tr class="tre">
+                                            <td ><a href="overviewMob.html">android版本</a></td>
+                                            <td >5</td>
+                                            <td >com.aa.w</td>
+                                            <td >6%</td>
+                                            <td >2rpm</td>
+                                            <td >2%</td>
+                                            <td >1%</td>
+                                            <td >100</td>                                  
+                                            <td style="text-align: center !important; padding: 8px 0">
+                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                    <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </a>
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                         <h2 class="page-title">
+                            <span>仪表盘</span><small>仪表盘信息</small>
+                            <a href="#" data-toggle="modal" data-target="#mydashboard">
+                                <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
+                                    添加仪表盘
+                                </button>
+                            </a>
+                         </h2>
+                     </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <section class="widget">
+                            <div class="body no-margin">
+                                <table class="table no-margin sources-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="30%" style="text-align: left;" class="sortedth">
+                                                <span class="sortedtext">名称</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="30%" style="text-align: left;">
+                                                <span class="sortedtext">创建时间</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th class="sortedth" width="37%" style="text-align: left;">
+                                                <span class="sortedtext">更新信息</span>
+                                                <i class="sortedup" style="display:none"></i>
+                                                <i class="sorteddown" style="display:none"></i>
+                                            </th>
+                                            <th width="3%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tre">
+                                            <td ><a href="dashboard1.html">仪表盘 1</a></td>
+                                            <td >2 小时前</td>
+                                            <td >blue@oneapm.com 15分钟前更新</td>
+                                            <td style="text-align: center !important; padding: 8px 0">
+                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                    <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </a>
+                                            </td>
+                                        </tr> 
+                                        <tr class="tre">
+                                            <td ><a href="dashboard2.html">仪表盘 2</a></td>
+                                            <td >3 小时前</td>
+                                            <td >blue@oneapm.com 15分钟前更新</td>
+                                            <td style="text-align: center !important; padding: 8px 0">
+                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                    <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
+                                                    </i>
+                                                </a>
+                                            </td>
+                                        </tr> 
+                                         
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <section class="widget widget-tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#All" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60d;</i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                <a href="#breaktime" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe607;</i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" title="通知">
+                                <a href="#notify" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60c;</i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" title="严重问题">
+                                <a href="#issue" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe608;</i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" title="宕机">
+                                <a href="#warm" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60a;</i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" title="注释">
+                                <a href="#notes" data-toggle="tab" class="tabIcon"><i class="iconfont icon1">&#xe60b;</i></a>
+                            </li>
+                            
+                        </ul>
+                    </header>
+                    <div class="body tab-content">
+                        <div id="All" class="tab-pane active clearfix">
+                            <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>今天</strong></h5>
+                                </div>
                                 <tbody>
-                                    <tr class="tre">
-                                        <td ><a href="overviewMob.html">for android</a></td>
-                                        <td >0 ms</td>
-                                        <td >0.0</td>
-                                        <td >0.0</td>
-                                        <td >0.00%</td>                                  
-                                        <td style="text-align: center !important; padding: 8px 0">
-                                            <a href="#" data-toggle="modal" data-target="#myModal">
-                                                <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
-                                                </i>
-                                            </a>
+                                    <tr>
+                                        <td class="warmtime" width="10%">15:58</td>
+                                        <td width="10%" class="warmicon">
+                                            <i class="iconfont icon1">&#xe608;</i>
                                         </td>
-                                    </tr> 
-                                    <tr class="tre">
-                                        <td ><a href="overviewMob.html">android版本</a></td>
-                                        <td >0 ms</td>
-                                        <td >0.0</td>
-                                        <td >0.0</td>
-                                        <td >0.00%</td>                                  
-                                        <td style="text-align: center !important; padding: 8px 0">
-                                            <a href="#" data-toggle="modal" data-target="#myModal">
-                                                <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
-                                                </i>
-                                            </a>
+                                        <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="warmtime">15:56</td>
+                                        <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                        <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                    </tr>  
+                                    <tr>
+                                        <td class="warmtime">15:54</td>
+                                        <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                        <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="warmtime">15:28</td>
+                                        <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                        <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                    </tr>                                          
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div id="breaktime" class="tab-pane">
+                            <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>还没有事件</strong></h5>
+                                </div>
+                            </table>
+                        </div>
+                        <div id="notify" class="tab-pane">
+                            <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>还没有事件</strong></h5>
+                                </div>
+                            </table>
+                        </div>
+                        <div id="issue" class="tab-pane">
+                            <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>今天</strong></h5>
+                                </div>
+                                <tbody>
+                                    <tr>
+                                        <td class="warmtime" width="10%">15:58</td>
+                                        <td width="10%" class="warmicon">
+                                            <i class="iconfont icon1">&#xe608;</i>
                                         </td>
-                                    </tr> 
-                                     
+                                        <td width="80%">应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="warmtime">15:56</td>
+                                        <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                        <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分5分钟内小于0.7</td>
+                                    </tr>  
+                                    <tr>
+                                        <td class="warmtime">15:54</td>
+                                        <td class="warmicon"><i class="iconfont icon1">&#xe608;</i</td>
+                                        <td >应用 Java-app-a 的Agent java:app187:80(10.133.197.33) Apdex得分10分钟内小于0.85</td>
+                                    </tr>                                      
                                 </tbody>
                             </table>
                         </div>
-                    </section>
-                         
-
+                        <div id="warm" class="tab-pane">
+                            <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>还没有事件</strong></h5>
+                                </div>
+                            </table>
+                        </div>
+                        <div id="notes" class="tab-pane">
+                            <table class="table sources-table no-margin" style="margin-top: 8px !important;">
+                                <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
+                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                    <h5><strong>还没有事件</strong></h5>
+                                </div>
+                            </table>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
 
@@ -107,6 +311,42 @@
                                        <div class="row">
                                             <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
                                                 <label for="account-name" class="control-label">输入app名称</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger pull-left">隐藏</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+        <div id="mydashboard" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">添加仪表盘</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="account-name" class="control-label">输入仪表盘名称</label>
                                             </div>
                                             <div class="col-sm-6 col-lg-6 col-md-6">
                                                 <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
