@@ -1,9 +1,194 @@
+////********Icon*******/////////
+.iconfont{
+  font-family:"iconfont";
+  font-size:40px;
+  font-style:normal;
+}
+.icon1{
+  font-size: 19px;
+  &.success{
+    color: rgb(86, 188, 118);
+  }
+  &.danger{
+    color:#e5603b;
+  }
+  &.warning{
+    color:#eac85e;
+  }
+}
+.icon2{
+  font-size: 12px;
+  &.success{
+    color: rgb(86, 188, 118);
+  }
+  &.outdate{
+    color: rgb(234, 200, 94);
+  }
+  &.danger{
+    color:#e5603b;
+  }
+  &.wait{
+    color: rgb(74, 121, 147);
+  }
+  &.trash{
+    font-size: 19px;
+    color: #9F9F9F;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited{
+      color: white;
+    }
+  }
+  &.setting{
+    font-size: 14px;
+    line-height: 15px;
+    color: #9F9F9F;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited{
+      color: white;
+    }
+  }
+  
+  &.expand{
+    cursor: pointer;
+    color: #9F9F9F;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited{
+      color: white;
+    }
+  }
+  &.icon-clock{
+    vertical-align: middle;
+  }
+  &.icon-user{
+
+  }
+  &.icon-refresh{
+    font-size: 14px;
+  }
+
+}
+.icon2-dd{
+  font-size: 12px;
+  float: right; 
+  margin:2px -4px 0 5px;
+}
+.icon3{
+  font-size: 21px;
+}
+.iconplus{
+  display: none;
+  font-weight: bold;
+  color: rgb(60, 60, 60);
+  position: absolute;
+  left: 40px;
+  top: 23px;
+  font-size:37px !important;
+  &:hover,
+  &:focus{
+    color: #767676 !important;
+    cursor: pointer;
+  }
+}
+
+.iconlogo{
+  font-size: 70px; 
+  line-height: 2.1;
+  margin-left: 20px;
+
+  @media(max-width: 768px) {
+    line-height: 0.4;
+    margin-left: 5px;
+  }
+  color:rgba(51, 51, 51, 0.5);
+
+  &:hover,
+  &:focus{
+    color: white;
+  }
+}
+.icon-side {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  width: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  opacity: 0.4;
+  text-align: right;
+  font-weight: 300;
+}
+.icon-file {
+  width: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.icon-users {
+  float: right;
+  margin-top: 8px;
+  font-size: 18px;
+  &:hover{
+    font-size: 18px;
+  }
+}
+.icon-setting {
+  float: right;
+  margin-top: 8px;
+  font-size: 18px;
+  &:hover{
+    font-size: 18px;
+  }
+}
+.icon-exclamation-sign{
+  font-size: 14px;
+}
+
+.sortedup{
+
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3em;
+  border: 0;
+  font-size: 10px ;
+}
+.sorteddown{
+
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3em;
+  border: 0;
+  font-size: 10px;
+}
+
+
+
+
 .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle{
   background: rgba(26, 26, 26, 0.4);
 }
 
 .icon-alert{
-  font-size: 19px;
+  font-size: 18px;
+}
+.icon-alert-small{
+  font-size: 14px;
+  color: #fff;
+}
+.icon-phone-small{
+  font-size: 14px;
+  margin-left: 10px; 
+  color:white;
 }
 .conMess{
   position:absolute; 
@@ -45,10 +230,9 @@
   display: inline-block;
 }
 
-
 .mob_dashboard{
   color: rgba(255, 255, 255, 0.45);
-  font-size: 14px;
+  font-size: 16px;
   float: right;
   display: none;
 }
@@ -233,38 +417,6 @@ td{
   }
 }
 
-.sortedup{
-
-  display: inline-block;
-  position: relative;
- 
-  width: 15px;
-  height: 15px;
-  margin-left: 0.3em;
-  border: 0;
-  content: "";
-  font: 15px FontAwesome;
-  &:before{
-    content: "\f0d8";
-  }
-}
-.sorteddown{
-
-  display: inline-block;
-  position: relative;
-  
-  width: 15px;
-  height: 15px;
-  margin-left: 0.3em;
-  border: 0;
-  content: "";
-  font: 15px FontAwesome;
-  &:before{
-    content: "\f0d7";
-  }
-}
-
-
 
 
 .trace-item{
@@ -387,7 +539,7 @@ td{
   background-color: transparent;
   margin-right: 10px;
   margin-left: 10px;
-  padding: 3px 7px 1px 7px;
+  padding: 0px 7px 0px 7px;
   border-color: #56bc76;
   &:hover,
   &:focus,
@@ -422,111 +574,7 @@ button.btn.dropdown-toggle.btn-choose{
   box-shadow:none;
   -webkit-box-shadow:none;
 }
-.iconfont{
-  font-family:"iconfont";
-  font-size:40px;
-  font-style:normal;
-}
-.icon1{
-  font-size: 19px;
-  &.success{
-    color: rgb(86, 188, 118);
-  }
-  &.danger{
-    color:#e5603b;
-  }
-  &.warning{
-    color:#eac85e;
-  }
-}
-.icon2{
-  font-size: 12px;
-  &.success{
-    color: rgb(86, 188, 118);
-  }
-  &.outdate{
-    color: rgb(234, 200, 94);
-  }
-  &.danger{
-    color:#e5603b;
-  }
-  &.wait{
-    color: rgb(74, 121, 147);
-  }
-  &.trash{
-    font-size: 19px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
-  &.setting{
-    font-size: 14px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
-  
-  &.expand{
-    cursor: pointer;
-    font-size: 12px;
-    color: #9F9F9F;
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited{
-      color: white;
-    }
-  }
 
-
-}
-.icon2-dd{
-  font-size: 12px;
-  float: right; 
-  margin:2px -4px 0 5px;
-}
-.icon3{
-  font-size: 21px;
-}
-.iconplus{
-  display: none;
-  font-weight: bold;
-  color: rgb(60, 60, 60);
-  position: absolute;
-  left: 43px;
-  top: 31px;
-  font-size:34px;
-  &:hover,
-  &:focus{
-    color: #767676;
-    cursor: pointer;
-  }
-}
-
-.iconlogo{
-  font-size: 70px; 
-  line-height: 2.1;
-  margin-left: 20px;
-
-  @media(max-width: 768px) {
-    line-height: 0.4;
-    margin-left: 5px;
-  }
-  color:rgba(51, 51, 51, 0.5);
-
-  &:hover,
-  &:focus{
-    color: white;
-  }
-}
 
 
 /***********************************/

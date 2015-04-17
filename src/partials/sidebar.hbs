@@ -1,7 +1,10 @@
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav">
          <li class="panel {{conditionClass "active" active "indexD topologyD transactionD sql externalD jvms"}}">
-            <a class="accordion-toggle {{conditionClass "" active "indexD topologyD transactionD sql externalD jvms" true}}" data-toggle="collapse"href="#forms-collapse"><i class="fa fa-eye"></i> <span class="name">监控</span></a>
+            <a class="accordion-toggle {{conditionClass "" active "indexD topologyD transactionD sql externalD jvms" true}}" data-toggle="collapse"href="#forms-collapse">
+                <i class="iconfont icon-side">&#xe61b;</i> 
+                <span class="name">监控</span>
+            </a>
             <ul id="forms-collapse" class="panel-collapse in collapse {{conditionClass "in" active "indexD topologyD transactionD sql externalD jvms"}}">
                 <li class="{{conditionClass "active" active "indexD"}}"><a href="indexD.html">总览</a></li>
                 <li class="{{conditionClass "active" active "topologyD"}}"><a href="topologyD.html">拓扑</a></li>
@@ -14,7 +17,10 @@
         </li>
 
         <li class="panel {{conditionClass "active" active "errorMessage profiler"}}">
-            <a class="accordion-toggle {{conditionClass "" active "errorMessage profiler" true}}" data-toggle="collapse" href="#stats-collapse"><i class="fa fa-flag"></i> <span class="name">事件</span></a>
+            <a class="accordion-toggle {{conditionClass "" active "errorMessage profiler" true}}" data-toggle="collapse" href="#stats-collapse">
+                <i class="iconfont icon-side">&#xe620;</i> 
+                <span class="name">事件</span>
+            </a>
             <ul id="stats-collapse" class="panel-collapse in collapse {{conditionClass "in" active "errorMessage profiler"}}">
                 <li class="{{conditionClass "active" active "errorMessage"}}"><a href="errorMessage.html">错误信息</a></li>
                 <li class="{{conditionClass "active" active "profiler"}}"><a href="profiler.html">性能剖析</a></li>
@@ -23,11 +29,17 @@
         </li>
         
         <li class="{{conditionClass "active" active "reportD"}}">
-            <a href="reportD.html"> <i class="fa fa-table"></i> <span class="name">报表</span></a>
+            <a href="reportD.html"> 
+                <i class="iconfont icon-side">&#xe622;</i> 
+                <span class="name">报表</span>
+            </a>
         </li>
         <li class="panel {{conditionClass "active" active "serverEn"}}">
             <a class="accordion-toggle {{conditionClass "" active "serverEn" true}}" data-toggle="collapse"
-                href="#ui-collapse"><i class="fa fa-cogs"></i> <span class="name">设置</span></a>
+                href="#ui-collapse">
+                <i class="iconfont icon-side">&#xe618;</i> 
+                <span class="name">设置</span>
+            </a>
             <ul id="ui-collapse" class="panel-collapse in collapse {{conditionClass "in" active "serverEn"}}">
                 <li class="{{conditionClass "active" active "serverEn"}}"><a href="serverEn.html">服务器环境</a></li>
             </ul>
