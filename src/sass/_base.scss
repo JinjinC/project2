@@ -540,13 +540,17 @@ position: absolute;
     margin-bottom: 5px;
    
 
-    & > .iconfont{
+    & .iconfont{
       font-size: 50px;
        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.5))); 
       &:hover,
       &:focus{
         color: #aaa;
       }
+    }
+    & .product-icon{
+      font-size: 70px;
+      line-height: 1;
     } 
   }
   .firNav_icon:hover,
@@ -598,8 +602,9 @@ position: absolute;
 
     & > .go_button{
       font-weight: bold;
-      padding-right: 6px;
+      padding: 0 6px;
       font-size: 17px;
+      vertical-align: text-bottom;
       @media(max-width: 560px){
         display: none;
       }
@@ -609,6 +614,9 @@ position: absolute;
       color: white;
     }
 
+  }
+  .header-icon{
+      font-size: 30px;
   }
   .go_img{
       width: 8px;

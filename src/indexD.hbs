@@ -64,9 +64,21 @@
                 <div class="col-md-12">
                     <section class="widget">
                         <header>
-                            <h4>
+                            <h4 >
                                 响应时间
+                                <ul class="show-type">
+                                    <li class="type-link active" data-toggle="tooltip" data-placement="top" title="叠加面积图">
+                                        <i class="icon iconfont" >&#xe642;</i>
+                                    </li>
+                                    <li class="type-link" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe641;</i>
+                                    </li>
+                                    <li class="type-link" title="正态分布曲线"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe643;</i>
+                                    </li>
+                                </ul>
                             </h4>
+                            
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
                                 <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
@@ -290,6 +302,17 @@
                         <header>
                             <h4>
                                 Apdex
+                                <ul class="show-type">
+                                    <li class="type-link active" data-toggle="tooltip" data-placement="top" title="叠加面积图">
+                                        <i class="icon iconfont" >&#xe642;</i>
+                                    </li>
+                                    <li class="type-link" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe641;</i>
+                                    </li>
+                                    <li class="type-link" title="正态分布曲线"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe643;</i>
+                                    </li>
+                                </ul>
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -310,6 +333,17 @@
                         <header>
                             <h4>
                                 吞吐量
+                                <ul class="show-type">
+                                    <li class="type-link active" data-toggle="tooltip" data-placement="top" title="叠加面积图">
+                                        <i class="icon iconfont" >&#xe642;</i>
+                                    </li>
+                                    <li class="type-link" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe641;</i>
+                                    </li>
+                                    <li class="type-link" title="正态分布曲线"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe643;</i>
+                                    </li>
+                                </ul>
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -506,6 +540,11 @@
             $('.trace-item').click(function(){
                 location.href="transactionD.html";
             })
+
+            $('.type-link').click(function  () {
+                $(this).parentsUntil('header').find('.type-link').removeClass("active");
+                $(this).addClass("active");
+            });
            
         </script>
         
