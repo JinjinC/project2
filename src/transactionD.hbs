@@ -565,7 +565,7 @@
                                     </thead>
                                     <tbody>
                                      <tr>
-                                        <td>SpringController/splits.do (GET)</td>
+                                        <td><a href="#" class="trace-name-in-transaction">SpringController/splits.do (GET)</a></td>
                                         <td>2015-02-05 16:00:44</td>
                                         <td>99,428ms</td>
                                         <td>java:app188:8090(10.133.197.33)</td>
@@ -581,7 +581,7 @@
 
             <div class="row float-card float-trace">
                 <div class="col-md-12">
-                    <section class="widget" style="min-height:800px;">
+                    <section class="widget trace-section" style="min-height:800px;">
                         <header>
                             <span class="float-card-title">Title</span>
                             <span class="glyphicon glyphicon-remove pull-right"></span>
@@ -959,8 +959,15 @@
                     $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
-                $('.float-card .glyphicon-remove').click(function  () {
-                    $('.float-card').hide();
+                // $('.float-card .glyphicon-remove').click(function  () {
+                //     $(this).pare('.float-card').hide();
+                //     $('.dd-handle').removeClass("active");
+                // });
+
+                //事件委托！！！！
+                $('.float-card').on('click', '.glyphicon-remove',function  (event) {
+                    $(this).closest('.float-card').hide();
+                    $('.float-trace').removeClass("float-trace-in-transaction");
                     $('.dd-handle').removeClass("active");
                 });
 
@@ -1046,11 +1053,21 @@
             //trace详细页面float-card
             $('.trace-name').click(function  () {
                 $('.float-trace').show().addClass("animated fadeInLeftBig");
+                setTimeout(function (){
+                                         $('.float-trace').removeClass("animated fadeInLeftBig");
+                                     },500);
             });
 
-            setTimeout(function (){
-                                     $('.float-trace').removeClass("animated fadeInLeftBig");
-                                 },500);
+            //事务详细页面中点击trace，float-card
+            $('.trace-name-in-transaction').click(function  () {
+                $('.float-trace').addClass("float-trace-in-transaction");
+                $('.float-trace').show().addClass("animated fadeInLeftBig");
+                setTimeout(function (){
+                                         $('.float-trace').removeClass("animated fadeInLeftBig");
+                                     },500);
+            });
+
+            
 
         </script>
         

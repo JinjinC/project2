@@ -1761,6 +1761,13 @@ a.tabIcon{
   
 }
 
+.float-trace-in-transaction{
+  top: 40px;
+  & .trace-section{
+    box-shadow: rgba(0, 0, 0, 0.29) 0 0 20px 10px;
+  }
+}
+
 .float-body {
 
   margin-top: 10px;
@@ -2147,11 +2154,19 @@ table .progress {
   margin-left: 10px;
 }
 
+.with-title{
+  margin-left: -5px;
+}
+
 .type-link{
   padding: 0 5px;
   color: rgba(51, 51, 51, 0.5);
   display: inline-block;
   cursor: pointer;
+  &>.disabled{
+    cursor: default;
+    color: #fff;
+  }
   &:hover{
     color: #fff;
   }
