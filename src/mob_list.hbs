@@ -148,7 +148,7 @@
                                             <td >2 小时前</td>
                                             <td >blue@oneapm.com 15分钟前更新</td>
                                             <td style="text-align: center !important; padding: 8px 0">
-                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                <a href="#" data-toggle="modal" data-target="#myModal1">
                                                     <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
                                                     </i>
                                                 </a>
@@ -159,7 +159,7 @@
                                             <td >3 小时前</td>
                                             <td >blue@oneapm.com 15分钟前更新</td>
                                             <td style="text-align: center !important; padding: 8px 0">
-                                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                                <a href="#" data-toggle="modal" data-target="#myModal1">
                                                     <i class="glyphicon glyphicon-cog icon2 setting" id="icon-setting" style="display:none">
                                                     </i>
                                                 </a>
@@ -331,6 +331,40 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div>
+        <div id="myModal1" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">修改APP名称</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="account-name" class="control-label">输入app名称</label>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                                <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
 
         <div id="mydashboard" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
@@ -359,7 +393,6 @@
                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger pull-left">隐藏</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
                         <button type="button" class="btn btn-success" id="btn-trans">确定</button>
                     </div>
