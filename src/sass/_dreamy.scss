@@ -2178,11 +2178,53 @@ table .progress {
   }
 }
 
+.word-bk {
+  word-break: break-all;
+}
 
+//按钮-点击显示内容
+.btn-show {
+  float:right;
+  background-color: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 4 10px;
+  margin-right: 13px;
+  transition: border-color 0.2s;
 
+  &:hover{
+    opacity: 0.65;
+    border: solid 1px #fff;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  &:focus, &:active{
+    border: solid 1px #fff;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+.click-show {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  .btn-show {
+    float: none;
+  }
+}
 
+.hide-section {
+  display: none;
+}
+.show-section {
+  display: block;
+}
 
-
-
-
-
+.chart-value {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-weight: bold;
+}

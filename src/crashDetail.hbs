@@ -1,0 +1,561 @@
+{{#extend "layoutMob"}}
+
+	{{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="crashMob"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-title" style="line-height: 1.2">
+                <a href="crashMob.html">
+                    <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top" style="margin-top:3px">
+                        <i class="iconfont icon3">&#xe612;</i>  
+                    </button>
+                </a>
+                <span>java.lang.IllegalStateException<small>ListView.java line 1562 in android.widget.ListView.layoutChildren()</small></span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="widget">
+                <div class="body no-margin">
+                    <div class="visits-info well well-sm well-cos">
+                        <div class="row">
+                            <div class="col-sm-1 hidden-xs">
+                            </div>
+                            <div class="col-sm-2  col-xs-6">
+                                <div class="key">应用版本</div>
+                                <div id="serve-value" class="value" style="margin-bottom:0;">1.1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">同类崩溃</div>
+                                <div class="value" style="margin-bottom:0;">1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">影响用户数</div>
+                                <div class="value" style="margin-bottom:0;">1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">最后发生时间</div>
+                                <div class="value" style="margin-bottom:0;">2015-01-30 12:07</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">状态</div>
+                                <div class="value btn-group" style="margin-bottom:0;">
+                                    <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
+                                        已解决
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">已解决</a></li>
+                                        <li><a href="#">未解决</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 hidden-xs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        崩溃次数
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart1" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        影响设备
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart2" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        影响 OS 版本
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart3" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="widget widget-tabs">
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#overview" data-toggle="tab" style="font-size:14px; font-weight: 500">堆栈信息</a>
+                        </li>
+                        <li>
+                            <a href="#threadPro" data-toggle="tab" style="font-size:14px; font-weight: 500">线程分析</a>
+                        </li>
+                        <li>
+                            <a href="#pre3" data-toggle="tab" style="font-size:14px; font-weight: 500">线程分析</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="body tab-content" style="padding:17px">
+                    <div id="overview" class="tab-pane active clearfix">
+                        <div class="body" style="background-color:transparent; padding:0">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <section class="widget user-info">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">发生时间</legend>
+                                                    <p>14-Apr-15 07:46:40 PM</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">异常信息</legend>
+                                                    <p style="word-break:break-all">java.lang.ArrayIndexOutOfBoundsException</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="form-section">
+                                                    <legend class="section">崩溃原因</legend>
+                                                    <p style="word-break:break-all">The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">APP 版本</legend>
+                                                    <p>1.5</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">反混淆</legend>
+                                                    <p>No ProGuard</p>
+                                                    <p>mapping.txt found</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <section class="widget inner-widget">
+                                        <header>
+                                            <h4>Thread - main</h4>
+                                        </header>
+                                        <div class="body" style="background-color:transparent;">
+                                            <table class="table table-striped table-hover no-margin sources-table">
+                                                <thead>
+                                                <tr>
+                                                    <th width="20%" style="text-align: left;" class="sortedth">
+                                                        <span class="sortedtext">包名</span>
+                                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                    </th>
+                                                    <th width="80%" style="text-align: left;" class="sortedth">
+                                                        <span class="sortedtext">详情信息</span>
+                                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>ListView.java line 1562 in android.widget.ListView.layoutChildren()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>AbsListView.java line 2148 in android.widget.AbsListView.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>RelativeLayout.java line 1076 in android.widget.RelativeLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1703 in android.widget.LinearLayout.setChildFrame()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1557 in android.widget.LinearLayout.layoutVertical()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="#" data-toggle="modal" data-target="#mydashboard">
+                                                <button type="button" class="btn btn-success btn-sm btn-hollow" style="float:left" data-placement="top" id="show-all">
+                                                    显示全部
+                                                </button>
+                                            </a>
+                                        </div> 
+                                    </div>
+                                    
+                                    <div id="show-content" style="display:none">
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>Thread - GCDaemon</h4>
+                                            </header>
+                                            <div class="body" style="background-color:transparent;">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="20%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">包名</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                            <th width="80%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">详情信息</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Object.java line -2 in java.lang.Object.wait()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Daemons.java line 341 in java.lang.Daemons$GCDaemon.run()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Thread.java line 818 in java.lang.Thread.run()</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>Thread - Thread-3507</h4>
+                                            </header>
+                                            <div class="body" style="background-color:transparent;">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="20%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">包名</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                            <th width="80%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">详情信息</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>Posix.java line -2 in libcore.io.Posix.poll()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>BlockGuardOs.java line 195 in libcore.io.BlockGuardOs.poll()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>IoBridge.java line 215 in libcore.io.IoBridge.isConnected()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.net</td>
+                                                            <td>PlainSocketImpl.java line 183 in java.net.PlainSocketImpl.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.net</td>
+                                                            <td>PlainSocketImpl.java line 456 in java.net.PlainSocketImpl.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp.internal</td>
+                                                            <td>Platform.java line 118 in com.android.okhttp.internal.Platform.connectSocket()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp</td>
+                                                            <td>Connection.java line 148 in com.android.okhttp.Connection.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp.internal.http</td>
+                                                            <td>HttpEngine.java line 276 in com.android.okhttp.internal.http.HttpEngine.connect()</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="threadPro" class="tab-pane clearfix">
+                        <div class="body" style="background-color:transparent; padding:0;">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="visits-info well well-sm" style="margin:0;margin-bottom:30px;">
+                                        <div class="row">
+                                            <div class="col-sm-3 hidden-xs">
+                                            </div>
+                                            <div class="col-sm-2  col-xs-4">
+                                                <div class="key">开始时间</div>
+                                                <div id="serve-value" class="value" style="margin-bottom:9px">2015-01-30 10:33</div>
+                                            </div>
+                                            <div class="col-sm-2 col-xs-4">
+                                                <div class="key"> 采集周期</div>
+                                                <div class="value" style="margin-bottom:9px">94分钟</div>
+                                            </div>
+                                            <div class="col-sm-2 col-xs-4">
+                                                <div class="key">采集次数</div>
+                                                <div class="value" style="margin-bottom:9px">30</div>
+                                            </div>
+                                            
+                                            <div class="col-sm-3 hidden-xs">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                     <section class="widget widget-tabs">
+                                        <header>
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a href="#timeDistr" data-toggle="tab" style="font-size:14px; font-weight: 500">时间分布图</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#CPU" data-toggle="tab" style="font-size:14px; font-weight: 500">CPU 消耗</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#threadLock" data-toggle="tab" style="font-size:14px; font-weight: 500">线程和锁</a>
+                                                </li>
+                                            </ul>
+                                        </header>
+                                        <div class="body tab-content">
+                                            <div id="timeDistr" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent; padding:0;">
+                                                    <section class="widget" style="background-color:transparent;min-height: 640px;padding:0;">
+                                                        <div>
+                                                            <span style="margin-right: 20px;font-size: 14px">显示设置</span>
+                                                            <div class="radio" style="display: inline-block; margin-right:20px;">
+                                                                 <input type="radio" name="radio3" id="radio5" value="option1" checked>
+                                                                 <label for="radio5">
+                                                                     web request
+                                                                 </label>
+                                                             </div>
+                                                             <div class="radio" style="display: inline-block;margin-right:10px;">
+                                                                 <input type="radio" name="radio3" id="radio6" value="option2">
+                                                                 <label for="radio6">
+                                                                     other
+                                                                 </label>
+                                                             </div>
+                                                             <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                                                <i class="iconfont icon2 refresh">&#xe61c;</i>
+                                                            </button>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div id="CPU" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent;">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div id="threadLock" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent;">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    {{/replace}}
+    {{#append "scripts"}}
+
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+       <!-- page specific libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery-ui/ui/core.js"></script>
+        <script src="lib/jquery-ui/ui/widget.js"></script>
+        <script src="lib/jquery-ui/ui/mouse.js"></script>
+        <script src="lib/jquery-ui/ui/sortable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+
+        <!-- page application js -->
+        <script src="js/component-list-groups.js"></script>
+        
+        <!-- page application js -->
+        <script src="js/graph/singlechart1.js"></script>
+        <script src="js/graph/singlechart2.js"></script>
+        <script src="js/graph/singlechart3.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-item').click(function  () {
+                    $('.dd-handle').removeClass("active");
+                    $(this).find('.dd-handle').addClass("active");
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                        $('.float-card').removeClass("animated fadeInLeftBig");
+                    },1000);
+                    $('.float-card-title').text($(this).find('.bar-text').text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function() {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+            });
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('#show-all').click(function(){
+                $('#show-all').hide();
+                $('#show-content').show();
+            })
+        </script>
+
+        
+    {{/append}}
+
+{{/extend}}

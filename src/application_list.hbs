@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <h2 class="page-title">
-                <span>应用程序<small>应用程序列表</small></span>
+                <span>应用程序<small>此列表为当前1小时内的数据</small></span>
                     <a href="add_application.html">
                         <button type="button" class="btn btn-success btn-sm btn-hollow" data-placement="top">
                             添加应用
@@ -61,14 +61,14 @@
         
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                 <section class="widget">
+                <section class="widget">
                     <div class="body no-margin">
                         <table class="table no-margin sources-table">
                             <thead>
                                 <tr>
                                     <th width="3%"></th>
                                     <th width="3%"></th>
-                                    <th width="48%" style="text-align: left;" class="sortedth">
+                                    <th width="40%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">名称</span>
                                         <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
                                         <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
@@ -88,8 +88,8 @@
                                         <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
                                         <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
                                     </th>
-                                    <th width="13%" style="text-align: left;">趋势</th>
-                                    <th width="3%"></th>
+                                    <th width="20%" style="text-align: left;">趋势</th>
+                                    <th width="4%"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -118,14 +118,14 @@
                                 <tr class="tre tre1" style="display: none;">
                                     <td width="3%"> </td>                                
                                     <td width="3%"></td>
-                                    <td width="46%">
+                                    <td width="40%">
                                         <a href="indexD.html" class="appItem" style="padding-left: 21px;">java:app187:80(10.133.197.33)</a>
                                     </td>
                                     <td width="10%">0 ms</td>
                                     <td width="10%">0.0</td>
                                     <td width="10%">0.00%</td>
-                                    <td width="13%"></td>
-                                    <td width="3%" style="text-align: center !important; padding: 8px 0">
+                                    <td width="20%"></td>
+                                    <td width="4%" style="text-align: center !important; padding: 8px 0">
                                         <a href="#" data-toggle="modal" data-target="#myModal">
                                             <i class="iconfont icon2 setting" style="display:none">
                                             &#xe61e;</i>
@@ -187,14 +187,14 @@
                                 <tr class="tre tre2" style="display: none;">
                                     <td width="3%"> </td>                                
                                     <td width="3%"></td>
-                                    <td width="46%">
+                                    <td width="40%">
                                         <a href="indexD.html" class="appItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java:app187:80(10.133.197.33)</a>
                                     </td>
                                     <td width="10%">0 ms</td>
                                     <td width="10%">0.0</td>
                                     <td width="10%">0.00%</td>
-                                    <td width="13%"></td>
-                                    <td width="3%" style="text-align: center !important; padding: 8px 0">
+                                    <td width="20%"></td>
+                                    <td width="4%" style="text-align: center !important; padding: 8px 0">
                                         <a href="#" data-toggle="modal" data-target="#myModal">
                                             <i class="iconfont icon2 setting" style="display:none">
                                             &#xe61e;</i>
@@ -224,14 +224,14 @@
                                 <tr class="tre tre3" style="display: none;">
                                     <td width="3%"> </td>                                
                                     <td width="3%"></td>
-                                    <td width="46%">
+                                    <td width="40%">
                                         <a href="indexD.html" class="appItem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java:app187:80(10.133.197.33)</a>
                                     </td>
                                     <td width="10%">0 ms</td>
                                     <td width="10%">0.0</td>
                                     <td width="10%">0.00%</td>
-                                    <td width="13%"></td>
-                                    <td width="3%" style="text-align: center !important; padding: 8px 0">
+                                    <td width="20%"></td>
+                                    <td width="4%" style="text-align: center !important; padding: 8px 0">
                                         <a href="#" data-toggle="modal" data-target="#myModal">
                                             <i class="iconfont icon2 setting" style="display:none">
                                             &#xe61e;</i>
@@ -240,8 +240,75 @@
                                 </tr> 
                             </tbody>
                         </table>
-
-
+                    </div>
+                </section>
+                <div class="click-show" id="click-show">
+                    <button type="button" class="btn btn-success btn-sm btn-show" data-placement="top">
+                        显示已隐藏的应用
+                    </button>
+                </div>
+                <section class="widget hide-section" id="hide-section">
+                    <div class="body no-margin">
+                        <table class="table no-margin sources-table">
+                            <thead>
+                                <tr>
+                                    <th width="3%"></th>
+                                    <th width="3%"></th>
+                                    <th width="40%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">隐藏的应用</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext">响应时间</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext">吞吐量(cpm)</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th class="sortedth" width="10%" style="text-align: left;">
+                                        <span class="sortedtext">错误率</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="14%" style="text-align: left;"></th>
+                                    <th width="10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>                                
+                                    <td></td>
+                                    <td><a href="indexD.html" class="appItem">php-testapplication1</a></td>
+                                    <td>0 ms</td>
+                                    <td>0.0</td>
+                                    <td>0.00%</td>
+                                    <td class="chart-cell">
+                                        {{!-- <div id="direct-trend1"></div> --}}
+                                    </td>
+                                    <td style="text-align: center !important;">
+                                        <a href="/">显示</a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td></td>   
+                                    <td></td>
+                                    <td><a href="indexD.html" class="appItem">orderfood</a></td>
+                                    <td>0 ms</td>
+                                    <td>0.0</td>
+                                    <td>0.00%</td>
+                                    <td class="chart-cell">
+                                        {{!-- <div id="refer-trend1"></div> --}}
+                                    </td>
+                                    <td style="text-align: center !important;">
+                                        <a href="/">显示</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </div>
@@ -380,12 +447,14 @@
 
         <script src="lib/d3/d3.min.js"></script>
         <script src="lib/nvd3/nv.d3.min.js"></script>
-
+        <script src="js/graph/graph1.js"></script>
         <!-- page application js -->
         <script src="js/index.js"></script>
         <script src="js/chat.js"></script>
         <!-- page application js -->
         <script src="js/ui-buttons.js"></script>
+      
+
         <script>
            
             $('#appOption').hide();
@@ -496,7 +565,9 @@
 
             $('.app_status').hide();
             
-
+            $('#click-show').click(function(){
+                $('#hide-section').toggleClass("show-section");
+            })
         </script>
     {{/append}}
 
