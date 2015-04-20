@@ -7,9 +7,9 @@
     {{#replace "app_content"}}
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-title">
+            <h2 class="page-title" style="line-height: 1.2">
                 <a href="crashMob.html">
-                    <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top">
+                    <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top" style="margin-top:3px">
                         <i class="iconfont icon3">&#xe612;</i>  
                     </button>
                 </a>
@@ -44,13 +44,13 @@
                             </div>
                             <div class="col-sm-2 col-xs-6">
                                 <div class="key">状态</div>
-                                <div class="value btn-group">
+                                <div class="value btn-group" style="margin-bottom:0;">
                                     <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
-                                        解决
+                                        已解决
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">解决</a></li>
+                                        <li><a href="#">已解决</a></li>
                                         <li><a href="#">未解决</a></li>
                                     </ul>
                                 </div>
@@ -68,7 +68,7 @@
             <section class="widget inner-widget">
                 <header>
                     <h4>
-                        奔溃次数
+                        崩溃次数
                     </h4>
                     <div class="widget-controls">
                         <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
@@ -125,377 +125,260 @@
                 <header>
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#overview" data-toggle="tab" style="font-size:14px; font-weight: 500">总览</a>
+                            <a href="#overview" data-toggle="tab" style="font-size:14px; font-weight: 500">堆栈信息</a>
                         </li>
                         <li>
                             <a href="#threadPro" data-toggle="tab" style="font-size:14px; font-weight: 500">线程分析</a>
+                        </li>
+                        <li>
+                            <a href="#pre3" data-toggle="tab" style="font-size:14px; font-weight: 500">线程分析</a>
                         </li>
                     </ul>
                 </header>
                 <div class="body tab-content" style="padding:17px">
                     <div id="overview" class="tab-pane active clearfix">
                         <div class="body" style="background-color:transparent; padding:0">
-                            <div class="col-lg-4 col-md-4" style="padding-left:0;">
-                                <ul id="myTab" class="nav nav-tabs">
-                                    <li class="active">
-                                        <a href="#time" data-toggle="tab" class="tabItem">耗时</a>
-                                    </li>
-                                    <li>
-                                        <a href="#startTime" data-toggle="tab" class="tabItem">开始时间</a>
-                                    </li>
-                                </ul>
-                                <div id="myTabContent" class="tab-content" >
-                                    <div class="tab-pane fade in active" id="time">
-                                        <div class="dd" id="nestable1">
-                                            <ol class="dd-list">
-                                                <li class="dd-item dd-collapsed" data-id="1">
-                                                   <div class="dd-handle">
-                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                        </i>
-                                                        <div class="bar-graph" style="width:90%"></div>
-                                                        <div class="bar-text">
-                                                            <span>users-insert</span>
-                                                            <span style="float: right;">5.43 ms</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="dd-item dd-collapsed" data-id="2">
-                                                   <div class="dd-handle">
-                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                        </i>
-                                                        <div class="bar-graph" style="width:10%"></div>
-                                                        <div class="bar-text">
-                                                            <span>users-update</span>
-                                                            <span style="float: right;">0.43 ms</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ol>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <section class="widget user-info">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">发生时间</legend>
+                                                    <p>14-Apr-15 07:46:40 PM</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">异常信息</legend>
+                                                    <p style="word-break:break-all">java.lang.ArrayIndexOutOfBoundsException</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="form-section">
+                                                    <legend class="section">崩溃原因</legend>
+                                                    <p style="word-break:break-all">The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">APP 版本</legend>
+                                                    <p>1.5</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <div class="form-section">
+                                                    <legend class="section">反混淆</legend>
+                                                    <p>No ProGuard</p>
+                                                    <p>mapping.txt found</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                   
-                                    <div class="tab-pane fade" id="startTime">
-                                        <div class="dd" id="nestable2">
-                                            <ol class="dd-list">
-                                                <li class="dd-item dd-collapsed" data-id="11">
-                                                    <div class="dd-handle">
-                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                        </i>
-                                                        <div class="bar-graph" style="width:95%"></div>
-                                                        <div class="bar-text">
-                                                            <span>users-insert</span>
-                                                            <span style="float: right;">196,333 cpm</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="dd-item dd-collapsed" data-id="12">
-                                                    <div class="dd-handle">
-                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
-                                                        </i>
-                                                        
-                                                        <div class="bar-graph" style="width:5%"></div>
-                                                        <div class="bar-text">
-                                                            <span>users-update</span>
-                                                            <span style="float: right;">333 cpm</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
+                                    </section>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-8" style="padding-right:0;">
-                
-                                <div class="row">
-                                    <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <section class="widget inner-widget">
+                                        <header>
+                                            <h4>Thread - main</h4>
+                                        </header>
+                                        <div class="body" style="background-color:transparent;">
+                                            <table class="table table-striped table-hover no-margin sources-table">
+                                                <thead>
+                                                <tr>
+                                                    <th width="20%" style="text-align: left;" class="sortedth">
+                                                        <span class="sortedtext">包名</span>
+                                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                    </th>
+                                                    <th width="80%" style="text-align: left;" class="sortedth">
+                                                        <span class="sortedtext">详情信息</span>
+                                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>ListView.java line 1562 in android.widget.ListView.layoutChildren()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>AbsListView.java line 2148 in android.widget.AbsListView.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>RelativeLayout.java line 1076 in android.widget.RelativeLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1703 in android.widget.LinearLayout.setChildFrame()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1557 in android.widget.LinearLayout.layoutVertical()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.widget</td>
+                                                    <td>LinearLayout.java line 1466 in android.widget.LinearLayout.onLayout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>View.java line 15596 in android.view.View.layout()</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>android.view</td>
+                                                    <td>ViewGroup.java line 4966 in android.view.ViewGroup.layout()</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <a href="#" data-toggle="modal" data-target="#mydashboard">
+                                                <button type="button" class="btn btn-success btn-sm btn-hollow" style="float:left" data-placement="top" id="show-all">
+                                                    显示全部
+                                                </button>
+                                            </a>
+                                        </div> 
+                                    </div>
+                                    
+                                    <div id="show-content" style="display:none">
                                         <section class="widget inner-widget">
                                             <header>
-                                                <h4>Breakdown Table</h4>
+                                                <h4>Thread - GCDaemon</h4>
                                             </header>
                                             <div class="body" style="background-color:transparent;">
                                                 <table class="table table-striped table-hover no-margin sources-table">
                                                     <thead>
-                                                    <tr>
-                                                        <th width="34%" style="text-align: left;" class="sortedth">
-                                                            <span class="sortedtext">名称</span>
-                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                        </th>
-                                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                                            <span class="sortedtext">开始时间</span>
-                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                        </th>
-                                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                                            <span class="sortedtext">耗时</span>
-                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                        </th>
-                                                        <th width="22%" style="text-align: left;" class="sortedth">
-                                                            <span class="sortedtext">Agent</span>
-                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                        </th>
-                                                    </tr>
+                                                        <tr>
+                                                            <th width="20%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">包名</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                            <th width="80%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">详情信息</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                        </tr>
                                                     </thead>
                                                     <tbody>
-                                                    <tr>
-                                                        <td>SpringController/splits.do (GET)</td>
-                                                        <td>2015-02-05 16:00:44</td>
-                                                        <td>99,428ms</td>
-                                                        <td>java:app188:8090(10.133.197.33)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>SpringController/abc.do (GET)</td>
-                                                        <td>2015-02-05 16:00:40</td>
-                                                        <td>97,030ms</td>
-                                                        <td>java:app188:8090(10.133.197.33)</td>
-                                                    </tr>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Object.java line -2 in java.lang.Object.wait()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Daemons.java line 341 in java.lang.Daemons$GCDaemon.run()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.lang</td>
+                                                            <td>Thread.java line 818 in java.lang.Thread.run()</td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </section>
-                                    </div>
-                                </div>
-
-                                <div class="row float-card" >
-                                    <div class="col-md-12">
-                                        <section class="widget" style="min-height:800px;margin-right: -15px">
+                                        <section class="widget inner-widget">
                                             <header>
-                                                <span class="float-card-title">Title</span>
-                                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                                                <h4>Thread - Thread-3507</h4>
                                             </header>
-                                            <div class="float-body" >
-                                                    <header>
-                                                        <ul class="nav nav-tabs">
-                                                            <li class="active">
-                                                                <a href="#general" data-toggle="tab" style="font-size:14px;" class="tab_link">概要</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#detail" data-toggle="tab" style="font-size:14px;" class="tab_link">详情</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#params" data-toggle="tab" style="font-size:14px;" class="tab_link">参数</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#sql" data-toggle="tab" style="font-size:14px;" class="tab_link">sql</a>
-                                                            </li>
-                                                        </ul>
-                                                    </header>
-                                                    <div class="body tab-content" id="inner-tab-body">
-                                                        <div id="general" class="tab-pane active clearfix">
-                                                            <section class="widget inner-widget">
-                                                                <header><h4>开始时间-消耗总时间</h4></header>
-                                                                <div class="no-margin">
-                                                                    <div id="visits-chart5" class="chart visits-chart">
-                                                                        <svg></svg>
-                                                                    </div>
-                                                                </div>
-                                                            </section>
-                                                            <section class="widget inner-widget">
-                                                                <header>
-                                                                    <h4>最慢组件</h4>
-                                                                </header>
-                                                                <div class="body-for-table">
-                                                                    <table class="table table-striped table-hover no-margin sources-table">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th width="60%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">名称</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="13%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">调用次数</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="13%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">执行时间(ms)</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="13%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">时间百分比</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td>1</td>
-                                                                            <td>10ms</td>
-                                                                            <td>25%</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td>1</td>
-                                                                            <td>10ms</td>
-                                                                            <td>50%</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td>1</td>
-                                                                            <td>10ms</td>
-                                                                            <td>25%</td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-
-                                                        <div id="detail" class="tab-pane clearfix">
-                                                            <section class="widget inner-widget">
-                                                                <header>
-                                                                    <h4>事务详情</h4>
-                                                                </header>
-                                                                <div class="body-for-table">
-                                                                    <table class="table table-striped table-hover no-margin sources-table">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th width="15%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">时间戳(ms)</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="10%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">耗时(ms)</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="15%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">时间百分比(ms)</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="50%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">详情</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="10%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">附加信息</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>25%</td>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>50%</td>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>25%</td>
-                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
-                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                        <div id="params" class="tab-pane clearfix">
-                                                            <section class="widget inner-widget">
-                                                                <header>
-                                                                    <h4>请求参数</h4>
-                                                                </header>
-                                                                <div class="body-for-table">
-                                                                    <table class="table table-striped table-hover no-margin sources-table">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">httpResponseCode</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">jvm.thread_name</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">request.headers.referer</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td>200</td>
-                                                                            <td>http-nio-80-exec-13652</td>
-                                                                            <td>http://182.254.159.46/emenu/userlogin/login.jsp</td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                        <div id="sql" class="tab-pane clearfix">
-                                                            <section class="widget inner-widget">
-                                                                <header>
-                                                                    <h4>事务详情</h4>
-                                                                </header>
-                                                                <div class="body-for-table">
-                                                                    <table class="table table-striped table-hover no-margin sources-table">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">调用时间(ms)</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">调用次数</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                            <th width="33%" style="text-align: left;" class="sortedth">
-                                                                                <span class="sortedtext">sql</span>
-                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                                                            </th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>1ms</td>
-                                                                            <td>10ms</td>
-                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                    </div>
+                                            <div class="body" style="background-color:transparent;">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="20%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">包名</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                            <th width="80%" style="text-align: left;" class="sortedth">
+                                                                <span class="sortedtext">详情信息</span>
+                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>Posix.java line -2 in libcore.io.Posix.poll()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>BlockGuardOs.java line 195 in libcore.io.BlockGuardOs.poll()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>libcore.io</td>
+                                                            <td>IoBridge.java line 215 in libcore.io.IoBridge.isConnected()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.net</td>
+                                                            <td>PlainSocketImpl.java line 183 in java.net.PlainSocketImpl.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>java.net</td>
+                                                            <td>PlainSocketImpl.java line 456 in java.net.PlainSocketImpl.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp.internal</td>
+                                                            <td>Platform.java line 118 in com.android.okhttp.internal.Platform.connectSocket()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp</td>
+                                                            <td>Connection.java line 148 in com.android.okhttp.Connection.connect()</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>com.android.okhttp.internal.http</td>
+                                                            <td>HttpEngine.java line 276 in com.android.okhttp.internal.http.HttpEngine.connect()</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </section>
                                     </div>
@@ -664,6 +547,11 @@
                     }
                 }
                 e.stopPropagation();
+            })
+
+            $('#show-all').click(function(){
+                $('#show-all').hide();
+                $('#show-content').show();
             })
         </script>
 
