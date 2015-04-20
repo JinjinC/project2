@@ -1,0 +1,673 @@
+{{#extend "layoutMob"}}
+
+	{{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="crashMob"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-title">
+                <a href="crashMob.html">
+                    <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top">
+                        <i class="iconfont icon3">&#xe612;</i>  
+                    </button>
+                </a>
+                <span>java.lang.IllegalStateException<small>ListView.java line 1562 in android.widget.ListView.layoutChildren()</small></span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="widget">
+                <div class="body no-margin">
+                    <div class="visits-info well well-sm well-cos">
+                        <div class="row">
+                            <div class="col-sm-1 hidden-xs">
+                            </div>
+                            <div class="col-sm-2  col-xs-6">
+                                <div class="key">应用版本</div>
+                                <div id="serve-value" class="value" style="margin-bottom:0;">1.1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">同类崩溃</div>
+                                <div class="value" style="margin-bottom:0;">1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">影响用户数</div>
+                                <div class="value" style="margin-bottom:0;">1</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">最后发生时间</div>
+                                <div class="value" style="margin-bottom:0;">2015-01-30 12:07</div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="key">状态</div>
+                                <div class="value btn-group">
+                                    <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
+                                        解决
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">解决</a></li>
+                                        <li><a href="#">未解决</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 hidden-xs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        奔溃次数
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart1" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        影响设备
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart2" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <section class="widget inner-widget">
+                <header>
+                    <h4>
+                        影响 OS 版本
+                    </h4>
+                    <div class="widget-controls">
+                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                    </div>
+                </header>
+                <div class="body no-margin" style="background-color:transparent;">
+                    <div id="single-chart3" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="widget widget-tabs">
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#overview" data-toggle="tab" style="font-size:14px; font-weight: 500">总览</a>
+                        </li>
+                        <li>
+                            <a href="#threadPro" data-toggle="tab" style="font-size:14px; font-weight: 500">线程分析</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="body tab-content" style="padding:17px">
+                    <div id="overview" class="tab-pane active clearfix">
+                        <div class="body" style="background-color:transparent; padding:0">
+                            <div class="col-lg-4 col-md-4" style="padding-left:0;">
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#time" data-toggle="tab" class="tabItem">耗时</a>
+                                    </li>
+                                    <li>
+                                        <a href="#startTime" data-toggle="tab" class="tabItem">开始时间</a>
+                                    </li>
+                                </ul>
+                                <div id="myTabContent" class="tab-content" >
+                                    <div class="tab-pane fade in active" id="time">
+                                        <div class="dd" id="nestable1">
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-collapsed" data-id="1">
+                                                   <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:90%"></div>
+                                                        <div class="bar-text">
+                                                            <span>users-insert</span>
+                                                            <span style="float: right;">5.43 ms</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item dd-collapsed" data-id="2">
+                                                   <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:10%"></div>
+                                                        <div class="bar-text">
+                                                            <span>users-update</span>
+                                                            <span style="float: right;">0.43 ms</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="tab-pane fade" id="startTime">
+                                        <div class="dd" id="nestable2">
+                                            <ol class="dd-list">
+                                                <li class="dd-item dd-collapsed" data-id="11">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        <div class="bar-graph" style="width:95%"></div>
+                                                        <div class="bar-text">
+                                                            <span>users-insert</span>
+                                                            <span style="float: right;">196,333 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="dd-item dd-collapsed" data-id="12">
+                                                    <div class="dd-handle">
+                                                        <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                        </i>
+                                                        
+                                                        <div class="bar-graph" style="width:5%"></div>
+                                                        <div class="bar-text">
+                                                            <span>users-update</span>
+                                                            <span style="float: right;">333 cpm</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8" style="padding-right:0;">
+                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section class="widget inner-widget">
+                                            <header>
+                                                <h4>Breakdown Table</h4>
+                                            </header>
+                                            <div class="body" style="background-color:transparent;">
+                                                <table class="table table-striped table-hover no-margin sources-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="34%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">名称</span>
+                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                        </th>
+                                                        <th width="22%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">开始时间</span>
+                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                        </th>
+                                                        <th width="22%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">耗时</span>
+                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                        </th>
+                                                        <th width="22%" style="text-align: left;" class="sortedth">
+                                                            <span class="sortedtext">Agent</span>
+                                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>SpringController/splits.do (GET)</td>
+                                                        <td>2015-02-05 16:00:44</td>
+                                                        <td>99,428ms</td>
+                                                        <td>java:app188:8090(10.133.197.33)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SpringController/abc.do (GET)</td>
+                                                        <td>2015-02-05 16:00:40</td>
+                                                        <td>97,030ms</td>
+                                                        <td>java:app188:8090(10.133.197.33)</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+
+                                <div class="row float-card" >
+                                    <div class="col-md-12">
+                                        <section class="widget" style="min-height:800px;margin-right: -15px">
+                                            <header>
+                                                <span class="float-card-title">Title</span>
+                                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                                            </header>
+                                            <div class="float-body" >
+                                                    <header>
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="active">
+                                                                <a href="#general" data-toggle="tab" style="font-size:14px;" class="tab_link">概要</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#detail" data-toggle="tab" style="font-size:14px;" class="tab_link">详情</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#params" data-toggle="tab" style="font-size:14px;" class="tab_link">参数</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#sql" data-toggle="tab" style="font-size:14px;" class="tab_link">sql</a>
+                                                            </li>
+                                                        </ul>
+                                                    </header>
+                                                    <div class="body tab-content" id="inner-tab-body">
+                                                        <div id="general" class="tab-pane active clearfix">
+                                                            <section class="widget inner-widget">
+                                                                <header><h4>开始时间-消耗总时间</h4></header>
+                                                                <div class="no-margin">
+                                                                    <div id="visits-chart5" class="chart visits-chart">
+                                                                        <svg></svg>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                            <section class="widget inner-widget">
+                                                                <header>
+                                                                    <h4>最慢组件</h4>
+                                                                </header>
+                                                                <div class="body-for-table">
+                                                                    <table class="table table-striped table-hover no-margin sources-table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th width="60%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">名称</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="13%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">调用次数</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="13%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">执行时间(ms)</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="13%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">时间百分比</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td>1</td>
+                                                                            <td>10ms</td>
+                                                                            <td>25%</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td>1</td>
+                                                                            <td>10ms</td>
+                                                                            <td>50%</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td>1</td>
+                                                                            <td>10ms</td>
+                                                                            <td>25%</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+
+                                                        <div id="detail" class="tab-pane clearfix">
+                                                            <section class="widget inner-widget">
+                                                                <header>
+                                                                    <h4>事务详情</h4>
+                                                                </header>
+                                                                <div class="body-for-table">
+                                                                    <table class="table table-striped table-hover no-margin sources-table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th width="15%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">时间戳(ms)</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="10%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">耗时(ms)</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="15%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">时间百分比(ms)</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="50%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">详情</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="10%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">附加信息</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>25%</td>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>50%</td>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>25%</td>
+                                                                            <td>org.apache.catalina.servlets.DefaultServlet/service</td>
+                                                                            <td><i class="iconfont icon-file">&#xe62f;</i></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                        <div id="params" class="tab-pane clearfix">
+                                                            <section class="widget inner-widget">
+                                                                <header>
+                                                                    <h4>请求参数</h4>
+                                                                </header>
+                                                                <div class="body-for-table">
+                                                                    <table class="table table-striped table-hover no-margin sources-table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">httpResponseCode</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">jvm.thread_name</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">request.headers.referer</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>200</td>
+                                                                            <td>http-nio-80-exec-13652</td>
+                                                                            <td>http://182.254.159.46/emenu/userlogin/login.jsp</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                        <div id="sql" class="tab-pane clearfix">
+                                                            <section class="widget inner-widget">
+                                                                <header>
+                                                                    <h4>事务详情</h4>
+                                                                </header>
+                                                                <div class="body-for-table">
+                                                                    <table class="table table-striped table-hover no-margin sources-table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">调用时间(ms)</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">调用次数</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                            <th width="33%" style="text-align: left;" class="sortedth">
+                                                                                <span class="sortedtext">sql</span>
+                                                                                <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                                                                <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1ms</td>
+                                                                            <td>10ms</td>
+                                                                            <td>UPDATE `wp_options` SET `option_value` = ? WHERE `option_name` = ?</td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="threadPro" class="tab-pane clearfix">
+                        <div class="body" style="background-color:transparent; padding:0;">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="visits-info well well-sm" style="margin:0;margin-bottom:30px;">
+                                        <div class="row">
+                                            <div class="col-sm-3 hidden-xs">
+                                            </div>
+                                            <div class="col-sm-2  col-xs-4">
+                                                <div class="key">开始时间</div>
+                                                <div id="serve-value" class="value" style="margin-bottom:9px">2015-01-30 10:33</div>
+                                            </div>
+                                            <div class="col-sm-2 col-xs-4">
+                                                <div class="key"> 采集周期</div>
+                                                <div class="value" style="margin-bottom:9px">94分钟</div>
+                                            </div>
+                                            <div class="col-sm-2 col-xs-4">
+                                                <div class="key">采集次数</div>
+                                                <div class="value" style="margin-bottom:9px">30</div>
+                                            </div>
+                                            
+                                            <div class="col-sm-3 hidden-xs">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                     <section class="widget widget-tabs">
+                                        <header>
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a href="#timeDistr" data-toggle="tab" style="font-size:14px; font-weight: 500">时间分布图</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#CPU" data-toggle="tab" style="font-size:14px; font-weight: 500">CPU 消耗</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#threadLock" data-toggle="tab" style="font-size:14px; font-weight: 500">线程和锁</a>
+                                                </li>
+                                            </ul>
+                                        </header>
+                                        <div class="body tab-content">
+                                            <div id="timeDistr" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent; padding:0;">
+                                                    <section class="widget" style="background-color:transparent;min-height: 640px;padding:0;">
+                                                        <div>
+                                                            <span style="margin-right: 20px;font-size: 14px">显示设置</span>
+                                                            <div class="radio" style="display: inline-block; margin-right:20px;">
+                                                                 <input type="radio" name="radio3" id="radio5" value="option1" checked>
+                                                                 <label for="radio5">
+                                                                     web request
+                                                                 </label>
+                                                             </div>
+                                                             <div class="radio" style="display: inline-block;margin-right:10px;">
+                                                                 <input type="radio" name="radio3" id="radio6" value="option2">
+                                                                 <label for="radio6">
+                                                                     other
+                                                                 </label>
+                                                             </div>
+                                                             <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                                                <i class="iconfont icon2 refresh">&#xe61c;</i>
+                                                            </button>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div id="CPU" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent;">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div id="threadLock" class="tab-pane active clearfix">
+                                                <div class="body" style="background-color:transparent;">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    {{/replace}}
+    {{#append "scripts"}}
+
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+       <!-- page specific libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery-ui/ui/core.js"></script>
+        <script src="lib/jquery-ui/ui/widget.js"></script>
+        <script src="lib/jquery-ui/ui/mouse.js"></script>
+        <script src="lib/jquery-ui/ui/sortable.js"></script>
+        <script src="lib/jquery.nestable/jquery.nestable.js"></script>
+        <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+
+        <!-- page application js -->
+        <script src="js/component-list-groups.js"></script>
+        
+        <!-- page application js -->
+        <script src="js/graph/singlechart1.js"></script>
+        <script src="js/graph/singlechart2.js"></script>
+        <script src="js/graph/singlechart3.js"></script>
+
+        <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+                $('.dd-item').click(function  () {
+                    $('.dd-handle').removeClass("active");
+                    $(this).find('.dd-handle').addClass("active");
+                    $('.float-card').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                        $('.float-card').removeClass("animated fadeInLeftBig");
+                    },1000);
+                    $('.float-card-title').text($(this).find('.bar-text').text());
+                });
+
+                $('.float-card .glyphicon-remove').click(function() {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+            });
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>
+
+        
+    {{/append}}
+
+{{/extend}}
