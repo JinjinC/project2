@@ -53,7 +53,9 @@
                         <li>
                             <a href="#sql" data-toggle="tab">SQL</a>
                         </li>
-                        
+                        <li>
+                            <a href="#JVM" data-toggle="tab">JVM</a>
+                        </li>
                     </ul>
                 </header>
                 <div class="body tab-content">
@@ -374,12 +376,10 @@
                                     </td>
                                 </tr>
                                 </tbody>
-                            </table>
-                        
+                            </table>                
                     </div>
                     <div id="sql" class="tab-pane clearfix">
-                        <div>
-
+                        <div class="contra-box">
                             <div class="checkbox checkbox0">
                                 <input id="checkbox0" type="checkbox" disabled checked>
                                 <label for="checkbox0">
@@ -412,7 +412,7 @@
                             </button>
                         </div>
                         <table class="table table-striped table-hover no-margin sources-table">
-                                <thead>
+                            <thead>
                                 <tr>
                                     <th width="20%" style="text-align: left;" class="sortedth">
                                         <span class="sortedtext">SQL</span>
@@ -457,8 +457,8 @@
                                         </div>
                                     </th>        
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>e_menu.list-insert</td>
                                     <td colspan="6">
@@ -691,9 +691,167 @@
                                         </table>
                                     </td>
                                 </tr>
-                                </tbody>
-                            </table>
-                        
+                            </tbody>
+                        </table>      
+                    </div>
+                    <div id="JVM" class="tab-pane clearfix">
+                        <div class="contra-box">
+                            <div class="checkbox checkbox0">
+                                <input id="checkbox0" type="checkbox" disabled checked>
+                                <label for="checkbox0">
+                                    今天
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox0">
+                                <input id="checkbox1" type="checkbox">
+                                <label for="checkbox1">
+                                    昨天
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox1">
+                                <input id="checkbox2" type="checkbox" checked>
+                                <label for="checkbox2">
+                                    7 天前
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox1">
+                                <input id="checkbox3" type="checkbox">
+                                <label for="checkbox3">
+                                   7 天内
+                                </label>
+                            </div>
+                             <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
+                                <i class="iconfont icon2 refresh">&#xe61c;</i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-report" data-placement="top" >
+                                重置
+                            </button>
+                        </div>
+                        <table class="table table-striped table-hover no-margin sources-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">JVM</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;">
+                                        <span></span>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">Apdex</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">平均响应时间</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">吞吐量</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">错误率</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">CPU</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th> 
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">内存</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>     
+                                    <th  width="10%" style="text-align: left;">
+                                        <div class="btn-group">
+                                            <button href="#" class="btn btn-sm btn-report dropdown-toggle" data-toggle="dropdown" type="button">
+                                                平均响应时间
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">吞吐量</a></li>
+                                                <li><a href="#">总执行时间</a></li>
+                                                <li><a href="#">平均执行时间</a></li>
+                                                <li><a href="#">Apdex</a></li>
+                                            </ul>
+                                        </div>
+                                    </th>        
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e_menu.list-insert</td>
+                                    <td colspan="8">
+                                        <table  class="table table-hover no-margin sources-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="12.5%">今天</td>
+                                                    <td width="12.5%">0.57</td>
+                                                    <td width="12.5%">13.14 s</td>
+                                                    <td width="12.5%">14.22 cpm</td>
+                                                    <td width="12.5%">0.00 %</td>
+                                                    <td width="12.5%">0.17 %</td>
+                                                    <td width="12.5%">306.42 MB</td>
+                                                    <td width="12.5%">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:38%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>昨天</td>
+                                                    <td>0.52</td>
+                                                    <td>15.43 s</td>
+                                                    <td>44.43 cpm</td>
+                                                    <td>0.00%</td>
+                                                    <td>0.16%</td>
+                                                    <td>297.16 MB</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:3%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7天前</td>
+                                                    <td>0.55</td>
+                                                    <td>12.72 s</td>
+                                                    <td>16.34 cpm</td>
+                                                    <td>0.01%</td>
+                                                    <td>0.15%</td>
+                                                    <td>446.43 MB</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:8%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7天内</td>
+                                                    <td>0.57</td>
+                                                    <td>13.58 s</td>
+                                                    <td>39.03 cpm</td>
+                                                    <td>0.00%</td>  
+                                                    <td>0.17%</td>
+                                                    <td>398.83 MB</td>
+                                                    <td>
+                                                        <div class="progress">
+                                                            <div class="progress-bar" style="width:8%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>      
                     </div>
                 </div>
             </section>

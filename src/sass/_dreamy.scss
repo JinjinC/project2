@@ -2213,3 +2213,16 @@ table .progress {
   right: 25px;
   font-weight: bold;
 }
+.widget .search-part {
+  position: absolute;
+  right: 30px;
+
+  input[type=search], input.search {
+    padding-left: 26px;
+    background-color: #fff;
+    background: url(../img/search.png) 3px 4px no-repeat #fff;
+    border: 1px solid #ccc;
+    min-height: 24px;
+    font-size: 12px;
+  }
+}
