@@ -1064,14 +1064,13 @@
 
             //trace详细页面float-card
             $('.trace-name').click(function  () {
-                $('.float-trace').show().addClass("animated fadeInLeftBig");
-                setTimeout(function (){
-                                         $('.float-trace').removeClass("animated fadeInLeftBig");
-                                     },500);
+                $('.dd-handle').first().trigger("click");
+                $('.trace-name-in-transaction').trigger("click");
             });
 
             //事务详细页面中点击trace，float-card
             $('.trace-name-in-transaction').click(function  () {
+                $('.float-trace').hide();
                 $('.float-trace').addClass("float-trace-in-transaction");
                 $('.float-trace').show().addClass("animated fadeInLeftBig");
                 setTimeout(function (){

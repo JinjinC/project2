@@ -661,6 +661,8 @@
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
                 $('.dd-handle').click(function  () {
 
+                    $('.float-card').hide();
+
                     $('.dd-handle').removeClass("active");
 
                     $(this).addClass("active");
@@ -731,18 +733,17 @@
 
             //trace详细页面float-card
             $('.trace-name').click(function  () {
-                $('.float-tran-detail').show().addClass("animated fadeInLeftBig");
-                setTimeout(function (){
-                 $('.float-tran-detail').removeClass("animated fadeInLeftBig");
-             },500);
+                $('.dd-handle').first().trigger("click");
+                $('.trace-name-in-transaction').trigger("click");
             });
 
             //事务详细页面中点击trace，float-card
             $('.trace-name-in-transaction').click(function  () {
+                $('.float-tran-detail').hide();
                 $('.float-tran-detail').addClass("float-trace-in-transaction");
                 $('.float-tran-detail').show().addClass("animated fadeInLeftBig");
                 setTimeout(function (){
-                                         $('.float-trace').removeClass("animated fadeInLeftBig");
+                                         $('.float-tran-detail').removeClass("animated fadeInLeftBig");
                                      },500);
             });
 
