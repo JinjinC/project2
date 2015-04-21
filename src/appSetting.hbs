@@ -1,0 +1,253 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="appSetting"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <h2 class="page-title"><span>应用设置 <small>应用设置界面</small></span></h2>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <section class="widget app-setting">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-section">
+                            <legend class="section">基本信息<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info last-tip-info">您监测的应用依然是「app187」，名称修改仅仅用作显示。使用字母数字和中文，最长 32 个字符，请勿使用重复的应用名称。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">Trace<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">Trace 阀值</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info">默认值为 4 倍 Apdex - T 值。当该应用的 Web 事务响应时间大于该阈值时，开始记录 trace 的数据。单位：s。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">返回 traces 个数</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info">设置最大能够返回 traces 的个数。该值最小值为：1。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">Apdex T</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info last-tip-info">性能指数的 T 值只适用于 Web 事务。单位：s。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">浏览器监控<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c1">
+                                        <label for="c1" class="checkbox-label">是否启用浏览器监控？</label>
+                                    </div>
+                                    <p class="tip-info last-tip-info">是否自动嵌入 js 代码，监控真实用户与您应用进行交互时的性能指标。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">Web事务<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c2">
+                                        <label for="c2" class="checkbox-label">是否自动命名 Web 事务？</label>
+                                    </div>
+                                    <p class="tip-info">当启用时，应用探针系统根据应用框架和组件来命名 Web 事务。当禁用时，则使用 Web 请求的 URI 来命名 Web 事务。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">过滤静态资源</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info last-tip-info">用逗号分隔多个赋值内容。在应用服务器端，过滤以上格式的静态文件，避免生成过多的事务。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">http请求参数<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c3">
+                                        <label for="c3" class="checkbox-label">是否采集 HTTP 请求参数？</label>
+                                    </div>
+                                    <p class="tip-info">是否自动嵌入 js 代码，监控真实用户与您应用进行交互时的性能指标。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">忽略参数</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info last-tip-info">使用逗号分隔的任意英文字段。告知 Agent 有选择的放弃收集某些特殊 HTTP 参数。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">错误信息<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c4">
+                                        <label for="c4" class="checkbox-label">是否采集错误信息？</label>
+                                    </div>
+                                    <p class="tip-info">开启时，应用探针将采集该应用所有的错误和异常信息。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">过滤类名</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info last-tip-info">使用逗号分隔多个赋值内容。过滤特定的类名不作为错误信息被报告到 OneAPM。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <legend class="section">SQL<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c5">
+                                        <label for="c5" class="checkbox-label">是否启用慢 SQL 跟踪？</label>
+                                    </div>
+                                    <p class="tip-info">决定 Agent 是否捕捉运行缓慢的 SQL 语句。目前只支持 MySQL 和 PostgreSQL。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                    <label class="control-label setting-label">追踪模式</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" disabled="disabled">
+                                        <option value="0">混淆sql</option>
+                                        <option value="1">原始sql</option>
+                                        <option value="2">关闭</option>
+                                    </select>
+                                    <p class="tip-info">决定 Agent 是否捕捉运行缓慢的 SQL 语句。目前只支持 MySQL 和 PostgreSQL。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3"> 
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-control input-transparent" disabled="disabled" value="Jerry" id="c6">
+                                        <label for="c6" class="checkbox-label">是否抓取 SQL 执行计划？</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">执行计划阈值</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info">只在「抓取 SQL 执行计划]启用时，才有效.当低于阀值时，不会纪录。单位为：s。缺省值：0.5s。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="control-label setting-label">慢 SQL 跟踪阈值</label>
+                                </div>
+                                <div class="col-lg-5 col-md-8 col-sm-8">
+                                    <input type="text" class="form-control input-transparent" disabled="disabled" value="Jerry">
+                                    <p class="tip-info">该选项只有在「启用慢 SQL 跟踪」开启时才生效。两个选项必须一起使用。当 SQL 的性能大于该阈值的时候，Agent 记录慢 SQL 的相关堆栈信息。单位为：s，缺省值：0.5s。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+     {{/replace}}
+
+      {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+        <script src="lib/select2/select2.min.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+        <script src="js/index.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                //点击修改
+                $('.edit-text').click(function  () {
+
+                    $(this).next().show();
+                    $(this).hide();
+                    var input = $(this).closest(".form-section").find("input");
+                    var select = $(this).closest(".form-section").find("select");
+                    var btn = $(this).closest(".form-section").find("button");
+                    var li = $(this).closest(".form-section").find("li");
+                    input.removeAttr("disabled");
+                    input.removeClass("input-transparent");
+                    select.removeAttr("disabled");
+                    btn.removeClass("disabled");
+                    li.removeClass("disabled");
+                    input.first().focus();
+                });
+                //点击保存
+                $('.save-text').click(function  () {
+                    $(this).prev().removeAttr("style");
+                    $(this).hide();
+                    var input = $(this).closest(".form-section").find("input");
+                    var select = $(this).closest(".form-section").find("select");
+                    var btn = $(this).closest(".form-section").find("button");
+                    var li = $(this).closest(".form-section").find("li");
+                    input.attr("disabled","disabled");
+                    input.addClass("input-transparent");
+                    select.attr("disabled","disabled");
+                    btn.removeClass("disabled");
+                    li.removeClass("disabled");
+                })
+            });
+        </script>
+    {{/append}}
+
+{{/extend}}
+
+
