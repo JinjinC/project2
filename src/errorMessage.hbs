@@ -6,175 +6,250 @@
 
     {{#replace "app_content"}}
     
-     <div class="row">
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+            <h2 class="page-title"><span>错误信息 <small>错误信息界面</small></span></h2>
+        </div>
 
-         <div class="col-lg-5 col-md-5">
-              <h2 class="page-title"><span>错误信息 <small>错误信息界面</small></span></h2>
-         </div>
-
-         <div class="col-lg-7 col-md-7">
-             {{#block "picker"}}
-                 {{> picker }}
-             {{/block}}
-         </div>
-     </div>
-
-
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="row">
-					<div class="col-lg-12">
-						<section class="widget">
-                            <header>
-                                <h4>
-                                    错误率
-                                </h4>
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-                                </div>
-                            </header>
-                            <div class="body no-margin">
-                               <div id="visits-chart2" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
-                            </div>
-						</section>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<section class="widget">
-                            <div class="body" style="margin-top:0;">
-                                <table class="table table-striped table-hover no-margin sources-table">
-                                    <thead>
-                                    <tr>
-                                        <th width="15%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">第一次出现时间</span>
-                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                        </th>
-                                        <th width="15%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">最后一次出现时间</span>
-                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                        </th>
-                                        <th width="25%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">请求地址</span>
-                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                        </th>
-                                        <th width="35%" style="text-align: left;">消息</th>
-                                        <th width="10%" style="text-align: left;" class="sortedth">
-                                            <span class="sortedtext">出现次数</span>
-                                            <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
-                                            <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>2015-02-06 10:40:29</td>
-                                        <td>2015-02-06 10:40:29</td>
-                                        <td><a href="#" class="request">http-bio-8090-exec-158</a></td>
-                                        <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
-                                        <td>6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2015-02-06 10:23:17</td>
-                                        <td>2015-02-06 10:50:14</td>
-                                        <td><a href="#" class="request">SpringController/getlist.do (GET)</a></td>
-                                        <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
-                                        <td>69</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2015-01-15 10:41:04</td>
-                                        <td>2015-01-15 10:41:18</td>
-                                        <td><a href="#" class="request">http-bio-8090-exec-22</a></td>
-                                        <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2015-01-15 10:41:04</td>
-                                        <td>2015-01-15 10:41:18</td>
-                                        <td><a href="#" class="request">http-bio-8090-exec-146</a></td>
-                                        <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2015-01-15 10:41:04</td>
-                                        <td>2015-01-15 10:41:18</td>
-                                        <td><a href="#" class="request">http-bio-8090-exec-87</a></td>
-                                        <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
-                                        <td>12</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-						</section>
-					</div>
-				</div>
-                <div class="row float-card">
-                    <div class="col-md-12">
-                    <section class="widget" style="min-height:800px;">
+        <div class="col-lg-7 col-md-7">
+            {{#block "picker"}}
+                {{> picker }}
+            {{/block}}
+        </div>
+    </div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-12">
+					<section class="widget">
                         <header>
-                            <span class="float-card-title">Title</span>
-                            <span class="glyphicon glyphicon-remove pull-right"></span>
+                            <h4>
+                                错误率
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                            </div>
                         </header>
-                        <div class="body">                 
-                            <div class="visits-info well well-sm">
-                                <div class="row">
-                                <div class="col-sm-4  col-xs-6">
-                                    <div class="key">服务器</div>
-                                    <div id="serve-value" class="value">服务器名</div>
+                        <div class="body no-margin">
+                           <div id="visits-chart2" class="chart visits-chart">
+                                <svg></svg>
+                            </div>
+                        </div>
+					</section>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<section class="widget">
+                        <div class="body" style="margin-top:0;">
+                            <table class="table table-striped table-hover no-margin sources-table">
+                                <thead>
+                                <tr>
+                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">第一次出现时间</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="15%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">最后一次出现时间</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="25%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">请求地址</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                    <th width="35%" style="text-align: left;">消息</th>
+                                    <th width="10%" style="text-align: left;" class="sortedth">
+                                        <span class="sortedtext">出现次数</span>
+                                        <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                        <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2015-02-06 10:40:29</td>
+                                    <td>2015-02-06 10:40:29</td>
+                                    <td><a href="#" class="request">http-bio-8090-exec-158</a></td>
+                                    <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-02-06 10:23:17</td>
+                                    <td>2015-02-06 10:50:14</td>
+                                    <td><a href="#" class="request">SpringController/getlist.do (GET)</a></td>
+                                    <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                    <td>69</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-01-15 10:41:04</td>
+                                    <td>2015-01-15 10:41:18</td>
+                                    <td><a href="#" class="request">http-bio-8090-exec-22</a></td>
+                                    <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-01-15 10:41:04</td>
+                                    <td>2015-01-15 10:41:18</td>
+                                    <td><a href="#" class="request">http-bio-8090-exec-146</a></td>
+                                    <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-01-15 10:41:04</td>
+                                    <td>2015-01-15 10:41:18</td>
+                                    <td><a href="#" class="request">http-bio-8090-exec-87</a></td>
+                                    <td>Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.test.dao.UserDao.getListByName</td>
+                                    <td>12</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+					</section>
+				</div>
+			</div>
+            <div class="row float-card">
+                <div class="col-md-12">
+                <section class="widget" style="min-height:800px;">
+                    <header>
+                        <span class="float-card-title">org.springframework.web.servlet.DispatcherServlet/init</span>
+                        <span class="glyphicon glyphicon-remove pull-right"></span>
+                    </header>
+                    <div class="body">                 
+                        <div class="visits-info well well-sm">
+                            <div class="row">
+                                <div class="col-sm-3  col-xs-6">
+                                    <div class="key">URL</div>
+                                    <div class="value">org.springframework.web.serv..</div>
                                 </div>
-                                    <div class="col-sm-2 col-xs-6">
-                                        <div class="key"> 开始时间</div>
-                                        <div class="value">2015-02-07 04:42</div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="key">第一次发生时间</div>
+                                    <div class="value">2015-04-14 14:25:03</div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="key">最后一次发生时间</div>
+                                    <div class="value">2015-04-14 14:25:03</div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="key">发生次数</div>
+                                    <div class="value">1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="widget" style="margin-top: 20px;margin-bottom:0;border-bottom: 1px solid #e5e5e5;" >
+                           <div class="crash-switch">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <span class="to-left">
+                                            <i class="fa fa-angle-left"></i>
+                                        </span>
                                     </div>
-                                    <div class="col-sm-2 col-xs-6">
-                                        <div class="key">采样周期</div>
-                                        <div class="value">2分钟</div>
+                                    <div class="col-md-8 col-sm-8 col-xs-8">
+                                        <span class="title">第 1/1 个同类崩溃</span>
+                                        <span class="occur-time">发生时间:2015-04-14 14:25:03</span>
                                     </div>
-                                    <div class="col-sm-2 col-xs-6">
-                                        <div class="key">采样次数</div>
-                                        <div class="value">120</div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <span class="to-right">
+                                            <i class="fa fa-angle-right"></i>
+                                        </span>
                                     </div>
-                                    <div class="col-sm-2 col-xs-6">
-                                        <div class="key">采集人</div>
-                                        <div class="value">ONEAPM</div>
+                                </div>
+                           </div>
+                        </section>
+                        <section class="widget" style="padding-top: 30px;">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="form-section">
+                                            <legend class="section">Host (Agent)</legend>
+                                            <p style="word-break:break-all;">fe80:0:0:0:20c:29ff:fe8f:146e%2 (java:app187:8080)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="form-section">
+                                            <legend class="section">请求参数</legend>
+                                            <p style="word-break:break-all">uri : Java/org.springframework.web.servlet.DispatcherServlet/initjvm.thread_name:localhost-startStop-1</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="form-section">
+                                            <legend class="section">自定义参数</legend>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="form-section">
+                                            <legend class="section">错误信息</legend>
+                                            <p style="word-break:break-all">Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <section class="widget" style="margin-top: 20px;min-height: 640px;">
-                                <div>
-                                    <span style="margin-right: 20px;font-size: 14px">显示设置</span>
-                                    <div class="radio">
-                                         <input type="radio" name="radio3" id="radio5" value="option1" checked>
-                                         <label for="radio5">
-                                             web request
-                                         </label>
-                                     </div>
-                                     <div class="radio">
-                                         <input type="radio" name="radio3" id="radio6" value="option2">
-                                         <label for="radio6">
-                                             other
-                                         </label>
-                                     </div>
-                                     <button type="button" class="btn btn-sm btn-refresh " data-placement="top">
-                                        <i class="iconfont icon2 refresh">&#xe61c;</i>
-                                    </button>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-section">
+                                            <legend class="section">Sample stack trace</legend>
+                                            <p>org.apache.naming.NamingContext.lookup(NamingContext.java:820)<br>
+                                                org.apache.naming.NamingContext.lookup(NamingContext.java:168)<br>
+                                                org.apache.naming.SelectorContext.lookup(SelectorContext.java:158)<br>
+                                                javax.naming.InitialContext.lookup(InitialContext.java:411)<br>
+                                                org.springframework.jndi.JndiTemplate$1.doInContext(JndiTemplate.java:155)<br>
+                                                org.springframework.jndi.JndiTemplate.execute(JndiTemplate.java:87)<br>
+                                                org.springframework.jndi.JndiTemplate.lookup(JndiTemplate.java:152)<br>
+                                                org.springframework.jndi.JndiTemplate.lookup(JndiTemplate.java:179)<br>
+                                                org.springframework.jndi.JndiLocatorSupport.lookup(JndiLocatorSupport.java:104)<br>
+                                                org.springframework.jndi.JndiLocatorDelegate.lookup(JndiLocatorDelegate.java:38)<br>
+                                                org.springframework.jndi.JndiLocatorSupport.lookup(JndiLocatorSupport.java:77)<br>
+                                                org.springframework.jndi.JndiLocatorDelegate.lookup(JndiLocatorDelegate.java:33)<br>
+                                                org.springframework.jndi.JndiPropertySource.getProperty(JndiPropertySource.java:82)<br>
+                                                org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:84)<br>
+                                                org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:60)<br>
+                                                org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:465)<br>
+                                                org.springframework.context.support.LiveBeansView.registerApplicationContext(LiveBeansView.java:61)<br>
+                                                org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:774)<br>
+                                                org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:483)<br>
+                                                org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:658)<br>
+                                                org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:624)<br>
+                                                org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:672)<br>
+                                                org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:543)<br>
+                                                org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484)<br>
+                                                org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)<br>
+                                                javax.servlet.GenericServlet.init(GenericServlet.java:160)<br>
+                                                org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)<br>
+                                                org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)<br>
+                                                org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)<br>
+                                                org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)<br>
+                                                org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)<br>
+                                                org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)<br>
+                                                org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)<br>
+                                                org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)<br>
+                                                org.apache.catalina.core.StandardHost.addChild(StandardHost.java:633)<br>
+                                                org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1120)<br>
+                                                org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1678)<br>
+                                                java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)<br>
+                                                java.util.concurrent.FutureTask.run(FutureTask.java:262)<br>
+                                                java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)<br>
+                                                java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)<br>
+                                                java.lang.Thread.run(Thread.java:744)<br>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </section>
-                        </div>
-                    </section>
-                        
+                                
+                            </div>
+                        </section>
                     </div>
+                </section>
+                    
                 </div>
-			</div>
-
+            </div>
 		</div>
+	</div>
  {{/replace}}
 
      {{#append "scripts"}}
@@ -189,7 +264,7 @@
         <script src="lib/nvd3/nv.d3.min.js"></script>
 
 
-        <script src="lib/form-daterangepicker/daterangepicker.js"></script>                  <!-- Date Range Picker -->
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>      
          <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
 
