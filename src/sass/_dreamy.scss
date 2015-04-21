@@ -2317,3 +2317,33 @@ table .progress {
     color: #666;
   }
 }
+.crash-switch {
+  .to-left {
+    display: block;
+    text-align: left;
+    color: #666;
+    font-size: 24px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .to-right {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 24px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .title {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
+  .occur-time {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+  }
+}
