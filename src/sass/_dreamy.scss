@@ -2070,6 +2070,63 @@ table .progress {
     }
   }
 
+  .app-setting{
+    .form-control{
+      height: 35px;
+    }
+    label {
+      margin-top: 13px;
+      float: right;
+    }
+    .checkbox{
+      margin-top: 0;
+    }
+    .checkbox-label{
+      float: none;
+      font-size: 14px;
+    }
+    .select-label{
+      margin-top: 8px;
+    }
+    .tip-info{
+      margin-top: 5px;
+      font-size: 12px;
+      color: #d2d2d2;
+    }
+    .last-tip-info{
+      margin-bottom: 0;
+    }
+    legend.section {
+      color: #fff;
+    }
+    .save-text{
+      font-size: 14px;
+      color: #9bd0f6;
+      &:hover{
+        color: #54aff0;
+        cursor: pointer;
+      }
+      display: none;
+    }
+    .edit-text{
+      font-size: 14px;
+      color: #9bd0f6;
+      &:hover{
+        color: #54aff0;
+        cursor: pointer;
+      }
+      display: none;
+    }
+    .form-section:hover {
+      & .edit-text{
+        display: inline-block;
+      }
+    }
+    .editing {
+      display: none;
+    }
+  }
+
 
   .news{
     position: fixed;
@@ -2163,7 +2220,7 @@ table .progress {
   color: rgba(51, 51, 51, 0.5);
   display: inline-block;
   cursor: pointer;
-  &>.disabled{
+  &.disabled{
     cursor: default;
     color: #fff;
   }
@@ -2228,7 +2285,10 @@ table .progress {
   right: 25px;
   font-weight: bold;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd022fb30fbd0fa98bb4ab52fb238f386e0b3c78
 .widget .search-part {
   position: absolute;
   right: 30px;
@@ -2241,5 +2301,9 @@ table .progress {
     min-height: 24px;
     font-size: 12px;
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> cd022fb30fbd0fa98bb4ab52fb238f386e0b3c78
