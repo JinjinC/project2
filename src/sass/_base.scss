@@ -1077,7 +1077,6 @@ position: absolute;
 
 .btn-floatcard{
   margin-top: -3px;
-  margin-right: 20px;
   line-height:1;
 }
 
@@ -1708,4 +1707,25 @@ ul.text-list{
 
 ol.text-list{
   list-style: decimal;
+}
+
+/*** footer ***/
+footer{
+  background: #f2f2f2;
+  color: #999;
+  height: 100px;
+  & .iconfont{
+    font-size: 20px;
+  }
+}
+.footer-content{
+  margin: auto;
+  width: 800px;
+}
+.footer-link{
+  display: inline-block;
+  padding: 10px 20px;
+}
+.copyright{
+  text-align: right;
 }
