@@ -1766,7 +1766,11 @@ a.tabIcon{
 .float-all {
   width: 85%;
   top: 146px;
-  
+}
+
+.sever-detail-card{
+  position: relative;
+  display: block;
 }
 
 .float-trace-in-transaction{
@@ -1774,6 +1778,13 @@ a.tabIcon{
   & .trace-section{
     box-shadow: rgba(0, 0, 0, 0.29) 0 0 20px 10px;
   }
+}
+
+.inner-float-card{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .float-body {
@@ -2346,5 +2357,26 @@ table .progress {
     display: block;
     text-align: center;
     font-size: 12px;
+  }
+}
+
+.host-agent-table{
+  tr{
+    &:hover{
+      cursor: pointer;
+    }
+   &.active{
+      & td{
+        color: #000;
+        background: #fff !important;
+      }
+      & a{
+        color: #4d9dd7;
+        font-weight: 400;
+        &:hover{
+          color: #2877b0;
+        }
+      }
+    }
   }
 }
