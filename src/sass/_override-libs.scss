@@ -38,6 +38,11 @@
   }
 }
 
+.checkbox input[type="checkbox"]:disabled + label{
+  opacity: 1;
+  cursor: not-allowed;
+}
+
 .checkbox input[type="checkbox"]:disabled + label::before{
   opacity: 0.65;
   background-color: transparent;
@@ -47,5 +52,17 @@
 .checkbox input[type="checkbox"]:disabled + label::after{
   color: #eee;
   opacity: 0.65;
+  cursor: not-allowed;
+}
+
+select:disabled + div{
+  cursor: not-allowed;
+}
+
+select:disabled + div>button{
+  cursor: not-allowed;
+}
+
+select:disabled + div>button>span{
   cursor: not-allowed;
 }
