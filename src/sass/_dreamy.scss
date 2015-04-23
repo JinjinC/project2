@@ -2543,6 +2543,7 @@ table .progress {
 .checkcode-img{
   display: inline-block;
   float: right;
+  cursor: pointer;
 }
 
 .checkcode-num{
@@ -2555,5 +2556,9 @@ table .progress {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-
+}
+.repeat-checkcode-btn{
+  float: right;
+  color: #fff;
+  cursor: pointer;
 }
