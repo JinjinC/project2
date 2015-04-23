@@ -56,7 +56,7 @@
                                                         <p>JDK 1.6 至 1.8，请下载</p>
                                                         <div class="addapp-btn">
                                                             <a href="add_application.html">
-                                                                <button type="button" class="btn btn-inverse btn-sm" data-placement="top">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
                                                                     OneAPM Java Agent 2.0
                                                                 </button>
                                                             </a>
@@ -66,14 +66,14 @@
                                                         <p>JDK 1.5，请下载</p>
                                                         <div class="addapp-btn">
                                                             <a href="add_application.html">
-                                                                <button type="button" class="btn btn-inverse btn-sm" data-placement="top">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
                                                                     OneAPM Java Agent 1.0
                                                                 </button>
                                                             </a>
                                                         </div>
                                                     </li>
                                                 </ul>
-                                                <p>Java SE 有关的 Agent 安装，请访问<a href="">帮助中心</a>.</p>
+                                                <p class="note">Java SE 有关的 Agent 安装，请访问<a href="">帮助中心</a>。</p>
                                             </div>
                                         </div>
                                         <div class="form-section">
@@ -95,20 +95,25 @@
                                                             <li>
                                                                 <p>解压「Agent」至「应用程序的根目录」下</p>
                                                                 <code>unzip oneapm.zip -d /&lt;Application Server Path&gt;/</code>
-                                                                <p>Hover: 请替换应用程序根目录地址</p>
+                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                                <p class="note">Hover: 请替换应用程序根目录地址</p>
                                                             </li>
                                                             <li>
-                                                                <p>写入「License Key」至配置文件「oneapm.yml</p>
+                                                                <p>写入「License Key」至配置文件「oneapm.yml」</p>
                                                                 <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=</code>
+                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
                                                             </li>
                                                             <li>
                                                                 <p>在「oneapm 目录」中运行安装指令</p>
                                                                 <code>cd /&lt;Application Server Path&gt;/oneapm</code>
-                                                                <p>Hover: 请替换应用程序根目录地址</p>
+                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
+                                                                <p class="note">Hover: 请替换应用程序根目录地址</p>
                                                                 <code>java -jar oneapm.jar install</code>
+                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
                                                             </li>
                                                         </ul>
-                                                        <p>有关于手动安装，和 OneAPM 所支持的 Java 框架，以及其他详细信息，请访问<a href="">帮助中心</a>。</p>
+                                                        <p class="note">有关于手动安装，和 OneAPM 所支持的 Java 框架，以及其他详细信息，请访问<a href="">帮助中心</a>。</p>
                                                     </div>
                                                     <div id="windows" class="tab-pane clearfix">
                                                         <p class="ul-title">JBOSS, GlassFish, Jetty, Tomcat 压缩包</p>
@@ -119,6 +124,7 @@
                                                             <li>
                                                                 <p>写入「License Key」至配置文件「oneapm.yml」</p>
                                                                 <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=</code>
+                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
                                                             </li>
                                                         </ul>
                                                         <p class="ul-title">Tomcat 安装程序</p>
@@ -135,11 +141,10 @@
                                         <div class="form-section">
                                              <legend class="section">3. 重启</legend>
                                              <div class="form-group">
-                                                <ul class="add-app-ul">
-                                                    <li>请重启您的应用服务器</li>
-                                                </ul>
+                                                
+                                                <p>请重启您的应用服务器。</p>
+                                                
                                                 <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
-                                                <img class="img-responsive" src="img/img_setup_001.png">
                                              </div>
                                         </div>
                                     </div>
@@ -162,7 +167,10 @@
                             </div>
                         </section>
                         <div class="connect-box">
-                            <a href="">返回应用程序列表</a>
+                            
+                            <a href="application_list.html"><button type="button" class="btn btn-reply btn-sm" data-placement="top">
+                                返回应用程序列表
+                            </button></a>
                             <p>若其中出现数据未展现错误，和其他错误，请使劲打扰 OneAPM 支持人员：</p>
                             <ol>
                                 <li>1. 访问<a href="">帮助中心</a>，查阅相关文档；</li>
@@ -183,7 +191,7 @@
                         <h5>Java Agent 安装方法</h5>
                     </header>
                     <div class="body">
-                        <video controls="" class="img-responsive">
+                        <video controls="" class="img-responsive" poster="img/video-poster.jpg">
                             <source src="http://oneapm-com-public-file.qiniudn.com/java-agent-install.mp4" type="video/mp4">
                         </video>
                         
@@ -202,12 +210,12 @@
                         <div class="help-part">
                             <h5>获取更多支持</h5>
                             <ul>
-                                <li><a href="">知识库</a></li>
-                                <li><a href="">提交工单</a></li>
-                                <li><a href="">400-622-3101</a></li>
-                                <li><a href="">support@onepam.com</a></li>
-                                <li><a href="">OneAPM 官方微博</a></li>
-                                <li><a href="">OneAPM 公众账号</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64d;</i>知识库</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64e;</i>提交工单</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64c;</i>400-622-3101</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe624;</i>support@onepam.com</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe649;</i>OneAPM 官方微博</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64a;</i>OneAPM 公众账号</a></li>
                             </ul>
                         </div>
                     </div>
@@ -225,6 +233,10 @@
             $('#divider').hide();
             $('#settings').hide();
             $('#divider1').hide();
+
+             $('.copy-pr').click(function(){
+                $('.copied').toggleClass("show-section");
+            })
         </script>
     {{/append}}
 
