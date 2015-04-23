@@ -57,20 +57,34 @@
                                                         <div class="addapp-btn">
                                                             <a href="add_application.html">
                                                                 <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                    OneAPM Java Agent 2.0
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM Java Agent 3.x
                                                                 </button>
                                                             </a>
                                                         </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/0431b83c021d745b/agent/java/OneAPM_java_Agent_3.1.7.zip
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
                                                     </li>
                                                     <li>
                                                         <p>JDK 1.5，请下载</p>
                                                         <div class="addapp-btn">
                                                             <a href="add_application.html">
                                                                 <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                    OneAPM Java Agent 1.0
+                                                                   <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM Java Agent 1.x
                                                                 </button>
                                                             </a>
                                                         </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/0431b83c021d745b/agent/java/OneAPM_java_Agent_1.05.zip
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
                                                     </li>
                                                 </ul>
                                                 <p class="note">Java SE 有关的 Agent 安装，请访问<a href="">帮助中心</a>。</p>
@@ -94,28 +108,44 @@
                                                         <ul class="add-app-ul">
                                                             <li>
                                                                 <p>解压「Agent」至「应用程序的根目录」下</p>
-                                                                <code>unzip oneapm.zip -d /&lt;Application Server Path&gt;/</code>
-                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
-                                                                <span class="copied hide-section">已复制</span>
-                                                                <p class="note">Hover: 请替换应用程序根目录地址</p>
+                                                                <code>unzip oneapm.zip -d /&lt;Application Server Path&gt;/
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <p class="note">注：请替换应用程序根目录地址</p>
+                                                                <img class="img-responsive" src="img/catalogue.png" style="margin-bottom:10px">
                                                             </li>
                                                             <li>
                                                                 <p>写入「License Key」至配置文件「oneapm.yml」</p>
-                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=</code>
-                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
+                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
                                                             </li>
                                                             <li>
                                                                 <p>在「oneapm 目录」中运行安装指令</p>
-                                                                <code>cd /&lt;Application Server Path&gt;/oneapm</code>
-                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
-                                                                <p class="note">Hover: 请替换应用程序根目录地址</p>
-                                                                <code>java -jar oneapm.jar install</code>
-                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
+                                                                <code>cd /&lt;Application Server Path&gt;/oneapm
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <p class="note">注：请替换应用程序根目录地址</p>
+                                                                <code>java -jar oneapm.jar install
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
                                                             </li>
                                                         </ul>
                                                         <p class="note">有关于手动安装，和 OneAPM 所支持的 Java 框架，以及其他详细信息，请访问<a href="">帮助中心</a>。</p>
                                                     </div>
-                                                    <div id="windows" class="tab-pane clearfix">
+                                                    <div id="windows" class="tab-pane clearfix" style="margin-top: 15px">
                                                         <p class="ul-title">JBOSS, GlassFish, Jetty, Tomcat 压缩包</p>
                                                         <ul class="add-app-ul">
                                                             <li>
@@ -123,8 +153,12 @@
                                                             </li>
                                                             <li>
                                                                 <p>写入「License Key」至配置文件「oneapm.yml」</p>
-                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=</code>
-                                                                <span class="copy-pr"><i class="iconfont icon1">&#xe64b;</i></span>
+                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
                                                             </li>
                                                         </ul>
                                                         <p class="ul-title">Tomcat 安装程序</p>
@@ -138,7 +172,7 @@
                                               
                                             </div>
                                         </div>
-                                        <div class="form-section">
+                                        <div class="form-section last-form">
                                              <legend class="section">3. 重启</legend>
                                              <div class="form-group">
                                                 
@@ -150,34 +184,482 @@
                                     </div>
                                 </div>
                                 <div id="net" class="tab-pane">
-                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        
+                                        <div class="form-section">
+                                            <legend class="section">1. 下载</legend>
+                                            <div class="form-group">
+                                                <p>OneAPM 支持 32 位和 64 位的 Windows 操作系统，请选择相应的 Agent 安装程序。</p>
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>64 位操作系统</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="#">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM .NET Agent x64
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p>32 位操作系统</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="add_application.html">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                   <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM .NET Agent x86
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 安装</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>运行 Agent 安装程序</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>提示输入「License Key」时，写入「License Key」</p>
+                                                        <code>Cw0GHVxNXVQ8561cXkUKXxVTUA2818gCDwkBCQkKB000fgMJSgINU1cJ39bdAwEACgoHCwk=
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>完成安装程序提示的后续步骤</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">3. 重启</legend>
+                                             <div class="form-group">
+                                                
+                                                <p>请重启您的应用服务器。</p>
+                                                <code>iisreset
+                                                    <span class="copy-part">
+                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                        <span class="copied hide-section">已复制</span>
+                                                    </span>
+                                                </code>
+                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="nodejs" class="tab-pane">
-                
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">  
+                                        <div class="form-section">
+                                            <legend class="section">1. 下载</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>点击下载 OneAPM Node.js Agent</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="#">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM Node.js Agent
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/02fafebcefed2e7a/agent/node/OneAPM_node_Agent_1.2.1.tgz
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 安装</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>定位路径至「应用程序根目录」下</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>运行安装指令</p>
+                                                        <code>npm install &lt;LocationOfYourOneAPMAgent>/oneapm.tgz
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        <p class="note">注意： 请替换应用程序根目录地址和安装包名称</p>
+                                                    </li>
+                                                    <li>
+                                                        <p >完成安装程序提示的后续步骤</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">3. 配置</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>复制<code>node_modules/oneapm/oneapm.js</code>至「应用程序根目录」下</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>打开<code>oneapm.js</code>设置<code>app_name</code>和<code>license_key</code></p>
+                                                        <code>Vg9SSFsTXwpe7bdJXUxZVE4GB15f3fUAW1wGVwtUUe395wcBGQlWBgBU8b73AVVVDVQFUl0=
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p >复制以下「代码」至「应用程序主模块文件」第一行</p>
+                                                        <code>require('oneapm');
+                                                             <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                             <legend class="section last-form">4. 重启</legend>
+                                             <div class="form-group">
+                                                
+                                                <p>请重新部署您的应用程序。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="python" class="tab-pane">
-                                   
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">  
+                                        <div class="form-section">
+                                            <legend class="section">1. 下载</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>点击下载 OneAPM Python Agent</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="#">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM Python Agent
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/02fafebcefed2e7a/agent/python/OneAPM_python_Agent_1.04.zip
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 安装</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>解压「Agent」至「应用程序的根目录」下</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>运行安装指令</p>
+                                                        <code>python setup.py install
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">3. 配置</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>在「应用程序根目录」下，执行「配置文件生成」指令</p>
+                                                        <code>blueware-admin generate-config A14BHAtHXVQ0f10fV0AKDkhVVge218BRBAhVAAAAA395fAAMSlNQVVAHbddbUAUCVAoCAQo= blueware.ini
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        <p class="note">注意：License Key 错误导致无法生成配置文件，请联系 OneAPM 支持人员。</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">4. 重启</legend>
+                                             <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>Shutdown 您的应用程序</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>在原有启动指令前，加入<code>blueware-admin</code>前缀</p>
+                                                        <code>BLUEWARE_CONFIG_FILE=blueware.ini blueware-admin run-program command options
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        <p class="note">注意：不清楚如何加入 blueware-admin 前缀，点击查看<a href="javascript:;" id="spec-case">具体案例</a>：</p>
+                                                        <div class="spec-case">
+                                                            <ul class="add-app-ul">
+                                                                <li>
+                                                                    <p>WSGI gunicorn</p>
+                                                                    <code>blueware-admin run-program gunicorn -w 3 wsgi:application
+                                                                        <span class="copy-part">
+                                                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                            <span class="copied hide-section">已复制</span>
+                                                                        </span>
+                                                                    </code>
+                                                                </li>
+                                                                <li>
+                                                                    <p>WSGI uWSGI</p>
+                                                                    <code>blueware-admin run-program uwsgi --socket /tmp/uwsgi.sock --single-interpreter --enable-threads wsgi.py
+                                                                        <span class="copy-part">
+                                                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                            <span class="copied hide-section">已复制</span>
+                                                                        </span>
+                                                                    </code>
+                                                                </li>
+                                                                <li>
+                                                                    <p>WSGI Paster Server</p>
+                                                                    <code>blueware-admin run-program paster serve production.ini
+                                                                        <span class="copy-part">
+                                                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                            <span class="copied hide-section">已复制</span>
+                                                                        </span>
+                                                                    </code>
+                                                                </li>
+                                                                <li>
+                                                                    <p>Django run_gunicorn</p>
+                                                                    <code>blueware-admin run-python manage.py run_gunicorn -w 3
+                                                                        <span class="copy-part">
+                                                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                            <span class="copied hide-section">已复制</span>
+                                                                        </span>
+                                                                    </code>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="php" class="tab-pane">
-                                   
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">  
+                                        <div class="form-section">
+                                            <legend class="section">1. 下载</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>点击下载 OneAPM PHP Agent</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="#">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM PHP Agent
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/02fafebcefed2e7a/agent/php/OneAPM_php_Agent_2.3.5.tar.gz
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 安装</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>解压 Agent 安装包</p>
+                                                        <code>tar -xzf oneapm-php5-linux-install-script
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>定位至「安装包所在路径」</p>
+                                                        <code>cd oneapm-php5-linux-install-script
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>执行安装指令</p>
+                                                        <code>sudo ./oneapm-install install
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>在提示输入「License Key」时，输入「License Key」</p>
+                                                        <code>Vg0EGFpFDe544VseVkBYWE40a7lQUVQBGQU2854GHVAHHgoE4ebaBQBIU1BIBAI=
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">3. 重启</legend>
+                                             <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>重启 Apache，等待安装成功。若出现以下信息，则安装成功。</p>
+                                                        <code>OneAPM is now installed on your system. Congratulations!</code>
+                                                    </li>
+                                                    <li>
+                                                        <p>此时，页面若出现以下提示，则启动 Daemon 即可。</p>
+                                                        <code>And then start php-agent in /usr/bin/oneapm-daemon</code>
+                                                    </li>
+                                                    <li>
+                                                        <p>启动 Daemon</p>
+                                                        <code>sudo /usr/bin/oneapm-daemon
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="ruby" class="tab-pane">
-                                   
+                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">  
+                                        <div class="form-section">
+                                            <legend class="section">1. 下载</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>点击下载 OneAPM 配置文件</p>
+                                                        <div class="addapp-btn">
+                                                            <a href="#">
+                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM Ruby 配置文件
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                        <p>或使用 wget</p>
+                                                        <code>wget https://user.oneapm.com/account/a7ea8e34c08c217d/agent/ruby/oneapm.yml
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 配置</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>复制<code>oneapm.yml</code>至「应用程序配置目录」下</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>写入「License Key」至配置文件「oneapm.yml」</p>
+                                                        <code>C1QMCkhZE9c98FxbGwgTD1d7e0sZBglSDBV77ffUBEgBBhtUc754V1ICGAQLTggN
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                             <legend class="section">3. 安装</legend>
+                                             <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>打开<code>Gemfile</code>，添加以下<code>gem source</code></p>
+                                                        <code>source 'http://rubygems.oneapm.com'
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>以及添加<code>gem</code></p>
+                                                        <code>gem 'oneapm_rpm'
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>定位至「应用程序根目录」，运行以下安装指令</p>
+                                                        <code>bundle install
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>若出现以下提示，则代表安装成功</p>
+                                                        <code>Your bundle is complete!<br>Use 'bundle show [gemname]' to see where a bundled gem is installed.</code>
+                                                    </li>
+                                                </ul>
+                                             </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">4. 重启</legend>
+                                             <div class="form-group">
+                                                <p>请启动或重新部署您的应用服务。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
-                        <div class="connect-box">
-                            
-                            <a href="application_list.html"><button type="button" class="btn btn-reply btn-sm" data-placement="top">
+                        <div class="connect-box">           
+                            <a href="application_list.html"><button type="button" class="btn btn-return btn-sm" data-placement="top">
                                 返回应用程序列表
                             </button></a>
-                            <p>若其中出现数据未展现错误，和其他错误，请使劲打扰 OneAPM 支持人员：</p>
-                            <ol>
-                                <li>1. 访问<a href="">帮助中心</a>，查阅相关文档；</li>
-                                <li>2. <a href="">提交问题</a>，等待支持人员的邮件反馈；</li>
-                                <li>3. 电话联系，400-622-3101；</li>
-                                <li>4. 邮件联系，<a href="">support@oneapm.com</a>。</li>
-                            </ol>
                         </div>
                     </div>
                 </section>
@@ -213,7 +695,7 @@
                                 <li><a href=""><i class="iconfont icon1 h-c">&#xe64d;</i>知识库</a></li>
                                 <li><a href=""><i class="iconfont icon1 h-c">&#xe64e;</i>提交工单</a></li>
                                 <li><a href=""><i class="iconfont icon1 h-c">&#xe64c;</i>400-622-3101</a></li>
-                                <li><a href=""><i class="iconfont icon1 h-c">&#xe624;</i>support@onepam.com</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c" style="font-size: 18px">&#xe624;</i>support@onepam.com</a></li>
                                 <li><a href=""><i class="iconfont icon1 h-c">&#xe649;</i>OneAPM 官方微博</a></li>
                                 <li><a href=""><i class="iconfont icon1 h-c">&#xe64a;</i>OneAPM 公众账号</a></li>
                             </ul>
@@ -234,9 +716,13 @@
             $('#settings').hide();
             $('#divider1').hide();
 
-             $('.copy-pr').click(function(){
-                $('.copied').toggleClass("show-section");
+            $('.copy-part').click(function(){
+                $(this).find('.copied').toggleClass("show-section");
             })
+            $('#spec-case').click(function(){
+                $('.spec-case').show();
+            })
+            
         </script>
     {{/append}}
 
