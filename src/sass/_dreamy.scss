@@ -2036,7 +2036,7 @@ table .progress {
     }
   }
 
-  #tab1 {
+  #tab1,#tab5,#tab7 {
     margin-top: 70px; 
     margin-bottom: 48px;
 
@@ -2062,14 +2062,9 @@ table .progress {
     label {
       margin-bottom: 18px;
     }
-    legend.section {
-      color: #fff;
-    }
     span {
-      font-size: 14px;
-      color: #9bd0f6;
+      font-size: 12px;
       &:hover{
-        color: #54aff0;
         cursor: pointer;
       }
     }
@@ -2559,4 +2554,44 @@ table .progress {
   .add-app-ul {
     font-size: 12px;
   }
+
+//************** Mobile sign ****************////
+
+#wizard-mobile{
+  display: none;
+}
+
+#switchToEmail,#switchToMobile{
+  cursor: pointer;
+  background: transparent;
+  &:hover{
+    background: transparent;
+  }
+}
+
+#switchToMobile{
+  cursor: pointer;
+}
+
+.checkcode-input{
+  display: inline-block;
+  width: 50%;
+}
+.checkcode-img{
+  display: inline-block;
+  float: right;
+}
+
+.checkcode-num{
+  margin-bottom: 21px;
+}
+#phone-checkcode-form{
+  margin-bottom: 5px;
+}
+#finish-btn{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+>>>>>>> ff37c9909cd269626b052f50d8b5747aed56bcc5
 }
