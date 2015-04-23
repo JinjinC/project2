@@ -978,9 +978,13 @@
 
                 //事件委托！！！！
                 $('.float-card').on('click', '.glyphicon-remove',function  (event) {
-                    $(this).closest('.float-card').hide();
-                    $('.float-trace').removeClass("float-trace-in-transaction");
-                    $('.dd-handle').removeClass("active");
+                    var current_card = $(this).closest('.float-card');
+                    if(current_card.hasClass("float-show-one")){
+                        $('.float-card').hide();
+                        $('.dd-handle').removeClass("active");
+                    }else if(current_card.hasClass("float-trace-in-transaction")){
+                        current_card.hide();
+                    }
                 });
 
             });

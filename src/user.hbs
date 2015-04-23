@@ -18,7 +18,7 @@
     					<div class="row">
     						<div class="col-lg-4 col-md-4 col-sm-4">
 		    					<div class="form-section">
-		    						<legend class="section">账户<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+		    						<legend class="section">账户<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
 		    						<div class="form-group">
 		    							<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="Jerry">
 		    						</div>
@@ -27,7 +27,7 @@
 			    					</div>
 		    					</div>
     							<div class="form-section">
-    								<legend class="section">密码<span class="edit-text pull-right psw-edit">修改</span><span class="save-text pull-right psw-save">保存</span></legend>
+    								<legend class="section">密码<span class="edit-text pull-right btn btn-xs btn-inverse psw-edit">修改</span><span class="save-text pull-right btn btn-xs btn-success psw-save">保存</span></legend>
     								<div class="before-edit">
     									<div class="form-group">
     										<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled"  value="11111">
@@ -46,7 +46,7 @@
     								</div>
     							</div>
     							<div class="form-section">
-    								<legend class="section">企业信息<span class="edit-text pull-right">修改</span><span class="save-text pull-right">保存</span></legend>
+    								<legend class="section">企业信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
     								<div class="form-group">
     									<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="OneAPM">
     								</div>
@@ -114,6 +114,7 @@
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
     			input.removeAttr("disabled");
+                input.removeClass("input-transparent");
     			input.first().focus();
     		});
     		//点击保存
@@ -122,6 +123,7 @@
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
     			input.attr("disabled","disabled");
+                input.addClass("input-transparent");
     		})
 
     		//密码修改

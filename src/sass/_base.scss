@@ -1086,6 +1086,9 @@ position: absolute;
 
 
 // Legend collapses margin, so next element is responsible for spacing
+legend{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 legend + .control-group {
   margin-top: $line-height-base;
   -webkit-margin-top-collapse: separate;
@@ -1711,9 +1714,11 @@ ol.text-list{
 
 /*** footer ***/
 footer{
-  background: #f2f2f2;
-  color: #999;
-  height: 100px;
+  color: rgba(51, 51, 51, 0.5);
+  height: auto;
+  width: 800px;
+  margin: 0 auto 50px;
+
   & .iconfont{
     font-size: 20px;
   }
@@ -1725,7 +1730,18 @@ footer{
 .footer-link{
   display: inline-block;
   padding: 10px 20px;
+  & a{
+    color: rgba(51, 51, 51, 0.5);
+    &:hover{
+      color: #fff;
+    }
+  }
 }
 .copyright{
   text-align: right;
+}
+
+/*** margin ****/
+.ml-n-sm-2{
+  margin-left: -7px
 }
