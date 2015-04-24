@@ -18,37 +18,41 @@
     					<div class="row">
     						<div class="col-lg-4 col-md-4 col-sm-4">
 		    					<div class="form-section">
-		    						<legend class="section">账户<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
+		    						<legend class="section">账户
+                                        <span class="edit-text pull-right btn btn-xs btn-inverse">修改</span>
+                                        <span class="save-text pull-right btn btn-xs btn-success">保存</span>
+                                        <a href="javascript:;" class="cancel-text pull-right">取消</a>
+                                    </legend>
 		    						<div class="form-group">
-		    							<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="Jerry">
+		    							<input type="text" name="name" class="form-control input-transparent" disabled="disabled" value="Jerry">
 		    						</div>
 		    						<div class="form-group">
-			    						<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="liuyuanli@oneapm.com">
+			    						<input type="text" name="email" class="form-control input-transparent" disabled="disabled" value="liuyuanli@oneapm.com">
 			    					</div>
 		    					</div>
     							<div class="form-section">
-    								<legend class="section">密码<span class="edit-text pull-right btn btn-xs btn-inverse psw-edit">修改</span><span class="save-text pull-right btn btn-xs btn-success psw-save">保存</span></legend>
+    								<legend class="section">密码<span class="edit-text pull-right btn btn-xs btn-inverse psw-edit">修改</span><span class="save-text pull-right btn btn-xs btn-success psw-save">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
     								<div class="before-edit">
     									<div class="form-group">
-    										<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled"  value="11111">
+    										<input type="password" name="psw" class="form-control input-transparent" disabled="disabled"  value="11111">
     									</div>
     								</div>
     								<div class="editing">
 	    								<div class="form-group">
-	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="输入原密码">
+	    									<input type="password" name="orig_psw" class="form-control input-transparent" disabled="disabled" placeholder="输入原密码">
 	    								</div>
 	    								<div class="form-group">
-	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="输入新密码">
+	    									<input type="password" name="new_psw" class="form-control input-transparent" disabled="disabled" placeholder="输入新密码">
 	    								</div>
 	    								<div class="form-group">
-	    									<input type="password" id="disabled-input" class="form-control input-transparent" disabled="disabled" placeholder="重复密码">
+	    									<input type="password" name="repeat_psw" class="form-control input-transparent" disabled="disabled" placeholder="重复密码">
 	    								</div>
     								</div>
     							</div>
     							<div class="form-section">
-    								<legend class="section">企业信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
+    								<legend class="section">企业信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
     								<div class="form-group">
-    									<input type="text" id="disabled-input" class="form-control input-transparent" disabled="disabled" value="OneAPM">
+    									<input type="text" name="company" class="form-control input-transparent" disabled="disabled" value="OneAPM">
     								</div>
     							</div>
     						</div>
@@ -107,24 +111,43 @@
 
     		$('#nav-right>li:eq(0)').hide();
             $('#nav-right>li:eq(1)').hide();
+            var inputValue ={};
     		//点击修改
     		$('.edit-text').click(function  () {
 
     			$(this).next().show();
+                $(this).siblings(".cancel-text").show();
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
     			input.removeAttr("disabled");
                 input.removeClass("input-transparent");
     			input.first().focus();
+                input.each(function  () {
+                    inputValue[$(this).attr("name")]=$(this).val();
+                });
     		});
     		//点击保存
     		$('.save-text').click(function  () {
     			$(this).prev().removeAttr("style");
+                $(this).siblings(".cancel-text").hide();
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
     			input.attr("disabled","disabled");
                 input.addClass("input-transparent");
     		})
+
+            //点击取消
+            $('.cancel-text').click(function  () {
+                $(this).siblings(".edit-text").removeAttr("style");
+                $(this).siblings(".save-text").hide();
+                $(this).hide();
+                var input = $(this).parentsUntil(".form-section").parent().find("input");
+                input.attr("disabled","disabled");
+                input.addClass("input-transparent");
+                input.each(function(){
+                    $(this).val(inputValue[$(this).attr("name")]);
+                })
+            })
 
     		//密码修改
     		$('.psw-edit').click(function  () {
