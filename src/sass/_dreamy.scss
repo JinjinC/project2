@@ -920,6 +920,9 @@ a.tabIcon{
   & .form-group {
     margin-bottom: 20px;
   }
+  & .phone-checkcode-form{
+    margin-bottom: 5px;
+  }
   & .input-group input.form-control {
     border-radius: 6px;
   }
@@ -2312,6 +2315,9 @@ table .progress {
   right: 25px;
   font-weight: bold;
 }
+.chart-value-link {
+  padding: 0 10px;
+}
 
 .widget .search-part {
   position: absolute;
@@ -2592,20 +2598,8 @@ table .progress {
 
 //************** Mobile sign ****************////
 
-#wizard-mobile{
+.wizard-mobile{
   display: none;
-}
-
-#switchToEmail,#switchToMobile{
-  cursor: pointer;
-  background: transparent;
-  &:hover{
-    background: transparent;
-  }
-}
-
-#switchToMobile{
-  cursor: pointer;
 }
 
 .checkcode-input{
@@ -2615,18 +2609,26 @@ table .progress {
 .checkcode-img{
   display: inline-block;
   float: right;
+  cursor: pointer;
 }
 
 .checkcode-num{
   margin-bottom: 21px;
 }
-#phone-checkcode-form{
-  margin-bottom: 5px;
-}
-#finish-btn{
+.finish-btn{
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
 
 }
-
+.repeat-checkcode-btn{
+  float: right;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+.switch{
+  vertical-align: middle;
+}
