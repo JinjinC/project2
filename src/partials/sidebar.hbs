@@ -34,15 +34,16 @@
                 <span class="name">报表</span>
             </a>
         </li>
-        <li class="panel {{conditionClass "active" active "serverEn appSetting"}}">
-            <a class="accordion-toggle {{conditionClass "" active "serverEn appSetting" true}}" data-toggle="collapse"
+        <li class="panel {{conditionClass "active" active "serverEn appSetting load"}}">
+            <a class="accordion-toggle {{conditionClass "" active "serverEn appSetting load" true}}" data-toggle="collapse"
                 href="#ui-collapse">
                 <i class="iconfont icon-side">&#xe618;</i> 
                 <span class="name">设置</span>
             </a>
-            <ul id="ui-collapse" class="panel-collapse in collapse {{conditionClass "in" active "serverEn appSetting"}}">
+            <ul id="ui-collapse" class="panel-collapse in collapse {{conditionClass "in" active "serverEn appSetting load"}}">
                 <li class="{{conditionClass "active" active "appSetting"}}"><a href="appSetting.html">应用设置</a></li>
                 <li class="{{conditionClass "active" active "serverEn"}}"><a href="serverEn.html">服务器环境</a></li>
+                <li class="{{conditionClass "active" active "load"}}"><a href="load.html">loading</a></li>
             </ul>
         </li>
         
