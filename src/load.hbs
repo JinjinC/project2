@@ -1,0 +1,70 @@
+{{#extend "layout"}}
+
+    {{#replace "sidebar"}}
+        {{> sidebar this conditionClass=conditionClass active="load"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div class="loader-wrap hiding for-show">
+        {{!-- <i class="fa fa-circle-o-notch fa-spin"></i> --}}
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+    <h2 class="page-title"><span>加载中 <small>loading 样式</small></span></h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <section class="widget" style="min-height: 200px">
+                <header>
+                    <h5>加载时间</h5>
+                </header>
+                <div class="body">
+                    <div class="loader animated fadeIn handle">
+                        <span class="spinner">
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <a href="#" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-transparent btn-sm" data-placement="top">
+                    加载中 
+                </button>
+            </a>
+        </div>
+    </div>
+      <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-load">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">加载中</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="loader animated fadeIn handle">
+                            <span class="spinner">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div>
+        </div>
+    {{/replace}}
+
+    {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+        <script src="js/index.js"></script>
+    {{/append}}
+
+{{/extend}}
+
+

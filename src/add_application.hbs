@@ -709,7 +709,7 @@
     {{/replace}}
     {{#append "scripts"}}
         <!-- page application js -->
-        <script src="js/ui-buttons.js"></script>
+        
         <script>
             $('#appList').hide();
             $('#divider').hide();
@@ -717,13 +717,24 @@
             $('#divider1').hide();
 
             $('.copy-part').click(function(){
-                $(this).find('.copied').toggleClass("show-section");
+                // $(this).find('.copied').toggleClass("show-section");
+                $(this).find('.copied').show();
+                setTimeout(function (){
+                     $('.copied').hide();
+                 },1500);
             })
+
             $('#spec-case').click(function(){
                 $('.spec-case').show();
             })
+
+            $(document).ready(function(){
+                 $('.logo').css("position","absolute");
+            })
+            
             
         </script>
+        <script src="js/ui-buttons.js"></script>
     {{/append}}
 
 {{/extend}}
