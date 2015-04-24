@@ -1201,6 +1201,14 @@ legend + .control-group {
   @extend .btn.disabled;
 }
 
+.pager li > a.no-bg, .pager li > span.no-bg{
+  cursor: pointer;
+  background: transparent;
+  &:hover{
+    background: transparent;
+  }
+}
+
 /***********************************/
 /**          ICONS                **/
 /**********************************/

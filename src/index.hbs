@@ -475,7 +475,7 @@
                                                 <li class="previous">
                                                     <button class="btn btn-primary pull-left"><i class="iconfont icon2">&#xe647;</i> 上一步</button>
                                                 </li>
-                                                <li class="switch"><a id="switchToMobile">使用手机注册</a></li>
+                                                <li class="switch"><a id="switchToMobile" class="no-bg">使用手机注册</a></li>
                                                 <li class="next">
                                                     <button class="btn btn-primary next-step" >下一步 <i class="iconfont icon2">&#xe648;</i></button>
                                                     <a id="ignore">跳过 <i class="iconfont icon2">&#xe648;</i></a>
@@ -484,7 +484,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="wizard-mobile" class="form-wizard">
+                                <div id="wizard-mobile" class="form-wizard wizard-mobile">
                                     <ul class="wizard-navigation nav-justified">
                                         <li><a href="#tab5" data-toggle="tab"><small>1.</small> <strong>输入手机号</strong></a></li>
                                         <li><a href="#tab6" data-toggle="tab"><small>2.</small> <strong>填写验证信息</strong></a></li>
@@ -522,7 +522,7 @@
                                                         <h4 class="mb-sm ml-n-sm-2" style="margin-top: 5px;padding-top: 0px;">验证短信已发送至&nbsp;139****1234</h4>
                                                         <p class="mb-lg ml-n-sm-2">有效时间为 30 分钟</p>
                                                     </div>
-                                                    <div class="form-group mb-xs" id="phone-checkcode-form">
+                                                    <div class="form-group mb-xs phone-checkcode-form">
                                                         <!-- phone-checkcode -->
                                                         <div class="col-md-6 col-sm-6 col-xs-10 col-md-offset-3 col-sm-offset-3 col-xs-offset-1">
                                                             <input type="text" id="phone-checkcode" name="phone-checkcode"
@@ -552,7 +552,7 @@
                                                                    placeholder="公司名称" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <button class="btn btn-success" id="finish-btn">完成</button>
+                                                    <button class="btn btn-success finish-btn" id="finish-btn" type="button">完成 <i class="iconfont icon2">&#xe640;</i></button>
                                                 </fieldset>
                                             </form>
                                         </div>
@@ -561,7 +561,7 @@
                                                 <li class="previous">
                                                     <button class="btn btn-primary pull-left"><i class="iconfont icon2">&#xe647;</i> 上一步</button>
                                                 </li>
-                                                <li class="switch"><a id="switchToEmail">使用邮箱注册</a></li>
+                                                <li class="switch"><a id="switchToEmail" class="no-bg">使用邮箱注册</a></li>
                                                 <li class="next">
                                                     <button class="btn btn-primary next-step" >下一步 <i class="iconfont icon2">&#xe648;</i></button>
                                                     <a id="ignore">跳过 <i class="iconfont icon2">&#xe648;</i></a>
@@ -653,7 +653,6 @@
     </div>
 
     
-
     {{/replace}}
 
 {{/extend}}
