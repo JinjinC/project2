@@ -256,8 +256,10 @@
                     $(this).siblings(".save-text").hide();
                     $(this).hide();
                     var input = $(this).parentsUntil(".form-section").parent().find("input");
+                    var tip_info = $(this).closest(".form-section").find(".tip-info");
                     input.attr("disabled","disabled");
                     input.addClass("input-transparent");
+                    tip_info.removeClass("active");
                     input.each(function(){
                         $(this).val(inputValue[$(this).attr("name")]);
                     })

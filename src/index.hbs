@@ -143,6 +143,7 @@
                             $('#forget-psw').hide();
                             $('.login-modal').removeClass("login-modal").addClass("sign-modal");
                             $('#modal-title').text("注册  OneAPM");
+                            $('#sign-in-mobile').show();
                         }
                         else if (text=="已有账号？"){
                             $('.form-sign-in').hide();
@@ -152,6 +153,7 @@
                             $('#forget-psw').show();
                             $('.sign-modal').removeClass("sign-modal").addClass("login-modal");
                             $('#modal-title').text("登录 OneAPM");
+                            $('#sign-in-mobile').hide();
                         }
                     });
 
@@ -268,6 +270,21 @@
                     $('.switch').show();
                     $('#wizard-mobile').show();
                 });
+
+                $('#sign-in-mobile').click(function  () {
+                    if ($(this).text() == "手机注册"){
+                        $('#wizard').hide();
+                        $('.switch').show();
+                        $('#wizard-mobile').show();
+                        $(this).text("邮箱注册");
+                    }else if ($(this).text() == "邮箱注册"){
+                        $('#wizard').show();
+                        $('.switch').show();
+                        $('#wizard-mobile').hide();
+                        $(this).text("手机注册");
+                    }
+                    
+                })
 
 
             });
@@ -619,6 +636,7 @@
         <div class="home-footer">
             <a href="#" id="forget-psw"><span>忘记密码？</span></a>
             <a href="#" id="sign-in"><span>尚未注册？</span></a>
+            <a href="mobile_sign.html" id="sign-in-mobile" class="nonvisible-link"><span>手机注册页</span></a>
         </div>
     </div>
 

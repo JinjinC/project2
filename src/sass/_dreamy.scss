@@ -991,6 +991,9 @@ a.tabIcon{
   & p {
     color: #fff;
     font-size: 39px;
+    @media(max-width: 480px){
+      font-size: 30px;
+    }
   }
 }
 
@@ -1046,11 +1049,12 @@ a.tabIcon{
   span{
     padding-left:15px;
   }
-
+  .only-link{
+    padding-left: 0;
+  }
   a{
     color: #fff;
   }
-
   a :hover,:focus{
     color:#e8e8e8;
   }
@@ -1893,6 +1897,9 @@ a.tabIcon{
 
 .modal-body {
   padding-top: 30px;
+  @media(max-width: 480px){
+    padding-top: 0;
+  }
   & .control-label {
     float: right;
     @media(max-width: 768px){
@@ -2277,6 +2284,10 @@ table .progress {
   }
 }
 
+.nonvisible-link{
+  display: none;
+}
+
 .word-bk {
   word-break: break-all;
 }
@@ -2618,6 +2629,13 @@ table .progress {
   display: inline-block;
   width: 50%;
 }
+.short-input{
+  display: inline-block;
+  width: 50%;
+}
+.inputline-btn{
+  margin-top: 4px;
+}
 .checkcode-img{
   display: inline-block;
   float: right;
@@ -2645,4 +2663,18 @@ table .progress {
 }
 .switch{
   vertical-align: middle;
+}
+
+.repeat-btn{
+  margin-top: 10px;
+  display: none;
+
+  & button{
+    margin-left: 8px;
+    margin-top: -2px;
+  }
+}
+
+.checkcode-form{
+  display: none;
 }
