@@ -2070,15 +2070,22 @@ table .progress {
     }
     span {
       font-size: 12px;
-      &:hover{
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
     .save-text{
       display: none;
     }
     .edit-text{
       display: none;
+    }
+    .cancel-text{
+      display: none;
+      padding-right: 10px;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.5);
+      &:hover{
+        color: #fff;
+      }
     }
     .form-section:hover {
       & .edit-text{
@@ -2138,17 +2145,22 @@ table .progress {
     }
     .save-text{
       font-size: 12px;
-      &:hover{
-        cursor: pointer;
-      }
+      cursor: pointer;
       display: none;
     }
     .edit-text{
       font-size: 12px;
-      &:hover{
-        cursor: pointer;
-      }
+      cursor: pointer;
       display: none;
+    }
+    .cancel-text{
+      display: none;
+      padding-right: 10px;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.5);
+      &:hover{
+        color: #fff;
+      }
     }
     .form-section:hover {
       & .edit-text{
@@ -2620,6 +2632,8 @@ table .progress {
   display: inline-block;
   float: right;
   cursor: pointer;
+  height: 30px;
+  width: 80px;
 }
 
 .checkcode-num{
@@ -2635,7 +2649,7 @@ table .progress {
   float: right;
   color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 22px;
   margin-top: 5px;
   font-size: 15px;
 }
