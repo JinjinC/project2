@@ -864,6 +864,15 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     margin-bottom: 16px;
     font-size: $font-size-large;
   }
+  &.info-box {
+    margin: 0 0 30px 0;
+  }
+  &.inner-info-box {
+    margin: 0 0 20px 0;
+    .value {
+      margin-bottom: 9px;
+    }
+  }
 }
 
 /* disable bootstrap 3 border-box for tooltips */
