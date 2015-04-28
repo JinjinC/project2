@@ -152,28 +152,21 @@
 }
 
 .sortedup{
-
-  display: inline-block;
+  display: none;
   position: relative;
-  width: 15px;
-  height: 15px;
   margin-left: 0.3em;
-  border: 0;
   font-size: 10px ;
+  line-height: 0.5;
 }
-.sorteddown{
 
-  display: inline-block;
+.sorteddown{
+  display: none;
   position: relative;
-  width: 15px;
-  height: 15px;
   margin-left: 0.3em;
   border: 0;
   font-size: 10px;
+  line-height: 0.5;
 }
-
-
-
 
 .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle{
   background: rgba(26, 26, 26, 0.4);
@@ -269,10 +262,9 @@
 
 .inner-widget{
   margin-bottom: 20px;
-}
-
-.inner-widget{
-  margin-bottom: 20px;
+  .inner-body {
+    background: transparent;
+  }
 }
 
 .well-cos{
@@ -315,6 +307,20 @@
   &:visited{
     color: white;
     text-decoration: underline;
+  }
+}
+
+.widget-tabs {
+  .body {
+    border-radius: 0 3px 3px 3px;
+  }
+  .tr-body {
+    background: transparent;
+    padding: 0;
+  }
+  .nav > li > a {
+    font-size: 14px;
+    font-weight: 500;
   }
 }
 
@@ -2026,6 +2032,8 @@ a.tabIcon{
 
 table .progress {
   margin-left: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .apdex-td {
@@ -2699,6 +2707,50 @@ table .progress {
   vertical-align: middle;
 }
 
+
+//crashDetail
+.interac-body {
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.interaction-box {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+  min-height: 66px;
+
+  .interac-name{
+    text-align: left;
+    word-break: break-all;
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 1.4;
+    height: 17px;
+    font-weight: normal;
+  }
+  .description {
+    text-align: left;
+    margin: 7px 0;
+    font-size: 12px;
+  }
+}
+.interac-icon {
+  text-align: center;
+  line-height: 89px;
+}
+.interac-col:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f105";
+  float: right;
+  position: relative;
+  top: 24px;
+  right: -18px;
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+}
+
 .repeat-btn{
   margin-top: 10px;
   display: none;
@@ -2711,6 +2763,35 @@ table .progress {
 
 .checkcode-form{
   display: none;
+}
+
+
+.float-card {
+  legend {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.6);
+  }
+}
+.search_mi {
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  input:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  .search-form {
+    margin: 0;
+    margin-top: 5px;
+  }
+  .search-query-mi {
+    color: #fff;
+    background: url(../img/search-white.png) 5px 5px no-repeat rgba(51, 51, 51, 0.4);
+  }
 }
 
  .mobile-input{
