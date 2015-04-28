@@ -934,6 +934,9 @@ a.tabIcon{
   }
   & .login-icon {
     font-size: 100px;
+    @media(max-width: 480px){
+      font-size: 85px;
+    }
   }
 
   & .myModalContent {
@@ -947,6 +950,11 @@ a.tabIcon{
 
   & h1,& h2,& h3,& h4,& h5,& h6,& p{
     color: #f8f8f8;
+  }
+  .validation-message{
+    color: #eac85e;
+    font-size: 12px;
+    display: none;
   }
 
   & .validate-message{
@@ -1058,6 +1066,16 @@ a.tabIcon{
   .only-link{
     padding-left: 0;
   }
+  a{
+    color: #fff;
+  }
+  a :hover,:focus{
+    color:#e8e8e8;
+  }
+}
+
+.mobile-footer{
+  text-align: center;
   a{
     color: #fff;
   }
@@ -1326,7 +1344,6 @@ a.tabIcon{
 }
 
 .tip-content{
-
   padding: 8px;
 }
 
@@ -2636,7 +2653,7 @@ table .progress {
 }
 
 
-
+//****** 手机注册样式 ***********//
 //************** Mobile sign ****************////
 
 .wizard-mobile{
@@ -2645,14 +2662,21 @@ table .progress {
 
 .checkcode-input{
   display: inline-block;
-  width: 50%;
+  width: 40%;
 }
-.short-input{
+.inline-input{
   display: inline-block;
   width: 50%;
 }
+.inline-btn{
+  display: inline-block;
+  width: 47%;
+  margin-top: 6px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
 .inputline-btn{
-  margin-top: 4px;
+  margin-top: 40%;
 }
 .checkcode-img{
   display: inline-block;
@@ -2733,13 +2757,14 @@ table .progress {
 
   & button{
     margin-left: 8px;
-    margin-top: -2px;
+    margin-top: -6px;
   }
 }
 
 .checkcode-form{
   display: none;
 }
+
 
 .float-card {
   legend {
@@ -2768,3 +2793,36 @@ table .progress {
     background: url(../img/search-white.png) 5px 5px no-repeat rgba(51, 51, 51, 0.4);
   }
 }
+
+ .mobile-input{
+  height: 40px;
+}
+
+.btn-lg-mobile{
+  height: 44px;
+  font-size: 16.5px;
+}
+
+.btn-whole{
+  width: 100%;
+}
+
+input[type="text"][disabled]{
+  background-color: #eee;
+  opacity: 1;
+}
+
+.small-padding-input-lg{
+  padding: 10px;
+}
+
+.modal-mobile{
+  position: static;
+  .sign-modal{
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+}
+
