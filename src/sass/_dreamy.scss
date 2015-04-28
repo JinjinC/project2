@@ -997,6 +997,9 @@ a.tabIcon{
   & p {
     color: #fff;
     font-size: 39px;
+    @media(max-width: 480px){
+      font-size: 30px;
+    }
   }
 }
 
@@ -1052,11 +1055,12 @@ a.tabIcon{
   span{
     padding-left:15px;
   }
-
+  .only-link{
+    padding-left: 0;
+  }
   a{
     color: #fff;
   }
-
   a :hover,:focus{
     color:#e8e8e8;
   }
@@ -1902,6 +1906,9 @@ a.tabIcon{
 
 .modal-body {
   padding-top: 30px;
+  @media(max-width: 480px){
+    padding-top: 0;
+  }
   & .control-label {
     float: right;
     @media(max-width: 768px){
@@ -2288,6 +2295,10 @@ table .progress {
   }
 }
 
+.nonvisible-link{
+  display: none;
+}
+
 .word-bk {
   word-break: break-all;
 }
@@ -2636,6 +2647,13 @@ table .progress {
   display: inline-block;
   width: 50%;
 }
+.short-input{
+  display: inline-block;
+  width: 50%;
+}
+.inputline-btn{
+  margin-top: 4px;
+}
 .checkcode-img{
   display: inline-block;
   float: right;
@@ -2664,6 +2682,7 @@ table .progress {
 .switch{
   vertical-align: middle;
 }
+
 
 //crashDetail
 .interac-body {
@@ -2706,4 +2725,46 @@ table .progress {
   right: -18px;
   font-size: 18px;
   color: rgb(51, 51, 51);
+}
+
+.repeat-btn{
+  margin-top: 10px;
+  display: none;
+
+  & button{
+    margin-left: 8px;
+    margin-top: -2px;
+  }
+}
+
+.checkcode-form{
+  display: none;
+}
+
+.float-card {
+  legend {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.6);
+  }
+}
+.search_mi {
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  input:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: rgba(255, 255, 255, 0.6);
+  }
+  .search-form {
+    margin: 0;
+    margin-top: 5px;
+  }
+  .search-query-mi {
+    color: #fff;
+    background: url(../img/search-white.png) 5px 5px no-repeat rgba(51, 51, 51, 0.4);
+  }
 }

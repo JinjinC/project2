@@ -1,0 +1,218 @@
+{{#extend "layoutMob"}}
+
+    {{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="crashATM"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+     
+     <div class="row">
+
+         <div class="col-lg-5 col-md-5">
+             <h2 class="page-title"><span>崩溃ATM <small>崩溃 ATM</small></span></h2>
+         </div>
+
+         <div class="col-lg-7 col-md-7">
+             {{#block "picker"}}
+                 {{> picker }}
+             {{/block}}
+         </div>
+     </div>
+     <div class="row">
+     	<div class="col-lg-12 col-md-12 col-sm-12">
+            <section class="widget">
+                <header>
+                    <h4>输入用户信息搜索</h4>
+                </header>
+                <div class="body">
+                    <form id="validation-form" class="form-horizontal form-label-left" method="post"
+                        data-parsley-priority-enabled="false" novalidate="novalidate">
+                        <fieldset>
+                            <legend class="section">
+                                {{!-- By default validation is started only after at least 3 characters have been input. --}}
+                            </legend>
+                            
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="basic">Enter username</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="basic" name="basic" class="form-control input-transparent" required="required">
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-primary">Go</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+     </div>
+     <div class="row">
+     	<div class="col-lg-12 col-md-12 col-sm-12">
+            <section class="widget">
+                <header>
+                   <h4>Please select a user from the list below to get more detail.</h4>
+                </header>
+                <div class="body">
+                    <table class="table table-striped table-hover no-margin sources-table">
+                        <thead>
+                        <tr>
+                            <th width="25%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">用户信息</span>
+                                <i class="iconfont sortedup">&#xe61a;</i>
+                                <i class="iconfont sorteddown">&#xe619;</i>
+                            </th>
+                            <th width="25%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">设备信息</span>
+                                <i class="iconfont sortedup">&#xe61a;</i>
+                                <i class="iconfont sorteddown">&#xe619;</i>
+                            </th>
+                            <th width="25%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">APP版本</span>
+                                <i class="iconfont sortedup">&#xe61a;</i>
+                                <i class="iconfont sorteddown">&#xe619;</i>
+                            </th>
+                            <th width="25%" style="text-align: left;" class="sortedth">
+                                <span class="sortedtext">崩溃会话开始时间</span>
+                                <i class="iconfont sortedup">&#xe61a;</i>
+                                <i class="iconfont sorteddown">&#xe619;</i>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">MommaCritter</a></td>
+                            <td>Samsung Galaxy S II</td>
+                            <td>1.1</td>
+                            <td>2015-04-14 03:22:34.584000+00.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+     </div>
+		
+ {{/replace}}
+
+     {{#append "scripts"}}
+        <!-- page libs -->
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="js/graph/graph1.js"></script>
+        <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph4.js"></script>
+   		<script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph5.js"></script>
+
+        <script src="lib/form-daterangepicker/daterangepicker.js"></script>                 
+        <!-- DateTime Picker -->
+        <script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+        <!-- page application js -->
+        <script src="js/daterangepicker.js"></script>
+
+        <script>
+        	$('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+        </script>
+   
+    {{/append}}
+
+{{/extend}}
