@@ -467,6 +467,10 @@ $i: 1;
   }
 }
 
+.transparentbg-widget{
+  background: transparent;
+}
+
 .widget-controls{
 position: absolute;
   z-index: 1;
@@ -1078,6 +1082,13 @@ position: absolute;
 .btn-floatcard{
   margin-top: -3px;
   line-height:1;
+}
+
+.btn-xl-onmobile{
+  padding: 5px 45px;
+}
+.btn-whole{
+  width: 100%;
 }
 
 /***********************************/
