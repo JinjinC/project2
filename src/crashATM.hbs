@@ -1,4 +1,4 @@
-{{#extend "layoutMob"}}
+﻿{{#extend "layoutMob"}}
 
     {{#replace "sidebarMob"}}
         {{> sidebarMob this conditionClass=conditionClass active="crashATM"}}
@@ -6,49 +6,26 @@
 
     {{#replace "app_content"}}
      
-     <div class="row">
-
-         <div class="col-lg-5 col-md-5">
-             <h2 class="page-title"><span>崩溃ATM <small>崩溃 ATM</small></span></h2>
-         </div>
-
-         <div class="col-lg-7 col-md-7">
-             {{#block "picker"}}
-                 {{> picker }}
-             {{/block}}
-         </div>
-     </div>
-     <div class="row">
-     	<div class="col-lg-12 col-md-12 col-sm-12">
-            <section class="widget">
-                <header>
-                    <h4>输入用户信息搜索</h4>
-                </header>
-                <div class="body">
-                    <form id="validation-form" class="form-horizontal form-label-left" method="post"
-                        data-parsley-priority-enabled="false" novalidate="novalidate">
-                        <fieldset>
-                            <legend class="section">
-                                {{!-- By default validation is started only after at least 3 characters have been input. --}}
-                            </legend>
-                            
-                            <div class="form-group">
-                                <label class="control-label col-md-2" for="basic">Enter username</label>
-                                <div class="col-md-3">
-                                    <input type="text" id="basic" name="basic" class="form-control input-transparent" required="required">
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-primary">Go</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </section>
-
+    <div class="row">
+        <div class="col-lg-9">
+            <h2 class="page-title" style="line-height: 1.2">
+                <a href="crashMob.html">
+                    <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top" style="margin-top:3px">
+                        <i class="iconfont icon3">&#xe612;</i>  
+                    </button>
+                </a>
+                <span>用户信息搜索结果<small>Please select a user from the list below to get more detail.</small></span>
+            </h2>
         </div>
-     </div>
-     <div class="row">
+        <div class="col-lg-3">
+            <div class="search_mi">
+                <form id="search-form" class="navbar-form pull-right search-form" role="search" style="margin-top:10px;padding-right:0">
+                    <input type="search" class="form-control search-query search-query-mi" placeholder="输入用户信息搜索">
+                </form>
+           </div>
+        </div>
+    </div>
+    <div class="row">
      	<div class="col-lg-12 col-md-12 col-sm-12">
             <section class="widget">
                 <header>
@@ -82,79 +59,79 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
                         </tr>
                         <tr>
-                            <td><a href="#">MommaCritter</a></td>
+                            <td><a href="#" class="user-crash">MommaCritter</a></td>
                             <td>Samsung Galaxy S II</td>
                             <td>1.1</td>
                             <td>2015-04-14 03:22:34.584000+00.00</td>
@@ -163,12 +140,145 @@
                     </table>
                 </div>
             </section>
+            <div class="row float-card">
+        <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <span class="float-card-title">MommaCritter's User Details</span>
+                <span class="glyphicon glyphicon-remove pull-right"></span>
+            </header>
+            <div class="body tr-body" style="margin-top: 10px;">  
+                <section class="widget inner-widget half-minfo">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">APP 使用次数：</span>
+                                <span class="minfo-txt">3</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">设备：</span>
+                                <span class="minfo-txt">HUAWEI A199</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">操作系统：</span>
+                                <span class="minfo-txt">android 4.1.2</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">崩溃发生次数：</span>
+                                <span class="minfo-txt">1</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">APP版本：</span>
+                                <span class="minfo-txt">1.5</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">最新地域：</span>
+                                <span class="minfo-txt">cn</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="minfo">
+                                <span class="minfo-name">最后一次使用APP时间：</span>
+                                <span class="minfo-txt">14-Apr-15 09:53:07 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="widget">
+                    <header>
+                        <span style="float:right;">
+                            <a href="#">生成 Excel</a>
+                        </span>
+                        <h4>用户信息表<small>影响用户数：206</small></h4>
+                    </header>
+                    <div class="body tr-body" style="padding-top:12px">
+                        <div>
+                            <table class="table table-striped table-hover" style="margin-bottom:0">
+                                <thead>
+                                <tr>
+                                    <th style="width: 20%;">崩溃信息</th>
+                                    <th style="width: 50%;">崩溃原因</th>
+                                    <th style="width: 10%;">崩溃次数</th>
+                                    <th style="width: 10%;">崩溃时间</th>
+                                    <th style="width: 10%;">APP版本</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">java.lang.ArithmeticException</a></td>
+                                    <td class="word-bk">Unable to start activity ComponentInfo{com.blueware.android.app.client/com.pediy.bbs.kanxue.LoginPage}: java.lang.ArrayIndexOutOfBoundsException: length=3; index=90</span></td>
+                                    <td>1</td>
+                                    <td>20-Apr-15 03:52:16 AM</td>
+                                    <td>1.5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+            
         </div>
-     </div>
-		
- {{/replace}}
+    </div>
+        </div>
+    </div>
+	
+    {{/replace}}
 
-     {{#append "scripts"}}
+    {{#append "scripts"}}
         <!-- page libs -->
         <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
         <script src="lib/jquery.sparkline/index.js"></script>
@@ -193,6 +303,23 @@
         <script src="js/daterangepicker.js"></script>
 
         <script>
+            $(document).ready(function  () {
+                //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
+               
+                $('.user-crash').click(function  () {
+                    $('.float-card').show().addClass("animated fadeInRightBig");
+
+                    setTimeout(function (){
+                        $('.float-card').removeClass("animated fadeInRightBig");
+                    },500);
+                });
+                $('.float-card .glyphicon-remove').click(function() {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                });
+
+            });
+
         	$('th').click(function(e){
                 var a = $(this).find('.sortedup');
                 var b = $(this).find('.sorteddown');
