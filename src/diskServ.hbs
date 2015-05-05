@@ -1,0 +1,197 @@
+{{#extend "layoutServ"}}
+	{{#replace "sidebarServe"}}
+	    {{> sidebarServe this conditionClass=conditionClass active="prServe"}}
+	{{/replace}}
+
+	{{#replace "app_content"}}
+		<div class="row">
+		    <div class="col-lg-5 col-md-5">
+		        <h2 class="page-title"><span>磁盘</span><small>磁盘界面</small></h2>
+		    </div>
+		    <div class="col-lg-7 col-md-7">
+		        <div class="navbar nav-picker">
+		           <ul class="nav navbar-nav navbar-right">
+		               <li role="presentation" class="timepicker">
+		                   <div class="form-group">
+		                       <button class="btn picker" id="daterangepicker">
+		                           <i class="iconfont icon2 icon-clock">&#xe61d;</i>  
+		                           <span></span> <b class="caret"></b>
+		                       </button>
+		                   </div>
+		               </li>
+		           </ul>  
+		        </div>
+		    </div>
+		</div>
+		<div class="row">
+		 	<div class="col-lg-3 col-md-3 col-sm-12">
+		 		<section class="widget device-widget active">
+		            <header>
+		                <h4 class="device-title">
+		                    /
+		                </h4>
+		                <div class="widget-controls">
+		                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                </div>
+		            </header>
+		            <div class="body text-center">
+		            	<div class="device disk-space">
+		            		<div class="device-chart">
+		            			<div class="device-graph" style="height:40%;"></div>
+		            			<span class="diskrate">40%</span>
+		            		</div>
+		            		<span class="space_used">18GB</span><br/>
+		            		<span class="space_available">of 50GB</span>
+		            	</div>
+		                <div class="device disk-io">
+		                	<div class="device-chart">
+		                		<div class="device-graph" style="height:2%;"></div>
+		                		<span class="diskrate">2%</span>
+		                	</div>
+		                	<span class="io_write">0.5%</span>
+		                	<span class="io_read">0.3%</span><br/>
+		            		<span class="space_available">IO Utilization</span>
+		                </div>
+		            </div>
+		        </section>
+		        <section class="widget device-widget">
+		            <header>
+		                <h4 class="device-title">
+		                    /home
+		                </h4>
+		                <div class="widget-controls">
+		                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                </div>
+		            </header>
+		            <div class="body text-center">
+		            	<div class="device disk-space">
+		            		<div class="device-chart">
+		            			<div class="device-graph" style="height:64%;"></div>
+		            			<span class="diskrate">64%</span>
+		            		</div>
+		            		<span class="space_used">18GB</span><br/>
+		            		<span class="space_available">of 50GB</span>
+		            	</div>
+		                <div class="device disk-io">
+		                	<div class="device-chart">
+		                		<div class="device-graph" style="height:5%;"></div>
+		                		<span class="diskrate">5%</span>
+		                	</div>
+		                	<span class="io_write">0.5%</span>
+		                	<span class="io_read">0.3%</span><br/>
+		            		<span class="space_available">IO Utilization</span>
+		                </div>
+		            </div>
+		        </section>
+		 	</div>
+		    <div class="col-lg-9 col-md-9 col-sm-12">
+		        <div class="float-card sever-detail-card">
+		            <section class="widget" style="min-height:800px;">
+		                <header>
+		                    <span class="float-card-title">/</span>
+		                </header>
+		                <div class="row body">
+		                    <div class="col-lg-12 col-md-12">
+		                         <section class="widget">
+		                            <header>
+		                                <h4>I/O utilization</h4>
+		                                <div class="widget-controls">
+		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                                </div>
+		                            </header>
+		                            <div class="body no-margin">
+		                                <div id="visits-chart1" class="chart visits-chart">
+		                                    <svg></svg>
+		                                </div>
+		                            </div>
+		                        </section>
+		                         <section class="widget">
+		                            <header>
+		                                <h4>I/O rate</h4>
+		                                <div class="widget-controls">
+		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                                </div>
+		                            </header>
+		                            <div class="body no-margin">
+		                                <div id="visits-chart2" class="chart visits-chart">
+		                                    <svg></svg>
+		                                </div>
+		                            </div>
+		                        </section>
+		                         <section class="widget">
+		                            <header>
+		                                <h4>I/O operations per second</h4>
+		                                <div class="widget-controls">
+		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                                </div>
+		                            </header>
+		                            <div class="body no-margin">
+		                                <div id="visits-chart3" class="chart visits-chart">
+		                                    <svg></svg>
+		                                </div>
+		                            </div>
+		                        </section>
+		                         <section class="widget">
+		                            <header>
+		                                <h4>Space usage</h4>
+		                                <div class="widget-controls">
+		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+		                                </div>
+		                            </header>
+		                            <div class="body no-margin">
+		                                <div id="visits-chart4" class="chart visits-chart">
+		                                    <svg></svg>
+		                                </div>
+		                            </div>
+		                        </section>
+		                    </div>
+		                </div>
+		            </section>
+		        </div>
+		    </div>
+		</div>
+	{{/replace}}
+
+	{{#append "scripts"}}
+		<script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+		<script src="lib/jquery.sparkline/index.js"></script>
+
+		<script src="lib/backbone/backbone.js"></script>
+		<script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+		<script src="lib/d3/d3.min.js"></script>
+		<script src="lib/nvd3/nv.d3.min.js"></script>
+		<!-- daterange picker js -->
+		<script src="lib/form-daterangepicker/daterangepicker.js"></script>                
+		<!-- DateTime Picker -->
+		<script src="lib/form-daterangepicker/moment.min.js"></script> 
+
+		<!-- page application js -->
+		<script src="js/daterangepicker.js"></script>
+		<script src="js/graph/graph3.js"></script>
+		<script src="js/graph/graph1.js"></script>
+		<script src="js/graph/graph4.js"></script>
+		<script src="js/graph/graph2.js"></script>
+		<script>
+			$(document).ready(function  () {
+				$('.device-widget').click(function () {
+					$(this).addClass("active");
+					$(this).siblings().removeClass("active");
+					$('.float-card').hide();
+					$('.float-card').show().addClass("animated fadeInLeftBig");
+					$('.float-card .float-card-title').text($(this).find('.device-title').text());
+					setTimeout(function(){
+					        $('.float-card').removeClass("animated fadeInLeftBig");
+					    },500);
+
+				});
+			});
+		</script>
+	{{/append}}
+{{/extend}}

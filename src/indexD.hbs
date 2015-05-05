@@ -188,7 +188,15 @@
                     <section class="widget">
                         <header>
                             <h4>
-                                服务器                                    
+                                服务器
+                                <ul class="show-type">
+                                    <li class="type-link type-link-table" title="表格"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe622;</i>
+                                    </li>
+                                    <li class="type-link type-link-chart" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
+                                        <i class="icon iconfont">&#xe641;</i>
+                                    </li>
+                                </ul>                                  
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#">
@@ -199,7 +207,7 @@
                                 </a>                                 
                             </div>
                         </header>
-                        <div class="body">
+                        <div class="body table-body">
                             <table class="table table-striped table-hover sources-table no-margin">
                                 <thead>
                                     <tr>
@@ -307,8 +315,77 @@
                                 </tbody>
                             </table>
                         </div>
-                    </section>
-                    
+                        <div class="body chart-body">
+                            <section class="widget">
+                                <header>
+                                    <h4>
+                                        <a href="errorMessage.html" class="linkk">错误率</a>
+                                    </h4>
+                                    <span class="chart-value">100%</span>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart8" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="widget">
+                                <header>
+                                    <h4>
+                                        <a href="errorMessage.html" class="linkk">错误率</a>
+                                    </h4>
+                                    <span class="chart-value">100%</span>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart5" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="widget">
+                                <header>
+                                    <h4>
+                                        <a href="errorMessage.html" class="linkk">错误率</a>
+                                    </h4>
+                                    <span class="chart-value">100%</span>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart6" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="widget">
+                                <header>
+                                    <h4>
+                                        <a href="errorMessage.html" class="linkk">错误率</a>
+                                    </h4>
+                                    <span class="chart-value">100%</span>
+                                    <div class="widget-controls">
+                                        <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                        <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                    </div>
+                                </header>
+                                <div class="body no-margin">
+                                    <div id="visits-chart7" class="chart visits-chart">
+                                        <svg></svg>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>   
                 </div>
             </div>
         </div>
@@ -328,7 +405,6 @@
                                     <li class="type-link" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
                                         <i class="icon iconfont">&#xe641;</i>
                                     </li>
-                                    
                                 </ul>
                             </h4>
                             <span class="chart-value">0.56 [0.50]</span>
@@ -362,7 +438,6 @@
                                     <li class="type-link" title="非叠加折线图"  data-toggle="tooltip" data-placement="top">
                                         <i class="icon iconfont">&#xe641;</i>
                                     </li>
-                                    
                                 </ul>
                             </h4>
                             <span class="chart-value">24.72 cpm</span>
@@ -532,6 +607,10 @@
         <script src="js/graph/graph2.js"></script>
         <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph4.js"></script>
+        <script src="js/graph/graph5.js"></script>
+        <script src="js/graph/graph6.js"></script>
+        <script src="js/graph/graph7.js"></script>
+        <script src="js/graph/graph8.js"></script>
         <script src="js/app.js"></script>
          <!-- page libs -->
   
@@ -565,6 +644,14 @@
             $('.type-link').click(function  () {
                 $(this).parentsUntil('header').find('.type-link').removeClass("active");
                 $(this).addClass("active");
+                if($(this).hasClass("type-link-table")){
+                    $('.chart-body').hide();
+                    $('.table-body').show();
+                }
+                if( $(this).hasClass("type-link-chart")){
+                    $('.chart-body').show();
+                    $('.table-body').hide();
+                }
             });
            
         </script>
