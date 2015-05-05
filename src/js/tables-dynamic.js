@@ -20,7 +20,7 @@ $(function(){
         function createBackgrid(collection){
             var columns = [{
                 name: "id", // The key of the model attribute
-                label: "ID", // The name to display in the header
+                label: "用户信息", // The name to display in the header
                 editable: false, // By default every cell in a column is editable, but *ID* shouldn't be
                 // Defines a cell type, and ID is displayed as an integer without the ',' separating 1000s.
                 cell: Backgrid.IntegerCell.extend({
@@ -28,16 +28,16 @@ $(function(){
                 })
             }, {
                 name: "name",
-                label: "Name",
+                label: "设备信息",
                 // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
                 cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
             }, {
                 name: "pop",
-                label: "Population",
+                label: "最近一次发生崩溃的时间",
                 cell: "integer" // An integer cell is a number cell that displays humanized integers
             }, {
                 name: "url",
-                label: "URL",
+                label: "APP 会话开始时间",
                 cell: "uri" // Renders the value in an HTML <a> element
             }];
             if (LightBlue.isScreen('xs')){
