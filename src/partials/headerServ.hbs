@@ -1,0 +1,174 @@
+<script>
+       $(function(){
+
+        $('#goHome').click(function(e){
+            $('#appOption_menu').hide();
+            $('#icon_down1').show(); 
+            $('#icon_up1').hide();
+            if ($('#goHome-content').css('display') == 'none') {
+                $('#goHome-content').show();
+                $('#icon_up').show();
+                $('#icon_down').hide(); 
+                
+            }else{
+                $('#goHome-content').hide();
+                $('#icon_down').show(); 
+                $('#icon_up').hide();
+            }
+
+
+            e.stopPropagation();
+        })
+
+         $('#appOption').click(function(e){
+            $('#goHome-content').hide();
+            $('#icon_down').show(); 
+            $('#icon_up').hide();
+            if ($('#appOption_menu').css('display') == 'none') {
+                $('#appOption_menu').show();
+                $('#icon_down1').hide(); 
+                $('#icon_up1').show();
+
+            }else{
+                $('#appOption_menu').hide();
+                $('#icon_down1').show(); 
+                $('#icon_up1').hide();
+            }
+            e.stopPropagation();
+
+         })
+         $(document).click(function(e){
+                $('#goHome-content').hide();
+                $('#icon_down').show(); 
+                $('#icon_up').hide();
+                $('#appOption_menu').hide();
+                $('#icon_down1').show(); 
+                $('#icon_up1').hide(); 
+                e.stopPropagation();
+         })
+         $('#goHome-content').click(function(e){
+                $('#goHome-content').show();
+                $('#appOption_menu').hide();
+                $('#icon_down').hide(); 
+                $('#icon_up').show();
+                e.stopPropagation();
+         })
+
+         $('#noItem').css("opacity","0.65");
+         $('#noItem').mouseover(function(){
+            // $('#itemCon').hide();
+            $('#iconplus').show();
+         })
+         $('#noItem').mouseout(function(){
+            // $('#itemCon').show();
+            $('#iconplus').hide();
+         })
+         $('#iconplus').click(function(){
+            location.href="add_application.html";
+         })
+
+    })
+
+
+</script>
+
+<header class="page-header">
+    <div class="navbar">       
+        <ul class="nav navbar-nav" style="float:left;" id="nav-left">
+            <li id="Home-nav">
+                <button id="goHome" type="button" class="goHome">
+                    <i class="iconfont icon3 ">&#xe617;</i>
+                    <span class="go_button">服务器监控</span>
+                    <i id="icon_down" class="iconfont icon2">&#xe610;</i>
+                    <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i>
+                    
+                </button>
+                {{#block "dashboardHeader"}}
+                    {{> dashboardHeader }}
+                {{/block}}
+            </li>
+            <li id="divider" class="divider"></li>
+            <li class="dropdown goHome" id="appList">
+                <a href="#" title="appOption" id="appOption"
+                   class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="iconfont icon2 success" >&#xe60f; </i>
+                    <span class="appOpt">My Application</span>
+                    <i id="icon_down1" class="iconfont icon2">&#xe610;</i>
+                    <i id="icon_up1" class="iconfont icon2" style="display:none">&#xe611;</i>
+                </a>
+
+                <ul id="appOption_menu" class="dropdown-menu account" role="menu">
+                    
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2 success">&#xe60f; </i>
+                            app1
+                        </a>
+                    </li>
+                    
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2 outdate">&#xe60f; </i>
+                            app3
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="iconfont icon2 danger">&#xe60f; </i>
+                            app4
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right pull-right" id="nav-right">
+            <li class="hidden-xs">                 
+                <a href="#" id="settings" title="Settings" data-toggle="popover1" data-placement="bottom" 
+                style="width: 31px;">                     
+                    <i class="iconfont icon-setting"> &#xe61e;</i>               
+                </a>             
+            </li>
+            <li id="divider1" class="divider hidden-xs"></li>             
+            <li class="hidden-xs dropdown" style="margin-right:16px; margin-left:7px;">                 
+                <a href="#" title="Account" id="account"                    
+                class="dropdown-toggle" data-toggle="dropdown" style="width: 100%;">                     
+                    <i class="iconfont icon-users"> &#xe623;
+                        <span class="hidden-xs" style="float:right; margin-top:5px; margin-left:9px; font-size:13px;">
+                            674986033@qq.com
+                        </span>
+                    </i>
+                </a>
+
+                <ul id="account-menu" class="dropdown-menu account" role="menu">
+                   
+                    <li role="presentation">
+                        <a href="user.html" class="link">
+                            <i class="iconfont icon2 icon-user"> &#xe623;</i>
+                            个人中心
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="index.html" class="link">
+                            <i class="iconfont icon2 icon-user"> &#xe636;</i>
+                            退出登录
+                        </a>
+                    </li>
+                </ul>
+            </li>
+          
+            <li class="visible-xs">
+                <a href="#"
+                   class="btn-navbar hidden-btn"
+                   data-toggle="collapse"
+                   data-target=".sidebar"
+                   title="">
+                    <i class="iconfont icon1">&#xe645;</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+   

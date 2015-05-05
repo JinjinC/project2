@@ -125,3 +125,10 @@ a{
 .background3 {
   background-color: rgba(136,79,144,0.89);
 }
+
+a.on-white{
+  color: #4d9dd7;
+  &:hover{
+    color: #2877b0;
+  }
+}
