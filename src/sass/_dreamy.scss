@@ -410,7 +410,6 @@ td{
   vertical-align:middle !important;
 }
 .sortedth{
-  
   cursor: pointer;
 }
 
@@ -426,7 +425,9 @@ td{
   }
 }
 
-
+.sources-table th {
+  text-align: left;
+}
 
 .trace-item{
   display: block;
