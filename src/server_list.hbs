@@ -1,0 +1,147 @@
+ 
+{{#extend "layoutServ"}}
+
+
+    {{#replace "sidebarServ"}}
+    <div class="sidebar-hidden">
+        {{> sidebarServ this conditionClass=conditionClass active=""}}
+    </div>
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div style="margin-left: -185px;">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <h2 class="page-title">
+                <span>服务器监控<small>服务器监控列表</small></span>
+                </h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                 <section class="widget">
+                    <div class="body no-margin">
+                        <table class="table table-hover no-margin sources-table">
+                            <thead>
+                            <tr>
+                                <th width="30%" style="text-align: left;" class="sortedth">
+                                    <span class="sortedtext">服务器</span>
+                                    <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                    <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                </th>
+                                <th class="sortedth" width="14%" style="text-align: left;">
+                                    <span class="sortedtext">CPU使用率</span>
+                                    <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                    <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                </th>
+                                <th class="sortedth" width="14%" style="text-align: left;">
+                                    <span class="sortedtext">磁盘I/O利用率</span>
+                                    <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                    <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                </th>
+                                <th class="sortedth" width="14%" style="text-align: left;">
+                                    <span class="sortedtext">内存使用率</span>
+                                    <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                    <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                </th>
+                                <th width="14%" style="text-align: left;">
+                                    <span class="sortedtext">磁盘使用率</span>
+                                    <i class="iconfont sortedup" style="display:none">&#xe61a;</i>
+                                    <i class="iconfont sorteddown" style="display:none">&#xe619;</i>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td ><a href="overviewServ.html" class="appItem">My Application</a></td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                            </tr> 
+                            <tr>
+                                <td ><a href="overviewServ.html" class="appItem">app1</a></td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                            </tr> 
+                            <tr>
+                                <td ><a href="overviewServ.html" class="appItem">app3</a></td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >0</td>
+                            </tr> 
+                            <tr>
+                                <td ><a href="overviewServ.html" class="appItem">app4</a></td>
+                                <td >0</td>
+                                <td >0</td>
+                                <td >1</td>
+                                <td >0</td>
+                            </tr> 
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <!-- page application js -->
+        <script src="js/index.js"></script>
+        <script src="js/chat.js"></script>
+        <!-- page application js -->
+        <script src="js/ui-buttons.js"></script>
+        <script>
+           
+            $('#appOption').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+            $("li").tooltip();
+
+            $('.visible-xs').removeClass('visible-xs').hide();
+            $('#account').parent().removeClass('hidden-xs');
+            $('#account span').removeClass('hidden-xs');
+
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
+
+            $('.app_status').hide();
+
+        </script>
+    {{/append}}
+
+
+
+{{/extend}}
