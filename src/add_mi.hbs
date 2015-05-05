@@ -24,40 +24,89 @@
                             <header>
                                 <ul class="nav nav-tabs">
                                     <li class="active">
-                                        <a href="#java" data-toggle="tab" class="tabIcon">iOS</a>
+                                        <a href="#ios" data-toggle="tab" class="tabIcon">iOS</a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="top" title=".Net">
-                                        <a href="#net" data-toggle="tab" class="tabIcon">Android</a>
+                                        <a href="#android" data-toggle="tab" class="tabIcon">Android</a>
                                     </li>
                                 </ul>
                             </header>
                             <div class="body tab-content add-content">
-                                <div id="java" class="tab-pane active clearfix">
+                                <div id="ios" class="tab-pane active clearfix">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         
                                         <div class="form-section">
                                             <legend class="section">1. 命名你的应用程序</legend>
                                             <div class="form-group">
-                                                <p>Agent安装成功后,你可以随时重命名你的应用程序</p>
+                                                <p>Agent 安装成功后，你可以随时重命名你的应用程序</p>
+                                                <div class="input-group" style="width:220px">
+                                                    <input data-trigger="change" required="required" class="form-control input-transparent">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-success" type="button">保存</button>
+                                                    </span>
+                                                </div>
                                                 
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <legend class="section">1. 下载并解压OneAPM iOS SDK</legend>
+                                            <legend class="section">2. 下载并解压 OneAPM iOS SDK</legend>
                                             <div class="form-group">
-                                                <p>OneAPM 支持 JDK 1.5 至 1.8，以及 Java SE。</p>
+                                                <div class="addapp-btn">
+                                                    <a href="add_application.html">
+                                                        <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                           <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM_iOS_Agent.zip
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">3. 添加 OneAPM Framework 至 Xcode 项目中</legend>
+                                            <div class="form-group">
+                                                <p>解压SDK，并将"OneAPM.framework"文件夹从Finder中拖拽至Xcode项目中（悬停至导航窗口的项目中）。出现提示窗口时，选择"Copy items into destination..."和"Create folder references..."。</p>
+                                                <img src="img/mi1.png" class="img-responsive">
+
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">4. 在 Linker Settings 中添加以下 3 个 Libraries</legend>
+                                            <div class="form-group">
+                                                <p>在项目导航窗口内点击你的Project，并选中你的App，然后选择“Build Phases"选项卡。打开"Link Binary with Libraries"列表。点击添加：</p>
                                                 <ul class="add-app-ul">
                                                     <li>
-                                                        <p>JDK 1.6 至 1.8，请下载</p>
-                                                        <div class="addapp-btn">
-                                                            <a href="add_application.html">
-                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM Java Agent 3.x
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                        <p>或使用 wget</p>
-                                                        <code>wget https://user.oneapm.com/account/0431b83c021d745b/agent/java/OneAPM_java_Agent_3.1.7.zip
+                                                        <p>SystemConfiguration.framework</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>CoreTelephony.framework</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>CoreData.framework</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>libz.dylib</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>libstdc++.dylib</p>
+                                                        <img src="img/mi2.png" class="img-responsive">
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">5. Build Settings设置</legend>
+                                            <div class="form-group">
+                                                <p>选择对应的target，在“Build Settings”中，为“Other Linker Flags”增加“-all_load”选项，如下图所示：</p>
+                                                <img src="img/mi3.png" class="img-responsive">
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">6. 启动agent</legend>
+                                            <div class="form-group">
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>在项目文件[app_name]-Prefix.pch（通常在文件夹“Support Files"中）中，引入OneAPM头文件：</p>
+                                                        <code>#import &lt;OneAPM/OneAPM.h>
                                                             <span class="copy-part">
                                                                 <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
                                                                 <span class="copied hide-section">已复制</span>
@@ -65,16 +114,8 @@
                                                         </code>
                                                     </li>
                                                     <li>
-                                                        <p>JDK 1.5，请下载</p>
-                                                        <div class="addapp-btn">
-                                                            <a href="add_application.html">
-                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                   <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM Java Agent 1.x
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                        <p>或使用 wget</p>
-                                                        <code>wget https://user.oneapm.com/account/0431b83c021d745b/agent/java/OneAPM_java_Agent_1.05.zip
+                                                        <p>在文件AppDelegate.m中添加如下代码，并确保它在<code>application:didFinishLaunchingWithOptions</code>的第一行中。</p>
+                                                        <code>[OneAPM startWithApplicationToken:@"&lt;generate app token by creating a name above>"];
                                                             <span class="copy-part">
                                                                 <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
                                                                 <span class="copied hide-section">已复制</span>
@@ -82,143 +123,194 @@
                                                         </code>
                                                     </li>
                                                 </ul>
-                                                <p class="note">Java SE 有关的 Agent 安装，请访问<a href="">帮助中心</a>。</p>
+
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <legend class="section">2. 安装</legend>
-                                            <div class="form-group add-app-tab">
-                                                <header>
-                                                    <ul class="nav nav-tabs">
-                                                        <li class="active">
-                                                            <a href="#linux" data-toggle="tab" class="tab_link">Linux 或 Mac</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#windows" data-toggle="tab" class="tab_link">Windows</a>
-                                                        </li>
-                                                    </ul>
-                                                </header>
-                                                <div class="body tab-content">
-                                                    <div id="linux" class="tab-pane active clearfix">
-                                                        <ul class="add-app-ul">
-                                                            <li>
-                                                                <p>解压「Agent」至「应用程序的根目录」下</p>
-                                                                <code>unzip oneapm.zip -d /&lt;Application Server Path&gt;/
-                                                                    <span class="copy-part">
-                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                        <span class="copied hide-section">已复制</span>
-                                                                    </span>
-                                                                </code>
-                                                                <p class="note">注：请替换应用程序根目录地址</p>
-                                                                <img class="img-responsive" src="img/catalogue.png" style="margin-bottom:10px">
-                                                            </li>
-                                                            <li>
-                                                                <p>写入「License Key」至配置文件「oneapm.yml」</p>
-                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=
-                                                                    <span class="copy-part">
-                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                        <span class="copied hide-section">已复制</span>
-                                                                    </span>
-                                                                </code>
-                                                            </li>
-                                                            <li>
-                                                                <p>在「oneapm 目录」中运行安装指令</p>
-                                                                <code>cd /&lt;Application Server Path&gt;/oneapm
-                                                                    <span class="copy-part">
-                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                        <span class="copied hide-section">已复制</span>
-                                                                    </span>
-                                                                </code>
-                                                                <p class="note">注：请替换应用程序根目录地址</p>
-                                                                <code>java -jar oneapm.jar install
-                                                                    <span class="copy-part">
-                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                        <span class="copied hide-section">已复制</span>
-                                                                    </span>
-                                                                </code>
-                                                            </li>
-                                                        </ul>
-                                                        <p class="note">有关于手动安装，和 OneAPM 所支持的 Java 框架，以及其他详细信息，请访问<a href="">帮助中心</a>。</p>
-                                                    </div>
-                                                    <div id="windows" class="tab-pane clearfix" style="margin-top: 15px">
-                                                        <p class="ul-title">JBOSS, GlassFish, Jetty, Tomcat 压缩包</p>
-                                                        <ul class="add-app-ul">
-                                                            <li>
-                                                                <p>解压「Agent」至「应用程序的根目录」下</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>写入「License Key」至配置文件「oneapm.yml」</p>
-                                                                <code>AVwJFVtHDQ02d99eVxRYD0kEBA52aaJTAAEGA1lTB29a4A1SGFJRBAMDce50Ug4IDQBXVQE=
-                                                                    <span class="copy-part">
-                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                        <span class="copied hide-section">已复制</span>
-                                                                    </span>
-                                                                </code>
-                                                            </li>
-                                                        </ul>
-                                                        <p class="ul-title">Tomcat 安装程序</p>
-                                                        <ul class="add-app-ul">
-                                                            <li>
-                                                                <p>使用 Tomcat 安装程序进行安装，请访问帮助中心查看详细步骤。</p>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                              
-                                            </div>
+                                             <legend class="section">7. 运行应用程序</legend>
+                                             <div class="form-group">
+                                                
+                                                <p>clean project，并重新在模拟器或设备中启动应用程序，开始应用性能管理。</p>
+                                                
+                                                <p class="note">提示：OneAPM iOS SDK目前支持iOS 6.0之后的版本；在iOS6.0之前的版本中安装OneAPM agent不会导致报错，但无法获取性能数据。</p>
+                                             </div>
                                         </div>
                                         <div class="form-section last-form">
                                              <legend class="section">3. 重启</legend>
                                              <div class="form-group">
                                                 
-                                                <p>请重启您的应用服务器。</p>
-                                                
-                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>请静候5分钟，等待应用程序向OneAPM发送应用程序性能数据，即可开始使用OneAPM应用性能管理。</p>
                                              </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div id="net" class="tab-pane">
+                                <div id="android" class="tab-pane">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         
                                         <div class="form-section">
-                                            <legend class="section">1. 下载</legend>
+                                            <legend class="section">1. 命名你的应用程序</legend>
                                             <div class="form-group">
-                                                <p>OneAPM 支持 32 位和 64 位的 Windows 操作系统，请选择相应的 Agent 安装程序。</p>
-                                                <ul class="add-app-ul">
-                                                    <li>
-                                                        <p>64 位操作系统</p>
-                                                        <div class="addapp-btn">
-                                                            <a href="#">
-                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                    <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i>OneAPM .NET Agent x64
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <p>32 位操作系统</p>
-                                                        <div class="addapp-btn">
-                                                            <a href="add_application.html">
-                                                                <button type="button" class="btn btn-primary btn-sm" data-placement="top">
-                                                                   <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM .NET Agent x86
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                                <p>Agent 安装成功后，你可以随时重命名你的应用程序</p>
+                                                <div class="input-group" style="width:220px">
+                                                    <input data-trigger="change" required="required" class="form-control input-transparent">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-success" type="button">保存</button>
+                                                    </span>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <legend class="section">2. 安装</legend>
+                                            <legend class="section">2. 选择开发环境</legend>
+                                            <div class="form-group add-app-tab">
+                                                 
+                                                <header>
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active">
+                                                            <a href="#ant" data-toggle="tab" class="tab_link">Ant</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#eclipse" data-toggle="tab" class="tab_link">Eclipse</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#gradle" data-toggle="tab" class="tab_link">Android Studio (Gradle)</a>
+                                                        </li>
+                                                    </ul>
+                                                </header>
+                                                <div class="body tab-content">
+                                                    <div id="ant" class="tab-pane active clearfix">
+                                                        <ul class="add-app-ul">
+                                                            <li>
+                                                                <p>安装 OneAPM Agent</p>
+                                                                <div class="addapp-btn">
+                                                                    <a href="add_application.html">
+                                                                        <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                           <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM_Android_Agent.zip
+                                                                        </button>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p>添加 OneAPM 至你的 App</p>
+                                                                <p>复制文件<code>OneAPM_android_Agent_1.0/sdk-v1.0/blueware-android-agent.jar</code>到你的App目录<code>libs</code>下。</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>添加class.rewriter.jar到ANT_OPTS环境变量</p>
+                                                                <p>通过更改 ANT_OPTS 环境变量，将OneAPM 添加至Ant 加载选项中。</p>
+                                                                <ul class="add-app-ul">
+                                                                    
+                                                                    <li>Mac OS / Linux
+                                                                        <code>export ANT_OPTS="-javaagent:/path/to/OneAPM_android_Agent_1.0/sdk-v1.0/class.rewriter.jar"
+                                                                            <span class="copy-part">
+                                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                                <span class="copied hide-section">已复制</span>
+                                                                            </span>
+                                                                        </code>
+                                                                    </li>
+                                                                    <li>Windows
+                                                                        <code>set ANT_OPTS="-javaagent:C:\path\to\OneAPM_android_Agent_1.0\sdk-v1.0\class.rewriter.jar"
+                                                                            <span class="copy-part">
+                                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                                <span class="copied hide-section">已复制</span>
+                                                                            </span>
+                                                                        </code>
+                                                                    </li>
+                                                                </ul>
+                                                                <p></p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="eclipse" class="tab-pane clearfix">
+                                                        <ul class="add-app-ul">
+                                                            <li>
+                                                                <p>安装OneAPM Eclipse 插件</p>
+                                                                <p class="note">Eclipse插件需要JAVA_HOME环境变量，不支持最新4.4版本Eclipse。</p>
+                                                                <p>打开ADT或Eclipse，点击"help"菜单中的"Install New Software..."，并复制以下链接至"Select All"按钮上方的输入框中：</p>
+                                                                <code>https://download.oneapm.com/android_agent/eclipse/
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <img src="img/mi4.png" class="img-responsive">
+                                                                <img src="img/mi5.png" class="img-responsive">
+                                                                <p>点击"Select All"，取消"Contact all update sites"勾选，点击"Next>"，跟随剩下的步骤并重启Eclipse。</p>
+                                                                <img src="img/mi6.png" class="img-responsive">
+                                                            </li>
+                                                            <li>
+                                                                <p>加载oneAPM至应用程序</p>
+                                                                <img src="img/mi7.png" class="img-responsive">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div id="gradle" class="tab-pane clearfix">
+                                                        <ul class="add-app-ul">
+                                                            <li>
+                                                                <p>下载并解压 OneAPM SDK</p>
+                                                                <div class="form-group">
+                                                                    <div class="addapp-btn">
+                                                                        <a href="add_application.html">
+                                                                            <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                                                               <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> OneAPM_Android_Agent.zip
+                                                                            </button>
+                                                                        </a>
+                                                                    </div>
+                                                                    <p>下载 OneAPM Android Studio SDK，并解压。</p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p>配置 Gradle</p>
+                                                                <p>打开工程根目录下的build.gradle文件</p>
+                                                                <img src="img/mi8.png" class="img-responsive">
+                                                                <p>在 dependencies 模块中加入代码</p>
+                                                                <code>classpath fileTree(dir: 'YourOneAPMPath/oneapm/plugin', include: ['*.jar'])
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <img src="img/mi9.png" class="img-responsive">
+                                                            </li>
+                                                            <li>
+                                                                <p>引入 OneAPM</p>
+                                                                <p>打开主模块目录下的 build.gradle 文件</p>
+                                                                <img src="img/mi10.png" class="img-responsive">
+                                                                <p>在 dependencies 模块中加入代码</p>
+                                                                <code>compile fileTree(dir:'YourOneAPMPath/oneapm/agent',include:['*.jar'])
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <img src="img/mi11.png" class="img-responsive">
+                                                                <p>在文件头部引入 OneAPM</p>
+                                                                <code>apply plugin: 'oneapm'
+                                                                    <span class="copy-part">
+                                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                        <span class="copied hide-section">已复制</span>
+                                                                    </span>
+                                                                </code>
+                                                                <img src="img/mi12.png" class="img-responsive">
+                                                                   
+                                                            </li>
+                                                            <li>
+                                                                <p>rebuild &amp; clean 项目</p>
+                                                                <p>建议 rebuild &amp; clean 项目，来确保 OneAPM 配置生效。</p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <p>推荐使用Ant安装方式。</p>
+                                                <p class="note">注意：Agent 不支持只有jre的运行环境。</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">3.  配置授权信息</legend>
                                             <div class="form-group">
                                                 <ul class="add-app-ul">
                                                     <li>
-                                                        <p>运行 Agent 安装程序</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>提示输入「License Key」时，写入「License Key」</p>
-                                                        <code>Cw0GHVxNXVQ8561cXkUKXxVTUA2818gCDwkBCQkKB000fgMJSgINU1cJ39bdAwEACgoHCwk=
+                                                        <p>确保应用程序的AndroidManifest.xml配置文件中，引入了INTERNET和ACCESS_NETWORK_STATE两个请求授权</p>
+                                                        <code>&lt;uses-permission android:name="android.permission.INTERNET" /><br>&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
                                                             <span class="copy-part">
                                                                 <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
                                                                 <span class="copied hide-section">已复制</span>
@@ -226,31 +318,68 @@
                                                         </code>
                                                     </li>
                                                     <li>
-                                                        <p>完成安装程序提示的后续步骤</p>
+                                                        <p>若想使用 Crash 快照功能，请引入以下授权信息</p>
+                                                        <code>&lt;uses-permission android:name="android.permission.GET_TASKS" />
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        <p class="note">注意：如果您的应用使用progurd混淆，请配置以下</p>
+                                                        <code>-dontwarn org.apache.commons.**<br>-keep class org.apache.http.impl.client.**<br>-dontwarn org.apache.commons.**<br>-keep class com.blueware.** { *; }<br>-dontwarn com.blueware.**<br>-keepattributes Exceptions, Signature, InnerClasses
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="form-section last-form">
-                                             <legend class="section">3. 重启</legend>
+                                        <div class="form-section">
+                                             <legend class="section">4. 启动agent</legend>
                                              <div class="form-group">
-                                                
-                                                <p>请重启您的应用服务器。</p>
-                                                <code>iisreset
-                                                    <span class="copy-part">
-                                                        <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                        <span class="copied hide-section">已复制</span>
-                                                    </span>
-                                                </code>
-                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>在默认启动的Activity中import BlueWare 类</p>
+                                                        <code>import com.blueware.agent.android.BlueWare;
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <p>在onCreate()方法中加入如下call来初始化oneAPM（其中包含了在步骤2中根据应用程序名称而生成的授权编号）</p>
+                                                        <code>BlueWare.withApplicationToken("&lt;generate app token by creating a name above>").start(this.getApplication());
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                    </li>
+                                                </ul>
                                              </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">5. 启动应用程序</legend>
+                                            <div class="form-group">
+                                                <p>clean project，并重新在模拟器或设备中启动应用程序，开始应用性能管理。</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                            <legend class="section">6. 静候5分钟，开启OneAPM之旅</legend>
+                                            <div class="form-group">
+                                                <p>静候5分钟，开启OneAPM之旅</p>
+                                                <p>静候5分钟，等待应用程序向OneAPM发送应用程序性能数据，即可开始使用OneAPM应用性能管理。</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <div class="connect-box">           
-                            <a href="application_list.html"><button type="button" class="btn btn-return btn-sm" data-placement="top">
+                            <a href="mob_list.html"><button type="button" class="btn btn-return btn-sm" data-placement="top">
                                 返回应用程序列表
                             </button></a>
                         </div>
