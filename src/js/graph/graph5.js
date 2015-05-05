@@ -74,13 +74,13 @@ $(function(){
 
     PjaxApp.onPageLoad(pageLoad);
 
-    $('.card-header>ul>li').click(function  () {
+    $('.card-header>ul>li,.type-link-chart').click(function  () {
        setTimeout(function  () {
            pageLoad();
        },500);
     });
 
-    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-table').click(function () {     
+    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-chart').click(function () {     
         setTimeout(function  () {
             pageLoad();
         },100);
