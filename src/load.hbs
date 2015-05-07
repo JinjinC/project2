@@ -32,6 +32,9 @@
                     加载样式 
                 </button>
             </a>
+            <p style="margin-top:20px;">
+                <a class="btn btn-success" id="show-success-message" href="#">提示</a>
+            </p>
         </div>
     </div>
       <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -55,15 +58,15 @@
 
     {{#append "scripts"}}
         <!-- page libs -->
-        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
-        <script src="lib/jquery.sparkline/index.js"></script>
-
+        <script src="lib/messenger/build/js/messenger.js"></script>
+        <script src="lib/messenger/build/js/messenger-theme-flat.js"></script>
+        <!-- demo-only libs -->
         <script src="lib/backbone/backbone.js"></script>
-        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+        <script src="lib/messenger/docs/welcome/javascripts/location-sel.js"></script>
 
-        <script src="lib/d3/d3.min.js"></script>
-        <script src="lib/nvd3/nv.d3.min.js"></script>
-        <script src="js/index.js"></script>
+        <!-- page application js -->
+        <script src="js/ui-notifications.js"></script>
+
     {{/append}}
 
 {{/extend}}
