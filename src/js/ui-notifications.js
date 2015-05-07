@@ -42,10 +42,10 @@ $(function(){
         $.globalMessenger({ theme: theme });
         Messenger.options = { theme: theme  };
 
-        Messenger().post("Thanks for checking out Messenger!");
+        // Messenger().post("Thanks for checking out Messenger!");
 
 
-        var loc = ['bottom', 'right'];
+        var loc = ['top', ''];
 
         var $lsel = $('.location-selector');
 
@@ -68,53 +68,53 @@ $(function(){
                 update();
             });
 
-        $('#show-error-message').on('click', function(){
-            var i;
+        // $('#show-error-message').on('click', function(){
+        //     var i;
 
-            i = 0;
+        //     i = 0;
 
-            Messenger().run({
-                errorMessage: 'Error destroying alien planet',
-                successMessage: 'Alien planet destroyed!',
-                action: function(opts) {
-                    if (++i < 3) {
-                        return opts.error({
-                            status: 500,
-                            readyState: 0,
-                            responseText: 0
-                        });
-                    } else {
-                        return opts.success();
-                    }
-                }
-            });
+        //     Messenger().run({
+        //         errorMessage: 'Error destroying alien planet',
+        //         successMessage: 'Alien planet destroyed!',
+        //         action: function(opts) {
+        //             if (++i < 3) {
+        //                 return opts.error({
+        //                     status: 500,
+        //                     readyState: 0,
+        //                     responseText: 0
+        //                 });
+        //             } else {
+        //                 return opts.success();
+        //             }
+        //         }
+        //     });
 
-            return false;
-        });
+        //     return false;
+        // });
 
-        $('#show-info-message').on('click', function(){
-            var msg = Messenger().post({
-                message: 'Launching thermonuclear war...',
-                actions: {
-                    cancel: {
-                        label: 'cancel launch',
-                        action: function() {
-                            return msg.update({
-                                message: 'Thermonuclear war averted',
-                                type: 'success',
-                                actions: false
-                            });
-                        }
-                    }
-                }
-            });
+        // $('#show-info-message').on('click', function(){
+        //     var msg = Messenger().post({
+        //         message: 'Launching thermonuclear war...',
+        //         actions: {
+        //             cancel: {
+        //                 label: 'cancel launch',
+        //                 action: function() {
+        //                     return msg.update({
+        //                         message: 'Thermonuclear war averted',
+        //                         type: 'success',
+        //                         actions: false
+        //                     });
+        //                 }
+        //             }
+        //         }
+        //     });
 
-            return false;
-        });
+        //     return false;
+        // });
 
         $('#show-success-message').on('click', function(){
             Messenger().post({
-                message: 'Showing success message was successful!',
+                message: '显示信息成功！',
                 type: 'success',
                 showCloseButton: true
             });

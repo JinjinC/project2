@@ -128,7 +128,7 @@ $(function(){
                 },500);
     });
 
-    $('.dd-handle,.trans-name,.trace-name,.tab_link.trace-name-in-transaction').click(function () {
+    $('.dd-handle,.trans-name,.trace-name,.tab_link.trace-name-in-transaction,.nav-tabs>li').click(function () {
         
         setTimeout(function  () {
                     pageLoad();
