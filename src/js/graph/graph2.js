@@ -84,11 +84,17 @@ $(function(){
                },500);
    });
 
-   $('.dd-handle,.trans-name,.trace-name,.tab_link.trace-name-in-transaction,.nav-tabs>li,#btn-draw').click(function () {
-       
+   $('.dd-handle,.trans-name,.trace-name,.tab_link.trace-name-in-transaction,.nav-tabs>li').click(function () {
        setTimeout(function  () {
-                   pageLoad();
-               },100);
+           pageLoad();
+       },100);
+   });
+    $('#btn-draw').click(function () {
+        if ($('#form-group2 .select2-chosen').html()=="APP版本") {
+            setTimeout(function  () {
+               pageLoad();
+            },100);
+        }; 
    });
 
 
