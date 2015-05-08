@@ -311,17 +311,17 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Database/wp_posts/select</td>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
                                         <td>2015-02-06 10:24:04</td>
                                         <td>2ms</td>
                                     </tr>
                                     <tr>
-                                        <td>Database/wp_posts/select</td>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
                                         <td>2015-02-06 10:23:04</td>
                                         <td>2ms</td>
                                     </tr>
                                     <tr>
-                                        <td>Database/wp_posts/select</td>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
                                         <td>2015-02-06 10:24:04</td>
                                         <td>2ms</td>
                                     </tr>
@@ -332,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="row  float-card">
+                <div class="row  float-card float-show-one">
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
@@ -400,19 +400,104 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>SpringController/insert.do (GET)</td>
+                                                <td><a href="#" class="trace-name-in-transaction">SpringController/insert.do (GET)</a></td>
                                                 <td>6700000</td>
                                                 <td>5.76 ms</td>
                                                 <td>223,333.33cpm</td>
                                             </tr>
                                             <tr>
-                                                <td>SpringController/splits.do (GET)</td>
+                                                <td><a href="#" class="trace-name-in-transaction">SpringController/splits.do (GET)</a></td>
                                                 <td>33000</td>
                                                 <td>6.33 ms</td>
                                                 <td>1,100.00cpm</td>
                                             </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row float-card float-trace">
+                    <div class="col-md-12">
+                        <section class="widget trace-section">
+                            <header>
+                                <h4>users-insert <small>com.blueware.android.app.client</small>
+                                    <span class="glyphicon glyphicon-remove pull-right"></span>
+                                </h4>
+                            </header>
+                            <div class="float-body">
+                                <section class="widget inner-widget">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">耗时：</span>
+                                                <span class="minfo-txt">3,101ms</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">应用版本：</span>
+                                                <span class="minfo-txt">1.1</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">OS：</span>
+                                                <span class="minfo-txt">Android 4.4.2</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">设备：</span>
+                                                <span class="minfo-txt">unknown</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">APP版本：</span>
+                                                <span class="minfo-txt">1.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">时间戳：</span>
+                                                <span class="minfo-txt">2015-05-04 10:28</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">地理信息：</span>
+                                                <span class="minfo-txt">中国 北京市</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">联网方式：</span>
+                                                <span class="minfo-txt">wifi</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">剩余电量：</span>
+                                                <span class="minfo-txt">50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">屏幕朝向：</span>
+                                                <span class="minfo-txt">竖屏</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="widget">
+                                    <header>
+                                        <h4>轨迹图</h4>
+                                    </header>
+                                    <div class="body tr-body" style="min-height:500px;">
+                                       
                                     </div>
                                 </section>
                             </div>
@@ -454,28 +539,48 @@
         <script>
             $(document).ready(function  () {
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
-                $('.dd-item').click(function  () {
-
+                $('.dd-handle').click(function  () {
                     $('.dd-handle').removeClass("active");
-
-                    $(this).find('.dd-handle').addClass("active");
-
-                    $('.float-card').show().addClass("animated fadeInLeftBig");
-
-
-                    setTimeout(function (){     
-                         $('.float-card').removeClass("animated fadeInLeftBig");
-                     },1000);
-
+                    $('.float-card').hide();
+                    $(this).addClass("active");
+                    $(this).find('button').addClass("active");
+                    $('.float-show-one').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                                             $('.float-show-one').removeClass("animated fadeInLeftBig");
+                                         },500);
                     $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
-                $('.float-card .glyphicon-remove').click(function  () {
-                    $('.float-card').hide();
-                    $('.dd-handle').removeClass("active");
+                //事件委托！！！！关闭卡片
+                $('.float-card').on('click', '.glyphicon-remove',function  (event) {
+                    var current_card = $(this).closest('.float-card');
+                    console.log('123');
+                    if(current_card.hasClass("float-show-one")){
+                        $('.float-card').hide();
+                        $('.dd-handle').removeClass("active");
+                    }else{
+                        current_card.hide();
+                    }
+                });
+
+                //trace详细页面float-card
+                $('.trace-name').click(function  () {
+                    $('.dd-handle').first().trigger("click");
+                    $('.trace-name-in-transaction').trigger("click");
+                });
+
+                //事务详细页面中点击trace，float-card
+                $('.trace-name-in-transaction').click(function  () {
+                    $('.float-trace').hide();
+                    $('.float-trace').addClass("float-trace-in-transaction");
+                    $('.float-trace').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                                             $('.float-trace').removeClass("animated fadeInLeftBig");
+                                         },500);
                 });
 
             });
+
 
              $('th').click(function(e){
                 var a = $(this).find('.sortedup');

@@ -1,0 +1,178 @@
+{{#extend "layoutMob"}}
+
+    {{#replace "sidebarMob"}}
+        {{> sidebarMob this conditionClass=conditionClass active="dayAct"}}
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div class="row">
+        <div class="col-lg-5 col-md-5">
+            <h2 class="page-title">
+                <span>日活 <small>日活跃会话数统计</small></span>
+            </h2>
+        </div>
+
+    </div>
+       
+    <div class="row">
+        <div class="col-lg-6">
+            <section class="widget widget-mob">
+                <header>
+                    <h4>活跃用户数</h4>
+                    <span class="chart-value">活跃设备数：20</span>
+                    <div class="widget-controls">
+                        <a href="" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont mob_dashboard">&#xe629;</i>
+                        </a>
+                    </div>
+                </header>
+                <div class="body">
+                    <div id="single-chart1" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-6">
+            <section class="widget widget-mob">
+                <header>
+                    <h4>
+                        分时段活跃用户数对比
+                    </h4>
+                    <div class="widget-controls">
+                        <a href="" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont mob_dashboard">&#xe629;</i>
+                        </a>
+                    </div>
+                </header>
+                <div class="body">
+                    <div id="visits-chart2" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>   
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <section class="widget widget-mob">
+                <header>
+                    <h4>
+                        APP版本划分的活跃用户数
+                    </h4>
+                    <div class="widget-controls">
+                        <a href="" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont mob_dashboard">&#xe629;</i>
+                        </a>
+                    </div>
+                </header>
+                <div class="body">
+                    <div id="visits-chart3" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>   
+            </section>
+        </div>
+        <div class="col-lg-6">
+            <section class="widget widget-mob">
+                <header>
+                    <h4>
+                        操作系统划分的活跃用户数
+                    </h4>
+                    <div class="widget-controls">
+                        <a href="" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont mob_dashboard">&#xe629;</i>
+                        </a>
+                    </div>
+                </header>
+                <div class="body">
+                    <div id="visits-chart4" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>   
+            </section>
+        </div>
+    </div>        
+    <div class="row">
+        <div class="col-md-12">
+            <section class="widget widget-mob">
+                <header>
+                    <h4>
+                        日活跃用户数对比
+                    </h4>
+                    <div class="widget-controls">
+                        <a href="" data-toggle="modal" data-target="#myModal">
+                            <i class="iconfont mob_dashboard">&#xe629;</i>
+                        </a>
+                    </div>
+                </header>
+                <div class="body">
+                    <div id="single-chart2" class="chart visits-chart">
+                        <svg></svg>
+                    </div>
+                </div>   
+            </section>
+        </div>
+    </div>
+
+    {{!-- <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">添加到仪表盘</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-3 col-lg-3 col-md-3 col-sm-offset-1 col-lg-offset-1 col-md-offset-1">
+                                                <label for="dashboard-name" class="control-label">仪表盘名称</label>
+                                            </div>
+                                            <div class="col-sm-8 col-lg-8 col-md-8">
+                                                <select required="required" class="select1 form-control form-input-white" name="app">
+                                                    <option value="">仪表盘1</option>
+                                                    <option value="">仪表盘2</option>
+                                                    <option value="">仪表盘3</option>
+                                                    <option value="" style="color: #56bc76;">新的仪表盘</option>
+                                                </select>
+                                                <p class="validation-message" id="account-error">该项不能为空</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div> --}}
+
+    {{/replace}}
+
+
+    {{#append "scripts"}}
+        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+        <script src="lib/jquery.sparkline/index.js"></script>
+
+        <script src="lib/backbone/backbone.js"></script>
+        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <script src="lib/d3/d3.min.js"></script>
+        <script src="lib/nvd3/nv.d3.min.js"></script>
+
+        <script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph3.js"></script>
+        <script src="js/graph/graph4.js"></script>
+        <script src="js/graph/singlechart1.js"></script>
+        <script src="js/graph/singlechart2.js"></script>
+    {{/append}}
+
+{{/extend}}

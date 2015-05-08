@@ -2363,7 +2363,7 @@ table .progress {
 
 .chart-value {
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 25px;
   font-weight: bold;
 }
@@ -2661,7 +2661,25 @@ table .progress {
     }
   }
 }
-
+ul.messenger.messenger-fixed.messenger-on-top, ul.messenger.messenger-fixed.messenger-on-bottom {
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+}
+ul.messenger-theme-air .messenger-message {
+  width: 300px;
+  margin: 20px auto;
+}
+ul.messenger-theme-air .messenger-message.alert-success .messenger-message-inner:before {
+  background-color: transparent;
+}
+ul.messenger-theme-air .messenger-message .messenger-message-inner:before {
+  border-radius: 0;
+  font-family: FontAwesome;
+  content: '\f00c';
+  color: #5fca4a;
+  display: inline-block;
+}
 
 //****** 手机注册样式 ***********//
 //************** Mobile sign ****************////
@@ -2850,7 +2868,7 @@ input[type="text"][disabled]{
   }
 
   .minfo-txt {
-    width:70%;
+    width:69%;
     padding-left: 5px;
     display: inline-block;   
     word-break: break-all;
@@ -2860,7 +2878,7 @@ input[type="text"][disabled]{
   width: 49%;
 }
 .half-minfo .minfo .minfo-txt{
-  width: 50%;
+  width: 49%;
 }
 .float-card .minfo-txt{
   color: #666;
@@ -2933,6 +2951,11 @@ input[type="text"][disabled]{
   display: none;
 }
 
+.btn-xs{
+  padding: 1px 5px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
 //mi-组合分析
 .draw-after {
   display: none;
@@ -2941,12 +2964,3 @@ input[type="text"][disabled]{
   font-family: 'Microsoft Yahei';
 }
 
-ul.messenger-theme-air .messenger-message {
-  width: 300px;
-  margin: 20px auto;
-}
-ul.messenger-theme-air .messenger-message .messenger-message-inner:before {
-  border-radius:0;
-  font-family: ' Font Awesome';
-  content: '\f00c';
-}
