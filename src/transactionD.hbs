@@ -971,11 +971,6 @@
                     $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
-                // $('.float-card .glyphicon-remove').click(function  () {
-                //     $(this).pare('.float-card').hide();
-                //     $('.dd-handle').removeClass("active");
-                // });
-
                 //事件委托！！！！关闭卡片
                 $('.float-card').on('click', '.glyphicon-remove',function  (event) {
                     var current_card = $(this).closest('.float-card');
@@ -988,7 +983,49 @@
                     }
                 });
 
+                //展现全部事务（或列表里的内容）
+
+                $('.dd-handle-show-all').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle').removeClass("active");
+                    $('.float-show-all').show().addClass("animated fadeInLeftBig");
+
+                    setTimeout(function (){
+                         $('.float-show-all').removeClass("animated fadeInLeftBig");
+                     },500);
+                });
+
+                //点击全部事务列表后……
+                $('.trans-name').click(function  () {
+                    $('.float-card').hide();
+                    $('.dd-handle:eq(2)').addClass("active");
+                    $('.dd-handle:eq(2)').find('button').addClass("active");
+                    $('.float-show-one').show().addClass("animated fadeInLeftBig");
+
+                    setTimeout(function (){
+                         $('.float-show-one').removeClass("animated fadeInLeftBig");
+                     },500);
+
+                });
+
+                //trace详细页面float-card
+                $('.trace-name').click(function  () {
+                    $('.dd-handle').first().trigger("click");
+                    $('.trace-name-in-transaction').trigger("click");
+                });
+
+                //事务详细页面中点击trace，float-card
+                $('.trace-name-in-transaction').click(function  () {
+                    $('.float-trace').hide();
+                    $('.float-trace').addClass("float-trace-in-transaction");
+                    $('.float-trace').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                                             $('.float-trace').removeClass("animated fadeInLeftBig");
+                                         },500);
+                });
+
             });
+
 
             $('th').click(function(e){
                 var a = $(this).find('.sortedup');
@@ -1040,47 +1077,6 @@
                 $('#apdexT-error').hide();
                 $('#trans-name').val("");
                 $('#apdexT').val("");
-            });
-
-            //展现全部事务（或列表里的内容）
-
-            $('.dd-handle-show-all').click(function  () {
-                $('.float-card').hide();
-                $('.dd-handle').removeClass("active");
-                $('.float-show-all').show().addClass("animated fadeInLeftBig");
-
-                setTimeout(function (){
-                     $('.float-show-all').removeClass("animated fadeInLeftBig");
-                 },500);
-            });
-
-            //点击全部事务列表后……
-            $('.trans-name').click(function  () {
-                $('.float-card').hide();
-                $('.dd-handle:eq(2)').addClass("active");
-                $('.dd-handle:eq(2)').find('button').addClass("active");
-                $('.float-show-one').show().addClass("animated fadeInLeftBig");
-
-                setTimeout(function (){
-                     $('.float-show-one').removeClass("animated fadeInLeftBig");
-                 },500);
-
-            });
-
-            //trace详细页面float-card
-            $('.trace-name').click(function  () {
-                $('.dd-handle').first().trigger("click");
-                $('.trace-name-in-transaction').trigger("click");
-            });
-
-            //事务详细页面中点击trace，float-card
-            $('.trace-name-in-transaction').click(function  () {
-                $('.float-trace').hide();
-                $('.float-trace').addClass("float-trace-in-transaction");
-                $('.float-trace').show().addClass("animated fadeInLeftBig");
-                setTimeout(function (){
-                                         $('.float-trace').removeClass("animated fadeInLeftBig");
-                                     },500);
             });
 
             $('#click-show').click(function(){
