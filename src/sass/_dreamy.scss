@@ -1691,6 +1691,13 @@ a.tabIcon{
     }
   }
 
+  & a.folder{
+    color: rgba(255, 255, 255, 0.45);
+    &:hover{
+      color: rgba(255, 255, 255, 0.45);
+    }
+  }
+
   & h1,h2,h3,h4,h5,div,th,td {
     color: rgba(51,51,51,0.6);
   }

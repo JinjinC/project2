@@ -563,13 +563,13 @@
                     }
                 });
 
-                //trace详细页面float-card
+                //trace表格点击展现2个float-card
                 $('.trace-name').click(function  () {
                     $('.dd-handle').first().trigger("click");
                     $('.trace-name-in-transaction').trigger("click");
                 });
 
-                //事务详细页面中点击trace，float-card
+                //事务详细页面中点击trace（已经有一个float-card时），float-card
                 $('.trace-name-in-transaction').click(function  () {
                     $('.float-trace').hide();
                     $('.float-trace').addClass("float-trace-in-transaction");

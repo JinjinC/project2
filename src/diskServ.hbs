@@ -1,6 +1,7 @@
 {{#extend "layoutServ"}}
-	{{#replace "sidebarServe"}}
-	    {{> sidebarServe this conditionClass=conditionClass active="prServe"}}
+
+	{{#replace "sidebarServ"}}
+	    {{> sidebarServ this conditionClass=conditionClass active="diskServ"}}
 	{{/replace}}
 
 	{{#replace "app_content"}}
@@ -30,10 +31,6 @@
 		                <h4 class="device-title">
 		                    /
 		                </h4>
-		                <div class="widget-controls">
-		                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                </div>
 		            </header>
 		            <div class="body text-center">
 		            	<div class="device disk-space">
@@ -60,10 +57,6 @@
 		                <h4 class="device-title">
 		                    /home
 		                </h4>
-		                <div class="widget-controls">
-		                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                </div>
 		            </header>
 		            <div class="body text-center">
 		            	<div class="device disk-space">
@@ -97,10 +90,6 @@
 		                         <section class="widget inner-widget">
 		                            <header>
 		                                <h4>I/O utilization</h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                                </div>
 		                            </header>
 		                            <div class="body no-margin">
 		                                <div id="visits-chart1" class="chart visits-chart">
@@ -111,10 +100,6 @@
 		                         <section class="widget inner-widget">
 		                            <header>
 		                                <h4>I/O rate</h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                                </div>
 		                            </header>
 		                            <div class="body no-margin">
 		                                <div id="visits-chart2" class="chart visits-chart">
@@ -125,10 +110,6 @@
 		                         <section class="widget inner-widget">
 		                            <header>
 		                                <h4>I/O operations per second</h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                                </div>
 		                            </header>
 		                            <div class="body no-margin">
 		                                <div id="visits-chart3" class="chart visits-chart">
@@ -139,10 +120,6 @@
 		                         <section class="widget inner-widget">
 		                            <header>
 		                                <h4>Space usage</h4>
-		                                <div class="widget-controls">
-		                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
-		                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
-		                                </div>
 		                            </header>
 		                            <div class="body no-margin">
 		                                <div id="visits-chart4" class="chart visits-chart">
