@@ -1,6 +1,8 @@
 <script>
        $(function(){
 
+        $('.ai-li>a').addClass("active");
+
         $('#goHome').click(function(e){
             $('#appOption_menu').hide();
             $('#icon_down1').show(); 
@@ -74,14 +76,13 @@
 
 <header class="page-header">
     <div class="navbar">       
-        <ul class="nav navbar-nav" style="float:left;" id="nav-left">
+        <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg" style="float:left;" id="nav-left">
             <li id="Home-nav">
                 <button id="goHome" type="button" class="goHome">
                     <i class="iconfont icon3 ">&#xe63a;</i>
                     <span class="go_button">Application Insight</span>
                     <i id="icon_down" class="iconfont icon2">&#xe610;</i>
-                    <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i>
-                    
+                    <i id="icon_up" class="iconfont icon2" style="display:none">&#xe611;</i> 
                 </button>
                 {{#block "dashboardHeader"}}
                     {{> dashboardHeader }}
@@ -121,8 +122,10 @@
                 </ul>
 
             </li>
-
         </ul>
+        {{#block "collapsingHeader"}}
+            {{> collapsingHeader }}
+        {{/block}}
         <ul class="nav navbar-nav navbar-right pull-right" id="nav-right">
             <li class="hidden-xs">                 
                 <a href="#" id="settings" title="Settings" data-toggle="popover1" data-placement="bottom" 
