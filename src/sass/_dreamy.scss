@@ -2984,6 +2984,18 @@ input[type="text"][disabled]{
   margin-top: 12px;
   & > li{
     padding: 0 10px;
+    &.divider{
+      display: block;
+      height: 38px;
+      width: 1px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: -10px;
+      padding: 0;
+      $experimental-support-for-svg: true;
+      @include background(linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0)));
+      $experimental-support-for-svg: false;
+    }
     & > a{
       color: rgba(51, 51, 51, 0.5);
       &:hover{
@@ -2993,5 +3005,62 @@ input[type="text"][disabled]{
         color: #fff;
       }
     }
+  }
+}
+
+
+/*** multiuser *****/
+
+.user-info header{
+  margin-left: -13px;
+}
+
+.icon-authority{
+  font-size: 15px;
+}
+
+.table-edit tr{
+ & td i.edit-trigger{
+    visibility: hidden;
+    color: #9F9F9F;
+    font-size: 19px;
+    cursor: pointer;
+    &.resend{
+      font-size: 15px;
+    }
+    &:hover{
+      color: #fff;
+    }
+ }
+ &:hover{
+    & td i.edit-trigger{
+      visibility: visible;
+    }
+ }
+}
+
+.fileversion{
+  text-align: right;
+  & li{
+    padding: 5px 0;
+  }
+}
+
+.filename{
+  text-align: left;
+  & li{
+    padding: 5px 0;
+  }
+}
+
+.ul-edit{
+  & li i.edit-trigger{
+    visibility: hidden;
+    font-size: 19px;
+    color: #9F9F9F;
+    cursor: pointer;
+  }
+  & li:hover  i.edit-trigger{
+    visibility: visible;
   }
 }

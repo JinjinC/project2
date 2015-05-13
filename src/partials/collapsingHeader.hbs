@@ -1,32 +1,66 @@
 <ul class="navbar-nav collapsing-header hidden-xs" style="float:left;">
-    <li class="ai-li">
+    <li class="ai-li"  data-toggle="tooltip" data-placement="bottom" title="Application Insight">
         <a href="application_list.html">
             <i class="iconfont collapsing-header-icon">&#xe63a;</i>
         </a>
     </li>
-    <li class="bi-li">
+    <li class="bi-li" data-toggle="tooltip" data-placement="bottom" title="Browser Insight">
         <a href="broswer_list.html">
             <i class="iconfont collapsing-header-icon">&#xe63b;</i>
         </a>
     </li>
-    <li class="mi-li">
+    <li class="mi-li" data-toggle="tooltip" data-placement="bottom" title="Mobile Insight">
         <a href="mob_list.html">
             <i class="iconfont collapsing-header-icon">&#xe63c;</i>
         </a>
     </li>
-    <li class="si-li">
+    <li class="si-li" data-toggle="tooltip" data-placement="bottom" title="Server Insight">
         <a href="server_list.html">
             <i class="iconfont collapsing-header-icon">&#xe617;</i>
         </a>
     </li>
-    <li class="tran-li">
+    <li class="tran-li" data-toggle="tooltip" data-placement="bottom" title="关键事务">
         <a href="keytransaction_list.html">
             <i class="iconfont collapsing-header-icon">&#xe602;</i>
         </a>
     </li>
-    <li class="sys-li">
+    <li class="sys-li" data-toggle="tooltip" data-placement="bottom" title="系统设置">
         <a href="account.html">
             <i class="iconfont collapsing-header-icon">&#xe605;</i>
         </a>
+    </li>
+    <li id="divider" class="divider"></li>
+    <li class="dropdown goHome" id="appList">
+        <a href="#" title="appOption" id="appOption"
+           class="dropdown-toggle" data-toggle="dropdown">
+            <i class="iconfont icon2 success" >&#xe60f; </i>
+            <span class="appOpt">My Application</span>
+            <i id="icon_down1" class="iconfont icon2">&#xe610;</i>
+            <i id="icon_up1" class="iconfont icon2" style="display:none">&#xe611;</i>
+        </a>
+
+        <ul id="appOption_menu" class="dropdown-menu account" role="menu">
+            
+            <li role="presentation">
+                <a href="#" class="link">
+                    <i class="iconfont icon2 success">&#xe60f; </i>
+                    app1
+                </a>
+            </li>
+            
+            <li role="presentation">
+                <a href="#" class="link">
+                    <i class="iconfont icon2 outdate">&#xe60f; </i>
+                    app3
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#" class="link">
+                    <i class="iconfont icon2 danger">&#xe60f; </i>
+                    app4
+                </a>
+            </li>
+        </ul>
+
     </li>
 </ul>

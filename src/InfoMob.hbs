@@ -16,14 +16,14 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <section class="widget app-setting">
                 <div class="row">
-                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="form-section">
                             <legend class="section">基本信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
                             <div class="form-group row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
                                     <label class="control-label setting-label">应用程序名称</label>
                                 </div>
-                                <div class="col-lg-5 col-md-8 col-sm-8 col-xs-12">
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12">
                                     <input type="text" class="form-control input-transparent" disabled="disabled" value="javaapp1" name="appname">
                                     <p class="tip-info last-tip-info">您监测的应用依然是「app187」，名称修改仅仅用作显示。使用字母数字和中文，最长 32 个字符，请勿使用重复的应用名称。</p>
                                 </div>
@@ -32,12 +32,119 @@
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
                                     <label class="control-label setting-label">APP Token</label>
                                 </div>
-                                <div class="col-lg-5 col-md-8 col-sm-8 col-xs-12">
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12">
                                     <input type="text" class="form-control input-transparent" disabled="disabled" value="klsdhklshfkljhkladjkla" name="apptoken">
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-section">
+                            <legend class="section">反混淆文件<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-section">
+                                        <div class="body">
+                                            <table class="table no-margin table-hover table-edit">
+                                                <thead>
+                                                    <tr>
+                                                        <th>版本号</th>
+                                                        <th>文件名</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>v 1.2.0</td>
+                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>v 1.2.0</td>
+                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>v 1.2.0</td>
+                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-section">
+                            <legend class="section">参数设置<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3"> 
+                                    <label class="control-label setting-label">Agent 发送数据间隔</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-9">
+                                    <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" disabled="disabled">
+                                        <option value="0">60</option>
+                                        <option value="1">100</option>
+                                        <option value="1">150</option>
+                                        <option value="1">200</option>
+                                        <option value="1">250</option>
+                                        <option value="2">300</option>
+                                    </select>
+                                    <span>s</span>
+                                    <p class="tip-info">Agent 发送数据间隔，可以选择 60 s 至 300 s 的数值。数据间隔越小，Agent 负载越高。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3"> 
+                                    <label class="control-label setting-label">HTTP 错误记录的最大次数</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-9">
+                                    <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" disabled="disabled">
+                                        <option value="0">10</option>
+                                        <option value="1">20</option>
+                                        <option value="1">30</option>
+                                        <option value="1">40</option>
+                                        <option value="1">50</option>
+                                    </select>
+                                    <p class="tip-info">Agent 发送数据的时间间隔内，数据中心缓存 HTTP 错误记录的最大数值。最大值：50。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3"> 
+                                    <label class="control-label setting-label">交互 Trace 记录采集阈值</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-9">
+                                    <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" disabled="disabled">
+                                        <option value="0">0.2</option>
+                                        <option value="1">0.3</option>
+                                        <option value="1">0.4</option>
+                                        <option value="1">0.5</option>
+                                        <option value="1">0.6</option>
+                                    </select>
+                                    <span> s</span>
+                                    <p class="tip-info">当交互页面任意线程的执行时间，超过「交互 Trace 记录采集阈值」，则开始建立 Trace 记录。可选范围：0.2 s - 0.6 s。</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3"> 
+                                    <label class="control-label setting-label">HTTP 错误堆栈最大记录 Trace 数</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-sm-8 col-xs-9">
+                                    <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1" id="simple-select" disabled="disabled">
+                                        <option value="0">80</option>
+                                        <option value="0">90</option>
+                                        <option value="1">100</option>
+                                        <option value="1">110</option>
+                                        <option value="1">120</option>
+                                    </select>
+                                    <p class="tip-info">记录 HTTP 错误堆栈深度。可选范围：80 - 120。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -46,6 +153,17 @@
     {{/replace}}
     
     {{#append "scripts"}}
+    <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="lib/jquery.sparkline/index.js"></script>
+    <script src="lib/select2/select2.min.js"></script>
+
+    <script src="lib/backbone/backbone.js"></script>
+    <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="lib/nvd3/nv.d3.min.js"></script>
+    <script src="js/index.js"></script>
         <script>
             $('th').click(function(e){
                 var a = $(this).find('.sortedup');
@@ -72,6 +190,69 @@
             $('tr').mouseout(function(){
                $(this).find('.setting').hide();
             })
+
+
+            $(document).ready(function(){
+                var inputValue ={};
+                //点击修改
+                $('.edit-text').click(function  () {
+
+                    $(this).next().show();
+                    $(this).siblings(".cancel-text").show();
+                    $(this).hide();
+                    var input = $(this).closest(".form-section").find("input");
+                    var select = $(this).closest(".form-section").find("select");
+                    var btn = $(this).closest(".form-section").find("button");
+                    var li = $(this).closest(".form-section").find("li");
+                    var tip_info = $(this).closest(".form-section").find(".tip-info");
+                    var checkbox_label = $(this).closest(".form-section").find(".checkbox-label");
+                    input.removeAttr("disabled");
+                    input.removeClass("input-transparent");
+                    select.removeAttr("disabled");
+                    btn.removeClass("disabled");
+                    li.removeClass("disabled");
+                    tip_info.addClass("active");
+                    checkbox_label.removeClass("disabled");
+                    input.first().focus();
+                    input.each(function  () {
+                        inputValue[$(this).attr("name")]=$(this).val();
+                    });
+                });
+                //点击保存
+                $('.save-text').click(function  () {
+                    $(this).prev().removeAttr("style");
+                    $(this).siblings(".cancel-text").hide();
+                    $(this).hide();
+                    var input = $(this).closest(".form-section").find("input");
+                    var select = $(this).closest(".form-section").find("select");
+                    var btn = $(this).closest(".form-section").find("button");
+                    var li = $(this).closest(".form-section").find("li");
+                    var tip_info = $(this).closest(".form-section").find(".tip-info");
+                    var checkbox_label = $(this).closest(".form-section").find(".checkbox-label");
+                    input.attr("disabled","disabled");
+                    input.addClass("input-transparent");
+                    select.attr("disabled","disabled");
+                    btn.removeClass("disabled");
+                    li.removeClass("disabled");
+                    tip_info.removeClass("active");
+                    checkbox_label.addClass("disabled");
+                });
+              
+                //点击取消
+                $('.cancel-text').click(function  () {
+                    $(this).siblings(".edit-text").removeAttr("style");
+                    $(this).siblings(".save-text").hide();
+                    $(this).hide();
+                    var input = $(this).parentsUntil(".form-section").parent().find("input");
+                    var tip_info = $(this).closest(".form-section").find(".tip-info");
+                    input.attr("disabled","disabled");
+                    input.addClass("input-transparent");
+                    tip_info.removeClass("active");
+                    input.each(function(){
+                        $(this).val(inputValue[$(this).attr("name")]);
+                    })
+                });
+            });
         </script>
     {{/append}}
 

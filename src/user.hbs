@@ -13,10 +13,13 @@
 			    </div>
 			</div>
     		<div class="row">
-    			<div class="col-lg-12 col-md-12 col-sm-12">
+    			<div class="col-lg-7 col-md-7 col-sm-7">
     				<section class="widget user-info">
+                        <header>
+                            <h4>账户信息</h4>
+                        </header>
     					<div class="row">
-    						<div class="col-lg-4 col-md-4 col-sm-4">
+    						<div class="col-lg-6 col-md-6 col-sm-6">
 		    					<div class="form-section">
 		    						<legend class="section">账户
                                         <span class="edit-text pull-right btn btn-xs btn-inverse">修改</span>
@@ -56,7 +59,7 @@
     								</div>
     							</div>
     						</div>
-    						<div class="col-lg-4 col-md-4 col-sm-4">
+    						<div class="col-lg-6 col-md-6 col-sm-6">
     							<div class="form-section">
     								<legend class="section">账户类型</legend>
     								<label class="text-success">免费用户</label>
@@ -65,34 +68,113 @@
     								<legend class="section">授权信息</legend>
     								<label class="text-warning">5天后，OneAPM免费试用到期</label>
     							</div>
-    						</div>
-    						<div class="col-lg-4 col-md-4 col-sm-4">
-    							<div class="form-section">
-    								<legend class="section">使用情况</legend>
-    								<div class="agent">
-    									<p class="agent-title">已使用产品</p>
-    									<ul>
-    										<li>java</li>
-    										<li>ruby</li>
-    										<li>python</li>
-    									</ul>
-    								</div>
-    								<div class="agent-num pull-right">
-    									<p class="num-title">有效agent数量</p>
-    									<ul>
-    										<li>1</li>
-    										<li>2</li>
-    										<li>0</li>
-    									</ul>
-    								</div>
-    							</div>
+                                <div class="form-section">
+                                    <legend class="section">已使用产品
+                                        <span class="pull-right" style="font-size: 14px;">有效agent数量</span>
+                                    </legend>
+                                    <div class="agent">
+                                        <ul>
+                                            <li>java</li>
+                                            <li>ruby</li>
+                                            <li>python</li>
+                                        </ul>
+                                    </div>
+                                    <div class="agent-num pull-right">
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>0</li>
+                                        </ul>
+                                    </div>
+                                </div>
     						</div>
     					</div>
     				</section>
     			</div>
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <section class="widget">
+                        <header>
+                            <h4>成员信息
+                            <button class="btn btn-success btn-xs pull-right" data-placement="middle" data-toggle="modal" data-target="#newMemberModal">新增成员</button></h4>
+                        </header>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-section">
+                                    <div class="body">
+                                        <table class="table no-margin table-hover table-edit">
+                                            <thead>
+                                                <tr>
+                                                    <th>名称</th>
+                                                    <th>邮箱</th>
+                                                    <th>权限</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cheng Mo</td>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td><i class="iconfont icon-authority text-success">&#xe623;</i></td>
+                                                    <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cheng Mo</td>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td><i class="iconfont icon-authority">&#xe623;</i></td>
+                                                    <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cheng Mo</td>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td><i class="iconfont icon-authority">&#xe623;</i></td>
+                                                    <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {{!-- <div class="form-section">
+                                    <legend class="section">验证中成员</legend>
+                                    <div class="body no-margin">
+                                        <table class="table no-margin table-hover table-edit">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">邮箱</th>
+                                                    <th width="30%">状态</th>
+                                                    <th width="10%"></th>
+                                                    <th width="10%"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td>发送成功</td>
+                                                    <td><i class="iconfont"  data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    <td><i class="iconfont resend">&#xe61c;</i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td>发送成功</td>
+                                                    <td><i class="iconfont"  data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    <td><i class="iconfont resend">&#xe61c;</i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ChengMo@oneapm.com</td>
+                                                    <td>发送成功</td>
+                                                    <td><i class="iconfont"  data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                    <td><i class="iconfont resend">&#xe61c;</i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </section>
+                </div>
     		</div>
     		<div class="navbar in-footer" style="display:block;">
-    		    <ul >
+    		    <ul>
     		        <li><a href="#"><span>官方网站</span></a></li>
     		        <li class="divider"></li>
     		        <li><a href="#"><span>帮助中心</span></a></li>
@@ -103,11 +185,64 @@
     		    </ul>
     		</div>
     	</div>
+
+        <div id="newMemberModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">新增成员</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row">
+                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                               <form class="form-horizontal form-label-left">
+                                   <div class="form-group">
+                                       <div class="row">
+                                            <div class="col-sm-4 col-lg-4 col-md-4">
+                                                <label for="account-name" class="control-label">输入邀请成员邮箱</label>
+                                            </div>
+                                            <div class="col-sm-8 col-lg-8 col-md-8">
+                                                <input id="account-name" class="form-control form-input-white" required="required" type="text" value="" name="account-name" data-parsley-trigger="change">
+                                                <p class="validation-message" id="account-error">邀请用户已经注册</p>
+                                            </div>                                         
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                        <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div>
+        </div>
+        <div id="delMemberModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-trash">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">提示</h4>
+                    </div>
+                    <div class="modal-body" style="padding-top:15px;">
+                        <h4>确定删除吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     {{/replace}}
 
     {{#append "scripts"}}
     <script>
     	$(document).ready(function  () {
+
+            $('#Home-nav').hide();
 
     		$('#nav-right>li:eq(0)').hide();
             $('#nav-right>li:eq(1)').hide();
@@ -159,6 +294,8 @@
     			$('.editing').hide();
     			$('.before-edit').show();
     		});
+
+
     	});
     </script>
     {{/append}}
