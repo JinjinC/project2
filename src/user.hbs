@@ -23,8 +23,8 @@
 		    					<div class="form-section">
 		    						<legend class="section">账户
                                         <span class="edit-text pull-right btn btn-xs btn-inverse">修改</span>
-                                        <span class="save-text pull-right btn btn-xs btn-success">保存</span>
                                         <a href="javascript:;" class="cancel-text pull-right">取消</a>
+                                        <span class="save-text pull-right btn btn-xs btn-success">保存</span>
                                     </legend>
 		    						<div class="form-group">
 		    							<input type="text" name="name" class="form-control input-transparent" disabled="disabled" value="Jerry">
@@ -34,7 +34,11 @@
 			    					</div>
 		    					</div>
     							<div class="form-section">
-    								<legend class="section">密码<span class="edit-text pull-right btn btn-xs btn-inverse psw-edit">修改</span><span class="save-text pull-right btn btn-xs btn-success psw-save">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                                    <legend class="section">密码
+        								<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span>
+                                        <a href="javascript:;" class="cancel-text pull-right">取消</a>
+                                        <span class="save-text pull-right btn btn-xs btn-success">保存</span>
+                                    </legend>
     								<div class="before-edit">
     									<div class="form-group">
     										<input type="password" name="psw" class="form-control input-transparent" disabled="disabled"  value="11111">
@@ -53,7 +57,11 @@
     								</div>
     							</div>
     							<div class="form-section">
-    								<legend class="section">企业信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                                    <legend class="section">企业信息
+        								<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span>
+                                        <a href="javascript:;" class="cancel-text pull-right">取消</a>
+                                        <span class="save-text pull-right btn btn-xs btn-success">保存</span>
+                                    </legend>
     								<div class="form-group">
     									<input type="text" name="company" class="form-control input-transparent" disabled="disabled" value="OneAPM">
     								</div>
@@ -74,9 +82,9 @@
                                     </legend>
                                     <div class="agent">
                                         <ul>
-                                            <li>java</li>
-                                            <li>ruby</li>
-                                            <li>python</li>
+                                            <li>Java</li>
+                                            <li>Ruby</li>
+                                            <li>Python</li>
                                         </ul>
                                     </div>
                                     <div class="agent-num pull-right">
@@ -250,7 +258,7 @@
     		//点击修改
     		$('.edit-text').click(function  () {
 
-    			$(this).next().show();
+    			$(this).siblings(".save-text").show();
                 $(this).siblings(".cancel-text").show();
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
@@ -263,7 +271,7 @@
     		});
     		//点击保存
     		$('.save-text').click(function  () {
-    			$(this).prev().removeAttr("style");
+    			$(this).siblings(".edit-text").removeAttr("style");
                 $(this).siblings(".cancel-text").hide();
     			$(this).hide();
     			var input = $(this).parentsUntil(".form-section").parent().find("input");
