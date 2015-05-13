@@ -2129,7 +2129,7 @@ table .progress {
     }
     .cancel-text{
       display: none;
-      padding-right: 10px;
+      padding-left: 10px;
       line-height: 1.4;
       color: rgba(255,255,255,0.5);
       &:hover{
@@ -2204,7 +2204,7 @@ table .progress {
     }
     .cancel-text{
       display: none;
-      padding-right: 10px;
+      padding-left: 10px;
       line-height: 1.4;
       color: rgba(255,255,255,0.5);
       &:hover{
@@ -3093,4 +3093,33 @@ input[type="text"][disabled]{
   & li:hover  i.edit-trigger{
     visibility: visible;
   }
+}
+
+.file-progress{
+  display: none;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.file-progress-0{
+  width: 0%;
+   transition: all 2s linear;
+}
+.file-progress-100{
+  width: 100%;
+  transition: all 2s linear;
+}
+.upload-result{
+  margin-top: 5px;
+  display: none;
+}
+.removefile{
+  padding: 0 2px;
+  background: #f5f5f5;
+  cursor: pointer;
+  display: none;
+  margin-left: 10px;
+}
+.fileinput-button{
+  cursor: pointer;
+  margin-top: 5px;
 }

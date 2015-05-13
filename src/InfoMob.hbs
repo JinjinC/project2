@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="form-section">
-                            <legend class="section">基本信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                            <legend class="section">基本信息<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><a href="javascript:;" class="cancel-text pull-right">取消</a><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
                             <div class="form-group row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
                                     <label class="control-label setting-label">应用程序名称</label>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="form-section">
-                            <legend class="section">反混淆文件<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                            <legend class="section">反混淆文件<span class="pull-right btn btn-xs btn-success" data-toggle="modal" data-target="#newFile">新增</span></legend>
                             <div class="form-group row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-section">
@@ -48,26 +48,26 @@
                                             <table class="table no-margin table-hover table-edit">
                                                 <thead>
                                                     <tr>
-                                                        <th>版本号</th>
-                                                        <th>文件名</th>
-                                                        <th></th>
+                                                        <th width="25%">版本号</th>
+                                                        <th width="65%">文件名</th>
+                                                        <th width="10%"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>v 1.2.0</td>
-                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
-                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                        <td><a href="#" target="_blank">/MyApplicationProguadv1.2.0.txt</a></td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delFile">&#xe61f;</i></td>
                                                     </tr>
                                                     <tr>
                                                         <td>v 1.2.0</td>
-                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
-                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                        <td><a href="#" target="_blank">/MyApplicationProguadv1.2.0.txt</a></td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delFile">&#xe61f;</i></td>
                                                     </tr>
                                                     <tr>
                                                         <td>v 1.2.0</td>
-                                                        <td>/MyApplicationProguadv1.2.0.txt</td>
-                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delMemberModal">&#xe61f;</i></td>
+                                                        <td><a href="#" target="_blank">/MyApplicationProguadv1.2.0.txt</a></td>
+                                                        <td><i class="iconfont edit-trigger" data-placement="middle" data-toggle="modal" data-target="#delFile">&#xe61f;</i></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-section">
-                            <legend class="section">参数设置<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><span class="save-text pull-right btn btn-xs btn-success">保存</span><a href="javascript:;" class="cancel-text pull-right">取消</a></legend>
+                            <legend class="section">参数设置<span class="edit-text pull-right btn btn-xs btn-inverse">修改</span><a href="javascript:;" class="cancel-text pull-right">取消</a><span class="save-text pull-right btn btn-xs btn-success">保存</span></legend>
                             <div class="form-group row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3"> 
                                     <label class="control-label setting-label">Agent 发送数据间隔</label>
@@ -150,6 +150,89 @@
         </div>
     </div>
 
+    <div id="delFile" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-trash">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body" style="padding-top:15px;">
+                    <h4>确定删除吗？</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="newFile" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">新增反混淆文件</h4>
+                </div>
+                <div class="modal-body">
+                   <div class="row">
+                       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                           <form class="form-horizontal form-label-left">
+                               <div class="form-group">
+                                   <div class="row">
+                                        <div class="col-sm-4 col-lg-4 col-md-4">
+                                            <label for="fileVer" class="control-label">选择文件版本号</label>
+                                        </div>
+                                        <div class="col-sm-8 col-lg-8 col-md-8">
+                                            <select class="select1 form-control form-input-white select" tabindex="-1" name="fileVer">
+                                                <option value="0">v 1.2.0</option>
+                                                <option value="0">v 1.2.1</option>
+                                                <option value="1">v 1.3.0</option>
+                                                <option value="1">v 1.3.1</option>
+                                                <option value="1">v 1.3.2</option>
+                                            </select>
+                                            <p class="validation-message" id="account-error">邀请用户已经注册</p>
+                                        </div>                                         
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                       <div class="col-sm-4 col-lg-4 col-md-4">
+                                           <label for="filename" class="control-label">添加混淆文件</label>
+                                       </div>
+                                       <div class="col-sm-8 col-md-8 col-lg-8">
+                                           <span class="btn btn-success fileinput-button btn-xs">
+                                               <span>选择文件</span>
+                                               <input type="file" name="files[]">
+                                           </span>
+                                           <div class="progress file-progress">
+                                               <div class="progress-bar progress-bar-primary file-progress-0">49%</div>
+                                           </div>
+                                           <div class="upload-result">
+                                               <span class="upload-filename">/MyApplicationProguadv1.2.0.txt</span>
+                                               <span class="text-result text-success">上传成功</span>
+                                               <br/>
+                                               <span class="btn btn-success fileinput-button file-reselect btn-xs">
+                                                   <span>重新选择</span>
+                                                   <input type="file" name="files[]">
+                                               </span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
+                    <button type="button" class="btn btn-success" id="btn-trans">确定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div>
+    </div>
+
     {{/replace}}
     
     {{#append "scripts"}}
@@ -197,7 +280,7 @@
                 //点击修改
                 $('.edit-text').click(function  () {
 
-                    $(this).next().show();
+                    $(this).siblings(".save-text").show();
                     $(this).siblings(".cancel-text").show();
                     $(this).hide();
                     var input = $(this).closest(".form-section").find("input");
@@ -220,7 +303,7 @@
                 });
                 //点击保存
                 $('.save-text').click(function  () {
-                    $(this).prev().removeAttr("style");
+                    $(this).siblings(".edit-text").removeAttr("style");
                     $(this).siblings(".cancel-text").hide();
                     $(this).hide();
                     var input = $(this).closest(".form-section").find("input");
@@ -251,6 +334,31 @@
                     input.each(function(){
                         $(this).val(inputValue[$(this).attr("name")]);
                     })
+                });
+
+                //上传文件
+                $('.fileinput-button input').change(function  () {
+                    $('.fileinput-button').hide();
+                    $('.upload-result').hide();
+                    $('.file-progress').show();
+                    $('.text-result').show();
+                    setTimeout(function(){
+                        $('.file-progress-0').addClass("file-progress-100");
+                    }, 500);
+                    setTimeout(function  () {
+                        $('.file-progress').hide();
+                        $('.upload-result').show();
+                        setTimeout(function(){
+                            $('.text-result').hide();
+                            $('.file-reselect').show();
+                        }, 2000)
+                    }, 3000)
+                })
+
+                //删除文件
+                $('.file-reselect').click(function  () {
+                    $(this).hide();
+                    $('.file-progress-0').removeClass("file-progress-100");
                 });
             });
         </script>
