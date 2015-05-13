@@ -1,8 +1,8 @@
 
-{{#extend "layoutMob"}}
+{{#extend "layoutDas"}}
 
-    {{#replace "sidebarMob"}}
-        {{> sidebarMob this conditionClass=conditionClass active="dashboard2"}}
+    {{#replace "sidebarDas"}}
+        {{> sidebarDas this conditionClass=conditionClass active="dashboard2"}}
     {{/replace}}
 
     {{#replace "app_content"}}
@@ -18,9 +18,18 @@
         </div>
 
         <div class="col-lg-7 col-md-7">
-            {{#block "picker"}}
-                {{> picker }}
-            {{/block}}
+            <div class="navbar nav-picker">
+               <ul class="nav navbar-nav navbar-right">
+                   <li role="presentation" class="timepicker">
+                       <div class="form-group">
+                           <button class="btn picker" id="daterangepicker">
+                               <i class="iconfont icon2 icon-clock">&#xe61d;</i>  
+                               <span></span> <b class="caret"></b>
+                           </button>
+                       </div>
+                   </li>
+               </ul>  
+            </div>
         </div>
     </div>
        
@@ -34,7 +43,9 @@
                                 执行次数
                             </h4>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="iconfont icon2 icon-close">&#xe638;</i></a>
+                                <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
+                                    <i class="iconfont icon2 icon-close">&#xe638;</i>
+                                </button>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -53,7 +64,9 @@
                                 会话数 - 应用版本
                             </h4>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="iconfont icon2 icon-close">&#xe638;</i></a>
+                                <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
+                                    <i class="iconfont icon2 icon-close">&#xe638;</i>
+                                </button>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -75,7 +88,9 @@
                                 HTTP 响应时间
                             </h4>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="iconfont icon2 icon-close">&#xe638;</i></a>
+                                <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
+                                    <i class="iconfont icon2 icon-close">&#xe638;</i>
+                                </button>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -91,10 +106,12 @@
                     <section class="widget">
                         <header>
                             <h4>
-                                HTTP 错误率 & 网络故障率
+                                HTTP 错误率 &amp; 网络故障率
                             </h4>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="iconfont icon2 icon-close">&#xe638;</i></a>
+                                <button type="button" class="btn btn-trash" data-toggle="modal" data-target="#myModalDel"> 
+                                    <i class="iconfont icon2 icon-close">&#xe638;</i>
+                                </button>
                             </div>
                         </header>
                         <div class="body no-margin">
@@ -103,6 +120,23 @@
                             </div>
                         </div>
                     </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModalDel" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-trash">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body" style="padding-top:15px;">
+                    <h4>确定删除吗？</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
@@ -157,7 +191,6 @@
 
         <!-- daterange picker js -->
         <script src="lib/form-daterangepicker/daterangepicker.js"></script>               
-        <!-- DateTime Picker -->
         <script src="lib/form-daterangepicker/moment.min.js"></script> 
         <script src="js/daterangepicker.js"></script>
 
@@ -168,10 +201,6 @@
         <script src="js/graph/graph4.js"></script>
         <script src="js/graph/graph5.js"></script>
 
-         <!-- page libs -->
-  
-        <script src="js/graph/singlechart1.js"></script>
-        <script src="js/graph/singlechart2.js"></script>
 
     {{/append}}
 
