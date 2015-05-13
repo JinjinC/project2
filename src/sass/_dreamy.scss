@@ -2638,6 +2638,10 @@ table .progress {
     font-size: 12px;
   }
 }
+.gen-scr {
+  display: none;
+  margin-top: 10px;
+}
 //loading
 .load-text {
   display: block;
@@ -2985,6 +2989,14 @@ input[type="text"][disabled]{
   border-top:1px solid rgba(51, 51, 51, 0.60)
 }
 
+// .widget > header .filter-header {
+//   line-height: 30px;
+
+//   .filter-item {
+//     display: inline-block;
+//     float: right;
+//   }
+// }
 
 .select2-container .select2-choices .select2-search-field input, .select2-container-multi .select2-choices .select2-search-choice {
   font-family: 'Microsoft Yahei';

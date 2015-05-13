@@ -1,0 +1,175 @@
+ {{#extend "layoutBro"}}
+    {{#replace "sidebarBro"}}
+    <div class="sidebar-hidden">
+        {{> sidebar this conditionClass=conditionClass active=""}}
+    </div>
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div style="margin-left: -185px;">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 cpl-sm-12">
+                <h2 class="page-title">
+                    <a href="broswer_list.html">
+                        <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top">
+                            <i class="iconfont icon3">&#xe612;</i>
+                        </button>
+                    </a>
+                    <span>添加应用<small>新增应用</small></span>
+                </h2>
+                <section class="widget">
+                  {{!--   <header></header> --}}
+                    <div class="body">
+                        <section class="widget widget-tabs add-app">
+                            <header>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#java" data-toggle="tab" class="tabIcon">复制/黏贴 js 代码</a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="top">
+                                        <a href="#net" data-toggle="tab" class="tabIcon">Ai 自动注入 js 代码</a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="body tab-content add-content">
+                                <div id="java" class="tab-pane active clearfix">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        
+                                        <div class="form-section">
+                                            <legend class="section">1.  部署说明</legend>
+                                            <div class="form-group">
+                                                <p>输入应用名称后，复制生成的代码，将其粘贴在<code>&lt;head></code>中。</p>
+                                                <p class="note-attention">注意：需要将代码黏贴在<code>&lt;meta></code>后面，所有<code>&lt;script></code>前面。</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 部署</legend>
+                                            <div class="form-group">
+                                                <p>输入应用名称：</p>
+                                                <div class="input-group" style="width:220px">
+                                                    <input data-trigger="change" required="required" class="form-control input-transparent">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-success" type="button" id="gen-btn">生成脚本</button>
+                                                    </span>
+                                                </div>
+                                                <div class="gen-scr">
+                                                    <code>&lt;script type='text/javascript'>window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"tpm.oneapm.com/static/js/bw-send.js","beaconUrl":"tpm.oneapm.com/beacon","licenseKey":"UgYBG1sUDQle4","applicationID":6417};&lt;/script>&lt;script type="text/javascript" src="//tpm.oneapm.com/static/js/bw-loader.js">&lt;/script>
+                                                        <span class="copy-part">
+                                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                            <span class="copied hide-section">已复制</span>
+                                                        </span>
+                                                    </code>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">3. 静候 5 分钟，开启 OneAPM 之旅</legend>
+                                             <div class="form-group">
+                                                <p>静候 5 分钟，等待应用程序向 OneAPM 发送应用程序性能数据，即可开始使用 OneAPM 应用性能管理。</p>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="net" class="tab-pane">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        
+                                        <div class="form-section">
+                                            <legend class="section">1. 部署说明</legend>
+                                            <div class="form-group">
+                                                <p>由 Ai 探针自动向前端页面注入 js 代码，只需简单配置，无需修改代码。</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">2. 部署</legend>
+                                            <div class="form-group">
+                                                <a href="add_application.html">
+                                                    <button class="btn btn-success" type="button" id="gen-btn">选择平台类型下载探针</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="form-section last-form">
+                                             <legend class="section">3. 静候 5 分钟，开启 OneAPM 之旅</legend>
+                                             <div class="form-group">
+                                                <p>静候 5 分钟，等待应用程序向 OneAPM 发送应用程序性能数据，即可开始使用 OneAPM 应用性能管理。</p>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </section>
+                        <div class="connect-box">           
+                            <a href="broswer_list.html"><button type="button" class="btn btn-return btn-sm" data-placement="top">
+                                返回应用程序列表
+                            </button></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h2 class="page-title">
+                    安装帮助<small>help</small>
+                </h2>
+                <section class="widget">
+                    <header>
+                        <h5>查阅更多文档</h5>
+                    </header>
+                    <div class="body">
+                        
+                        <div class="help-part" style="margin-top: 16px;">
+                           
+                            <ul>
+                                <li><a href="">浏览器功能说明</a></li>
+                                <li><a href="">浏览器部署说明</a></li>
+                            </ul>
+                        </div>
+                        <div class="help-part">
+                            <h5>获取更多支持</h5>
+                            <ul>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64d;</i>知识库</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64e;</i>提交工单</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64c;</i>400-622-3101</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c" style="font-size: 18px">&#xe624;</i>support@onepam.com</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe649;</i>OneAPM 官方微博</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64a;</i>OneAPM 公众账号</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+        <!-- page application js -->
+        
+        <script>
+            $('#appList').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+
+            $('.copy-part').click(function(){
+                // $(this).find('.copied').toggleClass("show-section");
+                $(this).find('.copied').show();
+                setTimeout(function (){
+                     $('.copied').hide();
+                 },1500);
+            })
+
+            $('#gen-btn').click(function(){
+                $('.gen-scr').show();
+            })
+
+            $(document).ready(function(){
+                 $('.logo').css("position","absolute");
+            })
+            
+            
+        </script>
+        <script src="js/ui-buttons.js"></script>
+    {{/append}}
+
+{{/extend}}
