@@ -8,18 +8,18 @@
 
     {{#replace "app_content"}}
     <div style="margin-left: -185px;">
-         <div class="row">
-             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <h2 class="page-title">
-                <span>应用程序 <small>app 信息</small></span>
-                 <a href="add_mi.html">
-                    <button type="button" class="btn btn-success btn-sm btn-hollow btn-rt" data-placement="top">
-                        添加应用
-                    </button>
-                </a>
-                 </h2>
-             </div>
-         </div>
+                    <span>应用程序 <small>app 信息</small></span>
+                     <a href="add_mi.html">
+                        <button type="button" class="btn btn-success btn-sm btn-hollow btn-rt" data-placement="top">
+                            添加应用
+                        </button>
+                    </a>
+                </h2>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -30,28 +30,43 @@
                                 <table class="table no-margin sources-table">
                                     <thead>
                                         <tr>
-                                            <th width="20%" class="sortedth">
+                                            <th width="10%" class="sortedth">
                                                 <span class="sortedtext">应用名称</span>
                                                 <i class="iconfont sortedup">&#xe61a;</i>
                                                 <i class="iconfont sorteddown">&#xe619;</i>
                                             </th>
-                                            <th class="sortedth" width="30%">
-                                                <span class="sortedtext">应用包名</span>
+                                            <th width="10%" class="sortedth">
+                                                <span class="sortedtext">活跃版本</span>
                                                 <i class="iconfont sortedup">&#xe61a;</i>
                                                 <i class="iconfont sorteddown">&#xe619;</i>
                                             </th>
                                             <th class="sortedth" width="20%">
-                                                <span class="sortedtext">创建时间</span>
-                                                <i class="iconfont sortedup">&#xe61a;</i>
-                                                <i class="iconfont sorteddown">&#xe619;</i>
-                                            </th>
-                                            <th class="sortedth" width="15%">
-                                                <span class="sortedtext">活跃会话数-今天</span>
+                                                <span class="sortedtext">包名</span>
                                                 <i class="iconfont sortedup">&#xe61a;</i>
                                                 <i class="iconfont sorteddown">&#xe619;</i>
                                             </th>
                                             <th class="sortedth" width="10%">
-                                                <span class="sortedtext">昨天</span>
+                                                <span class="sortedtext">崩溃率</span>
+                                                <i class="iconfont sortedup">&#xe61a;</i>
+                                                <i class="iconfont sorteddown">&#xe619;</i>
+                                            </th>
+                                            <th class="sortedth" width="15%">
+                                                <span class="sortedtext">HTTP 请求吞吐率</span>
+                                                <i class="iconfont sortedup">&#xe61a;</i>
+                                                <i class="iconfont sorteddown">&#xe619;</i>
+                                            </th>
+                                            <th class="sortedth" width="10%">
+                                                <span class="sortedtext">HTTP 错误率</span>
+                                                <i class="iconfont sortedup">&#xe61a;</i>
+                                                <i class="iconfont sorteddown">&#xe619;</i>
+                                            </th>
+                                            <th class="sortedth" width="10%">
+                                                <span class="sortedtext">网络错误率</span>
+                                                <i class="iconfont sortedup">&#xe61a;</i>
+                                                <i class="iconfont sorteddown">&#xe619;</i>
+                                            </th>
+                                            <th class="sortedth" width="10%">
+                                                <span class="sortedtext">活跃设备数</span>
                                                 <i class="iconfont sortedup">&#xe61a;</i>
                                                 <i class="iconfont sorteddown">&#xe619;</i>
                                             </th>
@@ -61,10 +76,13 @@
                                     <tbody>
                                         <tr class="tre">
                                             <td ><a href="overviewMob.html">for android</a></td>
+                                            <td>2</td>
                                             <td >com.hoge.android.chinablue</td>
-                                            <td >2015-03-18 09:50</td>
-                                            <td >0</td>
-                                            <td >0</td>
+                                            <td >4%</td>
+                                            <td >1.5 rpm</td>
+                                            <td >0%</td>
+                                            <td>0%</td>
+                                            <td>20</td>
                                             <td style="text-align: center !important; padding: 8px 0">
                                                 <a href="#" data-toggle="modal" data-target="#myModal">
                                                     <i class="glyphicon glyphicon-cog icon2 setting" style="display:none">
@@ -73,11 +91,14 @@
                                             </td>
                                         </tr> 
                                         <tr class="tre">
-                                            <td ><a href="overviewMob.html">android版本</a></td>
-                                            <td >com.example.app.demo</td>
-                                            <td >2015-02-04 18:27</td>
-                                            <td >0</td>
-                                            <td >0</td>                                  
+                                            <td ><a href="overviewMob.html">for android</a></td>
+                                            <td>5</td>
+                                            <td >com.hoge.android.chinablue</td>
+                                            <td >4%</td>
+                                            <td >1.5 rpm</td>
+                                            <td >0%</td>
+                                            <td>0%</td>
+                                            <td>20</td>                                 
                                             <td style="text-align: center !important; padding: 8px 0">
                                                 <a href="#" data-toggle="modal" data-target="#myModal">
                                                     <i class="glyphicon glyphicon-cog icon2 setting" style="display:none">
@@ -186,7 +207,7 @@
                         <div id="All" class="tab-pane active clearfix">
                             <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title" >
                                     <h5><strong>今天</strong></h5>
                                 </div>
                                 <tbody>
@@ -219,7 +240,7 @@
                         <div id="breaktime" class="tab-pane">
                             <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title">
                                     <h5><strong>还没有事件</strong></h5>
                                 </div>
                             </table>
@@ -227,7 +248,7 @@
                         <div id="notify" class="tab-pane">
                             <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title">
                                     <h5><strong>还没有事件</strong></h5>
                                 </div>
                             </table>
@@ -235,7 +256,7 @@
                         <div id="issue" class="tab-pane">
                             <table class="table sources-table table-striped table-hover no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title">
                                     <h5><strong>今天</strong></h5>
                                 </div>
                                 <tbody>
@@ -262,7 +283,7 @@
                         <div id="warm" class="tab-pane">
                             <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title">
                                     <h5><strong>还没有事件</strong></h5>
                                 </div>
                             </table>
@@ -270,7 +291,7 @@
                         <div id="notes" class="tab-pane">
                             <table class="table sources-table no-margin" style="margin-top: 8px !important;">
                                 <span style="font-size:12px">开始时间 : 01-09 13:43 - 截止时间 : 01-09 14:13</span>
-                                <div style="margin-top:3px; padding: 0; border-top:1px solid rgba(51, 51, 51, 0.60)" >
+                                <div class="alaBo-title" >
                                     <h5><strong>还没有事件</strong></h5>
                                 </div>
                             </table>

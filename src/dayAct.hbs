@@ -46,7 +46,7 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div id="visits-chart2" class="chart visits-chart">
+                    <div id="single-chart2" class="chart visits-chart">
                         <svg></svg>
                     </div>
                 </div>   
@@ -67,7 +67,7 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div id="visits-chart3" class="chart visits-chart">
+                    <div id="single-chart3" class="chart visits-chart">
                         <svg></svg>
                     </div>
                 </div>   
@@ -86,7 +86,7 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div id="visits-chart4" class="chart visits-chart">
+                    <div id="single-chart4" class="chart visits-chart">
                         <svg></svg>
                     </div>
                 </div>   
@@ -107,7 +107,7 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div id="single-chart2" class="chart visits-chart">
+                    <div id="sources-chart-bar" class="chart visits-chart">
                         <svg></svg>
                     </div>
                 </div>   
@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    {{!-- <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -153,26 +153,36 @@
 
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
-        </div> --}}
+        </div>
 
     {{/replace}}
 
 
     {{#append "scripts"}}
-        <script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
-        <script src="lib/jquery.sparkline/index.js"></script>
+        <!-- page libs -->
+        <script src="js/nvd3-custom-lb1.0/lib/d3.v2.min.js"></script>
+        <script src="js/nvd3-custom-lb1.0/nv.d3.custom.js"></script>
 
-        <script src="lib/backbone/backbone.js"></script>
-        <script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
+        <!-- nvd3 models -->
+        <script src="js/nvd3-custom-lb1.0/src/models/scatter.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/axis.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/legend.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/stackedArea.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/stackedAreaChart.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/line.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/pie.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/pieChartTotal.js"></script>
+        <script src="js/nvd3-custom-lb1.0/stream_layers.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/lineChart.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/multiBar.js"></script>
+        <script src="js/nvd3-custom-lb1.0/src/models/multiBarChart.js"></script>
 
-        <script src="lib/d3/d3.min.js"></script>
-        <script src="lib/nvd3/nv.d3.min.js"></script>
-
-        <script src="js/graph/graph2.js"></script>
-        <script src="js/graph/graph3.js"></script>
-        <script src="js/graph/graph4.js"></script>
+        <!-- page application js -->
+        <script src="js/stat-charts.js"></script>
         <script src="js/graph/singlechart1.js"></script>
         <script src="js/graph/singlechart2.js"></script>
+        <script src="js/graph/singlechart3.js"></script>
+        <script src="js/graph/singlechart4.js"></script>
     {{/append}}
 
 {{/extend}}
