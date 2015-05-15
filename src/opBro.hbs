@@ -1,14 +1,14 @@
 {{#extend "layoutBro"}}
 
     {{#replace "sidebarBro"}}
-        {{> sidebarBro this conditionClass=conditionClass active="pageBro"}}
+        {{> sidebarBro this conditionClass=conditionClass active="opBro"}}
     {{/replace}}
 
     {{#replace "app_content"}}
 
     <div class="row">
         <div class="col-lg-5 col-md-5">
-            <h2 class="page-title"><span>访问页面</span><small>按访问页面诊断性能瓶颈</small></h2>
+            <h2 class="page-title"><span>运营商</span><small>按运营商查看性能</small></h2>
         </div>
         <div class="col-lg-7 col-md-7">
             <div class="navbar nav-picker">
@@ -26,7 +26,7 @@
         </div>
     </div>     
     <div class="row">
-        <div class="col-lg-12">
+        {{!-- <div class="col-lg-12">
             <div class="row float-card float-show-all">
                 <div class="col-md-12">
                     <section class="widget" style="min-height:800px;">
@@ -206,7 +206,7 @@
                     </section>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="col-lg-4">
             <div class="row">
@@ -229,7 +229,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span><span style="float: right;">47.99 s</span></div>
+                                                            <div class="bar-text"><span>移动</span><span style="float: right;">47.99 s</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="2">
@@ -237,7 +237,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:30%"></div>
-                                                            <div class="bar-text"><span>SpringController/splits.do (GET)</span><span style="float: right;">15.37 s</span></div>
+                                                            <div class="bar-text"><span>联通</span><span style="float: right;">15.37 s</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="3">
@@ -245,7 +245,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:15%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span><span style="float: right;">3.35 s</span></div>
+                                                            <div class="bar-text"><span>电信</span><span style="float: right;">3.35 s</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="4">
@@ -253,12 +253,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:5%"></div>
-                                                            <div class="bar-text"><span>SpringController/testException.do (GET)</span><span style="float: right;">1.17 s</span></div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="dd-item">
-                                                        <div class="dd-handle-show-all">
-                                                            <div class="bar-text" style="text-align:center"><span>显示全部 +</span></div>
+                                                            <div class="bar-text"><span>鹏博士</span><span style="float: right;">1.17 s</span></div>
                                                         </div>
                                                     </li>
                                                 </ol>
@@ -272,7 +267,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span><span style="float: right;">26%</span></div>
+                                                            <div class="bar-text"><span>移动</span><span style="float: right;">26%</span></div>
                                                         </div>                                                   
                                                     </li>
                                                     <li class="dd-item" data-id="2">
@@ -280,7 +275,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/splits.do (GET)</span><span style="float: right;">10%</span></div>
+                                                            <div class="bar-text"><span>联通</span><span style="float: right;">10%</span></div>
                                                         </div>                                                    
                                                     </li>
                                                     <li class="dd-item" data-id="3">
@@ -288,7 +283,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:0%"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span> <span style="float: right;">7%</span></div>
+                                                            <div class="bar-text"><span>电信</span> <span style="float: right;">7%</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="4">
@@ -296,7 +291,7 @@
                                                             <i class="iconfont icon2-dd" style="float: right;">&#xe613;
                                                             </i>
                                                             <div class="bar-graph" style="width:100%"></div>
-                                                            <div class="bar-text"><span>SpringController/testRedis.do (GET)</span><span style="float: right;">1%</span></div>
+                                                            <div class="bar-text"><span>鹏博士</span><span style="float: right;">1%</span></div>
                                                         </div>
                                                     </li>
                                                 </ol>
@@ -311,7 +306,7 @@
                                                             </i>
                                                             <div class="bar-graph" style="width:50%"></div>
                                                             <div class="bar-text">
-                                                                <span>SpringController/splits.do (GET)</span>
+                                                                <span>移动</span>
                                                                 <span style="float: right;">6.77 cpm</span>
                                                             </div>
                                                         </div>
@@ -322,7 +317,7 @@
                                                             </i>
                                                             <span style="float: right;">4.03 cpm</span>
                                                             <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>SpringController/abc.do (GET)</span></div>
+                                                            <div class="bar-text"><span>鹏博士</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="3">
@@ -331,7 +326,7 @@
                                                             </i>
                                                             <span style="float: right;">2.35 cpm</span>
                                                             <div class="bar-graph" style="width:20%"></div>
-                                                            <div class="bar-text"><span>SpringController/insert.do (GET)</span></div>
+                                                            <div class="bar-text"><span>联通</span></div>
                                                         </div>
                                                     </li>
                                                     <li class="dd-item" data-id="4">
@@ -340,7 +335,7 @@
                                                             </i>
                                                             <span style="float: right;">2.40 cpm</span>
                                                             <div class="bar-graph" style="width:10%"></div>
-                                                            <div class="bar-text"><span>SpringController/testRedis.do (GET)</span></div>
+                                                            <div class="bar-text"><span>电信</span></div>
                                                         </div>
                                                     </li>
                                                 </ol>
@@ -362,7 +357,7 @@
                      <section class="widget">
                         <header>
                             <h4>
-                                平均加载时间
+                                页面加载时间
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
@@ -381,7 +376,7 @@
                      <section class="widget">
                         <header>
                             <h4>
-                                页面吞吐量
+                                Top 5 页面吞吐量
                             </h4>
                             <div class="widget-controls">
                                 <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
@@ -400,28 +395,33 @@
                 <div class="col-md-12">
                     <section class="widget">
                         <header>
-                            <h4>Traces</h4>
+                            <h4>慢加载追踪</h4>
                         </header>
                         <div class="body">
                             <table class="table table-striped table-hover no-margin sources-table">
                                 <thead>
                                     <tr>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">开始时间</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="34%" class="sortedth">
+                                         <th width="18%" class="sortedth">
+                                            <span class="sortedtext">运营商</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="28%" class="sortedth">
                                             <span class="sortedtext">事务 / 详情 </span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">浏览器(ms)</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">应用程序(ms)</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
@@ -431,36 +431,42 @@
                                 <tbody>
                                     <tr>
                                         <td>2015-04-18 23:59</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-17 23:59</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-21 14:39</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-20 23:56</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/menu</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr class="hide-section">
                                         <td>2015-04-21 14:39</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr class="hide-section">
                                         <td>2015-04-20 23:56</td>
+                                        <td><a href="#" class="trace-name">联通</a></td>
                                         <td class="tran-detail"><a href="#" class="trace-name">WebTransaction/StrutsAction/menu</a></td>
                                         <td>13596</td>
                                         <td>91</td>
@@ -519,22 +525,27 @@
                                     <table class="table table-striped table-hover no-margin sources-table">
                                     <thead>
                                     <tr>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">开始时间</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="34%" class="sortedth">
+                                         <th width="18%" class="sortedth">
+                                            <span class="sortedtext">运营商</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="28%" class="sortedth">
                                             <span class="sortedtext">事务 / 详情 </span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">浏览器(ms)</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
                                         </th>
-                                        <th width="22%" class="sortedth">
+                                        <th width="18%" class="sortedth">
                                             <span class="sortedtext">应用程序(ms)</span>
                                             <i class="iconfont sortedup">&#xe61a;</i>
                                             <i class="iconfont sorteddown">&#xe619;</i>
@@ -544,24 +555,28 @@
                                     <tbody>
                                     <tr>
                                         <td>2015-04-18 23:59</td>
+                                        <td><a href="#" class="trace-name-in-transaction">联通</a></td>
                                         <td><a href="#" class="trace-name-in-transaction">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-18 23:59</td>
+                                        <td><a href="#" class="trace-name-in-transaction">联通</a></td>
                                         <td><a href="#" class="trace-name-in-transaction">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-18 23:59</td>
+                                        <td><a href="#" class="trace-name-in-transaction">联通</a></td>
                                         <td><a href="#" class="trace-name-in-transaction">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
                                     </tr>
                                     <tr>
                                         <td>2015-04-18 23:59</td>
+                                        <td><a href="#" class="trace-name-in-transaction">联通</a></td>
                                         <td><a href="#" class="trace-name-in-transaction">WebTransaction/StrutsAction/restaurant</a></td>
                                         <td>13596</td>
                                         <td>91</td>
