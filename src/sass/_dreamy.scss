@@ -3202,17 +3202,11 @@ input[type="text"][disabled]{
   margin-top: 5px;
   display: none;
 }
-.removefile{
-  padding: 0 2px;
-  background: #f5f5f5;
-  cursor: pointer;
-  display: none;
-  margin-left: 10px;
-}
 .fileinput-button{
   cursor: pointer;
   margin-top: 5px;
 }
+
 
 .float-card{
     .table-editable + .backgrid-paginator > ul > li > a, .table-editable + .backgrid-paginator > ul > li > span {
@@ -3222,3 +3216,10 @@ input[type="text"][disabled]{
       color: gray;
     }
 }
+
+@media(max-width: 991px){
+  .mbt{
+    margin-bottom: 18px;
+  }
+}
+

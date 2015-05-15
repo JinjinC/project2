@@ -556,7 +556,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="row  float-card">
+                <div class="row  float-card float-show-one">
                     <div class="col-md-12">
                         <section class="widget">
                             <header>
@@ -564,7 +564,6 @@
                                 <span class="glyphicon glyphicon-remove pull-right"></span>
                             </header>
                             <div class="body">
-
                              <section class="widget inner-widget">
                                 <header>
                                     <h4>
@@ -577,7 +576,6 @@
                                     </div>                                   
                                 </div>
                             </section>
-
                             <section class="widget inner-widget">
                                 <header>
                                     <h4>Traces</h4>
@@ -637,8 +635,7 @@
                                     </table>
                                 </div>
                             </section>  
-
-                             <section class="widget inner-widget">
+                            <section class="widget inner-widget">
                                 <header>
                                     <h4>
                                         PV
@@ -649,7 +646,152 @@
                                         <svg></svg>
                                     </div> 
                                 </div>
-                            </section>                           
+                            </section>
+                            <section class="widget inner-widget">
+                                <header>
+                                    <h4>城市</h4>
+                                </header>
+                                <div class="body body-for-table">
+                                    <table class="table table-striped table-hover no-margin sources-table">
+                                        <thead>
+                                            <tr>
+                                                <th width="34%" class="sortedth">
+                                                    <span class="sortedtext">名称</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="33%" class="sortedth">
+                                                    <span class="sortedtext">平均时间（s）</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="33%" class="sortedth">
+                                                    <span class="sortedtext">吞吐量（cpm）</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">大理</a></td>
+                                                <td>0.5</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">昆明</a></td>
+                                                <td>0.3</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">丽江</a></td>
+                                                <td>0.4</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">保山</a></td>
+                                                <td>0.5</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>                             
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row float-card float-tran-detail">
+                    <div class="col-md-12">
+                        <section class="widget trace-section">
+                            <header>
+                                <span class="float-card-title">WebTransaction/StrutsAction/restaurant</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                            </header>
+                            <div class="body">
+                                 <section class="widget inner-widget">
+                                    <header>
+                                        <h4>
+                                            页面加载时间
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart2" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>                                   
+                                    </div>
+                                </section>
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>Traces</h4>
+                                    </header>
+                                    <div class="body body-for-table">
+                                        <table class="table table-striped table-hover no-margin sources-table">
+                                            <thead>
+                                                <tr>
+                                                    <th width="34%" class="sortedth">
+                                                        <span class="sortedtext">开始时间</span>
+                                                        <i class="iconfont sortedup">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown">&#xe619;</i>
+                                                    </th>
+                                                    <th width="22%" class="sortedth">
+                                                        <span class="sortedtext">事务 / 详情 </span>
+                                                        <i class="iconfont sortedup">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown">&#xe619;</i>
+                                                    </th>
+                                                    <th width="22%" class="sortedth">
+                                                        <span class="sortedtext">浏览器</span>
+                                                        <i class="iconfont sortedup">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown">&#xe619;</i>
+                                                    </th>
+                                                    <th width="22%" class="sortedth">
+                                                        <span class="sortedtext">应用程序(ms)</span>
+                                                        <i class="iconfont sortedup">&#xe61a;</i>
+                                                        <i class="iconfont sorteddown">&#xe619;</i>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2015-04-17 23:59</td>
+                                                    <td><a href="pageBro.html">WebTransaction/StrutsAction/restaurant</a></td>
+                                                    <td>13596</td>
+                                                    <td>91</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2015-04-06 23:59</td>
+                                                    <td><a href="pageBro.html">WebTransaction/StrutsAction/menu</a></td>
+                                                    <td>0</td>
+                                                    <td>5025</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2015-04-06 23:55</td>
+                                                    <td><a href="pageBro.html">WebTransaction/StrutsAction/menu</a></td>
+                                                    <td>0</td>
+                                                    <td>5025</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2015-04-06 23:59</td>
+                                                    <td><a href="pageBro.html">WebTransaction/StrutsAction/menu</a></td>
+                                                    <td>0</td>
+                                                    <td>5025</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>  
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>
+                                            PV
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart1" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div> 
+                                    </div>
+                                </section>
                             </div>
                         </section>
                     </div>
@@ -710,30 +852,48 @@
                 //item点击，去除所有active状态，当前点击对象加active，隐藏对象显示，开始tanslate
                 $('.dd-handle').click(function  () {
 
-                    var handleParent = $('.dd-handle.active')
+                    $('.float-card').hide();
 
                     $('.dd-handle').removeClass("active");
-                    $('.dd-item').find('button').removeClass("active");
 
                     $(this).addClass("active");
 
-                    $(this).parent().find('button').addClass("active");
+                    $(this).find('button').addClass("active");
 
-
-                    $('.float-card').show().addClass("animated fadeInLeftBig");
-
+                    $('.float-show-one').show().addClass("animated fadeInLeftBig");
 
                     setTimeout(function (){
-                                             $('.float-card').removeClass("animated fadeInLeftBig");
-                                         },1000);
+                         $('.float-show-one').removeClass("animated fadeInLeftBig");
+                     },500);
 
                     $('.float-card-title').text($(this).find('.bar-text').text());
                 });
 
-                $('.float-card .glyphicon-remove').click(function  () {
-                    $('.float-card').hide();
-                    $('.dd-handle').removeClass("active");
-                    $('.dd-item').find('button').removeClass("active");
+                //事件委托！！！！
+                $('.float-card').on('click', '.glyphicon-remove',function  (event) {
+                    var current_card = $(this).closest('.float-card');
+                    if(current_card.hasClass("float-show-one")){
+                        $('.float-card').hide();
+                        $('.dd-handle').removeClass("active");
+                    }else {
+                        current_card.hide();
+                    }
+                });
+
+                //trace详细页面float-card
+                $('.trace-name').click(function  () {
+                    $('.dd-handle').first().trigger("click");
+                    $('.trace-name-in-transaction').trigger("click");
+                });
+
+                //事务详细页面中点击trace，float-card
+                $('.trace-name-in-transaction').click(function  () {
+                    $('.float-tran-detail').hide();
+                    $('.float-tran-detail').addClass("float-trace-in-transaction");
+                    $('.float-tran-detail').show().addClass("animated fadeInLeftBig");
+                    setTimeout(function (){
+                                             $('.float-tran-detail').removeClass("animated fadeInLeftBig");
+                                         },500);
                 });
 
             });
