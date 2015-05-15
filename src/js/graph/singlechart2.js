@@ -87,4 +87,9 @@ $(function(){
     $('.cpuchart').hover(function(){
         pageLoad();
     })
+    $('.crash-detail').click(function () {
+        setTimeout(function  () {
+            pageLoad();
+        },100);
+    });
 });

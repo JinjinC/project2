@@ -83,5 +83,10 @@ $(function(){
     pageLoad();
 
     PjaxApp.onPageLoad(pageLoad);
+    $('.crash-detail').click(function () {
+        setTimeout(function  () {
+            pageLoad();
+        },100);
+    });
 
 });

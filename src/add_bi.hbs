@@ -45,13 +45,13 @@
                                         <div class="form-section">
                                             <legend class="section">2. 部署</legend>
                                             <div class="form-group">
-                                                <p>输入应用名称：</p>
-                                                <div class="input-group" style="width:220px">
-                                                    <input data-trigger="change" required="required" class="form-control input-transparent">
+                                                <div class="input-group" style="width:280px; margin-bottom:10px">
+                                                    <input data-trigger="change" required="required" class="form-control input-transparent" placeholder="输入应用名称" id="input-bi-name">
                                                     <span class="input-group-btn">
                                                         <button class="btn btn-success" type="button" id="gen-btn">生成脚本</button>
                                                     </span>
                                                 </div>
+                                                <p class="note-attention not-empt">应用名称不能为空</p>
                                                 <div class="gen-scr">
                                                     <code>&lt;script type='text/javascript'>window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"tpm.oneapm.com/static/js/bw-send.js","beaconUrl":"tpm.oneapm.com/beacon","licenseKey":"UgYBG1sUDQle4","applicationID":6417};&lt;/script>&lt;script type="text/javascript" src="//tpm.oneapm.com/static/js/bw-loader.js">&lt;/script>
                                                         <span class="copy-part">
@@ -160,7 +160,16 @@
             })
 
             $('#gen-btn').click(function(){
-                $('.gen-scr').show();
+                var inCon = $('#input-bi-name').val();
+                    inCon = $.trim(inCon); 
+                if (inCon !="") {
+                    $('.gen-scr').show();
+                    $('.not-empt').hide();
+                }else{
+                    $('.gen-scr').hide();
+                    $('.not-empt').show();
+                }
+                
             })
 
             $(document).ready(function(){

@@ -1,0 +1,159 @@
+
+{{#extend "layoutServ"}}
+    {{#replace "sidebarServ"}}
+    <div class="sidebar-hidden">
+        {{> sidebarServ this conditionClass=conditionClass active=""}}
+    </div>
+    {{/replace}}
+
+    {{#replace "app_content"}}
+    <div style="margin-left: -185px;">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 cpl-sm-12">
+                <h2 class="page-title">
+                    <a href="server_list.html">
+                        <button type="button" class="btn btn-success btn-sm btn-reply" data-placement="top">
+                            <i class="iconfont icon3">&#xe612;</i>
+                        </button>
+                    </a>
+                    <span>添加服务器<small>新增服务器</small></span>
+                </h2>
+                <section class="widget">
+                    <div class="body add-content">
+                              
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-section">
+                                <legend class="section">1. 下载 Server Insight 安装包</legend>
+                                <div class="form-group">
+                                    <div class="addapp-btn">
+                                        <a href="#">
+                                            <button type="button" class="btn btn-primary btn-sm" data-placement="top">
+                                               <i class="iconfont icon2" style="padding-right:8px">&#xe650;</i> Server Insight 安装包
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <legend class="section">2. 安装 Server Insight</legend>
+                                <div class="form-group">
+                                    <ul class="add-app-ul">
+                                        <li>
+                                            <p>解压安装包</p>
+                                            <code>tar -zxvf oneapm-sysmond-install--build-.tar.gz
+                                                <span class="copy-part">
+                                                    <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                    <span class="copied hide-section">已复制</span>
+                                                </span>
+                                            </code>
+                                        </li>
+                                        <li>
+                                            <p>定位至安装文件夹主目录，并执行安装脚本</p>
+                                            <p>
+                                            </p>
+                                            <code>cd oneapm-sysmond-linux-install-script/
+                                                <span class="copy-part">
+                                                    <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                    <span class="copied hide-section">已复制</span>
+                                                </span>
+                                            </code><br>
+                                            <code>sudo ./oasysmond-install
+                                                <span class="copy-part">
+                                                    <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                    <span class="copied hide-section">已复制</span>
+                                                </span>
+                                            </code>
+                                        </li>
+                                        <li>
+                                            <p>此时，会进入以下页面，输入<code>1</code>开始安装</p>
+                                            <img src="img/install2.png" class="img-responsive">
+                                            <p class="note-attention">注：输入 2 卸载 Server Insight，输入 3 升级 Server Insight。</p>
+                                        </li>
+                                        <li>
+                                            <p>根据提示，输入 License Key</p>
+                                            <code>IAMLICENSEKEYANDTHEDEVELOPERHASNOTDEVELOPEDTHISFEATURE
+                                                <span class="copy-part">
+                                                    <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                    <span class="copied hide-section">已复制</span>
+                                                </span>
+                                            </code>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <legend class="section">3. 运行 Server Insight</legend>
+                                <div class="form-group">
+                                    <p>输入以下指令，运行 Server Insight，并确保进程良好运行</p>
+                                    <code>oasysmond
+                                        <span class="copy-part">
+                                            <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                            <span class="copied hide-section">已复制</span>
+                                        </span>
+                                    </code>
+                                </div>
+                            </div>
+                            <div class="form-section last-form">
+                                <legend class="section">4. 开始使用 Server Insight</legend>
+                                <div class="form-group">
+                                    <p>请静候 5 分钟，等待应用程序向 OneAPM 发送应用程序性能数据，即可开始使用 OneAPM 应用性能管理。</p>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="connect-box">           
+                            <a href="server_list.html"><button type="button" class="btn btn-return btn-sm" data-placement="top">
+                                返回服务器列表
+                            </button></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h2 class="page-title">
+                    安装帮助<small>help</small>
+                </h2>
+                <section class="widget">
+                    <header>
+                        <h5>获取更多支持</h5>
+                    </header>
+                    <div class="body">
+                        <div class="help-part" style="margin-top:16px">
+                            <ul>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64d;</i>知识库</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64e;</i>提交工单</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64c;</i>400-622-3101</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c" style="font-size: 18px">&#xe624;</i>support@onepam.com</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe649;</i>OneAPM 官方微博</a></li>
+                                <li><a href=""><i class="iconfont icon1 h-c">&#xe64a;</i>OneAPM 公众账号</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+     
+    {{/replace}}
+    {{#append "scripts"}}
+        
+        <script>
+            $('#appList').hide();
+            $('#divider').hide();
+            $('#settings').hide();
+            $('#divider1').hide();
+
+            $(document).ready(function(){
+                $('.logo').css("position","absolute");
+            })
+            $('.copy-part').click(function(){
+                $(this).find('.copied').show();
+                setTimeout(function (){
+                    $('.copied').hide();
+                },1500);
+            })
+            
+        </script>
+        <script src="js/ui-buttons.js"></script>
+    {{/append}}
+
+{{/extend}}

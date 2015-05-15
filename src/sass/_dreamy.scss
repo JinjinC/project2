@@ -31,6 +31,9 @@
   &.wait{
     color: rgb(74, 121, 147);
   }
+  &.wi-ha {
+    color: rgba(255, 255, 255, 0.5);
+  }
   &.trash{
     font-size: 19px;
     color: #9F9F9F;
@@ -1744,10 +1747,10 @@ a.tabIcon{
   }
 
   .table-striped > tbody > tr:nth-child(odd) {
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
   }
   .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
   }
 
   .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
@@ -1756,7 +1759,7 @@ a.tabIcon{
     font-weight: 400;
   }
   .table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th{
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
   }
 
   .sortedtext {
@@ -1811,7 +1814,18 @@ a.tabIcon{
   .glyphicon-remove{
     margin-left: 20px;
   } 
+  .interaction-box {
+    background-color: #f5f5f5;
+  }
+  // .btn-resolve {
+  //   background-color: #f8f8f8;
+  //   color: #555555;
+  //   border: rgba(0, 0, 0, 0.2);
 
+  //   &:hover {
+  //     background-color: #dfdfdf;
+  //   }
+  // }
 }//float-card  end
 
 .float-all {
@@ -2409,37 +2423,52 @@ table .progress {
     color: #666;
   }
 }
+.float-card section .switch-widget {
+  background: transparent;
+  margin-bottom: 10px;
+  text-align: center;
+}
 .crash-switch {
+  vertical-align: middle;
   .to-left {
-    display: block;
+    display: inline-block;
     text-align: left;
     color: #666;
     font-size: 24px;
+    margin-right: 20px;
+    line-height: 36px;
+    vertical-align: top;
+
     &:hover {
       opacity: 0.7;
       cursor: pointer;
     }
   }
   .to-right {
-    display: block;
+    display: inline-block;
     text-align: right;
     color: #666;
     font-size: 24px;
+    margin-left: 20px;
+    line-height: 36px;
+    vertical-align: top;
+
     &:hover {
       opacity: 0.7;
       cursor: pointer;
     }
   }
   .title {
-    display: block;
+    display: inline-block;
     text-align: center;
     font-weight: bold;
+    line-height: 1.4;
+    .occur-time {
+      font-weight: normal;
+      font-size: 12px;
+    }
   }
-  .occur-time {
-    display: block;
-    text-align: center;
-    font-size: 12px;
-  }
+
 }
 
 
@@ -2640,7 +2669,9 @@ table .progress {
 }
 .gen-scr {
   display: none;
-  margin-top: 10px;
+}
+.not-empt {
+  display: none;
 }
 //loading
 .load-text {
@@ -2797,8 +2828,8 @@ ul.messenger-theme-air .messenger-message .messenger-message-inner:before {
   content: "\f105";
   float: right;
   position: relative;
-  top: 24px;
-  right: -18px;
+  top: 22px;
+  right: -16px;
   font-size: 18px;
   color: rgb(51, 51, 51);
 }
@@ -2988,7 +3019,66 @@ input[type="text"][disabled]{
   padding: 0; 
   border-top:1px solid rgba(51, 51, 51, 0.60)
 }
+.filter-section {
+  width: 100%;
+  position: relative;
 
+  .filter-addEle {
+    width: 100%;
+    text-align: center;
+  }
+  .addEle-box {
+    display: none;
+    width: 100%;
+
+    .addEle-ul {
+      color: #666;
+
+      .disable {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      li > a {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.428571429;
+        color: #666;
+        white-space: nowrap;
+
+      }
+      .addEle-li > a:hover, .addEle-li > a:focus {
+          text-decoration: none;
+          color: #ffffff;
+          background-color: #618fb0;
+        }
+    }
+  }
+}
+.fil-f1, .fil-f2, .fil-f3, .fil-f4, .fil-f5, .fil-f6{
+  position: relative;
+  display: none;
+
+  .fil-trash {
+    display: none;
+    position: absolute;
+    right: -5px;
+    i {
+      line-height: 31px;
+      font-size: 15px;  
+    }
+  }
+
+  &:hover, &:focus {
+    .fil-trash {
+      display: block;
+    }
+  }
+}
+.form-horizontal.form-label-left .form-group .control-label {
+  text-align: right;
+}
 // .widget > header .filter-header {
 //   line-height: 30px;
 
@@ -3122,4 +3212,13 @@ input[type="text"][disabled]{
 .fileinput-button{
   cursor: pointer;
   margin-top: 5px;
+}
+
+.float-card{
+    .table-editable + .backgrid-paginator > ul > li > a, .table-editable + .backgrid-paginator > ul > li > span {
+      color: gray;
+    }
+    .fa-lg {
+      color: gray;
+    }
 }
