@@ -55,6 +55,13 @@
       color: white;
     }
   }
+
+  &.setting-floatcard{
+    font-size: 14px;
+    line-height: 15px;
+    color: rgba(51, 51, 51, 0.6);
+    float: right;
+  }
   
   &.expand{
     cursor: pointer;

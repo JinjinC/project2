@@ -41,15 +41,15 @@ body{
   // padding-bottom: 100px;
 
   @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
-      rgba(126, 159, 229, 0.8) 30%, 
-      rgba(63, 109, 195, 0.8) 76%, 
-      rgba(50, 105, 168, 0.8)
+      rgba(119, 157, 207, 0.8) 30%, 
+      rgba(174, 180, 186, 0.8) 76%, 
+      rgba(199, 175, 156, 0.8)
   );
   &.background-dark{
     @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
-      rgba(126, 159, 229, 0.8) 30%, 
-      rgba(63, 109, 195, 0.8) 76%, 
-      rgba(50, 105, 168, 0.8)
+        rgba(119, 157, 207, 0.8) 30%, 
+        rgba(174, 180, 186, 0.8) 76%, 
+        rgba(199, 175, 156, 0.8)
     );
   }
 
@@ -115,15 +115,30 @@ a{
 }
 
 .background1 {
-  background-color: rgba(53, 115, 137, 0.89);
+  background-color: rgba(45, 101, 203, 0.89);
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+      rgba(119, 157, 207, 0.8) 30%, 
+      rgba(174, 180, 186, 0.8) 76%, 
+      rgba(199, 175, 156, 0.8)
+  );
 }
 
 .background2 {
-  background-color: rgba(144,133,79,0.89);
+  background-color: rgba(113,194,202,0.89);
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+      rgba(81, 159, 194, 0.8) 30%, 
+      rgba(135, 167, 174, 0.8) 76%, 
+      rgba(176, 174, 152, 0.8)
+  );
 }
 
 .background3 {
-  background-color: rgba(136,79,144,0.89);
+  background-color: rgba(104,120,182,0.89);
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+      rgba(85, 116, 199, 0.8) 30%, 
+      rgba(108, 135, 203, 0.8) 76%, 
+      rgba(96, 151, 179, 0.8)
+  );
 }
 
 a.on-white{
