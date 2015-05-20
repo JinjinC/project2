@@ -27,7 +27,7 @@
     </div>
      
     <div class="row">
-     	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+     	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
      		<section class="widget">
      			<header>
                     <h4>创建组合分析</h4>
@@ -179,29 +179,6 @@
                                 </fieldset>
                             </form>
                                            
-                           {{!--  <select data-placeholder="选择筛选条件" multiple tabindex="-1" data-minimum-results-for-search="10" class="select2 form-control" id="grouped-select">
-                                <option value=""></option>
-                                <optgroup label="运营商">
-                                    <option>运营商1</option>
-                                    <option>运营商2</option>
-                                    <option>运营商3</option>
-                                </optgroup>
-                                <optgroup label="接入方式">
-                                    <option>接入方式1</option>
-                                    <option>接入方式2</option>
-                                    <option>接入方式3</option>
-                                </optgroup>
-                                <optgroup label="APP 版本">
-                                    <option>4.1.2</option>
-                                    <option>4.1.3</option>
-                                    <option>4.2.0</option>
-                                </optgroup>
-                                <optgroup label="地理位置">
-                                    <option>北京</option>
-                                    <option>上海</option>
-                                    <option>浙江</option>
-                                </optgroup>
-                            </select> --}}
                         </div>
                     </section>
                     <div class="row margin-bottom text-align-center">
@@ -221,15 +198,21 @@
                 </div>
      		</section>
      	</div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <section class="widget widget-tabs">
                 <header>
                     <ul class="nav nav-tabs">
                         <li class="active">
                             <a href="#trend" data-toggle="tab">趋势图</a>
                         </li>
-                        <li data-toggle="tooltip" data-placement="top" title=".Net">
+                        <li data-toggle="tooltip" data-placement="top">
                             <a href="#detail" data-toggle="tab">详情</a>
+                        </li>
+                        <li data-toggle="tooltip" data-placement="top" class="draw-after" style="display:none">
+                            <a href="#v1" data-toggle="tab">v1.1.1</a>
+                        </li>
+                        <li data-toggle="tooltip" data-placement="top" class="draw-after" style="display:none">
+                            <a href="#v2" data-toggle="tab">v1.1.2</a>
                         </li>
                     </ul>
                 </header>
@@ -378,25 +361,248 @@
                         </div>
                     </div>
                     <div id="detail" class="tab-pane">
-                        <section class="widget inner-widget">
-                            <header>
-                                <h4 >响应时间</h4>
-                                
-                                <div class="widget-controls">
-                                    <a data-widgster="expand" title="Expand" href="#">
-                                        <i class="iconfont icon2 ">&#xe611;</i>
-                                    </a>
-                                    <a data-widgster="collapse" title="Collapse" href="#">
-                                        <i class="iconfont icon2 ">&#xe610;</i>
-                                    </a>
-                                </div>
-                            </header>
-                            <div class="body no-margin tr-body">
-                                <div id="visits-chart3" class="chart visits-chart">
-                                    <svg></svg>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="body table-body tr-body">
+                                    <table class="table table-striped table-hover sources-table no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%"></th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">应用名称</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                               
+                                                <th width="12%" class="sortedth">
+                                                    <span class="sortedtext">应用版本号</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">崩溃发生时间</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">设备厂商</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">操作系统版本</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃方法</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">用户信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 success">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.1</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 success">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.1</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 danger">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.2</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 danger">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.2</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>                                           
+                                        </tbody>
+                                    </table>
+                                </div>       
                             </div>
-                        </section>
+                        </div>                        
+                    </div>
+                    <div id="v1" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="body table-body tr-body">
+                                    <table class="table table-striped table-hover sources-table no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th width="3%"></th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">应用名称</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                               
+                                                <th width="12%" class="sortedth">
+                                                    <span class="sortedtext">应用版本号</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">崩溃发生时间</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">设备厂商</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">操作系统版本</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃方法</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">用户信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 danger">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.1</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>
+                                                                                    
+                                        </tbody>
+                                    </table>
+                                </div>       
+                            </div>
+                        </div>                        
+                    </div>
+                    <div id="v2" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="body table-body tr-body">
+                                    <table class="table table-striped table-hover sources-table no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th width="3%"></th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">应用名称</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                               
+                                                <th width="12%" class="sortedth">
+                                                    <span class="sortedtext">应用版本号</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">崩溃发生时间</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">设备厂商</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="15%" class="sortedth">
+                                                    <span class="sortedtext">操作系统版本</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">崩溃方法</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="11%" class="sortedth">
+                                                    <span class="sortedtext">用户信息</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center !important;padding-right:0;"><i class="iconfont icon2 success">&#xe60f; </i></td>
+                                                <td>test</td>
+                                                <td>V1.0.1</td>
+                                                <td>2015/4/7</td>
+                                                <td>huawei</td>
+                                                <td>4.1.2</td>
+                                                <td>java.lang.A</td>
+                                                <td class="word-bk">com.blueware.test.java90</td>
+                                                <td>21646464</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>       
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </section>
@@ -500,7 +706,25 @@
                 $('.fil-f5').hide();
                 $('.addEle-box li:nth-child(5)').removeClass('disable');
             })
-           
+            
+            $('th').click(function(e){
+                var a = $(this).find('.sortedup');
+                var b = $(this).find('.sorteddown');
+
+                if (a.css('display') == 'none' && b.css('display') == 'none') {
+                    a.show();
+                }else{
+                    if (a.css('display') != 'none') {
+                        a.hide();
+                        b.show();
+                    }else{
+                        if (a.css('display') == 'none') {
+                            b.hide();
+                        }
+                    }
+                }
+                e.stopPropagation();
+            })
             // $(document).ready(function  () {
             //     $('.server').click(function  () {
             //         $('.float-card').show().addClass("animated fadeInRightBig");
