@@ -98,7 +98,39 @@
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <legend class="section">6. 启动 Agent</legend>
+                                            <legend class="section">6. Build Phases 设置</legend>
+                                            <div class="form-group">
+                                                <p class="note-attention">注意：本设置是为自动上传符号表文件 *.app.dSYM 至 Server，设置之后可以实现 Crash Log 的自动化分析。如果您选择不使用此功能，可以跳过此步骤。</p>
+                                                <ul class="add-app-ul">
+                                                    <li>
+                                                        <p>添加 OneAPM iOS Agent 文件夹下的 symbolUploading.sh 至工程根目录</p>
+                                                        <img src="img/mi6-1.png" class="img-responsive">
+                                                    </li>
+                                                    <li>
+                                                        <p>在弹出窗口中，勾选「Copy items if needed」</p>
+                                                        <img src="img/mi6-2.png" class="img-responsive">
+                                                    </li>
+                                                    <li>
+                                                        <p>选择对应 Target 的 Build Phases，并新建 <code>Run Script</code></p>
+                                                        <p class="note-attention">注意：点击左上角的加号按钮，并选择「New Run Script Phases」来新建 Run Script。</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>粘贴以下内容至文本框「Type a script or drag a script file from your workspace to insert its path」中</p>
+                                                        <code>SCRIPT=`/usr/bin/find "${SRCROOT}" -name symbolUploading.sh | head -n 1`/bin/sh "${SCRIPT}" "APPLICATION TOKEN"
+                                                            <span class="copy-part">
+                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
+                                                                <span class="copied hide-section">已复制</span>
+                                                            </span>
+                                                        </code>
+                                                        <p class="note-attention">注意：替换 'APPLICATION TOKEN' 为您的 Token</p>
+                                                        <img src="img/mi6-3.png" class="img-responsive">
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <legend class="section">7. 启动 Agent</legend>
                                             <div class="form-group">
                                                 <ul class="add-app-ul">
                                                     <li>
