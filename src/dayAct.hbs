@@ -15,8 +15,8 @@
     </div>
        
     <div class="row">
-        <div class="col-lg-6">
-            <section class="widget widget-mob">
+        <div class="col-lg-12">
+            {{!-- <section class="widget widget-mob">
                 <header>
                     <h4>活跃用户数</h4>
                     <span class="chart-value">活跃设备数：20</span>
@@ -31,70 +31,7 @@
                         <svg></svg>
                     </div>
                 </div>
-            </section>
-        </div>
-        <div class="col-lg-6">
-            <section class="widget widget-mob">
-                <header>
-                    <h4>
-                        分时段活跃用户数对比
-                    </h4>
-                    <div class="widget-controls">
-                        <a href="" data-toggle="modal" data-target="#myModal">
-                            <i class="iconfont mob_dashboard">&#xe629;</i>
-                        </a>
-                    </div>
-                </header>
-                <div class="body">
-                    <div id="single-chart2" class="chart visits-chart">
-                        <svg></svg>
-                    </div>
-                </div>   
-            </section>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <section class="widget widget-mob">
-                <header>
-                    <h4>
-                        APP版本划分的活跃用户数
-                    </h4>
-                    <div class="widget-controls">
-                        <a href="" data-toggle="modal" data-target="#myModal">
-                            <i class="iconfont mob_dashboard">&#xe629;</i>
-                        </a>
-                    </div>
-                </header>
-                <div class="body">
-                    <div id="single-chart3" class="chart visits-chart">
-                        <svg></svg>
-                    </div>
-                </div>   
-            </section>
-        </div>
-        <div class="col-lg-6">
-            <section class="widget widget-mob">
-                <header>
-                    <h4>
-                        操作系统划分的活跃用户数
-                    </h4>
-                    <div class="widget-controls">
-                        <a href="" data-toggle="modal" data-target="#myModal">
-                            <i class="iconfont mob_dashboard">&#xe629;</i>
-                        </a>
-                    </div>
-                </header>
-                <div class="body">
-                    <div id="single-chart4" class="chart visits-chart">
-                        <svg></svg>
-                    </div>
-                </div>   
-            </section>
-        </div>
-    </div>        
-    <div class="row">
-        <div class="col-md-12">
+            </section> --}}
             <section class="widget widget-mob">
                 <header>
                     <h4>
@@ -114,7 +51,95 @@
             </section>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <section class="widget widget-tabs">
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#trend" data-toggle="tab">图表 1</a>
+                        </li>
+                        <li data-toggle="tooltip" data-placement="top">
+                            <a href="#detail" data-toggle="tab">图表 2</a>
+                        </li>
+                        <li data-toggle="tooltip" data-placement="top">
+                            <a href="#v1" data-toggle="tab">图表 3</a>
+                        </li>
+                        <li data-toggle="tooltip" data-placement="top">
+                            <a href="#v2" data-toggle="tab">图表 4</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="body tab-content" style="padding-top:20px">
+                    <div id="trend" class="tab-pane active clearfix">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>分时段活跃用户数对比</h4>
+                                        <span class="chart-value">活跃设备数：20</span>
+                                    </header>
+                                    <div class="body no-margin tr-body">
+                                        <div id="single-chart1" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="detail" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>日活跃用户数对比</h4>
+                                    </header>
+                                    <div class="body no-margin tr-body">
+                                        <div id="single-chart2" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div id="v1" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>APP版本划分的活跃用户数</h4>
+                                    </header>
+                                    <div class="body no-margin tr-body">
+                                        <div id="single-chart3" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div id="v2" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>操作系统划分的活跃用户数</h4>
+                                    </header>
+                                    <div class="body no-margin tr-body">
+                                        <div id="single-chart4" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>        
     <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -150,11 +175,9 @@
                         <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-trans-close">取消</button>
                         <button type="button" class="btn btn-success" id="btn-trans">确定</button>
                     </div>
-
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div>
-
     {{/replace}}
 
 

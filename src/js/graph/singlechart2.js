@@ -87,9 +87,15 @@ $(function(){
     $('.cpuchart').hover(function(){
         pageLoad();
     })
-    $('.crash-detail').click(function () {
+    $('.crash-detail,.nav-tabs>li').click(function () {
         setTimeout(function  () {
             pageLoad();
         },100);
     });
+    //  $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.nav-tabs>li').click(function () {
+        
+    //     setTimeout(function  () {
+    //         pageLoad();
+    //     },100);
+    // });
 });

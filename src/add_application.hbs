@@ -178,7 +178,7 @@
                                                 
                                                 <p>请重启您的应用服务器。</p>
                                                 
-                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>
@@ -247,7 +247,7 @@
                                                         <span class="copied hide-section">已复制</span>
                                                     </span>
                                                 </code>
-                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>若尚未开启应用服务器，请启动您的应用服务器。然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>
@@ -334,7 +334,7 @@
                                              <div class="form-group">
                                                 
                                                 <p>请重新部署您的应用程序。</p>
-                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>
@@ -460,7 +460,7 @@
                                                         
                                                     </li>
                                                 </ul>
-                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>
@@ -556,7 +556,7 @@
                                                         </code>
                                                     </li>
                                                 </ul>
-                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>
@@ -568,7 +568,7 @@
                                             <div class="form-group">
                                                 <ul class="add-app-ul">
                                                     <li>
-                                                        <p>点击下载 OneAPM 配置文件</p>
+                                                        <p>点击下载 OneAPM 配置文件 oneapm.yml 到应用程序的 config 目录下</p>
                                                         <div class="addapp-btn">
                                                             <a href="#">
                                                                 <button type="button" class="btn btn-primary btn-sm" data-placement="top">
@@ -593,9 +593,6 @@
                                             <div class="form-group">
                                                 <ul class="add-app-ul">
                                                     <li>
-                                                        <p>复制<code>oneapm.yml</code>至「应用程序配置目录」下</p>
-                                                    </li>
-                                                    <li>
                                                         <p>写入「License Key」至配置文件「oneapm.yml」</p>
                                                         <code>C1QMCkhZE9c98FxbGwgTD1d7e0sZBglSDBV77ffUBEgBBhtUc754V1ICGAQLTggN
                                                             <span class="copy-part">
@@ -611,7 +608,7 @@
                                              <legend class="section">3. 安装</legend>
                                              <div class="form-group">
                                                 <ul class="add-app-ul">
-                                                    <li>
+                                                    {{!-- <li>
                                                         <p>打开<code>Gemfile</code>，添加以下<code>gem source</code></p>
                                                         <code>source 'http://rubygems.oneapm.com'
                                                             <span class="copy-part">
@@ -619,14 +616,16 @@
                                                                 <span class="copied hide-section">已复制</span>
                                                             </span>
                                                         </code>
-                                                    </li>
+                                                    </li> --}}
                                                     <li>
-                                                        <p>以及添加<code>gem</code></p>
-                                                        <code>gem 'oneapm_rpm'
-                                                            <span class="copy-part">
-                                                                <span class="copy-pr"><i class="iconfont icon-copy">&#xe64b;</i></span>
-                                                                <span class="copied hide-section">已复制</span>
-                                                            </span>
+                                                        <p>添加 OneAPM 探针<code>oneapm_rpm</code>到 Gemfile 中</p>
+                                                        <code>http://rubygems.org<br/>
+                                                            <br/>
+                                                            gem 'your_gem1'<br/>
+                                                            gem 'your_gem2'<br/>
+                                                            gem 'your_gem3'<br/>
+                                                            <br/>
+                                                            gem 'oneapm_rpm'
                                                         </code>
                                                     </li>
                                                     <li>
@@ -649,7 +648,7 @@
                                              <legend class="section">4. 重启</legend>
                                              <div class="form-group">
                                                 <p>请启动或重新部署您的应用服务。</p>
-                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。<br/>若您看到以下画面，则代表 Agent 安装成功。</p>
+                                                <p>然后，稍等片刻，等待 OneAPM 接收 Agent 发送的数据。</p>
                                              </div>
                                         </div>
                                     </div>

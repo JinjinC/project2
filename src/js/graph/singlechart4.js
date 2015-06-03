@@ -81,7 +81,11 @@ $(function(){
     }
 
     pageLoad();
-
     PjaxApp.onPageLoad(pageLoad);
+    $('.crash-detail,.nav-tabs>li').click(function () {
+        setTimeout(function  () {
+            pageLoad();
+        },100);
+    });
 
 });

@@ -87,7 +87,7 @@ $(function(){
     $('.cpuchart').hover(function(){
         pageLoad();
     })
-    $('.crash-detail').click(function () {
+    $('.crash-detail,.nav-tabs>li').click(function () {
         setTimeout(function () {
             pageLoad();
         },100);

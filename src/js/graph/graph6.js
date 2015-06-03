@@ -75,18 +75,16 @@ $(function(){
     PjaxApp.onPageLoad(pageLoad);
 
     $('.card-header>ul>li').click(function  () {
-        setTimeout(function  () {
-                           pageLoad();
-                       },500);
+        setTimeout(function() {
+            pageLoad();
+        },500);
     });
 
-    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-chart').click(function () {
-        
+    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-chart,.nav-tabs>li').click(function () {
         setTimeout(function  () {
-                    pageLoad();
-                },100);
+            pageLoad();
+        },100);
     });
-
 
 });
 

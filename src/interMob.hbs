@@ -26,16 +26,15 @@
                             <header>
                                 <ul class="nav nav-tabs">
                                     <li class="active">
-                                        <a href="#interactions" data-toggle="tab">Interactions</a>
+                                        <a href="#interactions" data-toggle="tab" id="inter">Interactions</a>
                                     </li>
                                     <li>
-                                        <a href="#webview" data-toggle="tab">WebViews</a>
+                                        <a href="#webviews" data-toggle="tab" id="web">WebViews</a>
                                     </li>
                                 </ul>
                             </header>
                             <div class="body tab-content">
                                 <div id="interactions" class="tab-pane active clearfix">
-
                                     <div class="body tr-body">
                                         <ul id="myTab" class="nav nav-tabs">
                                             <li class="active"><a href="#averTime" data-toggle="tab" class="tabItem">平均响应时间</a></li>
@@ -132,18 +131,17 @@
                                             </div>
                                         </div>
                                     </div>
-                               
                                 </div>
                                 <div id="webviews" class="tab-pane clearfix">
-
                                     <div class="body tr-body">
                                         <ul id="myTab" class="nav nav-tabs">
-                                            <li class="active"><a href="#averTime" data-toggle="tab" class="tabItem">平均时间</a></li>
-                                            <li><a href="#excuTime" data-toggle="tab" class="tabItem">执行时间</a></li>
-                                            <li><a href="#visNum" data-toggle="tab" class="tabItem">访问次数</a></li>
+                                            <li class="active"><a href="#w-averTime" data-toggle="tab" class="tabItem">平均执行时间</a></li>
+                                            <li><a href="#w-excuTime" data-toggle="tab" class="tabItem">执行时间</a></li>
+                                            <li><a href="#w-visNum" data-toggle="tab" class="tabItem">访问次数</a></li>
+                                            <li><a href="#Js-error" data-toggle="tab" class="tabItem">JS 错误</a></li>
                                         </ul>
                                         <div id="myTabContent" class="tab-content" >
-                                            <div class="tab-pane fade in active" id="averTime">
+                                            <div class="tab-pane fade in active" id="w-averTime">
                                                 <div class="dd">
                                                     <ol class="dd-list">
                                                         <li class="dd-item dd-collapsed">
@@ -152,7 +150,7 @@
                                                                 </i>
                                                                 <div class="bar-graph" style="width:90%"></div>
                                                                 <div class="bar-text">
-                                                                    <span>users-insert</span>
+                                                                    <span>Expressjs/GET/big</span>
                                                                     <span style="float: right;">5.43 ms</span>
                                                                 </div>
                                                             </div>
@@ -172,7 +170,7 @@
                                                 </div>
                                             </div>
                                            
-                                            <div class="tab-pane fade" id="excuTime">
+                                            <div class="tab-pane fade" id="w-excuTime">
                                                 <div class="dd" id="nestable2">
                                                     <ol class="dd-list">
                                                         <li class="dd-item dd-collapsed">
@@ -181,7 +179,7 @@
                                                                 </i>
                                                                 <div class="bar-graph" style="width:95%"></div>
                                                                 <div class="bar-text">
-                                                                    <span>users-insert</span>
+                                                                    <span>Expressjs/GET/big</span>
                                                                     <span style="float: right;">196,333 cpm</span>
                                                                 </div>
                                                             </div>
@@ -201,7 +199,7 @@
                                                     </ol>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="visNum">
+                                            <div class="tab-pane fade" id="w-visNum">
                                                 <div class="dd" id="nestable2">
                                                     <ol class="dd-list">
                                                         <li class="dd-item dd-collapsed">
@@ -210,7 +208,36 @@
                                                                 </i>
                                                                 <div class="bar-graph" style="width:95%"></div>
                                                                 <div class="bar-text">
-                                                                    <span>users-insert</span>
+                                                                    <span>Expressjs/GET/big</span>
+                                                                    <span style="float: right;">196,333 cpm</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dd-item dd-collapsed" data-id="1">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                
+                                                                <div class="bar-graph" style="width:5%"></div>
+                                                                <div class="bar-text">
+                                                                    <span>users-update</span>
+                                                                    <span style="float: right;">333 cpm</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="Js-error">
+                                                <div class="dd" id="nestable2">
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item dd-collapsed">
+                                                            <div class="dd-handle">
+                                                                <i class="iconfont icon2-dd" style="float: right;">&#xe613;
+                                                                </i>
+                                                                <div class="bar-graph" style="width:95%"></div>
+                                                                <div class="bar-text">
+                                                                    <span>Expressjs/GET/big</span>
                                                                     <span style="float: right;">196,333 cpm</span>
                                                                 </div>
                                                             </div>
@@ -239,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-8 interactions">
                 <div class="row basic-card">
                     <div class="col-md-12">
                          <section class="widget">
@@ -508,6 +535,317 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-8 webviews">
+                <div class="row basic-card">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    平均执行时间
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart6" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                </div>
+                <div class="row basic-card">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    执行时间
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart7" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row basic-card">
+                    <div class="col-md-12">
+                         <section class="widget">
+                            <header>
+                                <h4>
+                                    访问次数
+                                </h4>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="iconfont icon2 ">&#xe611;</i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="iconfont icon2 ">&#xe610;</i></a>
+                                </div>
+                            </header>
+                            <div class="body no-margin">
+                                <div id="visits-chart8" class="chart visits-chart">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row basic-card">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                               <h4>慢加载追踪</h4>
+                            </header>
+                            <div class="body">
+                                <table class="table table-striped table-hover no-margin sources-table">
+                                    <thead>
+                                    <tr>
+                                        <th width="30%" class="sortedth">
+                                            <span class="sortedtext">名称</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="12%" class="sortedth">
+                                            <span class="sortedtext">白屏时间</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="12%" class="sortedth">
+                                            <span class="sortedtext">耗时</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="12%" class="sortedth">
+                                            <span class="sortedtext">时间戳</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="12%" class="sortedth">
+                                            <span class="sortedtext">操作系统</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                        <th width="12%" class="sortedth">
+                                            <span class="sortedtext">操作系统版本</span>
+                                            <i class="iconfont sortedup">&#xe61a;</i>
+                                            <i class="iconfont sorteddown">&#xe619;</i>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
+                                        <td>3ms</td>
+                                        <td>2015-02-06 10:24:04</td>
+                                        <td>2ms</td>
+                                        <td>Android</td>
+                                        <td>4.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
+                                        <td>4ms</td>
+                                        <td>2015-02-06 10:23:04</td>
+                                        <td>2ms</td>
+                                        <td>Android</td>
+                                        <td>4.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="trace-name">Database/wp_posts/select</a></td>
+                                        <td>5ms</td>
+                                        <td>2015-02-06 10:24:04</td>
+                                        <td>2ms</td>
+                                        <td>Android</td>
+                                        <td>4.04</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="row  float-card float-show-one">
+                    <div class="col-md-12">
+                        <section class="widget">
+                            <header>
+                                <span class="float-card-title">Title</span>
+                                <span class="glyphicon glyphicon-remove pull-right"></span>
+                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                    <i class="glyphicon glyphicon-cog icon2 setting-floatcard"></i>
+                                </a>
+                            </header>
+                            <div class="body">
+                                 <section class="widget inner-widget">
+                                    <header>
+                                        <h4>
+                                            UI Thread Breakdown
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart4" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                        
+                                    </div>
+                                </section>
+
+                                <section class="widget inner-widget">
+                                    <header>
+                                        <h4>
+                                            Worker Thread Breakdown
+                                        </h4>
+                                    </header>
+                                    <div class="body no-margin">
+                                        <div id="visits-chart5" class="chart visits-chart">
+                                            <svg></svg>
+                                        </div>
+                                       
+                                    </div>
+                                </section>
+
+                                <section class="widget inner-widget">
+                                    <header>
+                                       <h4>Traces</h4>
+                                    </header>
+                                    <div class="body body-for-table">
+                                        <table class="table table-striped table-hover no-margin sources-table">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%" class="sortedth">
+                                                    <span class="sortedtext">名称</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="16%" class="sortedth">
+                                                    <span class="sortedtext">访问次数</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="16%" class="sortedth">
+                                                    <span class="sortedtext">响应时间</span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                                <th width="18%" class="sortedth">
+                                                    <span class="sortedtext">吞吐量 </span>
+                                                    <i class="iconfont sortedup">&#xe61a;</i>
+                                                    <i class="iconfont sorteddown">&#xe619;</i>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">SpringController/insert.do (GET)</a></td>
+                                                <td>6700000</td>
+                                                <td>5.76 ms</td>
+                                                <td>223,333.33cpm</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="trace-name-in-transaction">SpringController/splits.do (GET)</a></td>
+                                                <td>33000</td>
+                                                <td>6.33 ms</td>
+                                                <td>1,100.00cpm</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row float-card float-trace">
+                    <div class="col-md-12">
+                        <section class="widget trace-section">
+                            <header>
+                                <h4>users-insert <small>com.blueware.android.app.client</small>
+                                    <span class="glyphicon glyphicon-remove pull-right"></span>
+                                </h4>
+                            </header>
+                            <div class="float-body">
+                                <section class="widget inner-widget">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">耗时：</span>
+                                                <span class="minfo-txt">3,101ms</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">应用版本：</span>
+                                                <span class="minfo-txt">1.1</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">OS：</span>
+                                                <span class="minfo-txt">Android 4.4.2</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">设备：</span>
+                                                <span class="minfo-txt">unknown</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">APP版本：</span>
+                                                <span class="minfo-txt">1.5</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">时间戳：</span>
+                                                <span class="minfo-txt">2015-05-04 10:28</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">地理信息：</span>
+                                                <span class="minfo-txt">中国 北京市</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">联网方式：</span>
+                                                <span class="minfo-txt">wifi</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">剩余电量：</span>
+                                                <span class="minfo-txt">50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="minfo">
+                                                <span class="minfo-name">屏幕朝向：</span>
+                                                <span class="minfo-txt">竖屏</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="widget">
+                                    <header>
+                                        <h4>轨迹图</h4>
+                                    </header>
+                                    <div class="body tr-body" style="min-height:500px;">
+                                       
+                                    </div>
+                                </section>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="myModal" class="modal fade account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -568,11 +906,14 @@
 
         <!-- page application js -->
         <script src="js/daterangepicker.js"></script>
-        <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph1.js"></script>
         <script src="js/graph/graph2.js"></script>
+        <script src="js/graph/graph3.js"></script>
         <script src="js/graph/graph4.js"></script>
         <script src="js/graph/graph5.js"></script>
+        <script src="js/graph/graph6.js"></script>
+        <script src="js/graph/graph7.js"></script>
+        <script src="js/graph/graph8.js"></script>
 
         <script>
             $(document).ready(function  () {
@@ -638,6 +979,19 @@
                 }
                 e.stopPropagation();
             })
+             $(document).ready(function(){
+                $('.webviews').hide();
+
+                $('#web').click(function(){
+                    $('.interactions').hide();
+                    $('.webviews').show();
+                })
+                $('#inter').click(function(){
+                    $('.interactions').show();
+                    $('.webviews').hide();
+                })
+
+             })
         </script>
         
     {{/append}}
