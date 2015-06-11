@@ -81,7 +81,7 @@ $(function(){
        },500);
     });
 
-    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-chart,.nav-tabs>li').click(function () {
+    $('.dd-handle,.trans-name,.trace-name,.tab_link,.trace-name-in-transaction,.type-link-chart,.nav-tabs>li,.err-detail').click(function () {
         setTimeout(function  () {
             pageLoad();
         },100);

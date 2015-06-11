@@ -1686,7 +1686,7 @@ a.tabIcon{
 
 .float-card {
   display: none;
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   width: 100%;
   top: 0;
@@ -2440,28 +2440,27 @@ table .progress {
   .to-left {
     display: inline-block;
     text-align: left;
-    color: #666;
+    color: #999;
     font-size: 24px;
     margin-right: 20px;
     line-height: 36px;
     vertical-align: top;
-
-    &:hover {
-      opacity: 0.7;
+    .iconfont:hover { 
+      color: #666;
       cursor: pointer;
     }
   }
   .to-right {
     display: inline-block;
     text-align: right;
-    color: #666;
+    color: #999;
     font-size: 24px;
     margin-left: 20px;
     line-height: 36px;
     vertical-align: top;
 
-    &:hover {
-      opacity: 0.7;
+    .iconfont:hover { 
+      color: #666;
       cursor: pointer;
     }
   }
